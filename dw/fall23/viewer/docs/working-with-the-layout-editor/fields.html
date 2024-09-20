@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fields &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lists" href="lists.html" />
+    <link rel="prev" title="Groups" href="groups.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Fields</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Fields
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="panels.html">Panels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sections.html">Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groups.html">Groups</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Fields</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#value-field">Value field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dropdown">Dropdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#color-field">Color field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#borders-style">Borders Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text-style">Text Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shadow-style">Shadow Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-display-format">Custom Display Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expression-builder">Expression builder</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lists.html">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inherited-values.html">Inherited Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation.html">Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard-shortcuts.html">Keyboard Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="fields">
+<h1>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h1>
+<p>Fields represent a single configuration option.</p>
+<div class="section" id="value-field">
+<h2>Value field<a class="headerlink" href="#value-field" title="Permalink to this headline">¶</a></h2>
+<p>Contain text or numeric value, the user can enter or change directly. Value can be copied by clicking the copy button that appears when you hover over the value field.</p>
+<p>Figure 1: Value field</p>
+<img alt="../../_images/fields-value-field.png" class="flat align-center" src="../../_images/fields-value-field.png" />
+</div>
+<div class="section" id="dropdown">
+<h2>Dropdown<a class="headerlink" href="#dropdown" title="Permalink to this headline">¶</a></h2>
+<p>Contain a selection of predefined values, the user can choose from. The value cannot be manually edited. User can also navigate in the dropdown list using arrow keys on the keyboard and confirm the selection by pressing the Enter key. The currently selected value is highlighted in bold.
+<br> Dropdowns may contain a search field, that is displayed right under the dropdown, when it’s rolled out. Items can be filtered based on the search criteria. Inserted search phrase can be cleared by pressing the <span class="button">x</span> button. Some Dropdowns contain dynamic values, that may change while it is opened. Such dropdowns can be refreshed using the refresh button.</p>
+<p>Figure 3: Rolled out dropdown</p>
+<img alt="../../_images/fields-dropdown.gif" class="flat align-center" src="../../_images/fields-dropdown.gif" />
+<p>Figure 4: Refreshable dropdown</p>
+<img alt="../../_images/fields-dropdown-refresh.gif" class="flat align-center" src="../../_images/fields-dropdown-refresh.gif" />
+</div>
+<div class="section" id="color-field">
+<h2>Color field<a class="headerlink" href="#color-field" title="Permalink to this headline">¶</a></h2>
+<p>A special type of a <strong>Value field</strong> containing a color in a HEX or RGB format. List of all supported color names is available <a class="reference external" href="https://htmlcolorcodes.com/color-names/">here</a>. A specific color name such as “red” or “blue” can also be used. Value can be copied by clicking the copy button that appears when you hover over the color field. The copied value can then be pasted only in another color field or a border style control. <br>
+A color can be chosen also through a color picker by clicking on an arrow next to a copy button or a colored square on the left side of the text field.</p>
+<p>Figure 5: Color field</p>
+<img alt="../../_images/color-picker.png" class="flat align-center" src="../../_images/color-picker.png" />
+<p>The color picker consist of two panels. A list of colors (Figure 6) and a color editor (Figure 7)</p>
+<p>Figure 6: Color picker - List of colors</p>
+<img alt="../../_images/color-picker-1.png" class="flat align-center" src="../../_images/color-picker-1.png" />
+<ol class="arabic simple">
+<li><p><strong>Currently selected color</strong> - In case color with transparency is selected, the transparency is visualized on the right side.</p></li>
+<li><p><strong>Search box</strong> - Colors can be filtered using the search box. When no search phrase is entered, all available colors are displayed. Otherwise only colors containing the entered phrase are displayed.</p></li>
+<li><p><strong>Default colors</strong> - Default colors.</p></li>
+<li><p><strong>Theme colors</strong> - Colors defined on applied theme. For more information, see <a class="reference external" href="../../administration-tool-guide/business-units/themes.html#colors">Theme colors</a> chapter.</p></li>
+<li><p><strong>Color pipette</strong> - By clicking this button, user can pick any color from the screen by simply clicking on the targeted pixel.</p></li>
+</ol>
+<p>Figure 7: Color picker - Color editor</p>
+<img alt="../../_images/color-picker-2.png" class="flat align-center" src="../../_images/color-picker-2.png" />
+<ol class="arabic simple">
+<li><p><strong>Currently selected color</strong> - In case color with transparency is selected, the transparency is visualized on the right side.</p></li>
+<li><p><strong>Color palette</strong> - Simply click or drag and drop to a desired color.</p></li>
+<li><p><strong>Transparency slider</strong> - Adjusting a transparency.</p></li>
+<li><p><strong>Color pipette</strong> - By clicking this button, user can pick any color from the screen by simply clicking on the targeted pixel.</p></li>
+</ol>
+</div>
+<div class="section" id="borders-style">
+<h2>Borders Style<a class="headerlink" href="#borders-style" title="Permalink to this headline">¶</a></h2>
+<p>The style, width and color settings for the segments borders. The style of the border can be set by clicking on one of the available styles from the list on the left side of the panel. Width of the border, defined in per mille of the layouts height, can be set by editing the width field. Color can be set in HEX or RGB format by editing a text field or by opening a color dropdown. Since the inheritance applies to a whole group of settings in this dropdown, changing any of these settings overrides the inheritance. A user can apply the inherited settings by clicking on an “Inherit” button. Value can be copied by clicking the copy button that appears when you hover over the dropdown. The copied value can then be pasted only in another border style field.</p>
+<p>Figure 8: Border Style</p>
+<img alt="../../_images/fields-border.png" class="align-center" src="../../_images/fields-border.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Uniform Border Style</strong></dt><dd><p>Whether border should be applied as a single border around the entire segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Border</strong></dt><dd><p><em>Available only if “Uniform Border Style” is enabled.</em> <br>
+The style, width and color of the border.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Top</strong></dt><dd><p><em>Available only if “Uniform Border Style” is disabled.</em> <br>
+The style, width and color of the top border.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Bottom</strong></dt><dd><p><em>Available only if “Uniform Border Style” is disabled.</em> <br>
+The style, width and color of the bottom border.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Left</strong></dt><dd><p><em>Available only if “Uniform Border Style” is disabled.</em> <br>
+The style, width and color of the left border.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Right</strong></dt><dd><p><em>Available only if “Uniform Border Style” is disabled.</em> <br>
+The style, width and color of the right border.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="text-style">
+<h2>Text Style<a class="headerlink" href="#text-style" title="Permalink to this headline">¶</a></h2>
+<p>A special type of a field, that defines the font to use and whether bold or italic text should be used. Value can be copied by clicking the copy button that appears when you hover over the dropdown. The copied value can then be pasted only in another text style field.</p>
+<p>Figure 9: Text style field</p>
+<img alt="../../_images/fields-font-style-0.png" class="flat align-center" src="../../_images/fields-font-style-0.png" />
+<p>The text style control consist of two panels. A list of predefined text styles on theme (Figure 10) and a text style editor (Figure 11).</p>
+<p>Figure 10: List of text styles</p>
+<img alt="../../_images/fields-font-style.png" class="flat align-center" src="../../_images/fields-font-style.png" />
+<ol class="arabic simple">
+<li><p><strong>Search box</strong> - Theme text styles can be filtered using the search box. When no search phrase is entered, all available text styles are displayed. Otherwise only text styles containing the entered phrase are displayed.</p></li>
+<li><p><strong>Theme text styles</strong> - Text styles defined on applied theme. For more information, see <a class="reference external" href="../../administration-tool-guide/business-units/themes.html#text-styles">Theme text styles</a> chapter.</p></li>
+</ol>
+<p>Figure 11: Text style editor</p>
+<img alt="../../_images/fields-font-style-2.png" class="flat align-center" src="../../_images/fields-font-style-2.png" />
+<ol class="arabic">
+<li><p><strong>Available Fonts</strong> - List of available fonts. Custom font can be defined by typing into the dropdown.</p></li>
+<li><p><strong>Bold/Italic/Underline</strong> - Whether bold, italic or underlined text should be used.</p></li>
+<li><p><strong>Custom CSS</strong> - Customize the text using a <a class="reference external" href="https://www.tutorialrepublic.com/css-reference/css3-properties.php">CSS properties</a>.</p>
+<p>Example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>text-decoration: underline;
+text-decoration-color: green;
+text-decoration-style: solid;
+</pre></div>
+</div>
+<p>Makes the text look like following:</p>
+<a class="flat reference internal image-reference" href="../../_images/fields-font-style-3.png"><img alt="../../_images/fields-font-style-3.png" class="flat align-center" src="../../_images/fields-font-style-3.png" style="width: 337.5px; height: 95.5px;" /></a>
+</li>
+</ol>
+<p>Since the inheritance applies to a whole group of settings in this dropdown, changing any of these settings overrides the inheritance. A user can apply the inherited settings by clicking on an “Inherit” button.</p>
+</div>
+<div class="section" id="shadow-style">
+<h2>Shadow Style<a class="headerlink" href="#shadow-style" title="Permalink to this headline">¶</a></h2>
+<p>A special type of a field, allowing user to adjust the shadow of the segment. Value can be copied by clicking the copy button that appears when you hover over the dropdown. The copied value can then be pasted only in another shadow style field. Since the inheritance applies to a whole group of settings in this dropdown, changing any of these settings overrides the inheritance. A user can apply the inherited settings by clicking on an “Inherit” button.</p>
+<p>Figure 12: Shadow style field</p>
+<img alt="../../_images/fields-shadow.png" class="flat align-center" src="../../_images/fields-shadow.png" />
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>Horizontal Offset</strong></dt><dd><p>Horizontal distance of the shadow from the segment. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Offset</strong></dt><dd><p>Vertical distance of the shadow from the segment. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Blur</strong></dt><dd><p>A shadows blur. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Spread</strong></dt><dd><p>Distance by which to expand a shadow in all directions. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="fields.html#color-field">Color field</a> <em>section</em>. <br>
+Color of the shadow.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="custom-display-format">
+<h2>Custom Display Format<a class="headerlink" href="#custom-display-format" title="Permalink to this headline">¶</a></h2>
+<p>When “Custom” is selected as a Display Format, custom format, in which value should be displayed can be defined.</p>
+<p>Figure 13: Custom display format field</p>
+<img alt="../../_images/fields-custom-display-format.png" class="flat align-center" src="../../_images/fields-custom-display-format.png" />
+<p>For more information see Microsoft documentation for <a class="reference external" href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">Numeric</a>, <a class="reference external" href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings">Timespan</a> or <a class="reference external" href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings">Date and Time</a> format <br></p>
+<div class="notice docutils container">
+<p>Example:</p>
+<p><strong>Numeric</strong></p>
+<ul class="simple">
+<li><p>Percent <cite>{0:P}</cite> -&gt; 100% <br></p></li>
+<li><p>Currency: <cite>{0:C}</cite> -&gt; $87</p></li>
+</ul>
+<p><strong>TimeSpan</strong></p>
+<ul class="simple">
+<li><p><cite>d’d ‘hh’:’mm’:’ss’.’fff</cite> -&gt; 1d 11:36:18.283</p></li>
+</ul>
+<p><strong>Date and Time</strong></p>
+<ul class="simple">
+<li><p><cite>{0:HH:mm:ss MM/dd/yyyy}</cite> -&gt; 12:36:22 10/03/2022 <br></p></li>
+<li><p><cite>{0:ddd MM/dd}</cite> -&gt; Sat 10/22</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="expression-builder">
+<h2>Expression builder<a class="headerlink" href="#expression-builder" title="Permalink to this headline">¶</a></h2>
+<p>Expression builder is used to compose expression which can contain DW placeholders. Expression can not be edited directly in field instead is editable through dialog which is opened by double clicking the field or clicking the
+pen icon.</p>
+<p>Dialog consists of text area, where expression is editable, and  list of available placeholders. Clicking any placeholder will add this placeholder, in correct format, to the text area at the cursor current position. Format of placeholders in expression is <strong>placeholder</strong>.</p>
+<div class="notice docutils container">
+<p>In case of using KPI custom calculation function, format of placeholders in expression is <strong>{{placeholder}}</strong>.</p>
+</div>
+<p>Figure 14: Expression field</p>
+<img alt="../../_images/fields-expression-field.png" class="flat align-center" src="../../_images/fields-expression-field.png" />
+<p>Figure 15: Expression dialog</p>
+<img alt="../../_images/fields-expression-dialog.png" class="flat align-center" src="../../_images/fields-expression-dialog.png" />
+<ol class="arabic simple">
+<li><p>Text area</p></li>
+<li><p>List of Placeholders</p></li>
+</ol>
+<p>Option, associated with expression builder, will be updated after clicking dialog’s <em>Update</em> button.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="groups.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Groups
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="lists.html">
+						Lists 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

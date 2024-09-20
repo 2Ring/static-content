@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Parameters &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Calculation Parameter Types" href="../calculation-parameter-types.html" />
+    <link rel="prev" title="Default Settings - Schema" href="columns/schema.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Parameters</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../connectors.html">Connectors</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-calculation-functions.html">Grid Calculation Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Parameters
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../business-units.html">Business Units</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../connectors.html">Connectors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities.html">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-calculation-functions.html">KPI Calculation Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-calculation-functions.html">Grid Calculation Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="columns.html">Columns</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calculation-parameter-types.html">Calculation Parameter Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import-functions.html">Import Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade.html">Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uninstallation.html">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="parameters">
+<h1>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h1>
+<p>Each Grid Calculation Function has a set of parameters that are accepted by calculations of that type.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p><em>Required</em> <br>
+The name of a parameter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Type</strong></dt><dd><p><em>Required</em> <br>
+Type of values this parameter is consuming. If one of enumerable types is selected <strong>Origin of Values</strong> has to be provided. For more information see <a class="reference internal" href="../calculation-parameter-types.html"><span class="doc">Calculation Parameter Types</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Metadata</strong></dt><dd><p>A user can view or edit a metadata.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Origin of Values</strong></dt><dd><p>Available options are:</p>
+<ul>
+<li><p>Values - Only values defined in <a class="reference internal" href="../calculation-parameter-types/values.html"><span class="doc">Values</span></a> can be used as parameter values</p></li>
+<li><p>Groups -  Only groups defined in <a class="reference internal" href="../../business-units/calculation-parameter-type-groups.html"><span class="doc">Groups</span></a> can be used as parameter values</p></li>
+<li><p>Mixed - Both values and groups can be used as parameter values</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Columns</strong></dt><dd><p>A column, based on which the the values are filtered.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Auxiliary Grouping Columns</strong></dt><dd><p><em>Available only if a filtering column is selected</em> <br>
+A list of columns, which can be used as an auxiliary columns for a grouping purpose.
+These columns, in addition to a column based on which the values are grouped, should also contain the name of the group.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="columns/schema.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Default Settings - Schema
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../calculation-parameter-types.html">
+						Calculation Parameter Types 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

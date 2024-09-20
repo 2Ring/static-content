@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Notification Channel Types &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Settings" href="notification-channel-types/settings.html" />
+    <link rel="prev" title="Notification Settings" href="../notification-settings.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Notification Channel Types</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../notification-settings.html">Notification Settings</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Notification Channel Types
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../business-units.html">Business Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../connectors.html">Connectors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../notification-settings.html">Notification Settings</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Notification Channel Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/settings.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/default-message-templates.html">Default Message Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/placeholders.html">Placeholders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/cisco-webex-teams.html">Cisco Webex Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/discord.html">Discord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/dw-layout-banner.html">DW Layout Banner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/mail.html">Mail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/microsoft-teams.html">Microsoft Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notification-channel-types/slack.html">Slack</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="notification-channel-types">
+<h1>Notification Channel Types<a class="headerlink" href="#notification-channel-types" title="Permalink to this headline">¶</a></h1>
+<p>Each Notification Channel has Type associated with it. Notification Channel Type defines available settings for Channel and also contains setup of request to external system represented by channel.</p>
+<div class="notice docutils container">
+<p>To setup notifications, a notification channel has to exist in the Business Unit and it’s type has to be set to one of the available notification channel types. Notifications are associated with the notification channel, not a notification channel type. For more information, see <a class="reference internal" href="../business-units/notification-channels.html"><span class="doc">Notification Channels</span></a> chapter.</p>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p><em>Required</em> <br>
+The name of a notification channel type.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Verb</strong></dt><dd><p><em>Required</em> <br>
+Action of the request.</p>
+<p>Possible values are <em>Post</em>, <em>Get</em>, <em>Put</em> and <em>Patch</em>.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Body Format</strong></dt><dd><p><em>Required</em> <br>
+The format of the data being sent.</p>
+<p>Possible values are <em>JSON</em>, <em>Text</em>, <em>XML</em> and <em>URL Encoded</em>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>URL</strong></dt><dd><p><em>Required</em> <br>
+Web service URL.a</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Ignore Certificate Errors</strong></dt><dd><p><em>Required</em> <br>
+Calling a web service hosted on https may cause errors if the certificate is not trusted on the server where DW is hosted. To ignore these errors, turn on ignore certificate errors.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Recipient Address Pattern</strong></dt><dd><p>Some notification channels have a predefined format for message recipients. For example email address have to contain &#64; character and domain. These requirements can be set here and will be validated when recipients will be created for this channel.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Header</strong></dt><dd><p>Http headers of the web service request. DW placeholders can be put into the header of message. List of all placeholders is available <a class="reference internal" href="notification-channel-types/placeholders.html"><span class="doc">here</span></a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Max Body Length</strong></dt><dd><p>Maximum number of characters message body can contain.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Body</strong></dt><dd><p>Http body of the web service request. DW placeholders can be put into the body of message. List of all placeholders is available <a class="reference internal" href="notification-channel-types/placeholders.html"><span class="doc">here</span></a>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/default-message-templates.html">Default Message Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/placeholders.html">Placeholders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/cisco-webex-teams.html">Cisco Webex Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/discord.html">Discord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/dw-layout-banner.html">DW Layout Banner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/mail.html">Mail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/microsoft-teams.html">Microsoft Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-channel-types/slack.html">Slack</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../notification-settings.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Notification Settings
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="notification-channel-types/settings.html">
+						Settings 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

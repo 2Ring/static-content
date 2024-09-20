@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Roles &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Business Units" href="business-units.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Roles</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../security.html">Security</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Roles
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../business-units.html">Business Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../connectors.html">Connectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../security.html">Security</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="business-units.html">Business Units</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Roles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="roles">
+<h1>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h1>
+<p><strong>Basic User</strong></p>
+<p>This type of user can only view Layout content of his or Shared Business Unit. Management of layouts and access to Administration Tool is not available.</p>
+<p><strong>Message Author</strong></p>
+<p>A Message Author is a basic user with permission to send messages to banners within the Business Unit in which they are defined.</p>
+<p><strong>Additional Reader</strong></p>
+<p>Additional Reader is a basic user with permission to view layouts within the Business Unit in which they are defined.</p>
+<p><strong>Business Unit Administrator</strong></p>
+<p>Every DW user belongs to exactly one Business Unit and can be administrator of any number of Business Units.
+Administrator of Business Unit can manage everything that belongs to Business Unit including but not limited to:</p>
+<ul class="simple">
+<li><p>Layouts</p></li>
+<li><p>Users</p></li>
+<li><p>Notifications</p></li>
+<li><p>Static content</p></li>
+<li><p>Themes</p></li>
+<li><p>Other Business Unit administrators of its Business Unit</p></li>
+</ul>
+<p>Business Unit administrator, however, can not:</p>
+<ul class="simple">
+<li><p>Create new Business Unit</p></li>
+<li><p>Delete its Business Unit</p></li>
+<li><p>Promote user to system or tenant administrator</p></li>
+<li><p>Manage Business Unit IP and Data Filters</p></li>
+</ul>
+<p><strong>Tenant Administrator</strong></p>
+<p>Tenant Administrator is a user who can manage every Business Unit except the System BU, including actions, that a Business Unit Administrator is not allowed to perform.</p>
+<p><strong>System Administrator</strong></p>
+<p>System administrator has full access to DW application without any restrictions.</p>
+<div class="section" id="permissions">
+<h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
+<p>The following table lists permissions for each panel in the Administration Tool based on the user’s role.</p>
+<div class="notice docutils container">
+<p>Admin abbreviation is used instead of administrator.</p>
+</div>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Table describing which panels are accessible to which DW roles.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Panel</p></th>
+<th class="head"><p>System admin</p></th>
+<th class="head"><p>Tenant admin</p></th>
+<th class="head"><p>BU admin</p></th>
+<th class="head"><p>Additional Reader</p></th>
+<th class="head"><p>Message Author</p></th>
+<th class="head"><p>Basic User</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Business Unit</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> Data Filters</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> Enums</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Aspect Ratios</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Display Formats</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Scroll Speeds</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> IP Filters</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Layout and Content Files Management</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Layout Viewing - Authenticated</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Layout Viewing - Anonymous</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> Users And Roles</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Users</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Additional Readers</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Message Authors</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Administrators</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> Calculation Parameter Type Groups</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> Fonts - Client</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> Fonts - Server</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> Notification Channels</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Settings</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Message Templates</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> Themes</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p>Connectors</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> Diagnostics</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> Filters</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> License</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> Settings</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> KPI Calculation Functions</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Parameters</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> Grid Calculation Functions</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Columns</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Parameters</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> Calculation Parameter Types</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Values</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p>Notification Settings</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> Notification Channel Types</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Settings</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Default Message Templates</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p>System Settings</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> Logging</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> Security</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Allowed Ip Addresses</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-even"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Entra Tenants</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+<tr class="row-odd"><td><p><span style="white-space:pre">&#9</span> <span style="white-space:pre">&#9</span> Okta Tenants</p></td>
+<td><p><em class="fa fa-check"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+<td><p><em class="fa fa-times"></em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="business-units.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Business Units
+					</a>
+				
+				
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cisco Webex Teams &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Discord" href="discord.html" />
+    <link rel="prev" title="Placeholders" href="placeholders.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Cisco Webex Teams</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../notification-settings.html">Notification Settings</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../notification-channel-types.html">Notification Channel Types</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Cisco Webex Teams
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../business-units.html">Business Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../connectors.html">Connectors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../notification-settings.html">Notification Settings</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notification-channel-types.html">Notification Channel Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="default-message-templates.html">Default Message Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="placeholders.html">Placeholders</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Cisco Webex Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="discord.html">Discord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dw-layout-banner.html">DW Layout Banner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mail.html">Mail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="microsoft-teams.html">Microsoft Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slack.html">Slack</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cisco-webex-teams">
+<h1>Cisco Webex Teams<a class="headerlink" href="#cisco-webex-teams" title="Permalink to this headline">¶</a></h1>
+<p><span class="heading-4">Channel Configuration</span></p>
+<ol class="arabic simple">
+<li><p>Create a new chat bot <a class="reference external" href="https://developer.webex.com/my-apps/new/bot">https://developer.webex.com/my-apps/new/bot</a></p></li>
+<li><p>Copy bot access token. Access token won’t be visible afterwards although it will be possible to re-generate it.</p></li>
+<li><p>Login to Cisco Webex Teams app or <a class="reference external" href="https://web.webex.com/spaces">https://web.webex.com/spaces</a> page.</p></li>
+<li><p>Add created chat bot to space to which notifications should be sent. Bot can be searched for by its username.</p></li>
+</ol>
+<p><span class="heading-4">DW Configuration</span></p>
+<p>DW notification channels are associated with specific bot. Bot access token has to be set as value of channel’s Access Token setting.</p>
+<p>Room/Space id is used as a recipient of a notification message. There are two ways to determine id of a room/space.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>in Cisco Webex Teams app</dt><dd><ol class="arabic simple">
+<li><p>Open room/space</p></li>
+<li><p>Copy information about room/space to clipboard <br> On Windows press Ctrl + Shift + K <br> On Mac press Option + Command + K</p></li>
+<li><p>Look for <strong>Space ID</strong> property in copied data</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>in Cisco Webex Teams web page</dt><dd><ol class="arabic simple">
+<li><p>Open room/space</p></li>
+<li><p>Copy last part of URL <a class="reference external" href="https://web.webex.com/spaces">https://web.webex.com/spaces</a>/{copy this part}.</p></li>
+<li><p>Copied text is base64 encoded so for it to be readable it has to be decoded. To do that use <a class="reference external" href="https://www.base64decode.org/">https://www.base64decode.org/</a> online tool.</p></li>
+<li><p><strong>Space ID</strong> is last URL fragment in decoded string. String will look something like <a class="reference external" href="https://conv-a.wbx2.com/conversation/api/v1/conversations">https://conv-a.wbx2.com/conversation/api/v1/conversations</a>/{SPACE ID}</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Format of a webex message can be found <a class="reference external" href="https://dev-preview.webex.com/formatting-messages.html">here</a>.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="placeholders.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Placeholders
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="discord.html">
+						Discord 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

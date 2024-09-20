@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Publishing/Discarding Changes &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Impersonating" href="impersonating.html" />
+    <link rel="prev" title="Item" href="editing-container-based-segments/ticker/item.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Publishing/Discarding Changes</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Publishing/Discarding Changes
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-calculation-based-segments.html">Editing Calculation Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Publishing/Discarding Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publish">Publish</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#publish-as">Publish As</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keep-draft">Keep Draft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discard">Discard</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="publishing-discarding-changes">
+<h1>Publishing/Discarding Changes<a class="headerlink" href="#publishing-discarding-changes" title="Permalink to this headline">¶</a></h1>
+<p>Changes made while editing are only visible in edit mode in the current session and are not yet available for other users.
+Layout preview is automatically updated while working in the Edit mode.</p>
+<div class="section" id="publish">
+<h2>Publish<a class="headerlink" href="#publish" title="Permalink to this headline">¶</a></h2>
+<p>By publishing the Layout, changes made in edit mode are applied globally. All clients displaying a Layout will reflect published changes automatically
+without the need to refresh or reload the page. Publish will override all changes made to the Layout by other users in the meantime. No merge is performed.
+Therefore it is advised, that a single Layout is not edited by more than one person at the same time.
+Clicking the <span class="button">Publish</span> button is followed by a confirmation prompt.</p>
+<p>Figure 1: Publish button</p>
+<img alt="../../_images/publishing-discarding-changes-publish-button.png" class="flat align-center" src="../../_images/publishing-discarding-changes-publish-button.png" />
+<div class="attention docutils container">
+<p>Invalid changes to the Layout prohibit publishing and disable the Publish button.</p>
+</div>
+</div>
+<div class="section" id="publish-as">
+<h2>Publish As<a class="headerlink" href="#publish-as" title="Permalink to this headline">¶</a></h2>
+<p>Publish As functionality allows user to publish the layout as a new one instead of saving changes to layout that is currently being edited. The layout can be published directly into any Business Unit and the original layout remains unaffected by changes made.</p>
+<p>Figure 2: Publish As button</p>
+<img alt="../../_images/publishing-discarding-changes-publish-as-button.png" class="flat align-center" src="../../_images/publishing-discarding-changes-publish-as-button.png" />
+<p>Clicking the <span class="button">Publish As</span> button is followed by a dialog with additional options:</p>
+<p>Figure 3: Publish As dialog</p>
+<img alt="../../_images/publishing-discarding-changes-publish-as-dialog.png" class="flat align-center" src="../../_images/publishing-discarding-changes-publish-as-dialog.png" />
+<ul>
+<li><dl>
+<dt><strong>Layout Name</strong></dt><dd><p>Name of the layout.</p>
+<div class="notice docutils container">
+<p>The layout name has to be unique within the targeted Business Unit.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Target Business Unit</strong></dt><dd><p>The Business Unit, where the Layout should be Published. Only Business Units that are available to the user are displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Keep Parameters</strong></dt><dd><p>Whether the calculation parameters in Layout should be kept and used in the newly published layout. If enabled, parameters of every calculation, located in the Layout are kept.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Keep Notification Message Recipients</strong></dt><dd><p>Whether the notification message recipients in Layout should be kept and used in the newly published layout.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>These options are available only when publishing Layout into another Business Unit:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Copy Parameter Groups</strong></dt><dd><p><em>Available only when Keep Parameters is enabled</em> <br>
+Whether parameter groups used in the layout should be copied. If a target Business Unit contains parameter group with the same name, this group is used instead of copying a new one. If the Parameter Group is copied into a different Business Unit, values are filtered based on the Business Unit’s configured filters.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy Notification Message Templates</strong></dt><dd><p>Whether notification message templates used by the Layout should be copied.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy Theme If does not exist</strong></dt><dd><p>Whether theme used by the Layout should also be copied if such theme does not already exist in the target Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Content Files</strong></dt><dd><p>Whether content files, such as audio files, pdf files or images used in the Layout should be copied. Available options are:</p>
+<ul>
+<li><dl>
+<dt><strong>Do Not Copy</strong></dt><dd><p>The content files will not be copied.</p>
+<div class="attention docutils container">
+<p>If Layout contains sources which references content from its own Business Unit, the copied Layout will be marked as invalid, unless default value is applicable. For administrators, invalid Layouts are marked red in the Layout list. Any other users are not able to see invalid Layouts in the Layout list.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy And Replace If Exists</strong></dt><dd><p>The content files will be copied. If there are already files with the same name but different size in the target Business Unit, they will be replaced.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy And Rename If Exists</strong></dt><dd><p>The content files will be copied. If there are already files with the same name but different size in the target Business Unit, copied files will be numbered (adding “(xyz)” at the end of the file name).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy If Not Exists</strong></dt><dd><p>The content files will be copied. If there are already files with the same name but different size in the target Business Unit, the content files will not be copied.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="attention docutils container">
+<p>Invalid changes to the Layout prohibit publishing and disable the Publish As button.</p>
+</div>
+<div class="attention docutils container">
+<p>After the layout is published as a new one, user is redirected into the edit mode of newly published layout, even if it is published into different Business Unit.</p>
+</div>
+</div>
+<div class="section" id="keep-draft">
+<h2>Keep Draft<a class="headerlink" href="#keep-draft" title="Permalink to this headline">¶</a></h2>
+<p>If there are some changes that should not be published yet, but user wants to keep the changes for further layout modification at different time, these changes can be kept as a layout draft. Layout can be kept as a draft by clicking on the <span class="button">Keep Draft and Close</span> button, or by selecting this option in the dialog, that is displayed when closing the editor without publishing changes.</p>
+<p>Figure 4: Keep Draft and Close button</p>
+<img alt="../../_images/publishing-discarding-changes-keep-draft-and-close-button.png" class="flat align-center" src="../../_images/publishing-discarding-changes-keep-draft-and-close-button.png" />
+<p>Users displaying the Layout still see the latest published version. Only user who made the original changes (created layout draft) can later continue editing it. <br></p>
+<p>If logged in user has a draft version of the layout stored, the layout is marked with <code class="docutils literal notranslate"><span class="pre">*</span></code> in the layout list.</p>
+<p>Figure 5: Layout with a draft in the layout list</p>
+<img alt="../../_images/publishing-discarding-changes-draft-layout-list.png" class="flat align-center" src="../../_images/publishing-discarding-changes-draft-layout-list.png" />
+<p>When layout with draft is opened for editing, user is asked whether he wants to edit existing draft or create a new draft. Also, draft details are provided in this dialog. <br></p>
+<p>Figure 6: Opening a Draft</p>
+<img alt="../../_images/publishing-discarding-changes-draft-open.png" class="flat align-center" src="../../_images/publishing-discarding-changes-draft-open.png" />
+<ul class="simple">
+<li><p>When the EDIT EXISTING DRAFT option is chosen, user continue editing the draft layout.</p></li>
+<li><p>When CREATE NEW DRAFT option is chosen, the existing draft is discarded and the latest published version of the layout is opened.</p></li>
+</ul>
+<p>If draft is of a layout which has never been published yet, it is slightly grayed out in the list.  While hoovering over the layout name, a tooltip with the notice, that the layout has not been published yet is displayed. When opening this layout, user is taken straight to the edit mode of the existing draft.</p>
+<p>Figure 7: Unpublished layout with a draft in the layout list</p>
+<img alt="../../_images/publishing-discarding-changes-draft-open2.png" class="flat align-center" src="../../_images/publishing-discarding-changes-draft-open2.png" />
+<div class="attention docutils container">
+<p>Drafts, in which no changes have been made for 14 days, are automatically deleted.</p>
+</div>
+<p>When closing an editor without publishing changes, a confirmation dialog will appear. In this dialog, user can publish, discard all changes made in the layout or keep the layout as a draft. Also, clicking on cancel button will return the user to the editor. <br>
+To keep the layout as a draft,  click <span class="button">KEEP DRAFT AND CLOSE</span></p>
+<p>Figure 8: Close Editor dialog</p>
+<img alt="../../_images/publishing-discarding-changes-close-editor-dialog.png" class="flat align-center" src="../../_images/publishing-discarding-changes-close-editor-dialog.png" />
+<div class="notice docutils container">
+<p>The draft is created even if the user leaves the editor in an unsupported way, such as closing the tab or a whole browser while editing a layout.</p>
+</div>
+</div>
+<div class="section" id="discard">
+<h2>Discard<a class="headerlink" href="#discard" title="Permalink to this headline">¶</a></h2>
+<p>Discard action discards all changes made in Edit mode. Discarding reverts the current Layout in editor to the latest
+published version. Discard may not revert to the version, at which the Edit mode has been entered if another user performs a Publish in the meantime, the latest published version may be different. Clicking the <span class="button">Discard</span> button is followed by a confirmation prompt. Discarding a newly created, and not yet published, Layout deletes it.</p>
+<p>Figure 9: Discard button</p>
+<img alt="../../_images/publishing-discarding-changes-discard-button.png" class="flat align-center" src="../../_images/publishing-discarding-changes-discard-button.png" />
+<div class="attention docutils container">
+<p>Discard action is irreversible.</p>
+</div>
+<div class="notice docutils container">
+<p>If no changes are present, publishing and discarding has no effect. Therefore no prompts are displayed.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="editing-container-based-segments/ticker/item.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Item
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="impersonating.html">
+						Impersonating 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Grid Calculation Functions &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Columns" href="grid-calculation-functions/columns.html" />
+    <link rel="prev" title="Default Settings - Schema" href="kpi-calculation-functions/schema.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Grid Calculation Functions</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../connectors.html">Connectors</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Grid Calculation Functions
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../business-units.html">Business Units</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../connectors.html">Connectors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capabilities.html">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kpi-calculation-functions.html">KPI Calculation Functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Grid Calculation Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="grid-calculation-functions/columns.html">Columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid-calculation-functions/parameters.html">Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="calculation-parameter-types.html">Calculation Parameter Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-functions.html">Import Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html">Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uninstallation.html">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="grid-calculation-functions">
+<h1>Grid Calculation Functions<a class="headerlink" href="#grid-calculation-functions" title="Permalink to this headline">¶</a></h1>
+<p>A Grid calculation function is a named method for calculating Grid values and is associated with a stored procedure in the connector database.</p>
+<p>Adding new Grid calculation functions to an existing 2Ring connectors is not possible but custom derived Grid columns can be created.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p><em>Required</em> <br>
+The name of the grid calculation function.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Display Name</strong></dt><dd><p>A name that appears as the segment title when the grid calculation function is selected as a source table. If the display name is not filled, the title is automatically set from the grid calculation function name in which all words are separated by a space and all non-alphanumeric characters are also replaced by a space.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Description</strong></dt><dd><p>A description of the Grid Calculation Functions which appears in dropdown tooltips in both Administration Application and Layout Editor.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Merge Columns</strong></dt><dd><p>Columns that uniquely identifies a record.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Default Columns</strong></dt><dd><p>Columns that are automatically added to the grid when the grid calculation function is selected in the layout editor.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Default Client Sorting Columns</strong></dt><dd><p>Columns that are automatically set as a sorting columns in ascending order when the grid calculation function is selected in the layout editor.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Total Row Label</strong></dt><dd><p>The label of the totals row.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Total Label in Column</strong></dt><dd><p>Column, in which the total label is displayed. Must be included in Default Columns.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Metadata</strong></dt><dd><p>A user can view or edit a metadata.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Capabilities</strong></dt><dd><p>Capabilities of the connector, defined during the installation.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Lock Built-In Columns</strong></dt><dd><p><em>Read-only</em> <br>
+If enabled, administrator can not add, delete or edit any built-in columns.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Lock Parameters</strong></dt><dd><p><em>Read-only</em> <br>
+If enabled, administrator can not add, delete or edit any grid calculation parameters.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Include Used Columns In Formula Hash</strong></dt><dd><p><em>Read-only</em> <br>
+Whether two grid-based sources differing only in the configured columns should each have its own calculation generated.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Support Intervals</strong></dt><dd><p><em>Read-only</em> <br>
+Whether connector supports interval based grid calculations. Similarly to interval based KPIs, this allows historical values to be displayed in grids.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Support Timezone</strong></dt><dd><p><em>Read-only</em> <br>
+Whether connector supports timezone configuration in grid calculations.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="grid-calculation-functions/columns.html">Columns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grid-calculation-functions/parameters.html">Parameters</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="kpi-calculation-functions/schema.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Default Settings - Schema
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="grid-calculation-functions/columns.html">
+						Columns 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

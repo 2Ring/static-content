@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Editing a Segment &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Copying" href="editing-segments/copying.html" />
+    <link rel="prev" title="Editing a Layout" href="../editing-layout.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Editing a Segment</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Editing a Segment
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Editing Segment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editing-segments/copying.html">Copying</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-segments/positioning-and-resizing-in-preview.html">Positioning and Resizing in Preview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-calculation-based-segments.html">Editing Calculation Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="editing-a-segment">
+<h1>Editing a Segment<a class="headerlink" href="#editing-a-segment" title="Permalink to this headline">¶</a></h1>
+<p>Layout Segment is the most essential part of the Layout. Segments display a specific type of data, depending on its type. Every Segment can be individually positioned and styled.</p>
+<p>Options of a Segment can be accessed also by clicking on a segment in the Layout preview. A selected Segment is highlighted in the Layout preview with an orange glow.</p>
+<p>Figure 1: Selected segment</p>
+<img alt="../../_images/editing-segment-segment-glow.gif" class="flat align-center" src="../../_images/editing-segment-segment-glow.gif" />
+<ul>
+<li><dl>
+<dt><strong>Type</strong></dt><dd><p><em>Required</em> <br>
+Determines, what type of data is displayed by the Segment.</p>
+<div class="notice docutils container">
+<p>After the type of a Segment is selected, a second section is displayed. This section contains all options related to the selected type.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Title</strong></dt><dd><p>Title of the Segment used in the Layout preview and also in the Segment list.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Appearance</strong></dt><dd><p>The style of the Segment.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Corner Radius</strong></dt><dd><p><em>Inheritable</em> <br>
+Corner radius of the segment can be adjusted with a slider or a text field for a custom value. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Margin</strong></dt><dd><p><em>Inheritable</em> <br>
+Margin of the segment can be adjusted with a slider or a text field for a custom value. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shadow</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../working-with-the-layout-editor/fields.html#shadow-style">Shadow Style</a> <em>section</em>. <br>
+Shadow of the segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Transparency</strong></dt><dd><p><em>Inheritable</em> <br>
+Transparency of the segment, measured in percents, can be adjusted with a slider or a text field for a custom value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Borders</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../working-with-the-layout-editor/fields.html#borders-style">Borders Style</a> <em>section</em>. <br>
+The style, width and color settings for the segments borders.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position and Size</strong></dt><dd><p>Coordinates and size of the Segment. All fields are measured in percents of the Layout’s size and number of snapping points. The Segment don’t have to be fully contained in the Layout. That means that not every coordinate field needs to contain a value between 0 and 100 or be in the range of snapping points.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Top</strong></dt><dd><p>Top boundary of the segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Left</strong></dt><dd><p>Left boundary of the segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of the segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Width</strong></dt><dd><p>Width of the segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Lock Aspect Ratio</strong></dt><dd><p>Whether aspect ratio of the source should be locked. For <em>Image</em> source, aspect ratio is locked by default. For <em>Nested Layout</em> and <em>Nested Widget</em>, aspect ratio is locked by default only in case if the parent Layout/Widget has aspect ratio different than UNLOCKED.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Native Aspect Ratio</strong></dt><dd><p><em>Available only for “Image”, “Nested Layout” and “Nested Widget” sources</em>. <br>
+Native aspect ratio of the source. This is only informative field. Native aspect ratio can be restored by clicking on the “Restore Native Aspect Ratio” button.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Title and Paging Info</strong></dt><dd><p>Settings for the title and paging info.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Visibility</strong></dt><dd><p><em>Inheritable</em> <br>
+Whether the title should be visible.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Content</strong></dt><dd><p><em>Inheritable</em> <br>
+Content of the title. <br>
+Available options are <em>Title</em>, <em>Paging Info</em> and <em>Title and Paging Info</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p><em>Inheritable</em> <br>
+Position of the title. If <em>Float on Top</em> or <em>Float on Bottom</em> is selected, title floats over the segment which may cause overlapping.   <br>
+Available options are <em>Float on Top</em>, <em>Float on Bottom</em>, <em>Top</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p><em>Inheritable</em> <br>
+Height of the title, that is measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p><em>Inheritable</em> <br>
+Position of the text on horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p><em>Available only if “Left” or “Right” is selected as horizontal alignment.</em> <br>
+<em>Inheritable</em> <br>
+The size of a padding between the Title text and Title’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Render as Link</strong></dt><dd><p>Renders the title as a hyperlink to another layout. The targeted layout opens in a new tab.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold, italic or underlined text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Layout</strong></dt><dd><p>A targeted layout, that the user is navigated into after clicking on the title.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Query String Parameters</strong></dt><dd><p>Parameters, that will be added to the targeted layouts URL. Parameters are used for passing values to dynamic filters in grid like sources. For more information about dynamic filters and URL parameters, see <a class="reference external" href="editing-calculation-based-segments/editing-calculation-grid/dynamic-filter.html#filtering-using-url-parameters">Filtering using URL parameters</a> chapter.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>Name of the query string parameter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value</strong></dt><dd><p>Value of the parameter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>If multiple Segments are overlapping, the order is determined by their order in the Layout list. This order can be manually changed, by dragging an item in the list.</p>
+<p>Figure 2: Segments overlapping</p>
+<img alt="../../_images/editing-segment-segment-overlap.gif" class="flat align-center" src="../../_images/editing-segment-segment-overlap.gif" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="editing-segments/copying.html">Copying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-segments/positioning-and-resizing-in-preview.html">Positioning and Resizing in Preview</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../editing-layout.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Editing a Layout
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="editing-segments/copying.html">
+						Copying 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

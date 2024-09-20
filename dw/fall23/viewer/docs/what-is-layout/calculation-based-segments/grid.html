@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Grid &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Bar/Line Chart - Grid" href="bar-line-chart-grid.html" />
+    <link rel="prev" title="Pie Chart" href="pie-chart.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Grid</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../what-is-layout.html">What is a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../calculation-based-segments.html">Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Grid
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../simple-segments.html">Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../calculation-based-segments.html">Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../container-based-segments.html">Container Based Segments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="grid">
+<h1>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h1>
+<p>A Grid displays dynamically calculated data in tabular fashion. A Grid is a segment, that usually displays a larger amounts of data.
+To reduce the amount of space to fully display Grid’s content, the paging functionality is available. A Grid can be configured to display only a certain number of
+rows at once and automatically page through pages at configured interval.</p>
+<p>Rows can be sorted by any number of columns using server side or/and client side sorting. The sorting column is marked with an arrow that indicates the direction of sorting.</p>
+<p>Figure 1: Grid with client sorting applied</p>
+<img alt="../../../_images/grid.png" class="flat align-center" src="../../../_images/grid.png" />
+<p>Configured client side sorting can be overriden in real-time using real-time client sorting. For more information, see <a class="reference external" href="../../editing-layout/editing-calculation-based-segments/grid/realtime-sorting-and-filtering.html">Real-Time Client Sorting</a> chapter.</p>
+<p>A grid can also be configured to display total values for each column in the grid or just for the certain column. Colors and text style in this row can be configured independently of the others.</p>
+<p>Figure 2: Grid with total values row</p>
+<img alt="../../../_images/grid-totals.png" class="flat align-center" src="../../../_images/grid-totals.png" />
+<p>Numeric values, contained in the grid are usually displayed in the form of a simple text. Additionally multiple
+other, more graphical presentation types, can be chosen. For more information about presentation types, see <a class="reference internal" href="kpi.html"><span class="doc">KPI</span></a> chapter.</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>Alphanumeric</strong></dt><dd><p>The value is presented as a pure text, without any additional graphical elements.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore</strong></dt><dd><p>The value is enveloped in a colored circle. The circle can change its color, depending on the value. For example by turning red, when the value is considered bad. The semaphore is used, when the state is more important than the value itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle</strong></dt><dd><p>The value is accompanied by a circle indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle</strong></dt><dd><p>The value is accompanied by a semi-circle indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal/Vertical Bar</strong></dt><dd><p>The value is accompanied by a rectangular indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Image</strong></dt><dd><p>An image is applied.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Static Color</strong></dt><dd><p>A static color is applied.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Conditional styles can be configured for each column, that will change the color of the column values. These conditional styles can represent whether the result has met its requirements. For more information about conditional styles see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/grid/conditional-styles.html"><span class="doc">Conditional Styles</span></a> chapter.</p>
+<p>Figure 3: Grid with conditional styles set</p>
+<img alt="../../../_images/grid-ranges.png" class="flat align-center" src="../../../_images/grid-ranges.png" />
+<p>Values, that that are considered bad, can be further brought to the user’s attention by using the alerts. The following types of alerts are available:</p>
+<ul class="simple">
+<li><p>Visual – the value blinks with configured color.</p></li>
+<li><p>Audible – an audio alert is played.</p></li>
+</ul>
+<div class="notice docutils container">
+<p>Audible alerts are always automatically played. In case the autoplay function does not work properly, see the <a class="reference external" href="../../../troubleshooting.html#media-autoplay-not-working">Media autoplay not working</a> chapter.</p>
+</div>
+<p>Both visual and audible alerts can be configured at the same time. This allows the user to easily see the most important information, when lots of data is displayed.</p>
+<p>In addition to column conditional styles also row conditions can be created, to highlight rows, that meet configured requirements.</p>
+<p>Figure 4: Grid with highlighting rules</p>
+<img alt="../../../_images/grid-conditional-style.png" class="flat align-center" src="../../../_images/grid-conditional-style.png" />
+<p>For visual separation of displayed data, borders can be configured for both headers and value area separately. User can choose between multiple styles, adjust the width of the border and set a different color for horizontal/vertical borders.</p>
+<p>Figure 5: Grid with borders</p>
+<img alt="../../../_images/grid-borders.png" class="flat align-center" src="../../../_images/grid-borders.png" />
+<p>Also, grid can be configured to alternate colors of consecutive rows.</p>
+<p>Figure 6: Grid with alternating row colors</p>
+<img alt="../../../_images/grid-alternate.png" class="flat align-center" src="../../../_images/grid-alternate.png" />
+<p>For more information about editing this segment, see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/grid.html"><span class="doc">Grid</span></a> chapter.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="pie-chart.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Pie Chart
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="bar-line-chart-grid.html">
+						Bar/Line Chart - Grid 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

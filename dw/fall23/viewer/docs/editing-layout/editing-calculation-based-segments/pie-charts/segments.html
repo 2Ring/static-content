@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Segment &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/fontawesome.min.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/main.js"></script>
+    <script src="../../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Row Filters" href="row-filters.html" />
+    <link rel="prev" title="Pie Chart" href="../pie-chart.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../../index.html" id="headerImgWrapper">
+			<img src="../../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Segment</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../pie-chart.html">Pie Chart</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Segment
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../pie-chart.html">Pie Chart</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Segments</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="row-filters.html">Row Filters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="segment">
+<h1>Segment<a class="headerlink" href="#segment" title="Permalink to this headline">¶</a></h1>
+<p>Pie Chart segment represent a calculation. Each segment is represented in the chart by a corresponding portion of the whole circle.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>External Id</strong></dt><dd><p><em>Only available if Shared Calculation is not used</em> <br>
+An unique id, that is used to access this Segment via the API. Using this id, the Segment can be used by external applications, such as 2Ring Gadgets. The External Id has to be unique across the entire Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Title</strong></dt><dd><p>The title of the segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation</strong></dt><dd><p>For calculation options, see <a class="reference internal" href="../editing-scalar-valued-calculations.html"><span class="doc">Editing Scalar-Valued Calculations</span></a> chapter.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Use Shared Calculation</strong></dt><dd><p>Whether shared calculation should be used for generating results.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shared Calculation</strong></dt><dd><p><em>Available only if “Use Shared Calculation” is enabled</em> <br>
+A shared calculation to be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Column</strong></dt><dd><p><em>Available only if Grid Shared Calculation is used and Shared Calculation is selected</em> <br>
+Specifies a column from which the value should be displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Row Filter</strong></dt><dd><p><em>Available only if Grid Shared Calculation is used and Shared Calculation is selected</em> <br>
+Row Filter is used to determine a specific row from the Grid Shared Calculation that should be used. For more information see <a class="reference internal" href="row-filters.html"><span class="doc">Row Filters</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Use Test Value</strong></dt><dd><p>Test value is used to force the pie chart segment to display a user defined value.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Value</strong></dt><dd><p>A value to be displayed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Appearance</strong></dt><dd><p>The style of a Segment</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#color-field">Color field</a> <em>section</em>. <br>
+Background color of the pie chart segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Label Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#color-field">Color field</a> <em>section</em>. <br>
+Color of the pie chart segment’s label.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show In Legend</strong></dt><dd><p>Whether the segment should be displayed in the legend.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="row-filters.html">Row Filters</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../pie-chart.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Pie Chart
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="row-filters.html">
+						Row Filters 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

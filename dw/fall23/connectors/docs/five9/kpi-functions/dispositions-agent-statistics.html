@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.15. Dispositions Agent Statistics &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.16. Dispositions Autodial Campaign" href="dispositions-autodial-campaign.html" />
+    <link rel="prev" title="1.14. Autodial Campaign" href="autodial-campaign.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.15. </span>Dispositions Agent Statistics</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../five9.html">Five9</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">1. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.15. </span>Dispositions Agent Statistics
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../five9.html">Five9</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="acd-status.html">1.1. ACD Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-chat.html">1.2. ACD Status Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-email.html">1.3. ACD Status Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-sms.html">1.4. ACD Status SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-social.html">1.5. ACD Status Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-text.html">1.6. ACD Status Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">1.7. Agent State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">1.8. Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-chat.html">1.9. Agent Statistics Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-email.html">1.10. Agent Statistics Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-sms.html">1.11. Agent Statistics SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-social.html">1.12. Agent Statistics Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-text.html">1.13. Agent Statistics Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autodial-campaign.html">1.14. Autodial Campaign</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.15. Dispositions Agent Statistics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-3rd-party-transfer">1.15.1. Dispositions Agent Statistics - 3rd Party Transfer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-abandon">1.15.2. Dispositions Agent Statistics - Abandon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-agent-error">1.15.3. Dispositions Agent Statistics - Agent Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-answering-machine">1.15.4. Dispositions Agent Statistics - Answering Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-busy">1.15.5. Dispositions Agent Statistics - Busy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-caller-disconnected">1.15.6. Dispositions Agent Statistics - Caller Disconnected</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-declined">1.15.7. Dispositions Agent Statistics - Declined</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-dial-error">1.15.8. Dispositions Agent Statistics - Dial Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-do-not-call">1.15.9. Dispositions Agent Statistics - Do Not Call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-duplicated-callback-request">1.15.10. Dispositions Agent Statistics - Duplicated Callback Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-fax">1.15.11. Dispositions Agent Statistics - Fax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-force-stop">1.15.12. Dispositions Agent Statistics - Force Stop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-forced-logout">1.15.13. Dispositions Agent Statistics - Forced Logout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-forward-participant">1.15.14. Dispositions Agent Statistics - Forward Participant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-forwarded">1.15.15. Dispositions Agent Statistics - Forwarded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-hangup">1.15.16. Dispositions Agent Statistics - Hangup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-hardware-timeout">1.15.17. Dispositions Agent Statistics - Hardware Timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-internal-call">1.15.18. Dispositions Agent Statistics - Internal Call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-no-answer">1.15.19. Dispositions Agent Statistics - No Answer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-no-disposition">1.15.20. Dispositions Agent Statistics - No Disposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-no-response-from-caller">1.15.21. Dispositions Agent Statistics - No Response From Caller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-operator-intercept">1.15.22. Dispositions Agent Statistics - Operator Intercept</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-parked">1.15.23. Dispositions Agent Statistics - Parked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-queue-callback-assigned">1.15.24. Dispositions Agent Statistics - Queue Callback Assigned</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-queue-callback-timeout">1.15.25. Dispositions Agent Statistics - Queue Callback Timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-recycle">1.15.26. Dispositions Agent Statistics - Recycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-resource-unavailable">1.15.27. Dispositions Agent Statistics - Resource Unavailable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-ringback">1.15.28. Dispositions Agent Statistics - Ringback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-sent-to-voicemail">1.15.29. Dispositions Agent Statistics - Sent To Voicemail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-spam">1.15.30. Dispositions Agent Statistics - Spam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-station-session">1.15.31. Dispositions Agent Statistics - Station Session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-system-error">1.15.32. Dispositions Agent Statistics - System Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-system-shutdown">1.15.33. Dispositions Agent Statistics - System Shutdown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-timeout">1.15.34. Dispositions Agent Statistics - Timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-transferred-to-3rd-party">1.15.35. Dispositions Agent Statistics - Transferred To 3rd Party</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-unknown-connection">1.15.36. Dispositions Agent Statistics - Unknown Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-voicemail-dump">1.15.37. Dispositions Agent Statistics - Voicemail Dump</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-voicemail-processed">1.15.38. Dispositions Agent Statistics - Voicemail Processed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dispositions-agent-statistics-voicemail-returned">1.15.39. Dispositions Agent Statistics - Voicemail Returned</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-autodial-campaign.html">1.16. Dispositions Autodial Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-inbound-campaign.html">1.17. Dispositions Inbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-outbound-campaign.html">1.18. Dispositions Outbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign.html">1.19. Inbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-chat.html">1.20. Inbound Campaign Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-email.html">1.21. Inbound Campaign Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-sms.html">1.22. Inbound Campaign SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-social.html">1.23. Inbound Campaign Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outbound-campaign.html">1.24. Outbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outbound-campaign-manager.html">1.25. Outbound Campaign Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dispositions-agent-statistics">
+<h1><span class="section-number">1.15. </span>Dispositions Agent Statistics<a class="headerlink" href="#dispositions-agent-statistics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dispositions-agent-statistics-3rd-party-transfer">
+<h2><span class="section-number">1.15.1. </span>Dispositions Agent Statistics - 3rd Party Transfer<a class="headerlink" href="#dispositions-agent-statistics-3rd-party-transfer" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -24</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-abandon">
+<h2><span class="section-number">1.15.2. </span>Dispositions Agent Statistics - Abandon<a class="headerlink" href="#dispositions-agent-statistics-abandon" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -5</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-agent-error">
+<h2><span class="section-number">1.15.3. </span>Dispositions Agent Statistics - Agent Error<a class="headerlink" href="#dispositions-agent-statistics-agent-error" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -12</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-answering-machine">
+<h2><span class="section-number">1.15.4. </span>Dispositions Agent Statistics - Answering Machine<a class="headerlink" href="#dispositions-agent-statistics-answering-machine" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -7</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-busy">
+<h2><span class="section-number">1.15.5. </span>Dispositions Agent Statistics - Busy<a class="headerlink" href="#dispositions-agent-statistics-busy" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -3</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-caller-disconnected">
+<h2><span class="section-number">1.15.6. </span>Dispositions Agent Statistics - Caller Disconnected<a class="headerlink" href="#dispositions-agent-statistics-caller-disconnected" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -17</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-declined">
+<h2><span class="section-number">1.15.7. </span>Dispositions Agent Statistics - Declined<a class="headerlink" href="#dispositions-agent-statistics-declined" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -36</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-dial-error">
+<h2><span class="section-number">1.15.8. </span>Dispositions Agent Statistics - Dial Error<a class="headerlink" href="#dispositions-agent-statistics-dial-error" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -2</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-do-not-call">
+<h2><span class="section-number">1.15.9. </span>Dispositions Agent Statistics - Do Not Call<a class="headerlink" href="#dispositions-agent-statistics-do-not-call" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -8</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-duplicated-callback-request">
+<h2><span class="section-number">1.15.10. </span>Dispositions Agent Statistics - Duplicated Callback Request<a class="headerlink" href="#dispositions-agent-statistics-duplicated-callback-request" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -42</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-fax">
+<h2><span class="section-number">1.15.11. </span>Dispositions Agent Statistics - Fax<a class="headerlink" href="#dispositions-agent-statistics-fax" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -6</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-force-stop">
+<h2><span class="section-number">1.15.12. </span>Dispositions Agent Statistics - Force Stop<a class="headerlink" href="#dispositions-agent-statistics-force-stop" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -34</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-forced-logout">
+<h2><span class="section-number">1.15.13. </span>Dispositions Agent Statistics - Forced Logout<a class="headerlink" href="#dispositions-agent-statistics-forced-logout" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -39</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-forward-participant">
+<h2><span class="section-number">1.15.14. </span>Dispositions Agent Statistics - Forward Participant<a class="headerlink" href="#dispositions-agent-statistics-forward-participant" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -31</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-forwarded">
+<h2><span class="section-number">1.15.15. </span>Dispositions Agent Statistics - Forwarded<a class="headerlink" href="#dispositions-agent-statistics-forwarded" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -32</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-hangup">
+<h2><span class="section-number">1.15.16. </span>Dispositions Agent Statistics - Hangup<a class="headerlink" href="#dispositions-agent-statistics-hangup" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -26</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-hardware-timeout">
+<h2><span class="section-number">1.15.17. </span>Dispositions Agent Statistics - Hardware Timeout<a class="headerlink" href="#dispositions-agent-statistics-hardware-timeout" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -25</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-internal-call">
+<h2><span class="section-number">1.15.18. </span>Dispositions Agent Statistics - Internal Call<a class="headerlink" href="#dispositions-agent-statistics-internal-call" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -33</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-no-answer">
+<h2><span class="section-number">1.15.19. </span>Dispositions Agent Statistics - No Answer<a class="headerlink" href="#dispositions-agent-statistics-no-answer" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -4</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-no-disposition">
+<h2><span class="section-number">1.15.20. </span>Dispositions Agent Statistics - No Disposition<a class="headerlink" href="#dispositions-agent-statistics-no-disposition" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: 0</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-no-response-from-caller">
+<h2><span class="section-number">1.15.21. </span>Dispositions Agent Statistics - No Response From Caller<a class="headerlink" href="#dispositions-agent-statistics-no-response-from-caller" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -19</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-operator-intercept">
+<h2><span class="section-number">1.15.22. </span>Dispositions Agent Statistics - Operator Intercept<a class="headerlink" href="#dispositions-agent-statistics-operator-intercept" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -21</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-parked">
+<h2><span class="section-number">1.15.23. </span>Dispositions Agent Statistics - Parked<a class="headerlink" href="#dispositions-agent-statistics-parked" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -16</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-queue-callback-assigned">
+<h2><span class="section-number">1.15.24. </span>Dispositions Agent Statistics - Queue Callback Assigned<a class="headerlink" href="#dispositions-agent-statistics-queue-callback-assigned" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -40</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-queue-callback-timeout">
+<h2><span class="section-number">1.15.25. </span>Dispositions Agent Statistics - Queue Callback Timeout<a class="headerlink" href="#dispositions-agent-statistics-queue-callback-timeout" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -41</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-recycle">
+<h2><span class="section-number">1.15.26. </span>Dispositions Agent Statistics - Recycle<a class="headerlink" href="#dispositions-agent-statistics-recycle" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -9</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-resource-unavailable">
+<h2><span class="section-number">1.15.27. </span>Dispositions Agent Statistics - Resource Unavailable<a class="headerlink" href="#dispositions-agent-statistics-resource-unavailable" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -35</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-ringback">
+<h2><span class="section-number">1.15.28. </span>Dispositions Agent Statistics - Ringback<a class="headerlink" href="#dispositions-agent-statistics-ringback" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -38</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-sent-to-voicemail">
+<h2><span class="section-number">1.15.29. </span>Dispositions Agent Statistics - Sent To Voicemail<a class="headerlink" href="#dispositions-agent-statistics-sent-to-voicemail" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -20</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-spam">
+<h2><span class="section-number">1.15.30. </span>Dispositions Agent Statistics - Spam<a class="headerlink" href="#dispositions-agent-statistics-spam" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -43</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-station-session">
+<h2><span class="section-number">1.15.31. </span>Dispositions Agent Statistics - Station Session<a class="headerlink" href="#dispositions-agent-statistics-station-session" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -22</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-system-error">
+<h2><span class="section-number">1.15.32. </span>Dispositions Agent Statistics - System Error<a class="headerlink" href="#dispositions-agent-statistics-system-error" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -1</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-system-shutdown">
+<h2><span class="section-number">1.15.33. </span>Dispositions Agent Statistics - System Shutdown<a class="headerlink" href="#dispositions-agent-statistics-system-shutdown" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -15</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-timeout">
+<h2><span class="section-number">1.15.34. </span>Dispositions Agent Statistics - Timeout<a class="headerlink" href="#dispositions-agent-statistics-timeout" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -37</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-transferred-to-3rd-party">
+<h2><span class="section-number">1.15.35. </span>Dispositions Agent Statistics - Transferred To 3rd Party<a class="headerlink" href="#dispositions-agent-statistics-transferred-to-3rd-party" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -23</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-unknown-connection">
+<h2><span class="section-number">1.15.36. </span>Dispositions Agent Statistics - Unknown Connection<a class="headerlink" href="#dispositions-agent-statistics-unknown-connection" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -18</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-voicemail-dump">
+<h2><span class="section-number">1.15.37. </span>Dispositions Agent Statistics - Voicemail Dump<a class="headerlink" href="#dispositions-agent-statistics-voicemail-dump" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -29</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-voicemail-processed">
+<h2><span class="section-number">1.15.38. </span>Dispositions Agent Statistics - Voicemail Processed<a class="headerlink" href="#dispositions-agent-statistics-voicemail-processed" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -27</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="dispositions-agent-statistics-voicemail-returned">
+<h2><span class="section-number">1.15.39. </span>Dispositions Agent Statistics - Voicemail Returned<a class="headerlink" href="#dispositions-agent-statistics-voicemail-returned" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: AGENT_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: dispositions</p>
+<p><strong>DispositionId</strong>: -30</p>
+<p><strong>Parameters</strong>: Agents, Agent Groups, Skills</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="autodial-campaign.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.14. </span>Autodial Campaign
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="dispositions-autodial-campaign.html">
+						<span class="section-number">1.16. </span>Dispositions Autodial Campaign 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

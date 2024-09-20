@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>3.16. User Observations - Active (UO_A) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="3.17. User Observations - Passive (UO_P)" href="user-observations-p.html" />
+    <link rel="prev" title="3.15. User Aggregates By Media Type - Active (UA_A)" href="user-aggregates-by-media-type.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">3.16. </span>User Observations - Active (UO_A)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">3. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">3.16. </span>User Observations - Active (UO_A)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">3.1. Agent Info - Passive (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">3.2. Agent State - Active (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">3.3. Campaign Diagnostics - Passive (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">3.4. Campaign Progress - Active (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">3.5. Campaign Stats - Passive (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type.html">3.6. Conversation Aggregates By Media Type - Passive (CA_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-mediatype-and-queue.html">3.7. Conversation Aggregates By Media Type And Queue - Active (CAByQ_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-mediatype-and-wrap-up.html">3.8. Conversation Aggregates By Media Type And Wrap Up - Active (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type-a.html">3.9. Flow Aggregates By Media Type - Active (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type-p.html">3.10. Flow Aggregates By Media Type - Passive (FA_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">3.11. Flow Observations By Media Type - Active (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type-a.html">3.12. Queue Observations By Media Type - Active (QOByM_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type-p.html">3.13. Queue Observations By Media Type - Passive (QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">3.14. Queue Observations - Active (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">3.15. User Aggregates By Media Type - Active (UA_A)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.16. User Observations - Active (UO_A)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#merge-columns">3.16.1. Merge Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#columns">3.16.2. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">3.16.3. Calculation Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">3.17. User Observations - Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">3.18. User Status Aggregates - Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">3.19. User Status Aggregates - Passive (USA_P)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="user-observations-active-uo-a">
+<h1><span class="section-number">3.16. </span>User Observations - Active (UO_A)<a class="headerlink" href="#user-observations-active-uo-a" title="Permalink to this headline">¶</a></h1>
+<div class="notice docutils container">
+<p>This grid only supports the REALTIME interval.</p>
+</div>
+<div class="section" id="merge-columns">
+<h2><span class="section-number">3.16.1. </span>Merge Columns<a class="headerlink" href="#merge-columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>UserId</strong> - Agent’s user ID.</p></li>
+</ul>
+</div>
+<div class="section" id="columns">
+<h2><span class="section-number">3.16.2. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>ActiveQueuesCount</strong> - Number of active queues.</p></li>
+<li><p><strong>MemberQueuesCount</strong> - Observed number of queues for a user.</p></li>
+<li><p><strong>UserName</strong> - Name of a user.</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">3.16.3. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The Grid function has this optional parameter:</p>
+<ul class="simple">
+<li><p><strong>Queue</strong></p></li>
+<li><p><strong>User</strong></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="user-aggregates-by-media-type.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">3.15. </span>User Aggregates By Media Type - Active (UA_A)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="user-observations-p.html">
+						<span class="section-number">3.17. </span>User Observations - Passive (UO_P) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

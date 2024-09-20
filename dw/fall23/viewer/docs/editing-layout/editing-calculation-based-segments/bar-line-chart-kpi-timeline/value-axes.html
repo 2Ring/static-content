@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Value Axes &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/fontawesome.min.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/main.js"></script>
+    <script src="../../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Thresholds" href="value-axes/thresholds.html" />
+    <link rel="prev" title="Bar/Line Chart - Kpi Timeline" href="../bar-line-chart-kpi-timeline.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../../index.html" id="headerImgWrapper">
+			<img src="../../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Value Axes</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../bar-line-chart-kpi-timeline.html">Bar/Line Chart - Kpi Timeline</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Value Axes
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Value Axes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="value-axes/thresholds.html">Thresholds</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="series.html">Series</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="value-axes">
+<h1>Value Axes<a class="headerlink" href="#value-axes" title="Permalink to this headline">¶</a></h1>
+<p>The axis determines how the values of the series are displayed.</p>
+<div class="notice docutils container">
+<p>The Value Axes list is orderable. When multiple axes are displayed and positioned on the same side of the chart, their order defines in which order will they be shown. The higher the axis is in the list the closer to the chart it will be displayed.</p>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Title</strong></dt><dd><p><em>Required</em> <br>
+Title of the Value Axis used as its label in chart and also in list of Value Axes.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Axis</strong></dt><dd><p>Whether the axis should be displayed in chart.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p><em>Required</em> <br>
+Position of the axis within the plot area.
+<br> Available options are <em>Left</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Grid Lines</strong></dt><dd><p>Whether the lines, separating the labels on the axis should be displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Title</strong></dt><dd><p>Whether axis title should be displayed.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+<em>Title does not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p><em>Inheritable</em> <br>
+Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Labels</strong></dt><dd><p><em>Required</em> <br>
+When enabled, axis labels are displayed along the axis in regular intervals.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Display Format</strong></dt><dd><p><em>Required</em> <br>
+Label’s format. When Raw is selected, the labels are displayed without any transformation.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Display Format</strong></dt><dd><p><em>Available only when “Custom” is selected as a Display Format</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#custom-display-format">Custom Display Format</a> <em>section</em>. <br>
+Custom format of the label.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+<em>Labels do not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p><em>Inheritable</em> <br>
+Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Choose Range Manually</strong></dt><dd><p>When disabled, the axis range is automatically adjusted, based on displayed values.
+<br> When enabled, the axis range has to be manually set.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Min</strong></dt><dd><p>Minimum of the range.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Max</strong></dt><dd><p>Maximum of the range.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Thresholds</strong></dt><dd><p>Thresholds are graphically represented by customizable horizontal line across whole chart area. For more information see <a class="reference internal" href="value-axes/thresholds.html"><span class="doc">Thresholds</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="value-axes/thresholds.html">Thresholds</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../bar-line-chart-kpi-timeline.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Bar/Line Chart - Kpi Timeline
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="value-axes/thresholds.html">
+						Thresholds 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

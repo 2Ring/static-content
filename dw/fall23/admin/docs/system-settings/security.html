@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Security &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Security" href="../security.html" />
+    <link rel="prev" title="Logging" href="logging.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Security</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../system-settings.html">System Settings</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Security
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../business-units.html">Business Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../connectors.html">Connectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../system-settings.html">System Settings</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Security</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="security">
+<h1>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h1>
+<img alt="../../_images/security.png" class="flat align-center" src="../../_images/security.png" />
+<ul>
+<li><dl class="simple">
+<dt><strong>Allow Anonymous Layouts</strong></dt><dd><p>Allows navigation to the Layout, without the need to login first. Affects only a direct navigation using the Short URL.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Enable Admin Tool IP Filtering</strong></dt><dd><p>Whether access to the Administration Tool is restricted to specific IP addresses.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Allowed IP Addresses</strong></dt><dd><p>List of IP addresses that are allowed to access the Administration Tool.</p>
+<div class="notice docutils container">
+<p>A dialog, with the option to add the logged-in user’s IP address to the list of allowed IP addresses appears in cases, where action requested by the user would result in loosing access to Administration Tool. This is a safeguard to prevent accidental removal of the access to the Administration Tool.</p>
+</div>
+<div class="notice docutils container">
+<p>Access from the localhost address can be allowed implicitly by seting the “ImplicitlyAllowLocalhostIps” property to <em>true</em> in the <em>security_settings.json</em>, located in the <em>{DW deploy folder}\settings</em> folder.</p>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>IP Mode</strong></dt><dd><p>The way an IP address is defined. <br>
+Available modes are: <br></p>
+<ul>
+<li><p><em>Exact</em> - An exact IP address. <br></p></li>
+<li><p><em>List</em> - Comma separated list of IP addresses. <br></p></li>
+<li><p><em>Range</em> - Range of IP addresses. <br></p></li>
+<li><p><em>Subnet</em> - IPv4 or IPv6 subnet.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>IP</strong></dt><dd><p><em>Available only if “Exact” is selected as an IP Mode.</em> <br>
+An IP address.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>IPs</strong></dt><dd><p><em>Available only if “List” is selected as an IP Mode.</em> <br>
+Comma separated list of IP addresses.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Start IP/End IP</strong></dt><dd><p><em>Available only if “Range” is selected as an IP Mode.</em> <br>
+Specifies the range of IP addresses.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>IP Subnet</strong></dt><dd><p><em>Available only if “Subnet” is selected as an IP Mode.</em> <br>
+IPv4 or IPv6 subnet.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Description</strong></dt><dd><p>Description of the IP address.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Entra Tenants</strong></dt><dd><p>List of Entra Tenants whose users are available for importing. Fill in the information obtained in the Entra integration process. For more information see <a class="reference internal" href="../logging-in/entra.html"><span class="doc">Entra Authentication</span></a> chapter.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>Name of the tenant.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Tenant ID</strong></dt><dd><p>ID of the tenant. Available in application details in Microsoft Azure Portal:</p>
+<img alt="../../_images/entra1.png" class="flat align-center" src="../../_images/entra1.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Client ID</strong></dt><dd><p>Client ID of the tenant. Available in application details in Microsoft Azure Portal:</p>
+<img alt="../../_images/entra2.png" class="flat align-center" src="../../_images/entra2.png" />
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Client Secret</strong></dt><dd><p>Client secret. It should be copied when creating a connected application in Microsoft Azure Portal, as the client secret appears only once for enhanced security</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>System</strong></dt><dd><p>Whether users belonging to the tenant should be available for import only for system administrator.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Okta Tenants</strong></dt><dd><p>List of Okta Tenants whose users are available for importing. Fill in the information obtained in the Okta integration process. For more information see <a class="reference internal" href="../logging-in/okta.html"><span class="doc">Okta Authentication</span></a> chapter.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>Name of the tenant.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Domain</strong></dt><dd><p>Domain of the tenant. Available in profile details in Okta:</p>
+<img alt="../../_images/okta1.png" class="flat align-center" src="../../_images/okta1.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Client ID</strong></dt><dd><p>Client ID of the tenant. Available in application details in Okta:</p>
+<img alt="../../_images/okta2.png" class="flat align-center" src="../../_images/okta2.png" />
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>PEM Private Key</strong></dt><dd><p>PEM Private Key. It should be copied when creating a connected application in Microsoft Azure Portal, as the PEM Private Key appears only once for enhanced security</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>System</strong></dt><dd><p>Whether users belonging to the tenant should be available for import only for system administrator.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="logging.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Logging
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../security.html">
+						Security 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

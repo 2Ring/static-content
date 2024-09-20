@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Source Tables &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/fontawesome.min.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/main.js"></script>
+    <script src="../../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Custom Columns" href="custom-columns.html" />
+    <link rel="prev" title="Editing Table-Valued Calculations" href="../editing-table-valued-calculations.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../../index.html" id="headerImgWrapper">
+			<img src="../../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Source Tables</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Source Tables
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Source Tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="custom-columns.html">Custom Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sort-columns.html">Sort Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamic-filter.html">Dynamic Filter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="source-tables">
+<h1>Source Tables<a class="headerlink" href="#source-tables" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><dl class="simple">
+<dt><strong>Function</strong></dt><dd><p><em>Required</em> <br>
+Connector provided calculation function, used for calculation of the results.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Alias</strong></dt><dd><p><em>Required</em> <br>
+Source Table appears under this alias in dropdowns and lists.</p>
+<div class="attention docutils container">
+<p>Changes made to the Alias field are not applied to Filters and Join Condition fields automatically. Alias in these fields needs to be manually changed.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Join Type</strong></dt><dd><p><em>Required</em> <br>
+<em>Not available for the first Source Table in the list.</em> <br>
+A join type, that is used to join this Source Table with other tables in the Grid.
+<br> Available options are <em>INNER</em>, <em>LEFT</em>, <em>RIGHT</em>, <em>FULL</em> and <em>CROSS</em></p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Join Condition</strong></dt><dd><p><em>Required</em> <br>
+<em>Not available for the first Source Table in the list.</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#expression-builder">Expression builder</a> <em>chapter</em>. <br>
+An expression that determines how this Source Table is joined with other tables in the Grid.</p>
+<div class="notice docutils container">
+<p>Order of Source Tables in Grid affects list of columns available to be used in Join Condition. Source Table can be joined only with other Source Tables that are defined before it in list of Source Tables.</p>
+</div>
+<div class="notice docutils container">
+<p>Custom columns can not be used in the join condition.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><p>For more information refer to the <a class="reference internal" href="../editing-calculation-kpi/parameters.html"><span class="doc">Parameters</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Is Historical</strong></dt><dd><p>Whether source table should provide historical values.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Interval Type</strong></dt><dd><p><em>Required</em> <br>
+Specifies the type of interval displayed value should be from.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Which Interval</strong></dt><dd><p><em>Required</em> <br>
+Lets an user choose from which interval, of selected type, data should be displayed. For each interval type current, previous or other interval can be chosen. If other option is chosen, how far into the past the displayed interval is has to be provided.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Number of intervals</strong></dt><dd><p><em>Required</em> <br>
+Specify the exact number of selected interval types to be displayed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Advanced</strong></dt><dd><p>Advanced Source Table settings.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Time Zone</strong></dt><dd><p><em>Inheritable</em> <br>
+Specify based on which time zone values should be calculated.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Refresh Interval</strong></dt><dd><p><em>Inheritable</em> <br>
+Interval in seconds, between each refresh of the calculation’s data.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Log Retention</strong></dt><dd><p><em>Inheritable</em> <br>
+Result of all calculations are logged, for configured number of days. Unsuccessful calculations are also logged. These logs can help with troubleshooting.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation Id</strong></dt><dd><p><em>Serves for information purposes only</em> <br>
+<em>Calculation Id is available only when calculation-based function is selected</em> <br>
+Id of the calculation. Calculation Id is not being automatically updated after changing calculation. Manual refresh is required to show up-to-date value.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../editing-table-valued-calculations.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Editing Table-Valued Calculations
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="custom-columns.html">
+						Custom Columns 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

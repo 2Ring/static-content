@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Okta Authentication &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Quick Start" href="../quick-start.html" />
+    <link rel="prev" title="Entra Authentication" href="entra.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Okta Authentication</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../logging-in.html">Logging In</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Okta Authentication
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../logging-in.html">Logging in</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="logging-in-on-tv.html">Logging in on TV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entra.html">Microsoft Entra ID Authorization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Okta Authorization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ring-dw-auth">2Ring DW - Auth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ring-dw-user-import">2Ring DW - User Import</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="okta-authentication">
+<h1>Okta Authentication<a class="headerlink" href="#okta-authentication" title="Permalink to this headline">¶</a></h1>
+<p>Users configured in the Okta app can be used to access the DW application.</p>
+<p>In order to Import users from Okta, these two Okta applications needs to be created:</p>
+<ul class="simple">
+<li><p>2Ring DW - Auth</p></li>
+<li><p>2Ring DW - User Import</p></li>
+</ul>
+<div class="section" id="ring-dw-auth">
+<h2>2Ring DW - Auth<a class="headerlink" href="#ring-dw-auth" title="Permalink to this headline">¶</a></h2>
+<p><span class="heading-4">Create Okta application</span></p>
+<ol class="arabic">
+<li><p>Login to your Okta account -&gt; Applications -&gt; Applications</p>
+<p>Figure 1: Create Okta application</p>
+<img alt="../../_images/okta-1.png" class="flat align-center" src="../../_images/okta-1.png" />
+</li>
+<li><p>Click on “Create App Integration”</p>
+<p>Figure 2: Create Okta application 2</p>
+<img alt="../../_images/okta-2.png" class="flat align-center" src="../../_images/okta-2.png" />
+</li>
+<li><p>Select OIDC - OpenID Connect -&gt; Web Application and click “Next”</p>
+<p>Figure 3: Create Okta application 3</p>
+<img alt="../../_images/oktaa-2.png" class="flat align-center" src="../../_images/oktaa-2.png" />
+</li>
+<li><p>Fill the App integration name and click “Save”</p>
+<p>Figure 4: Create Okta application 4</p>
+<img alt="../../_images/oktaa-2a.png" class="flat align-center" src="../../_images/oktaa-2a.png" />
+</li>
+<li><p>Scroll down to “Controlled access” section and define, who should have access to the app integration. Click “Save”</p>
+<p>Figure 5: Create Okta application 5</p>
+<img alt="../../_images/oktaa-3.png" class="flat align-center" src="../../_images/oktaa-3.png" />
+</li>
+</ol>
+<p><span class="heading-4">Configure Okta application</span></p>
+<ol class="arabic">
+<li><p>Go to Okta application page and click “Edit” in the “Client Credentials” section</p>
+<p>Figure 6: Configure Okta application</p>
+<img alt="../../_images/oktaa-4.png" class="flat align-center" src="../../_images/oktaa-4.png" />
+</li>
+<li><p>Check the “Require PKCE as additional verification” option and click “Save”</p>
+<p>Figure 7: Configure Okta application 2</p>
+<img alt="../../_images/oktaa-5.png" class="flat align-center" src="../../_images/oktaa-5.png" />
+</li>
+<li><p>Click “Edit” in the “General Settings” section</p>
+<p>Figure 8: Configure Okta application 3</p>
+<img alt="../../_images/oktaa-6.png" class="flat align-center" src="../../_images/oktaa-6.png" />
+</li>
+<li><p>Scroll down to the “Login” section and remove default “Sign-in and Sign-out redirect URI”</p>
+<p>Figure 9: Configure Okta application 4</p>
+<img alt="../../_images/oktaa-7.png" class="flat align-center" src="../../_images/oktaa-7.png" />
+</li>
+<li><p>Add “Sign-in redirect URIs” -&gt; https://{tenant_domain}/realms/cluster/broker/okta/endpoint</p>
+<p>Figure 10: Configure Okta application 5</p>
+<img alt="../../_images/oktaa-8.png" class="flat align-center" src="../../_images/oktaa-8.png" />
+</li>
+<li><p>Add Sign-out redirect URIs -&gt; https://{tenant_domain}/realms/cluster/broker/okta/endpoint/logout_response</p>
+<p>Figure 11: Configure Okta application 6</p>
+<img alt="../../_images/oktaa-9.png" class="flat align-center" src="../../_images/oktaa-9.png" />
+</li>
+<li><p>Click “Save”</p>
+<p>Figure 12: Configure Okta application 7</p>
+<img alt="../../_images/oktaa-10.png" class="flat align-center" src="../../_images/oktaa-10.png" />
+</li>
+</ol>
+</div>
+<div class="section" id="ring-dw-user-import">
+<h2>2Ring DW - User Import<a class="headerlink" href="#ring-dw-user-import" title="Permalink to this headline">¶</a></h2>
+<p><span class="heading-4">Create Okta application</span></p>
+<ol class="arabic">
+<li><p>Login to your Okta account -&gt; Applications -&gt; Applications</p>
+<p>Figure 13: Create Okta application</p>
+<img alt="../../_images/okta-1.png" class="flat align-center" src="../../_images/okta-1.png" />
+</li>
+<li><p>Click on “Create App Integration”</p>
+<p>Figure 14: Create Okta application 2</p>
+<img alt="../../_images/okta-2.png" class="flat align-center" src="../../_images/okta-2.png" />
+</li>
+<li><p>Select the “API Services” and click “Next”</p>
+<p>Figure 15: Create Okta application 3</p>
+<img alt="../../_images/okta-3.png" class="flat align-center" src="../../_images/okta-3.png" />
+</li>
+<li><p>Fill the App integration name and click “Save”</p>
+<p>Figure 16: Create Okta application 4</p>
+<img alt="../../_images/okta-4.png" class="flat align-center" src="../../_images/okta-4.png" />
+</li>
+</ol>
+<p><span class="heading-4">Configure Okta application</span></p>
+<ol class="arabic">
+<li><p>In the app details, in the Client Credentials section, click “Edit”</p>
+<p>Figure 17: Configure Okta application</p>
+<img alt="../../_images/okta-5.png" class="flat align-center" src="../../_images/okta-5.png" />
+</li>
+<li><p>Select the “Public key / Private key” Client authorization</p>
+<p>Figure 18: Configure Okta application 2</p>
+<img alt="../../_images/okta-6.png" class="flat align-center" src="../../_images/okta-6.png" />
+</li>
+<li><p>Click on “Add Key”</p>
+<p>Figure 19: Configure Okta application 3</p>
+<img alt="../../_images/okta-7.png" class="flat align-center" src="../../_images/okta-7.png" />
+</li>
+<li><p>In the following dialog, click on “Generate new key”</p>
+<p>Figure 20: Configure Okta application 4</p>
+<img alt="../../_images/okta-8.png" class="flat align-center" src="../../_images/okta-8.png" />
+</li>
+<li><p>Switch the format of the private key to “PEM”, copy the value and click “Done”</p>
+<p>Figure 21: Configure Okta application 5</p>
+<img alt="../../_images/okta-9.png" class="flat align-center" src="../../_images/okta-9.png" />
+</li>
+<li><p>In the application detail, switch to the “Okta API Scopes” tab</p>
+<p>Figure 22: Configure Okta application 6</p>
+<img alt="../../_images/okta-10.png" class="flat align-center" src="../../_images/okta-10.png" />
+</li>
+<li><p>Scroll down and grant the “okta.users.read” permission.</p>
+<p>Figure 23: Configure Okta application 7</p>
+<img alt="../../_images/okta-11.png" class="flat align-center" src="../../_images/okta-11.png" />
+</li>
+<li><p>Confirm that you want to grant this permission to created application.</p>
+<p>Figure 24: Configure Okta application 8</p>
+<img alt="../../_images/okta-12.png" class="flat align-center" src="../../_images/okta-12.png" />
+</li>
+</ol>
+<p>Now you can define created tenant in the Security settings in DW Administration tool. For more information see the System Settings -&gt; Security chapter in the DW Administration Tool documentation.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="entra.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Entra Authentication
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../quick-start.html">
+						Quick Start 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Connector Windows Service &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Connector Windows Service</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Connector Windows Service
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="connector-windows-service">
+<h1>Connector Windows Service<a class="headerlink" href="#connector-windows-service" title="Permalink to this headline">¶</a></h1>
+<p>Once the InstallService.cmd batch script is finished running, a Demo Connector Windows service will be installed from the connector folder. This service performs tasks necessary to display data in DW and will automatically start running once installed with the configuration supplied during the installation.</p>
+<p>Figure 1: Demo Connector Windows Service</p>
+<img alt="docs\demo\installation-guide\../../amazonconnect/installation-guide/connector-windows-service.png" class="flat align-center" src="docs\demo\installation-guide\../../amazonconnect/installation-guide/connector-windows-service.png" />
+<p>If you need to make configuration changes to the service, locate <strong>appsettings.json</strong> configuration file in the install directory. The service has to be restarted after any change is made to the file.</p>
+<p>appsettings.json</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>{
+    &quot;RunConnector&quot;: &quot;Demo&quot;,
+    &quot;Connectors&quot;: [
+        {
+            &quot;Name&quot;: &quot;Demo&quot;,
+            &quot;Type&quot;: &quot;Demo&quot;,
+            &quot;ConnectionString&quot;: &quot;Data source=localhost; Initial
+                Catalog=DW_DemoConnector;
+                Integrated Security=False; User ID=DWApplication; Password=***;
+                MultiSubnetFailover=False&quot;,
+            &quot;DeleteOldDataScheduleTime&quot;: &quot;3:11:00&quot;,
+            &quot;DeleteOldDataTimeout&quot;: 300,
+            &quot;CollectDataTimeout&quot;: 300
+        }
+    ],
+    &quot;Encryption&quot;: {
+        &quot;RsaContainerName&quot;: &quot;DW_831&quot;,
+        &quot;AesKeyPath&quot;: &quot;C:\\inetpub\\wwwroot\\DW_831\\settings\\aes.key&quot;
+    },
+    &quot;Logging&quot;: {
+        &quot;UseEventLog&quot;: false,
+        &quot;UseLog4Net&quot;: true,
+        &quot;DatabaseLogLifetime&quot;: 60,
+        &quot;MinimumLevel&quot;: &quot;Debug&quot;,
+        &quot;EventLogSetting&quot;: {
+            &quot;SourceName&quot;: &quot;2Ring DW&quot;,
+            &quot;LogName&quot;: &quot;Application&quot;,
+            &quot;MinimumLevel&quot;: &quot;Warning&quot;,
+            &quot;DuplicityFilter&quot;: {
+                &quot;Use&quot;: true,
+                &quot;TimeWindow&quot;: 3600,
+                &quot;LastOnly&quot;: false
+            }
+        }
+    }
+}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>RunConnector</strong> – the name of the connector which will be running</p></li>
+</ul>
+<ul class="not-collapsable simple">
+<li><dl class="simple">
+<dt>Connectors</dt><dd><ul>
+<li><p><strong>Name</strong> – the name of the connector</p></li>
+<li><p><strong>Type</strong> – the type of the connector</p></li>
+<li><dl class="simple">
+<dt>Connection string</dt><dd><ul>
+<li><p><strong>Data Source</strong> – the address of the SQL Server, that contains the Demo Connector database</p></li>
+<li><p><strong>Initial Catalog</strong> – the name of the Demo Connector database</p></li>
+<li><p><strong>User ID</strong> – the username of the DW Application SQL Server user with reading privileges to the Demo connector database</p></li>
+<li><p><strong>Password</strong> – the password of the user</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Delete Old Data Schedule Time</strong> – the time at which old data is deleted each day</p></li>
+<li><p><strong>Delete Old Data Timeout</strong> – the number of seconds before a timeout is triggered when deleting old data and an error message is displayed in the connector Diagnostics tab.</p></li>
+<li><p><strong>Collect Data Timeout</strong> – the number of seconds before a timeout is triggered when collecting data from the Demo database and an error message is displayed in connector Diagnostics tab</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="not-collapsable simple">
+<li><dl class="simple">
+<dt>Encryption</dt><dd><ul>
+<li><p><strong>RSAContainerName</strong> - the name of the RSA container</p></li>
+<li><p><strong>AesKeyPath</strong> - a path to the Aes key</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="not-collapsable">
+<li><dl>
+<dt>Logging</dt><dd><ul class="simple">
+<li><p><strong>UseEventLog</strong> – enables logging into the event viewer</p></li>
+<li><p><strong>UseLog4Net</strong> – enables logging with the log4net framework</p></li>
+</ul>
+<div class="attention docutils container">
+<p>Log4net has it’s own configuration. If you need to make configuration changes locate log4net.config configuration file in the install directory.</p>
+</div>
+<ul class="simple">
+<li><p><strong>DatabaseLogLifeTime</strong> – how long will the records be stored in the database (in minutes)</p></li>
+<li><p><strong>DatabaseEventLogLifetime</strong> – how long will the event records be stored in the database (in minutes)</p></li>
+<li><p><strong>Minimum Level</strong> – minimum logging level for all records. Available values are: Trace, Debug, Information, Warning, Error, Critical, None</p></li>
+</ul>
+<ul class="not-collapsable simple">
+<li><dl class="simple">
+<dt>EventLogSetting (settings for event viewer logging)</dt><dd><ul>
+<li><p><strong>Source Name</strong> – do not modify</p></li>
+<li><p><strong>Log Name</strong> – do not modify</p></li>
+<li><p><strong>Minimum Level</strong> – minimum logging level for event viewer records</p></li>
+<li><dl class="simple">
+<dt><strong>Duplicity Filter</strong> (configuration for logging non-duplicate records)</dt><dd><ul>
+<li><p><strong>Use</strong> – enables duplicity filter</p></li>
+<li><p><strong>Time Window</strong> – how often should unique messages be logged (in seconds)</p></li>
+<li><p><strong>Last Only</strong> – enables logging only of messages that are different from the last one (ignores Time Window parameter)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>DatabaseLogLifeTime</strong> – how long will the records be stored in the database (in minutes)</p></li>
+<li><p><strong>Minimum Level</strong> – minimum logging level for all records. Available values are: Trace, Debug, Information, Warning, Error, Critical, None</p></li>
+</ul>
+<ul class="not-collapsable simple">
+<li><dl class="simple">
+<dt><strong>EventLogSetting</strong> (settings for event viewer logging)</dt><dd><ul>
+<li><p><strong>Source Name</strong> – do not modify</p></li>
+<li><p><strong>Log Name</strong> – do not modify</p></li>
+<li><p><strong>Minimum Level</strong> – minimum logging level for event viewer records</p></li>
+<li><dl class="simple">
+<dt><strong>Duplicity Filter</strong> (configuration for logging non-duplicate records)</dt><dd><ul>
+<li><p><strong>Use</strong> – enables duplicity filter</p></li>
+<li><p><strong>Time Window</strong> – how often should unique messages be logged (in seconds)</p></li>
+<li><p><strong>Last Only</strong> – enables logging only of messages that are different from the last one (ignores Time Window parameter)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="demo-service-exe">
+<h2>Demo.Service.exe<a class="headerlink" href="#demo-service-exe" title="Permalink to this headline">¶</a></h2>
+<p>The Demo.Service.exe file, located in the install directory, serves as both a Windows service and a command line application. To see the list of available commands, navigate to the Connector directory in the Command Prompt (cmd.exe) and type: Demo.Service.exe –help.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>Demo.Service.exe <span class="nt">&lt;command&gt;</span> <span class="nt">&lt;options&gt;</span>
+</pre></div>
+</div>
+<div class="attention docutils container">
+<p>Do not run the connector as Windows service and command line simultaneously. The data may get corrupted. It is recommended to use the Windows service in a production environment and only use the command line mode for troubleshooting purposes. Do not forget to stop the service before running the command line mode.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+				
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

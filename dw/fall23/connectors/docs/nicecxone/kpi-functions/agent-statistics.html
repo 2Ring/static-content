@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.2. Agent Statistics &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.3. Skill Statistics" href="skill-statistics.html" />
+    <link rel="prev" title="1.1. Agent State" href="agent-state.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.2. </span>Agent Statistics</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../nicecxone.html">Nice CXone</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">1. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.2. </span>Agent Statistics
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">1.1. Agent State</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.2. Agent Statistics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-acw-time">1.2.1. Agent Statistics - Acw Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-agent-offered">1.2.2. Agent Statistics - Agent Offered</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-available-time">1.2.3. Agent Statistics - Available Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-consult-time">1.2.4. Agent Statistics - Consult Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-inbound-handled">1.2.5. Agent Statistics - Inbound Handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-inbound-talk-time">1.2.6. Agent Statistics - Inbound Talk Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-inbound-time">1.2.7. Agent Statistics - Inbound Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-login-time">1.2.8. Agent Statistics - Login Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-outbound-handled">1.2.9. Agent Statistics - Outbound Handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-outbound-talk-time">1.2.10. Agent Statistics - Outbound Talk Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-outbound-time">1.2.11. Agent Statistics - Outbound Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-refused">1.2.12. Agent Statistics - Refused</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-total-handled">1.2.13. Agent Statistics - Total Handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-total-talk-time">1.2.14. Agent Statistics - Total Talk Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-unavailable-time">1.2.15. Agent Statistics - Unavailable Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="skill-statistics.html">1.3. Skill Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="skill-statistics-rt.html">1.4. Skill Statistics RT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="agent-statistics">
+<h1><span class="section-number">1.2. </span>Agent Statistics<a class="headerlink" href="#agent-statistics" title="Permalink to this headline">¶</a></h1>
+<p>The Agent Statistics KPI functions display aggregated summary for all agents for the current day.</p>
+<div class="notice docutils container">
+<p>For more information, see the <a class="reference external" href="https://developer.niceincontact.com/API/ReportingAPI#/Reporting/PerformanceSummary">NICE CXone API documentation</a>.</p>
+</div>
+<p>Depending on the KPI function, the following parameters may be used:</p>
+<ul class="simple">
+<li><p><strong>Skills</strong> - Allows you to select from a list of skills using a logical OR operation for filtering. When you use this parameter, any object that matches at least one of the selected skills will be included in the results.  - List of Skill names</p></li>
+<li><p><strong>Teams</strong> - List of Team names</p></li>
+</ul>
+<div class="section" id="agent-statistics-acw-time">
+<h2><span class="section-number">1.2.1. </span>Agent Statistics - Acw Time<a class="headerlink" href="#agent-statistics-acw-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time that the agents spent in the after call work (acw) state.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-agent-offered">
+<h2><span class="section-number">1.2.2. </span>Agent Statistics - Agent Offered<a class="headerlink" href="#agent-statistics-agent-offered" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts offered to the agents.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-available-time">
+<h2><span class="section-number">1.2.3. </span>Agent Statistics - Available Time<a class="headerlink" href="#agent-statistics-available-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time that the agents spent in the available state.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-consult-time">
+<h2><span class="section-number">1.2.4. </span>Agent Statistics - Consult Time<a class="headerlink" href="#agent-statistics-consult-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time that the agents spent in consult state.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-inbound-handled">
+<h2><span class="section-number">1.2.5. </span>Agent Statistics - Inbound Handled<a class="headerlink" href="#agent-statistics-inbound-handled" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of inbound calls handled by the agents.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-inbound-talk-time">
+<h2><span class="section-number">1.2.6. </span>Agent Statistics - Inbound Talk Time<a class="headerlink" href="#agent-statistics-inbound-talk-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time the agents spent talking to contacts on inbound calls.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-inbound-time">
+<h2><span class="section-number">1.2.7. </span>Agent Statistics - Inbound Time<a class="headerlink" href="#agent-statistics-inbound-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time that the agents spent on inbound calls.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-login-time">
+<h2><span class="section-number">1.2.8. </span>Agent Statistics - Login Time<a class="headerlink" href="#agent-statistics-login-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time the agents was logged into the system.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-outbound-handled">
+<h2><span class="section-number">1.2.9. </span>Agent Statistics - Outbound Handled<a class="headerlink" href="#agent-statistics-outbound-handled" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of outbound calls handled.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-outbound-talk-time">
+<h2><span class="section-number">1.2.10. </span>Agent Statistics - Outbound Talk Time<a class="headerlink" href="#agent-statistics-outbound-talk-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time the agents spent talking to contacts on outbound calls.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-outbound-time">
+<h2><span class="section-number">1.2.11. </span>Agent Statistics - Outbound Time<a class="headerlink" href="#agent-statistics-outbound-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time the agents spent handling outbound contacts.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-refused">
+<h2><span class="section-number">1.2.12. </span>Agent Statistics - Refused<a class="headerlink" href="#agent-statistics-refused" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of calls refused by the agents.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-total-handled">
+<h2><span class="section-number">1.2.13. </span>Agent Statistics - Total Handled<a class="headerlink" href="#agent-statistics-total-handled" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of calls the agents handled.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-total-talk-time">
+<h2><span class="section-number">1.2.14. </span>Agent Statistics - Total Talk Time<a class="headerlink" href="#agent-statistics-total-talk-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time the agents spent talking to contacts on inbound and outbound calls.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+<div class="section" id="agent-statistics-unavailable-time">
+<h2><span class="section-number">1.2.15. </span>Agent Statistics - Unavailable Time<a class="headerlink" href="#agent-statistics-unavailable-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the length of time that the agents spent in the unavailable state.</p>
+<p><strong>Parameters</strong>: Skills, Teams</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="agent-state.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.1. </span>Agent State
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="skill-statistics.html">
+						<span class="section-number">1.3. </span>Skill Statistics 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

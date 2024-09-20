@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Values &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Installation" href="../installation.html" />
+    <link rel="prev" title="Calculation Parameter Types" href="../calculation-parameter-types.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Values</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../connectors.html">Connectors</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../calculation-parameter-types.html">Calculation Parameter Types</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Values
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../business-units.html">Business Units</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../connectors.html">Connectors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities.html">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-calculation-functions.html">KPI Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-calculation-functions.html">Grid Calculation Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../calculation-parameter-types.html">Calculation Parameter Types</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import-functions.html">Import Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade.html">Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uninstallation.html">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="values">
+<h1>Values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p><em>Required</em> <br>
+The name of a parameter value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value</strong></dt><dd><p><em>Required</em> <br>
+Value of a parameter value.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="notice docutils container">
+<p>System Connectors periodically checks source systems for available values for parameter types. Found values are then automatically updated. In custom Connectors available values have to be inserted and managed manually.</p>
+</div>
+<p><strong>For manual refreshing of values for parameter types:</strong></p>
+<div class="notice docutils container">
+<p>By clicking on <span class="button">PULL VALUES</span>, connector gets the latest available values from the source system, while refresh button refreshes the values from the DW database.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click on <span class="button">PULL VALUES</span> button located in panel’s toolbar.</p></li>
+<li><p>The pop up will appear, informing that the request has been submitted. A user has to wait until next connector iteration, which usually takes a few seconds.</p></li>
+<li><p>Refresh the list of values by clicking on the refresh button.</p></li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../calculation-parameter-types.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Calculation Parameter Types
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../installation.html">
+						Installation 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

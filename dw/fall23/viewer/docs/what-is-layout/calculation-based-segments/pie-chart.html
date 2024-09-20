@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pie Chart &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Grid" href="grid.html" />
+    <link rel="prev" title="Calendar" href="calendar.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Pie Chart</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../what-is-layout.html">What is a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../calculation-based-segments.html">Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Pie Chart
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../simple-segments.html">Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../calculation-based-segments.html">Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../container-based-segments.html">Container Based Segments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pie-chart">
+<h1>Pie Chart<a class="headerlink" href="#pie-chart" title="Permalink to this headline">¶</a></h1>
+<p>A Pie Chart displays results of several calculations in form of a circular chart. Usually a Pie Chart is used to display the current result of its calculations. However historical results can be displayed too.
+A year, month, week, day, hour, 30 minutes or 15 minutes historical interval can be chosen. When displaying a historical result, how much the interval should go back in time, can be configured. This way Pie Chart can display values from any number of days ago. For more information about historical intervals see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/historical-intervals.html"><span class="doc">Historical Intervals</span></a> chapter.</p>
+<p>Figure 1: Pie Chart types</p>
+<img alt="../../../_images/pie-chart-types.png" class="flat align-center" src="../../../_images/pie-chart-types.png" />
+<p>Each calculation displayed in the chart is represented by a color. A corresponding section of the chart is reserved for each calculation. The size of each section is proportionate to all other sections, effectively comparing the calculation results. Each section can be accompanied by a label, that represents the name of the calculation, actual result or percentage of the entire chart, that the section takes.</p>
+<p>Figure 2: Pie Charts with different label configurations</p>
+<img alt="../../../_images/pie-chart-labels.png" class="flat align-center" src="../../../_images/pie-chart-labels.png" />
+<p>The appearance and position of this label can be configured. For example labels can be written in arc, for better usage of available space.</p>
+<p>Figure 3: Pie Charts with label in arc</p>
+<img alt="../../../_images/pie-chart-arc-text.png" class="flat align-center" src="../../../_images/pie-chart-arc-text.png" />
+<p>A legend can be displayed, that describes the calculation and can provide additional information. The position and size of the legend can be configured.</p>
+<p>Figure 4: Pie Chart with legend enabled</p>
+<img alt="../../../_images/pie-chart-legend.png" class="flat align-center" src="../../../_images/pie-chart-legend.png" />
+<p>For more information about editing this segment, see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/pie-chart.html"><span class="doc">Pie Chart</span></a> chapter.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="calendar.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Calendar
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="grid.html">
+						Grid 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

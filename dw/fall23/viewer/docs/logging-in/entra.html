@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Entra Authentication &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Okta Authentication" href="okta.html" />
+    <link rel="prev" title="Logging In On TV" href="logging-in-on-tv.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Entra Authentication</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../logging-in.html">Logging In</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Entra Authentication
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../logging-in.html">Logging in</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="logging-in-on-tv.html">Logging in on TV</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Microsoft Entra ID Authorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="okta.html">Okta Authorization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="entra-authentication">
+<h1>Entra Authentication<a class="headerlink" href="#entra-authentication" title="Permalink to this headline">¶</a></h1>
+<p>Microsoft Entra authentication enables the DW application to be connected with the Microsoft Entra ID app. Users configured in the Microsoft Entra ID app can be then used to access the DW application.</p>
+<p><span class="heading-4">Create app registration</span></p>
+<ol class="arabic">
+<li><p>Go to Microsoft Entra ID -&gt; App registrations -&gt; New registration</p>
+<p>Figure 1: App registration</p>
+<img alt="../../_images/entra-1.png" class="flat align-center" src="../../_images/entra-1.png" />
+<p>Figure 2: App registration 2</p>
+<img alt="../../_images/entra-1a.png" class="flat align-center" src="../../_images/entra-1a.png" />
+</li>
+<li><p>Fill the name of the application, select “Accounts in this organizational directory only (Single tenant)” and click “Register”.</p>
+<p>Figure 3: App registration 3</p>
+<img alt="../../_images/entra-2.png" class="flat align-center" src="../../_images/entra-2.png" />
+</li>
+</ol>
+<p><span class="heading-4">Set permissions</span></p>
+<ol class="arabic">
+<li><p>Open the app registration and go to API permissions</p>
+<p>Figure 4: Set permission</p>
+<img alt="../../_images/entra-3.png" class="flat align-center" src="../../_images/entra-3.png" />
+</li>
+<li><p>Remove “User.Read” permission by clicking the three dots on the right side and select “Remove permission”</p>
+<p>Figure 5: Set permission 2</p>
+<img alt="../../_images/entra-4.png" class="flat align-center" src="../../_images/entra-4.png" />
+</li>
+<li><p>Click “Add permission”</p>
+<p>Figure 7: Set permission 3</p>
+<img alt="../../_images/entra-5.png" class="flat align-center" src="../../_images/entra-5.png" />
+</li>
+<li><p>Add a permission -&gt; Microsoft Graph -&gt; Application permissions -&gt; User.Read.All</p>
+<p>Figure 7: Set permission 4</p>
+<img alt="../../_images/entra-6.png" class="flat align-center" src="../../_images/entra-6.png" />
+</li>
+<li><p>Add following permissions -&gt; Microsoft Graph -&gt; Delegated permissions -&gt; openid, profile and email</p>
+<p>Figure 8: Set permission 5</p>
+<img alt="../../_images/entra-7.png" class="flat align-center" src="../../_images/entra-7.png" />
+</li>
+<li><p>Grant admin consent</p>
+<p>Figure 9: Set permission 6</p>
+<img alt="../../_images/entra-8.png" class="flat align-center" src="../../_images/entra-8.png" />
+</li>
+</ol>
+<p><span class="heading-4">Create client secret</span></p>
+<ol class="arabic">
+<li><p>Open the app registration and go to Certificates &amp; secrets</p>
+<p>Figure 10: Create client secret</p>
+<img alt="../../_images/entra-9.png" class="flat align-center" src="../../_images/entra-9.png" />
+</li>
+<li><p>Create new client secret</p>
+<p>Figure 11: Create client secret 2</p>
+<img alt="../../_images/entra-10.png" class="flat align-center" src="../../_images/entra-10.png" />
+</li>
+<li><p>Copy and save the secret value</p>
+<p>Figure 12: Create client secret 3</p>
+<img alt="../../_images/entra-11.png" class="flat align-center" src="../../_images/entra-11.png" />
+</li>
+</ol>
+<p><span class="heading-4">Add redirect URI</span></p>
+<ol class="arabic">
+<li><p>Open the app registration and go to Authentication</p>
+<p>Figure 13: Add redirect URI</p>
+<img alt="../../_images/entra-12.png" class="flat align-center" src="../../_images/entra-12.png" />
+</li>
+<li><p>Platform configurations -&gt; Add a platform -&gt; Web</p>
+<p>Figure 14: Add redirect URI 2</p>
+<img alt="../../_images/entra-13.png" class="flat align-center" src="../../_images/entra-13.png" />
+</li>
+<li><p>Add Web redirect URI for tenant in following format <a class="reference external" href="https:/">https:/</a>/{tenant ID}.2ring.cloud/realms/{tenant ID}/broker/entra_id/endpoint</p>
+<p>Figure 15: Add redirect URI 3</p>
+<img alt="../../_images/entra-14.png" class="flat align-center" src="../../_images/entra-14.png" />
+</li>
+</ol>
+<p>Now you can define created tenant in the Security settings in DW Administration tool. For more information see the System Settings -&gt; Security chapter in the DW Administration Tool documentation.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="logging-in-on-tv.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Logging In On TV
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="okta.html">
+						Okta Authentication 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

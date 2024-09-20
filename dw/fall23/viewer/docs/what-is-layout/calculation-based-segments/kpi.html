@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>KPI &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Calendar" href="calendar.html" />
+    <link rel="prev" title="Calculation Based Segments" href="../calculation-based-segments.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>KPI</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../what-is-layout.html">What is a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../calculation-based-segments.html">Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					KPI
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../simple-segments.html">Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../calculation-based-segments.html">Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../container-based-segments.html">Container Based Segments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="kpi">
+<h1>KPI<a class="headerlink" href="#kpi" title="Permalink to this headline">¶</a></h1>
+<p>A KPI is a segment, which displays a single result of a specific connector calculation.</p>
+<p>Usually, a KPI is used to display the current result of its calculation. However historical results can be displayed too. A year, month, week, day, hour, 30 minutes or 15 minutes historical interval can be chosen. When displaying a historical result, how much the interval should go back in time, can be configured. This way KPI can display value from any number of days ago. For more information about historical intervals see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/historical-intervals.html"><span class="doc">Historical Intervals</span></a> chapter.</p>
+<p>Usually, KPI is used to display its value in the form of a simple text. Additionally multiple other, more graphical presentation types can be chosen.</p>
+<p>Figure 1: KPI presentation types.</p>
+<img alt="../../../_images/kpi1.png" class="flat align-center" src="../../../_images/kpi1.png" />
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>Alphanumeric</strong></dt><dd><p>The value is presented as a pure text, without any additional graphical elements.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore</strong></dt><dd><p>The value is enveloped in a colored circle. The circle can change its color, depending on the value. For example by turning red, when the value is considered bad. The semaphore is used, when the state is more important than the  value itself</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle</strong></dt><dd><p>The value is accompanied by a circle indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle</strong></dt><dd><p>The value is accompanied by a semi-circle indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal/Vertical Bar</strong></dt><dd><p>The value is accompanied by a rectangular indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Image</strong></dt><dd><p>Image is applied.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Static Color</strong></dt><dd><p>A static color is applied.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Kpi can be conditionally styled based on its value. Kpi can have multiple conditional styles and the first one that meets its condition is applied. Each conditional style can be represented by different presentation type, colors, font, etc.</p>
+<p>For more information about KPI’s conditional styles, see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/kpi/conditional-styles.html"><span class="doc">Conditional Styles</span></a> chapter.</p>
+<p>Figure 2: The effect of changing text color with conditional styles on different presentation types.</p>
+<img alt="../../../_images/kpi-effects-of-ranges.png" class="flat align-center" src="../../../_images/kpi-effects-of-ranges.png" />
+<p>Also, alerts can be configured, to notify the user, when the value reaches the configured range for a conditional style. These alerts can be:</p>
+<ul class="simple">
+<li><p>Blink Background – the value’s background blinks with configured color.</p></li>
+<li><p>Audible Alert – an audio alert is played.</p></li>
+</ul>
+<div class="notice docutils container">
+<p>Audible alerts are always automatically played. In case the autoplay function does not work properly, see the <a class="reference external" href="../../../troubleshooting.html#media-autoplay-not-working">Media autoplay not working</a> chapter.</p>
+</div>
+<ul class="simple">
+<li><p>Notification - message is sent to configured e-mails or 3rd party applications</p></li>
+</ul>
+<p>For more information about alerts see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/kpi.html"><span class="doc">KPI</span></a> chapter.</p>
+<p>Figure 3: Visual alert - KPI in the process of blinking</p>
+<img alt="../../../_images/kpi-blinking.gif" class="flat align-center" src="../../../_images/kpi-blinking.gif" />
+<p>For more information about editing this segment, see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/kpi.html"><span class="doc">KPI</span></a> chapter.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../calculation-based-segments.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Calculation Based Segments
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="calendar.html">
+						Calendar 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

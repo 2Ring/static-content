@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.2. Queues Statistics Current &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.3. Queues Statistics Historical" href="queues-statistics-historical.html" />
+    <link rel="prev" title="1.1. Agents Statistics" href="agents-statistics.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.2. </span>Queues Statistics Current</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../amazonconnect.html">AmazonConnect</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">1. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.2. </span>Queues Statistics Current
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">1. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agents-statistics.html">1.1. Agents Statistics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.2. Queues Statistics Current</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">1.2.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">1.2.2. Calculation Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-mapped-parameters">1.2.3. Column-mapped Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="queues-statistics-historical.html">1.3. Queues Statistics Historical</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-attributes.html">1.4. User Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="queues-statistics-current">
+<h1><span class="section-number">1.2. </span>Queues Statistics Current<a class="headerlink" href="#queues-statistics-current" title="Permalink to this headline">¶</a></h1>
+<p>The Queues Statistics Current Grid function calculates current statistics for queues, which are then displayed in a tabular format.</p>
+<div class="section" id="columns">
+<h2><span class="section-number">1.2.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Agents After Contact Work</strong> – the number of agents who are doing After Call Work for a contact.</p></li>
+<li><p><strong>Agents Available</strong> – the number of agents who have set their status to Available.</p></li>
+<li><p><strong>Agents Error</strong> – the number of agents who have their contact in an error state.</p></li>
+<li><p><strong>Agents Non Productive</strong> – the number of agents who have set their status to a custom status (other than Available or Offline).</p></li>
+<li><p><strong>Agents On Call</strong> – the number of agents currently on a contact.</p></li>
+<li><p><strong>Agents Online</strong> – the number of agents who have set their status to something other than Offline.</p></li>
+<li><p><strong>Agents Staffed</strong> – the number of agents who are online, and not in Non Productive (custom) status.</p></li>
+<li><p><strong>Contacts In Queue</strong> – the number of contacts currently in the queue.</p></li>
+<li><p><strong>Contacts Scheduled</strong> – the number of customers in the queue for which there is a callback scheduled.</p></li>
+<li><p><strong>Name</strong> – the name of the queue.</p></li>
+<li><p><strong>Oldest Contact Age</strong> – the time for the contact that has been in the queue the longest.</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">1.2.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Queues</strong> – list of queue names.</p></li>
+</ul>
+</div>
+<div class="section" id="column-mapped-parameters">
+<h2><span class="section-number">1.2.3. </span>Column-mapped Parameters<a class="headerlink" href="#column-mapped-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Name</strong> - Queues calculation parameter value</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="agents-statistics.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.1. </span>Agents Statistics
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="queues-statistics-historical.html">
+						<span class="section-number">1.3. </span>Queues Statistics Historical 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

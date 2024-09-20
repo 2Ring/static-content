@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Custom Columns &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/fontawesome.min.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/main.js"></script>
+    <script src="../../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Sort Columns" href="sort-columns.html" />
+    <link rel="prev" title="Source Tables" href="source-tables.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../../index.html" id="headerImgWrapper">
+			<img src="../../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Custom Columns</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Custom Columns
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="source-tables.html">Source Tables</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Custom Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sort-columns.html">Sort Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamic-filter.html">Dynamic Filter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="custom-columns">
+<h1>Custom Columns<a class="headerlink" href="#custom-columns" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>Name of the custom column. This name is also used as the name of the column’s item in the Columns list.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Data Type</strong></dt><dd><p><em>Required</em> <br>
+Indicates the type of value associated with this column.|br|
+Available options are <em>Numeric</em>, <em>Text</em>, <em>DateTime</em> and <em>TimeSpan</em>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation Parameter Type</strong></dt><dd><p>Determines a calculation parameter type whose values appear in this column.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value Type</strong></dt><dd><p>Whether calcualtion parameter type name or calculation parameter type value appears in this column.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Expression</strong></dt><dd><p>T-SQL expression to compute the column. Other column values can be used in the expression by using format “source_table.column_name”. Simple or advanced SQL logic can be used in the expression. This includes simple math operations, cast operations, etc. If a number with a decimal point is desired, the expressions have to be multiplied by 1.0.</p>
+<p><strong>Example</strong>: Create a message column that displays “Please end the call” when an agent is talking over 15 minutes. The expression would be:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>CASE
+    WHEN AgentState.Duration &gt; 900 AND AgentState.State = &#39;Talking&#39;
+    THEN &#39;Please end the call.&#39;
+END
+</pre></div>
+</div>
+<div class="notice docutils container">
+<p>If the “DateTime” is used as a data type for a custom column, expression has to evaluate to the Unix Time format in milliseconds. For more information about the Unix Time and conversion to Unix Time, visit <a class="reference external" href="https://www.unixtimestamp.com/">this</a> website.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Aggregation Function</strong></dt><dd><p>A method how to merge values, if multiple rows are returned.</p>
+<p>Available options are <em>Average</em>, <em>Count</em>, <em>Count Distinct</em>, <em>Count Not Null</em>, <em>First</em>, <em>Last</em>, <em>Max</em>, <em>Median</em>, <em>Min</em>, <em>Standard Deviation</em>, <em>Sum</em>, <em>Variance</em> and <em>Weighted Average</em></p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="source-tables.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Source Tables
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="sort-columns.html">
+						Sort Columns 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

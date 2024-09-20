@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>3.7. Conversation Aggregates By Media Type And Queue - Active (CAByQ_A) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="3.8. Conversation Aggregates By Media Type And Wrap Up - Active (CAByW_A)" href="conversation-aggregates-by-mediatype-and-wrap-up.html" />
+    <link rel="prev" title="3.6. Conversation Aggregates By Media Type - Passive (CA_P)" href="conversation-aggregates-by-media-type.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">3.7. </span>Conversation Aggregates By Media Type And Queue - Active (CAByQ_A)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">3. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">3.7. </span>Conversation Aggregates By Media Type And Queue - Active (CAByQ_A)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">3.1. Agent Info - Passive (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">3.2. Agent State - Active (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">3.3. Campaign Diagnostics - Passive (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">3.4. Campaign Progress - Active (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">3.5. Campaign Stats - Passive (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type.html">3.6. Conversation Aggregates By Media Type - Passive (CA_P)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.7. Conversation Aggregates By Media Type And Queue - Active (CAByQ_A)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#merge-columns">3.7.1. Merge Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#columns">3.7.2. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">3.7.3. Calculation Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-mediatype-and-wrap-up.html">3.8. Conversation Aggregates By Media Type And Wrap Up - Active (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type-a.html">3.9. Flow Aggregates By Media Type - Active (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type-p.html">3.10. Flow Aggregates By Media Type - Passive (FA_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">3.11. Flow Observations By Media Type - Active (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type-a.html">3.12. Queue Observations By Media Type - Active (QOByM_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type-p.html">3.13. Queue Observations By Media Type - Passive (QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">3.14. Queue Observations - Active (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">3.15. User Aggregates By Media Type - Active (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">3.16. User Observations - Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">3.17. User Observations - Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">3.18. User Status Aggregates - Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">3.19. User Status Aggregates - Passive (USA_P)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="conversation-aggregates-by-media-type-and-queue-active-cabyq-a">
+<h1><span class="section-number">3.7. </span>Conversation Aggregates By Media Type And Queue - Active (CAByQ_A)<a class="headerlink" href="#conversation-aggregates-by-media-type-and-queue-active-cabyq-a" title="Permalink to this headline">¶</a></h1>
+<div class="notice docutils container">
+<p>This grid only supports the HISTORICAL interval for the last 24 hours.</p>
+</div>
+<div class="section" id="merge-columns">
+<h2><span class="section-number">3.7.1. </span>Merge Columns<a class="headerlink" href="#merge-columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>MediaType</strong> - Media type of the contact, such as telephony, email, or chat.</p></li>
+<li><p><strong>QueueId</strong> - ID assigned to a queue.</p></li>
+</ul>
+</div>
+<div class="section" id="columns">
+<h2><span class="section-number">3.7.2. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>ACWAvg</strong> - Average amount of time agents spent completing after-call work.</p></li>
+<li><p><strong>ACWCount</strong> - Number of times agents completed after-call work.</p></li>
+<li><p><strong>ACWMax</strong> - Maximum amount of time spent on after-call work for the selected interval.</p></li>
+<li><p><strong>ACWMin</strong> - Minimum amount of time spent on after-call work for the selected interval.</p></li>
+<li><p><strong>ACWSum</strong> - Total time spent doing after-call work (ACW). After-call work is the work that an agent performs immediately following an interaction. This work may involve keying activity codes, updating customer databases, filling out forms, or initiating outbound contact. As a metric, it indicates the total time an agent takes to finish working on a call. If an agent must complete any work before the agent can handle the next contact, then ACW is factored into the average handle time.</p></li>
+<li><p><strong>ASA</strong> - Average amount of time an interaction waits in queue before an agent answers it. This metric does not include interactions that agents do not answer. ASA is directly associated with service levels, and provides insight into the customer service your company provides. ASA is recorded in the interval in which the agent answered the interaction. Calculated by: Total Time to Answer / Number Answered.</p></li>
+<li><p><strong>AbandonCount</strong> - Number of interactions in which a customer disconnects in an ACD queue before connecting with an agent. For example, the customer hangs up before an agent answers, or the system disconnects the interaction.</p></li>
+<li><p><strong>AbandonMax</strong> - Maximum amount of time before an end user abandoned an interaction in a queue.</p></li>
+<li><p><strong>AbandonMin</strong> - Minimum amount of time before an end user abandoned an interaction in a queue.</p></li>
+<li><p><strong>AbandonNoShort</strong> - Number of abandoned interactions, excluding short abandons.</p></li>
+<li><p><strong>AbandonNoShortPercent</strong> - Percentage of abandoned interactions, excluding short abandons.</p></li>
+<li><p><strong>AbandonPercent</strong> - Percentage of offered interactions in which the customer has disconnected before connecting with an agent. Abandon rate can identify queues that require extra staff to handle interactions in a timely manner.</p></li>
+<li><p><strong>AnswerPercent</strong> - Percentage of offered interactions that an agent answered.</p></li>
+<li><p><strong>AnsweredCount</strong> - Number of assigned ACD interactions answered by an agent in a given period. The answered count increments when the agent is the first to connect to the interaction.</p></li>
+<li><p><strong>AnsweredMax</strong> - Maximum amount of time an interaction waited to be connected to an agent.</p></li>
+<li><p><strong>AnsweredMin</strong> - Minimum amount of time an interaction waited to be connected to an agent.</p></li>
+<li><p><strong>AnsweredSum</strong> - Total number of assigned ACD interactions answered by an agent in a given period. Answered increments when the agent is the first to connect to the interaction.</p></li>
+<li><p><strong>FlowOutCount</strong> - Number of flow-outs. Flow-outs are interactions that enter and leave a queue without getting answered by an agent and without getting disconnected. Flow-outs are an indication of customer service level and queue productivity. High numbers of flow-outs can indicate staffing issues or ineffective agents when used with high handle times (bullseye matching metrics). Flow-outs can include transfers to voicemail, callbacks, and any system-driven events such as in-queue flows that transfer to another queue or external party after a certain amount of time. Flow-outs can also occur if the caller opts to exit out of the queue and return to the IVR. Offered interactions are either flow-out, answered, or abandoned interactions.</p></li>
+<li><p><strong>FlowOutPercent</strong> - Percentage of offered interactions that enter and leave a queue without getting answered or disconnected by an agent.</p></li>
+<li><p><strong>HandleAvg</strong> - Average amount of time agents spent handling interactions. This calculation includes talk time, hold time, and after-call work. HandleAvg also includes dialing and contacting time for outbound calls.</p></li>
+<li><p><strong>HandleCount</strong> - Total number of ACD and non-ACD interactions agents were involved in, including answered interactions, transfers, callbacks, and outbound calls. Handle increments in the interval in which the interaction ends, after the agent completes any after-call work and completes the interaction.</p></li>
+<li><p><strong>HandleSum</strong> - Total amount of time agents spent handling interactions. This calculation includes talk time, hold time, and after-call work. For outbound calls it also includes dialing and contacting time.</p></li>
+<li><p><strong>HoldAvg</strong> - Average number of seconds that interactions were placed on hold for.</p></li>
+<li><p><strong>HoldCount</strong> - Number of interactions in which the interaction went on hold.</p></li>
+<li><p><strong>HoldMax</strong> - Maximum amount of time spent on hold for the selected interval.</p></li>
+<li><p><strong>HoldMin</strong> - Minimum amount of time spent on hold for the selected interval.</p></li>
+<li><p><strong>HoldSum</strong> - Total amount of time spent on hold for the selected interval.</p></li>
+<li><p><strong>OfferedCount</strong> - Number of interactions routed into the queue for an agent to answer. Offered interactions are either answered, abandoned, or flow-out interactions.</p></li>
+<li><p><strong>OutboundAttemptCount</strong> - Number of attempted outbound interactions for Dialer campaigns.</p></li>
+<li><p><strong>OutboundCount</strong> - Number of outbound interactions placed on behalf of the queue.</p></li>
+<li><p><strong>OverSLACount</strong> - Number of interactions that were over the defined service level.</p></li>
+<li><p><strong>QueueName</strong> - Name of a queue.</p></li>
+<li><p><strong>ServiceLevelDenominator</strong> - Denominator used as part of the formula to calculate the service level.</p></li>
+<li><p><strong>ServiceLevelNumerator</strong> - Numerator used as part of the formula to calculate the service level.</p></li>
+<li><p><strong>ServiceLevelPercent</strong> - Service level percentage is a contact center performance statistic expressed as “X percent of contacts answered in Y seconds.” For example, a goal of answering 80% of voice calls within 20 seconds provides a service level target of 80/20. You can set the service level target for each media type in a queue. Analytics uses this service level target to calculate whether you are within the service level % defined by your service level agreement (SLA).</p></li>
+<li><p><strong>ServiceLevelTarget</strong> - Target service level for a queue.</p></li>
+<li><p><strong>ShortAbandonCount</strong> - Number of interactions that were short abandoned.</p></li>
+<li><p><strong>ShortAbandonPercent</strong> - Percentage of interactions that were short abandoned.</p></li>
+<li><p><strong>TalkAvg</strong> - Average number of seconds spent interacting with a type of media.</p></li>
+<li><p><strong>TalkCompleteCount</strong> - Number of times an agent was talking/interacting.</p></li>
+<li><p><strong>TalkMax</strong> - Maximum amount of time an agent spent talking/interacting.</p></li>
+<li><p><strong>TalkMin</strong> - Minimum amount of time an agent spent talking/interacting.</p></li>
+<li><p><strong>TalkSum</strong> - Total amount of time an agent spent talking/interacting.</p></li>
+<li><p><strong>TransferPercent</strong> - Number of transfers compared to the total number of interactions answered.</p></li>
+<li><p><strong>TransferredCount</strong> - Number of interactions an agent answered in one queue and then transferred. A transfer counts for the queue in which an agent answers the interaction. This measurement is calculated by the number of interactions blind transferred or consult transferred.</p></li>
+<li><p><strong>VoicemailCount</strong> - Amount of voicemails received.</p></li>
+<li><p><strong>WaitAvg</strong> - Average amount of time an interaction is in a queue before an agent answers it, it flows out, or the customer abandons it.</p></li>
+<li><p><strong>WaitCount</strong> - Number of times a user was waiting in queue before an interaction was answered, abandoned, or flowed out of queue.</p></li>
+<li><p><strong>WaitMax</strong> - Maximum amount of time spent waiting in queue for the selected interval.</p></li>
+<li><p><strong>WaitMin</strong> - Minimum amount of time spent waiting in queue for the selected interval.</p></li>
+<li><p><strong>WaitSum</strong> - Total amount of time spent waiting in queue for the selected interval.</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">3.7.3. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The Grid function has these optional parameters:</p>
+<ul class="simple">
+<li><p><strong>MediaType</strong></p></li>
+<li><p><strong>MediaTypeGroup</strong></p></li>
+<li><p><strong>Queue</strong></p></li>
+<li><p><strong>QueueGroup</strong></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="conversation-aggregates-by-media-type.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">3.6. </span>Conversation Aggregates By Media Type - Passive (CA_P)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="conversation-aggregates-by-mediatype-and-wrap-up.html">
+						<span class="section-number">3.8. </span>Conversation Aggregates By Media Type And Wrap Up - Active (CAByW_A) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.13. User Aggregates By Media Type (UA_A) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.14. User Observations Active (UO_A)" href="user-observations-a.html" />
+    <link rel="prev" title="2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)" href="queue-observations-by-media-type.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.13. </span>User Aggregates By Media Type (UA_A)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.13. </span>User Aggregates By Media Type (UA_A)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="administrative.html">2.1. Administrative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">2.2. Agent Info (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.3. Agent State (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">2.4. Campaign Diagnostics (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">2.5. Campaign Progress (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">2.6. Campaign Stats (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-queue.html">2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-wrapup.html">2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type.html">2.9. Flow Aggregates By Media Type (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">2.10. Flow Observations By Media Type (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">2.11. Queue Observations (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type.html">2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.13. User Aggregates By Media Type (UA_A)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-acwcount">2.13.1. UA_A_ACWCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-acwsum">2.13.2. UA_A_ACWSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-alertcount">2.13.3. UA_A_AlertCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-alertsum">2.13.4. UA_A_AlertSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-contactingsum">2.13.5. UA_A_ContactingSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-dialingsum">2.13.6. UA_A_DialingSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-handlecount">2.13.7. UA_A_HandleCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-handlesum">2.13.8. UA_A_HandleSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-holdcount">2.13.9. UA_A_HoldCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-holdsum">2.13.10. UA_A_HoldSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-talkcompletecount">2.13.11. UA_A_TalkCompleteCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-talksum">2.13.12. UA_A_TalkSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ua-a-transferredcount">2.13.13. UA_A_TransferredCount</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">2.14. User Observations Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">2.15. User Observations Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">2.16. User Status Aggregates Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">2.17. User Status Aggregates Passive (USA_P)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="user-aggregates-by-media-type-ua-a">
+<h1><span class="section-number">2.13. </span>User Aggregates By Media Type (UA_A)<a class="headerlink" href="#user-aggregates-by-media-type-ua-a" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ua-a-acwcount">
+<h2><span class="section-number">2.13.1. </span>UA_A_ACWCount<a class="headerlink" href="#ua-a-acwcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - ACW Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times agents completed after-call work.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-acwsum">
+<h2><span class="section-number">2.13.2. </span>UA_A_ACWSum<a class="headerlink" href="#ua-a-acwsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - ACW Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total time spent doing after-call work (ACW).</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-alertcount">
+<h2><span class="section-number">2.13.3. </span>UA_A_AlertCount<a class="headerlink" href="#ua-a-alertcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Alert Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times an agent was alerted.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-alertsum">
+<h2><span class="section-number">2.13.4. </span>UA_A_AlertSum<a class="headerlink" href="#ua-a-alertsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Alert Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time that the Genesys Cloud alerts agents before the agent accepts or declines an interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-contactingsum">
+<h2><span class="section-number">2.13.5. </span>UA_A_ContactingSum<a class="headerlink" href="#ua-a-contactingsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Contacting Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time that it takes to establish a connection with the station on an outbound call.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-dialingsum">
+<h2><span class="section-number">2.13.6. </span>UA_A_DialingSum<a class="headerlink" href="#ua-a-dialingsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Dialing Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent dialing.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-handlecount">
+<h2><span class="section-number">2.13.7. </span>UA_A_HandleCount<a class="headerlink" href="#ua-a-handlecount" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Handle Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the total number of ACD and non-ACD interactions that agents were involved in, including answered interactions, transfers, callbacks, and outbound calls. Handle increments in the interval in which the interaction ends, after the agent completes any after-call work and completes the interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-handlesum">
+<h2><span class="section-number">2.13.8. </span>UA_A_HandleSum<a class="headerlink" href="#ua-a-handlesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Handle Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent handling an interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-holdcount">
+<h2><span class="section-number">2.13.9. </span>UA_A_HoldCount<a class="headerlink" href="#ua-a-holdcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Hold Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions in which the interaction went on hold.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-holdsum">
+<h2><span class="section-number">2.13.10. </span>UA_A_HoldSum<a class="headerlink" href="#ua-a-holdsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Hold Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the cumulative hold time for all interactions.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-talkcompletecount">
+<h2><span class="section-number">2.13.11. </span>UA_A_TalkCompleteCount<a class="headerlink" href="#ua-a-talkcompletecount" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Talk Complete Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times an agent was talking/interacting.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-talksum">
+<h2><span class="section-number">2.13.12. </span>UA_A_TalkSum<a class="headerlink" href="#ua-a-talksum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Talk Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the amount of time spent interacting with a type of media.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+<div class="section" id="ua-a-transferredcount">
+<h2><span class="section-number">2.13.13. </span>UA_A_TransferredCount<a class="headerlink" href="#ua-a-transferredcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Aggregates By Media Type - Transferred Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the total number of interactions transferred. This includes blind and consult transfers.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, User</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="queue-observations-by-media-type.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.12. </span>Queue Observations By Media Type (QOByM_A, QOByM_P)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="user-observations-a.html">
+						<span class="section-number">2.14. </span>User Observations Active (UO_A) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

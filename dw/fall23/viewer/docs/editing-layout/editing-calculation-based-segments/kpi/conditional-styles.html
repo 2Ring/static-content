@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Conditional Styles &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/fontawesome.min.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/main.js"></script>
+    <script src="../../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Row Filters" href="row-filters.html" />
+    <link rel="prev" title="KPI" href="../kpi.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../../index.html" id="headerImgWrapper">
+			<img src="../../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Conditional Styles</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi.html">KPI</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Conditional Styles
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../kpi.html">KPI</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Conditional Styles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="row-filters.html">Row Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="conditional-styles">
+<h1>Conditional Styles<a class="headerlink" href="#conditional-styles" title="Permalink to this headline">¶</a></h1>
+<div class="notice docutils container">
+<p>First conditional style whose condition has been met is applied.</p>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>Mode</strong></dt><dd><p><em>For information about setting the condition, see</em> <a class="reference external" href="../condition.html">Condition</a> <em>section</em>. <br>
+A condition that needs to be met for the conditional style to apply.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Description</strong></dt><dd><p>A short definition of the usage of the conditional style.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Appearance</strong></dt><dd><p>A style of the condition.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Presentation Type</strong></dt><dd><p>Defines how value should be presented.
+<br> Available options are:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Alphanumeric</strong></dt><dd><p>The value is presented as a pure text, without any additional graphical elements.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore</strong></dt><dd><p>The value is enveloped in a colored circle. The circle changes color based on configured conditional styles. The semaphore is used, when the state is more important than the value itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle</strong></dt><dd><p>The value is accompanied by a circle indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle</strong></dt><dd><p>The value is accompanied by a semi-circle indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal/Vertical Bar</strong></dt><dd><p>The value is accompanied by a rectangular indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Image</strong></dt><dd><p>An image is applied, when the condition is met.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Static Color</strong></dt><dd><p>A static color is applied, when the condition is met.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Display Format</strong></dt><dd><p>Format in which the value should be displayed. When Raw is selected, the value is displayed without any transformation.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Display Format</strong></dt><dd><p><em>Available only when “Custom” is selected as a Display Format</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#custom-display-format">Custom Display Format</a> <em>section</em>. <br>
+Custom format in which the value should be displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text/Semaphore/Circle/Semi Circle/Bar Color</strong></dt><dd><p><em>According to the selected presentation type</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Not available, if the “Image” presentation type is selected</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Not available, if the “Image” presentation type is selected</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Sizing</strong></dt><dd><p><em>Not available, if the “Image” or “Static color” presentation type is selected</em> <br>
+Controls, how the font size is calculated.
+<br> Available options are:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Regular</dt><dd><p>Font is sized relatively to KPI’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Best Fit</dt><dd><p>Font is dynamically sized to always fit inside KPI.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Wrapping</strong></dt><dd><p><em>Available inly if “Regular” is selected as a text sizing.</em> <br>
+Whether the text should be splitted into multiple lines if the text is wider than the whole segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Preserve Whitespace</strong></dt><dd><p><em>Available inly if “Regular” is selected as a text sizing.</em> <br>
+Whether whitespaces should be preserved as they are, or be replaced with a single space character.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Available only if “Regular” is selected as a text sizing</em> <br>
+<em>Not available if “Image” or “Solid Color” is selected as a presentation type</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p><em>Available only when the text sizing is set to Regular and presentation type to Alphanumeric</em> <br>
+Controls, where the value should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p><em>Available only when the horizontal alignment is not Center</em> <br>
+The size of a padding between the value and segment’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Choose Display Range Min Manually</strong></dt><dd><p><em>Available only when “Circle”, “Semi Circle” or “Bar” presentation type is selected.</em> <br>
+Whether the minimum on the value range is defined manually.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Min</strong></dt><dd><p>Value, that defines the minimum on the value range.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Choose Display Range Max Manually</strong></dt><dd><p><em>Available only when “Circle”, “Semi Circle” or “Bar” presentation type is selected.</em> <br>
+Whether the maximum on the value range is defined manually.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Max</strong></dt><dd><p>Value, that defines the maximum on the value range.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>File</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../static-content.html">Static content</a> <em>chapter</em>. <br>
+Relative path of the image, that should be displayed. Using the {{value}} placeholder in the path, an image can dynamically change, based on the KPI value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Image Horizontal Alignment</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+Controls, where the image should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Image Vertical Alignment</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+Controls, where the image should be aligned on the vertical axis. <br>
+Available options are <em>Top</em>, <em>Middle</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Image Size</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+Decides, how the image is adjusted to the Segment’s size.</p>
+<ul>
+<li><dl>
+<dt><strong>Cover</strong></dt><dd><p>The image is resized to cover the whole Segment, without deforming the image. No uncovered spaces are present. However one of image’s axis may overlap outside of the Segment’s boundaries.</p>
+<p>Figure 1: Cover</p>
+<img alt="../../../../_images/image-cover2.png" class="flat align-center" src="../../../../_images/image-cover2.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Contain</strong></dt><dd><p>The image The image is resized to be fully displayed, in largest possible size, without deforming the image. Uncovered spaces, filled with the Background Color, are present.</p>
+<p>Figure 2: Contain</p>
+<img alt="../../../../_images/image-contain2.png" class="flat align-center" src="../../../../_images/image-contain2.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Fill</strong></dt><dd><p>The image fully fills the entire Segment’s size. The image may be deformed. No uncovered spaces or overlapping occurs.</p>
+<p>Figure 3: Fill</p>
+<img alt="../../../../_images/image-fill2.png" class="flat align-center" src="../../../../_images/image-fill2.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Custom</strong></dt><dd><p>When selected, <strong>Custom Size Height</strong> and <strong>Custom Size Width</strong> fields are displayed. These fields define size of the image in percentages of the Segment’s size.</p>
+<p>Figure 4: Custom</p>
+<img alt="../../../../_images/image-custom2.png" class="flat align-center" src="../../../../_images/image-custom2.png" />
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Effects and Filters</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+Controls, adjusting the image, such as Brightness, Contrast, Opacity etc. Click <span class="button">Reset</span> to revert image to its default values.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Blink Background</strong></dt><dd><p>Whether a background should blink, when the condition is met.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the blinking background.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Play Audible Alert</strong></dt><dd><p>Whether audio sound should be played, when the condition is met.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Audio File</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../../static-content.html">Static content</a> <em>chapter</em>. <br>
+The alert sound that will be played.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Repetition</strong></dt><dd><p><em>Inheritable</em> <br>
+Defines how many times audio alert should be played.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Repeat</strong></dt><dd><p>The sound is continuously repeated while the bad value is present.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Don’t Repeat</strong></dt><dd><p>The sound is played only once, when the bad value is first displayed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../kpi.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						KPI
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="row-filters.html">
+						Row Filters 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

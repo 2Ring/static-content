@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.4. Current Tasks &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.5. Queue Agent States" href="queue-agent-states.html" />
+    <link rel="prev" title="2.3. Agent Statistics RT" href="agent-statistics-rt.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.4. </span>Current Tasks</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../wxcc-2-0.html">WXCC</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">2. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.4. </span>Current Tasks
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agent-states.html">2.1. Agent States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">2.2. Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-rt.html">2.3. Agent Statistics RT</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.4. Current Tasks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">2.4.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">2.4.2. Calculation Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-mapped-parameters">2.4.3. Column-mapped Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="queue-agent-states.html">2.5. Queue Agent States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-statistics.html">2.6. Queue Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-statistics-rt.html">2.7. Queue Statistics RT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-attributes.html">2.8. User Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="current-tasks">
+<h1><span class="section-number">2.4. </span>Current Tasks<a class="headerlink" href="#current-tasks" title="Permalink to this headline">¶</a></h1>
+<p>The Current Tasks Grid Function displays all currently ongoing tasks, that are assigned to a queue, in a tabular format.</p>
+<div class="attention docutils container">
+<p>This Grid Function utilizes REST API for initialization and Webhook Notifications for updates.</p>
+</div>
+<div class="section" id="columns">
+<h2><span class="section-number">2.4.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Agent Id</strong> - the Id of the agent the task is assigned to</p></li>
+<li><p><strong>Agent Name</strong> - the name of the agent the task is assigned to</p></li>
+<li><p><strong>Channel Type</strong> - the type of channel associated with the queue the task is assigned to</p></li>
+<li><p><strong>Destination</strong> - destination the customer contacted. For telephony, this is the number the contact called. For chat, this is chat template name where the chat takes place. For email, it is the email address contacted.</p></li>
+<li><p><strong>Direction</strong> - indicates which party initiated the Task. If “inbound”, was initiated by customer. If “outbound”, was initiated by system or by an agent.</p></li>
+<li><p><strong>Duration</strong> - the amount of time the task spent in the current state</p></li>
+<li><p><strong>Origin</strong> - customer’s channel-specific identifier. For telephony, this is the phone number. For email and chat, this is the email address.</p></li>
+<li><p><strong>Outbound Type</strong> - indicates if the outbound task was an outdial, campaign or callback.</p></li>
+<li><p><strong>Queue Name</strong> - the name of the queue the task is assigned to</p></li>
+<li><p><strong>State</strong> - the current state the task is in</p></li>
+<li><p><strong>State Change Time</strong> - timestamp of when the task entered the current state</p></li>
+<li><p><strong>Task Id</strong> - the Id of the task</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">2.4.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The Grid function has these optional parameters:</p>
+<ul class="simple">
+<li><p><strong>Agents</strong> - list of Agent names</p></li>
+<li><p><strong>Channel Type</strong> - list of Channel Types</p></li>
+<li><p><strong>Queues</strong> - list of Queue names</p></li>
+</ul>
+</div>
+<div class="section" id="column-mapped-parameters">
+<h2><span class="section-number">2.4.3. </span>Column-mapped Parameters<a class="headerlink" href="#column-mapped-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Agent Id</strong> - Agents calculation parameter value</p></li>
+<li><p><strong>Agent Name</strong> - Agents calculation parameter value</p></li>
+<li><p><strong>Channel Type</strong> - Channel Type calculation parameter value</p></li>
+<li><p><strong>Queue Name</strong> - Queues calculation parameter value</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="agent-statistics-rt.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.3. </span>Agent Statistics RT
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="queue-agent-states.html">
+						<span class="section-number">2.5. </span>Queue Agent States 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Static content &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/fontawesome.min.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/main.js"></script>
+    <script src="../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="Impersonating" href="editing-layout/impersonating.html" /> 
+  </head><body>
+  	<header>
+		<a href="../index.html" id="headerImgWrapper">
+			<img src="../_static/2ring_logo.jpg">
+		</a>
+		<span>Static content</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Static content
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Static Content</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#content-management">Content management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="static-content">
+<h1>Static content<a class="headerlink" href="#static-content" title="Permalink to this headline">¶</a></h1>
+<p>Static content are resources, used by some segment types, such as Images, PDF Documents, Kpis. These resources need to be included into the application first, before they can be used.</p>
+<p>These files can be included into the application either by:</p>
+<ul>
+<li><p>Manually copying the files into the correct folder on the server, where the DW application is deployed.</p>
+<div class="notice docutils container">
+<p>Static content is located in the static-content\files\{Id of a Business Unit} subfolder of DW application deploy folder.</p>
+</div>
+</li>
+<li><p>Using the Content Files Manager dialog, described in the <em>Content management</em> chapter.</p></li>
+</ul>
+<div class="section" id="content-management">
+<h2>Content management<a class="headerlink" href="#content-management" title="Permalink to this headline">¶</a></h2>
+<p>Some resources are included by default. Custom resources need to be included into the application first, before they can be used. This can be achieved in two ways:</p>
+<ul class="simple">
+<li><p>By clicking the <em>Manage CSV/Image/Audio/PDF Files</em> button in the layout list. For more information see <a class="reference external" href="working-with-layout-list.html">Working with the Layout List</a> chapter.</p></li>
+<li><p>When a segment uses resource, a Content Files Manager button is displayed in the corresponding field. A path to the desired file can also be typed directly into the text field.</p></li>
+</ul>
+<p>Figure 1: Field with the Content Files Manager button</p>
+<img alt="../_images/static-content-upload-button.png" class="flat align-center" src="../_images/static-content-upload-button.png" />
+<p>Clicking the button opens up the Content Files Manager dialog.</p>
+<p>Figure 2: Content Files Manager</p>
+<img alt="../_images/static-content-upload-dialog.png" class="flat align-center" src="../_images/static-content-upload-dialog.png" />
+<ol class="arabic">
+<li><p><strong>List of folders</strong> - List of folders within the Static Content folder. This section also contains a search bar for faster filtering in the list of folders.</p></li>
+<li><p><strong>List of files and folders</strong> - List of files and subfolders within the folder, selected in the section 1. Files and folders can also be filtered by using the search bar. Double-click on a file in this section automatically selects the file and closes the dialog. Double-click on a folder opens it in the list of folders.</p></li>
+<li><p><strong>Create Folder</strong> - A folder can be created by clicking this button.</p></li>
+<li><p><strong>Upload File</strong> - Clicking this button opens an upload dialog. The dialog allows the user to add files from his file system to the list. Added files won’t be uploaded until the <span class="button">Upload</span> button is clicked.</p>
+<p>Figure 3: Upload dialog</p>
+<img alt="../_images/static-content-upload-dialog2.png" class="flat align-center" src="../_images/static-content-upload-dialog2.png" />
+<p>Locate the desired files by clicking the <em class="fa fa-plus"></em> button and decide how the static content should be uploaded. Available options are:</p>
+<ul class="simple">
+<li><p><strong>Upload And Replace If Exists</strong> - static content files are uploaded. In case a file with the same name already exists, it is replaced by the uploaded file.</p></li>
+<li><p><strong>Upload And Rename If Exists</strong> - static content files are uploaded. In case a file with the same name already exists, the uploaded file is renamed.</p></li>
+<li><p><strong>Upload If Not Exists</strong> - static content files are only uploaded if they do not already exist.</p></li>
+</ul>
+</li>
+<li><p><strong>Download File</strong> - Each file can be downloaded by selecting it in the list of files and clicking this button.</p></li>
+<li><p><strong>Delete selected files/folders</strong> - Selected files or folders can be deleted by clicking this button.</p></li>
+</ol>
+<p><span class="heading-4">Upload configuration</span></p>
+<p>Configuration is located in the static-content\api\appsettings.json of DW application deploy folder.</p>
+<p><strong>Default configuration:</strong></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">{</span>
+  <span class="s">&quot;ContentFiles&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+      <span class="s">&quot;ImageFiles&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+          <span class="s">&quot;Extentions&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;.jpg&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;.jpeg&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;.png&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;.gif&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;.webp&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;.svg&quot;</span><span class="p p-Indicator">],</span>
+          <span class="s">&quot;MaxFileSize&quot;</span><span class="p p-Indicator">:</span> <span class="nv">10485760</span>
+      <span class="p p-Indicator">},</span>
+      <span class="s">&quot;AudioFiles&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+          <span class="s">&quot;Extentions&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;.mp3&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;.wav&quot;</span><span class="p p-Indicator">],</span>
+          <span class="s">&quot;MaxFileSize&quot;</span><span class="p p-Indicator">:</span> <span class="nv">3145728</span>
+      <span class="p p-Indicator">},</span>
+      <span class="s">&quot;PdfFiles&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+          <span class="s">&quot;Extentions&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;.pdf&quot;</span><span class="p p-Indicator">],</span>
+          <span class="s">&quot;MaxFileSize&quot;</span><span class="p p-Indicator">:</span> <span class="nv">10485760</span>
+      <span class="p p-Indicator">},</span>
+      <span class="s">&quot;FontFiles&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+          <span class="s">&quot;Extentions&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;.ttf&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;.woff&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;.woff2&quot;</span><span class="p p-Indicator">],</span>
+          <span class="s">&quot;MaxFileSize&quot;</span><span class="p p-Indicator">:</span> <span class="nv">5242880</span><span class="p p-Indicator">,</span>
+      <span class="p p-Indicator">},</span>
+      <span class="s">&quot;CsvFiles&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+          <span class="s">&quot;Extentions&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;.csv&quot;</span><span class="p p-Indicator">],</span>
+          <span class="s">&quot;MaxFileSize&quot;</span><span class="p p-Indicator">:</span> <span class="nv">2097152</span><span class="p p-Indicator">,</span>
+      <span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">},</span>
+  <span class="s">&quot;Cache&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+      <span class="s">&quot;UrlsCacheDuration&quot;</span><span class="p p-Indicator">:</span> <span class="nv">200</span>
+  <span class="p p-Indicator">}</span>
+<span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>Extentions</strong></dt><dd><p>The application can be configured to only allow specific file formats for each type of the static content.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>MaxFileSize</strong></dt><dd><p>Maximum allowed file size of uploaded file.</p>
+<div class="notice docutils container">
+<p>This limit applies only when uploading files through Upload dialog. Bigger files, copied manually to server, can still be used in segments.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>UrlsCacheDuration</strong></dt><dd><p>How often the database is checked for new static content files in layouts with anonymous access allowed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="editing-layout/impersonating.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Impersonating
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="troubleshooting.html">
+						Troubleshooting 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

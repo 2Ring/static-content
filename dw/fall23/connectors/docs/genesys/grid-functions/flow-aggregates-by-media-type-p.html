@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>3.10. Flow Aggregates By Media Type - Passive (FA_P) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="3.11. Flow Observations By Media Type - Active (FO_A)" href="flow-observations-by-media-type.html" />
+    <link rel="prev" title="3.9. Flow Aggregates By Media Type - Active (FA_A)" href="flow-aggregates-by-media-type-a.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">3.10. </span>Flow Aggregates By Media Type - Passive (FA_P)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">3. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">3.10. </span>Flow Aggregates By Media Type - Passive (FA_P)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">3.1. Agent Info - Passive (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">3.2. Agent State - Active (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">3.3. Campaign Diagnostics - Passive (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">3.4. Campaign Progress - Active (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">3.5. Campaign Stats - Passive (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type.html">3.6. Conversation Aggregates By Media Type - Passive (CA_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-mediatype-and-queue.html">3.7. Conversation Aggregates By Media Type And Queue - Active (CAByQ_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-mediatype-and-wrap-up.html">3.8. Conversation Aggregates By Media Type And Wrap Up - Active (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type-a.html">3.9. Flow Aggregates By Media Type - Active (FA_A)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.10. Flow Aggregates By Media Type - Passive (FA_P)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">3.10.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">3.10.2. Calculation Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">3.11. Flow Observations By Media Type - Active (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type-a.html">3.12. Queue Observations By Media Type - Active (QOByM_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type-p.html">3.13. Queue Observations By Media Type - Passive (QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">3.14. Queue Observations - Active (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">3.15. User Aggregates By Media Type - Active (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">3.16. User Observations - Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">3.17. User Observations - Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">3.18. User Status Aggregates - Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">3.19. User Status Aggregates - Passive (USA_P)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="flow-aggregates-by-media-type-passive-fa-p">
+<h1><span class="section-number">3.10. </span>Flow Aggregates By Media Type - Passive (FA_P)<a class="headerlink" href="#flow-aggregates-by-media-type-passive-fa-p" title="Permalink to this headline">¶</a></h1>
+<p>Columns with the “group” postfix have the values returned from Genesys grouped by an entity from the prefix.</p>
+<div class="notice docutils container">
+<p>The Flow Aggregates By Media Type - Passive (FA_P) grid:</p>
+<ul class="simple">
+<li><p>only supports HISTORICAL interval.</p></li>
+<li><p>must always contain a <em>mediaType</em> calculation parameter to display the results.</p></li>
+<li><p>must contain at least one calculation parameter or column that can be filtered on a queue (queue, flow, user wrapup, campaign).</p></li>
+</ul>
+</div>
+<div class="section" id="columns">
+<h2><span class="section-number">3.10.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>AddressFromGroup</strong> - Address that initiated an action.</p></li>
+<li><p><strong>AddressToGroup</strong> - Address receiving an action.</p></li>
+<li><p><strong>AgentRankGroup</strong> - Proposed agent rank for this conversation from predictive routing (lower is better).</p></li>
+<li><p><strong>AgentScoreGroup</strong> - Assigned agent score for this conversation (0 - 100, higher being better).</p></li>
+<li><p><strong>AniGroup</strong> - The Automatic Number Identification (caller’s number).</p></li>
+<li><p><strong>ConversationIdGroup</strong> - ID of a conversation.</p></li>
+<li><p><strong>ConvertedFromGroup</strong> - Session media type that was converted from in case of a media type conversion.</p></li>
+<li><p><strong>ConvertedToGroup</strong> - Session media type that was converted to in case of a media type conversion.</p></li>
+<li><p><strong>DirectionGroup</strong> - Direction of the communication.</p></li>
+<li><p><strong>DisconnectTypeGroup</strong> - Reason the interaction disconnected.</p>
+<ul>
+<li><p><em>System</em> - The cloud or the provider caused the disconnect.</p></li>
+<li><p><em>Agent</em> - An agent caused the disconnect. For example, an agent clicked End Call during a voice interaction, or the agent hung up their physical phone, or the browser closed while using the Genesys Cloud WebRTC phone.</p></li>
+<li><p><em>External</em> - External participant in the conversation caused the disconnect. For example, the customer hung up their phone, or their browser closed during the interaction.</p></li>
+</ul>
+</li>
+<li><p><strong>DivisionIdGroup</strong> - Displays the divisions associated with the interaction. A division is a way to group and segregate objects but keep them inside the same organization. For example, you can create divisions by business units, countries, and office locations and then assign configuration objects to each division. After you create and configure divisions, you can use roles to grant user access to divisions, and thus the objects within each division.</p></li>
+<li><p><strong>DnisGroup</strong> - Original number dialed for the interaction.</p></li>
+<li><p><strong>EdgeIdGroup</strong> - Unique identifier of the edge device.</p></li>
+<li><p><strong>EndingLanguageGroup</strong> - Flow ending language, e.g. en-us.</p></li>
+<li><p><strong>EntryReasonGroup</strong> - Particular entry reason for this flow, e.g. an address, userId, or flowId.</p></li>
+<li><p><strong>EntryTypeGroup</strong> - Entry type for this flow, e.g. dnis, dialer, agent, flow, or direct.</p></li>
+<li><p><strong>ExitReasonGroup</strong> - Reason why a customer exited the interaction.</p></li>
+<li><p><strong>ExternalContactIdGroup</strong> - ID of an external contact.</p></li>
+<li><p><strong>ExternalMediaCountGroup</strong> - Observed media count for an external participiant.</p></li>
+<li><p><strong>ExternalOrganizationIdGroup</strong> - ID of an external organization.</p></li>
+<li><p><strong>FlaggedReasonGroup</strong> - Indicates calls flagged for voice quality issues. For more information about flagging calls, see Flag a problematic voice interaction, or Flag a problematic phone call.</p></li>
+<li><p><strong>FlowAvg</strong> - Average amount of time that an entry spent in the flow.</p></li>
+<li><p><strong>FlowCount</strong> - Number of communications that entered a flow.</p></li>
+<li><p><strong>FlowDisconnectAvg</strong> - Average amount of time until an entry disconnected in a flow.</p></li>
+<li><p><strong>FlowDisconnectCount</strong> - Number of times an entry spent time in a flow until it was disconnected.</p></li>
+<li><p><strong>FlowDisconnectMax</strong> - Longest amount of time that an entry spent in the flow before disconnecting.</p></li>
+<li><p><strong>FlowDisconnectMin</strong> - Shortest amount of time that an entry spent in the flow before disconnecting.</p></li>
+<li><p><strong>FlowDisconnectSum</strong> - Total amount of time spent in a flow for communications that were abandoned.</p></li>
+<li><p><strong>FlowExitAvg</strong> - Average amount of time that an entry spent in a flow before exiting.</p></li>
+<li><p><strong>FlowExitCount</strong> - Total number of times an entry was in a flow until it exited the flow to another destination, such as an ACD queue, ACD voicemail, or a user.</p></li>
+<li><p><strong>FlowExitMax</strong> - Longest amount of time that an entry spent in the flow before exiting.</p></li>
+<li><p><strong>FlowExitMin</strong> - Shortest amount of time that an entry spent in the flow before exiting.</p></li>
+<li><p><strong>FlowExitSum</strong> - Total amount of time spent in a flow for communications that exited the flow regularly.</p></li>
+<li><p><strong>FlowIdGroup</strong> - ID assigned to a flow.</p></li>
+<li><p><strong>FlowMax</strong> - Maximum amount of time spent in a flow.</p></li>
+<li><p><strong>FlowMin</strong> - Minimum amount of time spent in a flow.</p></li>
+<li><p><strong>FlowNameGroup</strong> - Name of a flow.</p></li>
+<li><p><strong>FlowOutTypeGroup</strong> - Type of flow out that occurred when emitting tFlowOut.</p></li>
+<li><p><strong>FlowOutcomeAvg</strong> - Average number of communications that had a specific flow outcome.</p></li>
+<li><p><strong>FlowOutcomeCount</strong> - Number of communications that had a specific flow outcome.</p></li>
+<li><p><strong>FlowOutcomeFailedCount</strong> - Number of failed flow outcomes.</p></li>
+<li><p><strong>FlowOutcomeGroup</strong> - Number of communications that had a specific flow outcome.</p></li>
+<li><p><strong>FlowOutcomeIdGroup</strong> - ID of a flow outcome.</p></li>
+<li><p><strong>FlowOutcomeMax</strong> - Maximum number of communications that had a specific flow outcome.</p></li>
+<li><p><strong>FlowOutcomeMin</strong> - Minimum number of communications that had a specific flow outcome.</p></li>
+<li><p><strong>FlowOutcomeSum</strong> - Total number of communications that had a specific flow outcome.</p></li>
+<li><p><strong>FlowOutcomeValueGroup</strong> - Flow outcome value, e.g. SUCCESS.</p></li>
+<li><p><strong>FlowSum</strong> - Total amount of time spent in a flow.</p></li>
+<li><p><strong>FlowTypeGroup</strong> - Type of flow.</p></li>
+<li><p><strong>FlowVersionGroup</strong> - Version of a flow.</p></li>
+<li><p><strong>GroupIdGroup</strong> - ID of a group.</p></li>
+<li><p><strong>InteractionTypeGroup</strong> - Type of interaction.</p></li>
+<li><p><strong>JourneyActionIdGroup</strong> - ID of the action.</p></li>
+<li><p><strong>JourneyActionMapIdGroup</strong> - ID of the action map that triggered the action.</p></li>
+<li><p><strong>JourneyActionMapVersionGroup</strong> - Version of the action map that triggered the action.</p></li>
+<li><p><strong>JourneyCustomerIdGroup</strong> - Primary identifier of the customer in the source where the activities originate from.</p></li>
+<li><p><strong>JourneyCustomerIdTypeGroup</strong> - Primary identifier type (e.g. cookie).</p></li>
+<li><p><strong>JourneyCustomerSessionIdGroup</strong> - Unique identifier of the session.</p></li>
+<li><p><strong>JourneyCustomerSessionIdTypeGroup</strong> - Session types indicate the type or category of sessions (e.g. web, ticket, delivery, atm).</p></li>
+<li><p><strong>MediaCountGroup</strong> - Observed media count for an internal participant, e.g. an agent.</p></li>
+<li><p><strong>MediaTypeGroup</strong> - Media type of the contact, such as telephony, email, or chat.</p></li>
+<li><p><strong>MessageTypeGroup</strong> - Type of message.</p></li>
+<li><p><strong>OriginatingDirectionGroup</strong> - Original direction of the conversation.</p></li>
+<li><p><strong>OutboundCampaignIdGroup</strong> - ID of an outbound campaign.</p></li>
+<li><p><strong>OutboundCampaignNameGroup</strong> - Name of an outbound campaign.</p></li>
+<li><p><strong>OutboundContactIdGroup</strong> - ID of an outbound contact.</p></li>
+<li><p><strong>OutboundContactListIdGroup</strong> - ID of an outbound contact list.</p></li>
+<li><p><strong>ParticipantNameGroup</strong> - Participant’s name.</p></li>
+<li><p><strong>PeerIdGroup</strong> - Identifies pairs of related sessions in a conversation. E.g. an external session’s peerId will be the session that the call originally connected to, e.g. if an IVR was dialed, the IVR session will also have the external session’s ID as its peer. After that point, any transfers of that session to other internal components (acd, agent, etc.) will all spawn new sessions whose peerIds point back to that original external session.</p></li>
+<li><p><strong>ProposedAgentIdGroup</strong> - Unique identifier for the agent that was proposed by predictive routing.</p></li>
+<li><p><strong>ProviderGroup</strong> - Source provider for the communication.</p></li>
+<li><p><strong>PurposeGroup</strong> - Participant’s purpose.</p></li>
+<li><p><strong>QueueIdGroup</strong> - ID of a queue.</p></li>
+<li><p><strong>QueueNameGroup</strong> - Name of a queue.</p></li>
+<li><p><strong>RemoteGroup</strong> - Name, phone number, or email address of the remote party.</p></li>
+<li><p><strong>RequestedLanguageIdGroup</strong> - Unique identifier for the language requested for an interaction.</p></li>
+<li><p><strong>RequestedRoutingGroup</strong> - Routing type(s) for requested/attempted routing methods.</p></li>
+<li><p><strong>RequestedRoutingSkillIdGroup</strong> - Unique identifier(s) for the skill(s) requested for an interaction.</p></li>
+<li><p><strong>RoomIdGroup</strong> - Unique identifier for the room.</p></li>
+<li><p><strong>RoutingPriorityGroup</strong> - A value can be assigned to prioritize a conversation in the queue.</p></li>
+<li><p><strong>ScoredAgentIdGroup</strong> - Unique identifier for the agent that was scored for this conversation.</p></li>
+<li><p><strong>SelectedAgentIdGroup</strong> - Selected agent’s ID.</p></li>
+<li><p><strong>SelectedAgentRankGroup</strong> - Selected agent’s GPR rank.</p></li>
+<li><p><strong>SessionDnisGroup</strong> - Dialed number for the current session; this can be different from the dnis, e.g. if the call was transferred.</p></li>
+<li><p><strong>SessionIdGroup</strong> - ID of a session.</p></li>
+<li><p><strong>StartingLanguageGroup</strong> - Flow starting language, e.g. en-us.</p></li>
+<li><p><strong>StationIdGroup</strong> - Unique identifier for a phone.</p></li>
+<li><p><strong>TransferTargetAddressGroup</strong> - Address of a flow transfer target, e.g. a phone number, an email address, or a queueId.</p></li>
+<li><p><strong>TransferTargetNameGroup</strong> - Name of a flow transfer target.</p></li>
+<li><p><strong>TransferTypeGroup</strong> - Type of transfer for flows that ended with a transfer.</p></li>
+<li><p><strong>UsedRoutingGroup</strong> - Complete routing method.</p></li>
+<li><p><strong>UserIdGroup</strong> - User ID of an agent.</p></li>
+<li><p><strong>UserNameGroup</strong> - Agent’s username.</p></li>
+<li><p><strong>WrapUpCodeGroup</strong> - Wrap-up code that an agent assigned to an interaction.</p></li>
+<li><p><strong>WrapUpCodeNameGroup</strong> - Name of the wrap-up code.</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">3.10.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The Grid function has these optional parameters:</p>
+<ul class="simple">
+<li><p><strong>AddressFrom</strong></p></li>
+<li><p><strong>AddressTo</strong></p></li>
+<li><p><strong>AgentRank</strong></p></li>
+<li><p><strong>AgentScore</strong></p></li>
+<li><p><strong>Ani</strong></p></li>
+<li><p><strong>ConversationId</strong></p></li>
+<li><p><strong>ConvertedFrom</strong></p></li>
+<li><p><strong>ConvertedTo</strong></p></li>
+<li><p><strong>Direction</strong></p></li>
+<li><p><strong>DisconnectType</strong></p></li>
+<li><p><strong>DivisionId</strong></p></li>
+<li><p><strong>Dnis</strong></p></li>
+<li><p><strong>EdgeId</strong></p></li>
+<li><p><strong>EndingLanguage</strong></p></li>
+<li><p><strong>EntryReason</strong></p></li>
+<li><p><strong>EntryType</strong></p></li>
+<li><p><strong>ExitReason</strong></p></li>
+<li><p><strong>ExternalContactId</strong></p></li>
+<li><p><strong>ExternalMediaCount</strong></p></li>
+<li><p><strong>ExternalOrganizationId</strong></p></li>
+<li><p><strong>FlaggedReason</strong></p></li>
+<li><p><strong>Flow</strong></p></li>
+<li><p><strong>FlowName</strong></p></li>
+<li><p><strong>FlowOutType</strong></p></li>
+<li><p><strong>FlowOutcome</strong></p></li>
+<li><p><strong>FlowOutcomeId</strong></p></li>
+<li><p><strong>FlowOutcomeValue</strong></p></li>
+<li><p><strong>FlowType</strong></p></li>
+<li><p><strong>FlowVersion</strong></p></li>
+<li><p><strong>GroupId</strong></p></li>
+<li><p><strong>InteractionType</strong></p></li>
+<li><p><strong>JourneyActionId</strong></p></li>
+<li><p><strong>JourneyActionMapId</strong></p></li>
+<li><p><strong>JourneyActionMapVersion</strong></p></li>
+<li><p><strong>JourneyCustomerId</strong></p></li>
+<li><p><strong>JourneyCustomerIdType</strong></p></li>
+<li><p><strong>JourneyCustomerSessionId</strong></p></li>
+<li><p><strong>JourneyCustomerSessionIdType</strong></p></li>
+<li><p><strong>MediaCount</strong></p></li>
+<li><p><strong>MediaType</strong></p></li>
+<li><p><strong>MessageType</strong></p></li>
+<li><p><strong>OriginatingDirection</strong></p></li>
+<li><p><strong>OutboundCampaignId</strong></p></li>
+<li><p><strong>OutboundContactId</strong></p></li>
+<li><p><strong>OutboundContactListId</strong></p></li>
+<li><p><strong>ParticipantName</strong></p></li>
+<li><p><strong>PeerId</strong></p></li>
+<li><p><strong>ProposedAgentId</strong></p></li>
+<li><p><strong>Provider</strong></p></li>
+<li><p><strong>Purpose</strong></p></li>
+<li><p><strong>Queue</strong></p></li>
+<li><p><strong>Remote</strong></p></li>
+<li><p><strong>RequestedLanguageId</strong></p></li>
+<li><p><strong>RequestedRouting</strong></p></li>
+<li><p><strong>RequestedRoutingSkillId</strong></p></li>
+<li><p><strong>RoomId</strong></p></li>
+<li><p><strong>RoutingPriority</strong></p></li>
+<li><p><strong>ScoredAgentId</strong></p></li>
+<li><p><strong>SelectedAgentId</strong></p></li>
+<li><p><strong>SelectedAgentRank</strong></p></li>
+<li><p><strong>SessionDnis</strong></p></li>
+<li><p><strong>SessionId</strong></p></li>
+<li><p><strong>StartingLanguage</strong></p></li>
+<li><p><strong>StationId</strong></p></li>
+<li><p><strong>TransferTargetAddress</strong></p></li>
+<li><p><strong>TransferTargetName</strong></p></li>
+<li><p><strong>TransferType</strong></p></li>
+<li><p><strong>UsedRouting</strong></p></li>
+<li><p><strong>User</strong></p></li>
+<li><p><strong>WrapUpCode</strong></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="flow-aggregates-by-media-type-a.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">3.9. </span>Flow Aggregates By Media Type - Active (FA_A)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="flow-observations-by-media-type.html">
+						<span class="section-number">3.11. </span>Flow Observations By Media Type - Active (FO_A) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

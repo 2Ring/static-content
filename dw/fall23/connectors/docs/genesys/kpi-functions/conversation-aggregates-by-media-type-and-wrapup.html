@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.9. Flow Aggregates By Media Type (FA_A)" href="flow-aggregates-by-media-type.html" />
+    <link rel="prev" title="2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)" href="conversation-aggregates-by-media-type-and-queue.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.8. </span>Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.8. </span>Conversation Aggregates By Media Type And Wrap Up (CAByW_A)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="administrative.html">2.1. Administrative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">2.2. Agent Info (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.3. Agent State (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">2.4. Campaign Diagnostics (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">2.5. Campaign Progress (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">2.6. Campaign Stats (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-queue.html">2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-acwcount">2.8.1. CAByW_A_ACWCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-acwsum">2.8.2. CAByW_A_ACWSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-handlecount">2.8.3. CAByW_A_HandleCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-handlesum">2.8.4. CAByW_A_HandleSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-holdcount">2.8.5. CAByW_A_HoldCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-holdsum">2.8.6. CAByW_A_HoldSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-talkcount">2.8.7. CAByW_A_TalkCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-talksum">2.8.8. CAByW_A_TalkSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyw-a-transferredcount">2.8.9. CAByW_A_TransferredCount</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type.html">2.9. Flow Aggregates By Media Type (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">2.10. Flow Observations By Media Type (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">2.11. Queue Observations (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type.html">2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">2.13. User Aggregates By Media Type (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">2.14. User Observations Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">2.15. User Observations Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">2.16. User Status Aggregates Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">2.17. User Status Aggregates Passive (USA_P)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="conversation-aggregates-by-media-type-and-wrap-up-cabyw-a">
+<h1><span class="section-number">2.8. </span>Conversation Aggregates By Media Type And Wrap Up (CAByW_A)<a class="headerlink" href="#conversation-aggregates-by-media-type-and-wrap-up-cabyw-a" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cabyw-a-acwcount">
+<h2><span class="section-number">2.8.1. </span>CAByW_A_ACWCount<a class="headerlink" href="#cabyw-a-acwcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - ACW Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times agents completed after-call work.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+<div class="section" id="cabyw-a-acwsum">
+<h2><span class="section-number">2.8.2. </span>CAByW_A_ACWSum<a class="headerlink" href="#cabyw-a-acwsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - ACW Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total time spent in after-call work (ACW). After-call work is the work that an agent performs immediately following an interaction. Work may involve keying activity codes, updating customer databases, filling out forms, or initiating outbound contact. As a metric, it indicates the total amount of time an agent takes to finish working on a call. If an agent must complete any work before the agent can handle the next contact, then ACW is factored into the average handle time.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+<div class="section" id="cabyw-a-handlecount">
+<h2><span class="section-number">2.8.3. </span>CAByW_A_HandleCount<a class="headerlink" href="#cabyw-a-handlecount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - Handle Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the total number of ACD and non-ACD interactions agents were involved in, including answered interactions, transfers, callbacks, and outbound calls. Handle increments in the interval in which the interaction ends, after the agent completes any after-call work and completes the interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+<div class="section" id="cabyw-a-handlesum">
+<h2><span class="section-number">2.8.4. </span>CAByW_A_HandleSum<a class="headerlink" href="#cabyw-a-handlesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - Handle Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time that it takes to establish a connection with the station on an outbound call.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+<div class="section" id="cabyw-a-holdcount">
+<h2><span class="section-number">2.8.5. </span>CAByW_A_HoldCount<a class="headerlink" href="#cabyw-a-holdcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - Hold Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions in which the interaction went on hold.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+<div class="section" id="cabyw-a-holdsum">
+<h2><span class="section-number">2.8.6. </span>CAByW_A_HoldSum<a class="headerlink" href="#cabyw-a-holdsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - Hold Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the cumulative hold time for all interactions.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+<div class="section" id="cabyw-a-talkcount">
+<h2><span class="section-number">2.8.7. </span>CAByW_A_TalkCount<a class="headerlink" href="#cabyw-a-talkcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - Talk Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times an agent was talking/interacting.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+<div class="section" id="cabyw-a-talksum">
+<h2><span class="section-number">2.8.8. </span>CAByW_A_TalkSum<a class="headerlink" href="#cabyw-a-talksum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - Talk Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the amount of time spent interacting with a type of media.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+<div class="section" id="cabyw-a-transferredcount">
+<h2><span class="section-number">2.8.9. </span>CAByW_A_TransferredCount<a class="headerlink" href="#cabyw-a-transferredcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Wrap Up - Transferred Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions an agent answered in one queue and then transferred. A transfer counts for the queue in which an agent answers the interaction. This measurement is calculated by the number of interactions blind transferred or consult transferred.</p>
+<p><strong>Parameters:</strong> MediaType, Queue, WrapUpCode</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="conversation-aggregates-by-media-type-and-queue.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.7. </span>Conversation Aggregates By Media Type And Queue (CAByQ_A)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="flow-aggregates-by-media-type.html">
+						<span class="section-number">2.9. </span>Flow Aggregates By Media Type (FA_A) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

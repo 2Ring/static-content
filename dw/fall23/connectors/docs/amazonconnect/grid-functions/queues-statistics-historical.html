@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.3. Queues Statistics Historical &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.4. User Attributes" href="user-attributes.html" />
+    <link rel="prev" title="1.2. Queues Statistics Current" href="queues-statistics-current.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.3. </span>Queues Statistics Historical</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../amazonconnect.html">AmazonConnect</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">1. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.3. </span>Queues Statistics Historical
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">1. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agents-statistics.html">1.1. Agents Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queues-statistics-current.html">1.2. Queues Statistics Current</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.3. Queues Statistics Historical</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">1.3.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">1.3.2. Calculation Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-mapped-parameters">1.3.3. Column-mapped Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-attributes.html">1.4. User Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="queues-statistics-historical">
+<h1><span class="section-number">1.3. </span>Queues Statistics Historical<a class="headerlink" href="#queues-statistics-historical" title="Permalink to this headline">¶</a></h1>
+<p>The Queues Statistics Historical Grid function calculates interval statistics for queues, which are then displayed in a tabular format.</p>
+<div class="section" id="columns">
+<h2><span class="section-number">1.3.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><strong>Api Contacts Handled</strong> – the number of contacts that were initiated using an Amazon Connect API operation and handled by an agent.</p></li>
+<li><p><strong>Average Abandon Time</strong> – the average time that contacts waited in the queue before being abandoned.</p></li>
+<li><p><strong>Average After Contact Work Time</strong> – the average time that an agent spent in the After Contact Work (ACW) status after handling a contact.</p></li>
+<li><p><strong>Average Handle Time</strong> – the average time that an agent spent on contacts, including hold time and after contact work time.</p></li>
+<li><p><strong>Average Hold Time</strong> – the average time that customers spent on hold after being connected to an agent.</p></li>
+<li><p><strong>Average Interaction And Hold Time</strong> – the average of the sum of the interaction time and hold time.</p></li>
+<li><p><strong>Average Interaction Time</strong> – the average time that agents spent interacting with customers on a contact.</p></li>
+<li><p><strong>Average Occupancy</strong> – the percentage of time that agents were active on contacts.</p></li>
+<li><p><strong>Average Queue Answer Time</strong> – the average time that contacts waited in the queue before being answered by an agent.</p></li>
+<li><p><strong>Callback Contacts Handled</strong> – the number of contacts that were initiated from a queued callback and handled by an agent.</p></li>
+<li><p><strong>Contacts Abandoned</strong> – the number of contacts disconnected by the customer while in the queue.</p></li>
+<li><p><strong>Contacts Agent Hung Up First</strong> – the number of contacts disconnected where the agent disconnected before the customer.</p></li>
+<li><p><strong>Contacts Consulted</strong> – the number of contacts handled by an agent who consulted with another agent. The agent interacts with the other agent, but the customer is not transferred to the other agent.</p></li>
+<li><p><strong>Contacts Handled</strong> – the number of contacts that were connected to an agent.</p></li>
+<li><p><strong>Contacts Handled Incoming</strong> – the number of incoming contacts that were handled by an agent, including inbound contacts, transferred contacts, and scheduled callbacks.</p></li>
+<li><p><strong>Contacts Handled Outbound</strong> – the number of outbound contacts that were handled by an agent.</p></li>
+<li><p><strong>Contacts Hold Abandons</strong> – the number of contacts that disconnected while the customer was on hold.</p></li>
+<li><p><strong>Contacts Missed</strong> – the number of contacts routed to an agent but not answered by the agent, including contacts abandoned by the customer, during the specified time range.</p></li>
+<li><p><strong>Contacts Queued</strong> – the number of contacts placed in the queue.</p></li>
+<li><p><strong>Contacts Transferred In</strong> – the count of contacts transferred to the queue by an agent.</p></li>
+<li><p><strong>Contacts Transferred In From Queue</strong> – the number of contacts transferred to the queue from another queue.</p></li>
+<li><p><strong>Contacts Transferred Out</strong> – the number of contacts transferred from the queue after being answered by an agent.</p></li>
+<li><p><strong>Contacts Transferred Out From Queue</strong> – the number of contacts transferred from the queue to another queue.</p></li>
+<li><p><strong>Longest Queued Time</strong> – the longest time that a contact spent waiting in the queue.</p></li>
+<li><p><strong>Name</strong> – the name of the queue.</p></li>
+<li><p><strong>Service Level</strong> – the percentage of contacts removed from the queue between 0 and X seconds after being added to it.</p>
+<div class="notice docutils container">
+<p>Maximum of 20 unique SERVICE_LEVEL metrics can be included in a request.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">1.3.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Queues</strong> – the list of queue names.</p></li>
+<li><p><strong>Threshold</strong> – time in seconds. Calls with queue time lower than the threshold will be considered as handled in service level. The possible threshold values are: whole numbers between 1 and 604800(inclusive).</p></li>
+</ul>
+<div class="attention docutils container">
+<p>One threshold value has to be selected, otherwise the ServiceLevel column will show 0.</p>
+</div>
+</div>
+<div class="section" id="column-mapped-parameters">
+<h2><span class="section-number">1.3.3. </span>Column-mapped Parameters<a class="headerlink" href="#column-mapped-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Name</strong> - Queues calculation parameter value</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="queues-statistics-current.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.2. </span>Queues Statistics Current
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="user-attributes.html">
+						<span class="section-number">1.4. </span>User Attributes 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

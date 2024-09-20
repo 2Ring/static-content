@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>3. SQL Patterns &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ServiceNow" href="../servicenow.html" />
+    <link rel="prev" title="2.6. User Attributes" href="grid-functions/user-attributes.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">3. </span>SQL Patterns</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../nicecxone.html">Nice CXone</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">3. </span>SQL Patterns
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../nicecxone.html">Nice CXone</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="kpi-functions.html">1. KPI Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid-functions.html">2. Grid Functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sql-patterns">
+<h1><span class="section-number">3. </span>SQL Patterns<a class="headerlink" href="#sql-patterns" title="Permalink to this headline">¶</a></h1>
+<p>It is possible to use Transact-SQL patterns in the Wildcards section of some parameters. For more information about SQL patterns see <a class="reference external" href="https://msdn.microsoft.com/en-us/library/ms179859.aspx">https://msdn.microsoft.com/en-us/library/ms179859.aspx</a>.</p>
+<p>Filters, where you can use SQL Patterns:</p>
+<ul class="simple">
+<li><p><strong>Agents</strong></p></li>
+<li><p><strong>AgentStates</strong></p></li>
+<li><p><strong>Skills</strong> - Allows you to select from a list of skills using a logical OR operation for filtering. When you use this parameter, any object that matches at least one of the selected skills will be included in the results.</p></li>
+<li><p><strong>Teams</strong></p></li>
+</ul>
+<p>It is possible to use more than one SQL Pattern by creating a comma separated list. E.g.: CSQ_A%, CSQ_B%, CSQ_C%</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="grid-functions/user-attributes.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.6. </span>User Attributes
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../servicenow.html">
+						ServiceNow 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

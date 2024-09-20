@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bar/Line Chart - Kpi Timeline &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Value Axes" href="bar-line-chart-kpi-timeline/value-axes.html" />
+    <link rel="prev" title="Conditional Styles" href="bar-line-chart-grid/conditional-styles.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Bar/Line Chart - Kpi Timeline</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Bar/Line Chart - Kpi Timeline
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bar/Line Chart - KPI Timeline</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bar-line-chart-kpi-timeline/value-axes.html">Value Axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bar-line-chart-kpi-timeline/series.html">Series</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bar-line-chart-kpi-timeline">
+<h1>Bar/Line Chart - Kpi Timeline<a class="headerlink" href="#bar-line-chart-kpi-timeline" title="Permalink to this headline">¶</a></h1>
+<p>A Bar/Line Chart - Kpi Timeline can display values of one or more calculations, over the course of a specific period.
+The period is represented by an horizontal axis which spans the whole period.</p>
+<div class="notice docutils container">
+<p>For general information about this segment, see <a class="reference internal" href="../../what-is-layout/calculation-based-segments/bar-line-chart-kpi-timeline.html"><span class="doc">Bar/Line Chart - KPI Timeline</span></a> chapter.</p>
+</div>
+<ul>
+<li><dl>
+<dt><strong>Period Settings</strong></dt><dd><p>This group defines period over which we want to display values.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Period</strong></dt><dd><p><em>Required</em> <br>
+A desired type of time period to be displayed in chart.
+<br> Available options are <em>Day</em>, <em>Week</em>, <em>Month</em>, <em>Year</em> and <em>Sliding Interval</em></p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Number of Displayed Periods</strong></dt><dd><p><em>Required</em> <br>
+The number of days, weeks, months or years to display.</p>
+<div class="notice docutils container">
+<p>When Number of Displayed Periods is more than 1, each period is represented by its own chart. Charts are stacked vertically inside of the segment.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Displayed Period</strong>/<strong>Newest Displayed Period</strong></dt><dd><p><em>Required</em> <br>
+<em>When multiple periods should be displayed this option specifies which will be the newest displayed period.</em> <br>
+When only one period should be displayed this option defines which period it will be.
+<br> Available options are:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>This Period</strong></dt><dd><p>The calendar displays the currently ongoing period.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Last Period</strong></dt><dd><p>The calendar displays the previous period.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Other Period</strong></dt><dd><p>If this option is chosen, how far into the past the Displayed Period/Newest Displayed Period is has to be provided.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Granularity</strong></dt><dd><p><em>Required</em> <br>
+<em>Available only when “Day”, “Year” or “Sliding Interval” period is selected. When “Month” or “Week” period is selected day granularity is used.</em> <br>
+The time interval each series item represent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Current Day/Hour/…</strong></dt><dd><p><em>Available only when “This Period” is selected as Displayed Period/Newest Displayed Period.</em> <br>
+Whether the value for ongoing series item (interval) should be displayed. Value is being automatically updated if displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Number of Periods</strong></dt><dd><p><em>Available only if “Sliding Interval” is selected as a Period</em> <br>
+Number of periods to be displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Number of intervals in Period</strong></dt><dd><p><em>Available only if “Sliding Interval” is selected as a Period</em> <br>
+Number of selected intervals to be displayed within each period.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Filter Hours</strong></dt><dd><p><em>Available only when “Day” period is selected or when “Sliding Interval” with granularity less than a “Day” is selected.</em> <br>
+When <em>Day</em>, or <em>Sliding Interval</em> with granularity less than a <em>Day</em> is selected as a period, time-based intervals are shown as series items. This options is used to limit which items should be shown.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>From</strong></dt><dd><p><em>Required</em> <br>
+Items are shown only if their associated intervals started after or at this time.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>To</strong></dt><dd><p><em>Required</em> <br>
+Items are shown only if their associated intervals ended before or at this time.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Time zone</strong></dt><dd><p><em>Inheritable</em> <br>
+Specifies based on which time zone values should be calculated.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Weekdays</strong></dt><dd><p><em>When “Day” period is selected, if non-working day should be shown, nearest previous working day is displayed instead.</em> <br>
+<em>When “Day” granularity is selected, non-working days are not displayed in the chart.</em> <br>
+The Timeline Chart can be configured to display only certain relevant days. Has effect only if <em>Day</em> granularity or period is selected.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>First Day Of Week</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available only when “Week”, “Month” or “Year” period is selected.</em> <br>
+Specifies, which day should be displayed and considered as first of each week.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Monday, …, Sunday</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available options are *Working Day</em> and “Non-Working Day”* <br>
+Visibility of each day can be configured with its corresponding dropdown. Non-Working days are hidden.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Appearance</strong></dt><dd><p>The style of the Bar/Line Chart - Kpi Timeline.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Show Headers</strong></dt><dd><p>When enabled, headers describing shown periods are displayed</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p><em>Inheritable</em> <br>
+Height of the header, that is measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Legend</strong></dt><dd><p>When enabled, the chart legend is displayed.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p><em>Required</em> <br>
+<em>Available options are “Left”, “Right”, “Top” and “Bottom”</em> <br>
+Position of legend.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section.</em> <br>
+The background color of the legend.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p><em>Inheritable</em> <br>
+Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Date Axis</strong></dt><dd><p>Configuration of horizontal chart axis</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Auto Rotate Labels</strong></dt><dd><p>Whether axis labels should be automatically rotated when there is not enough space for them.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p><em>Inheritable</em> <br>
+Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Grid Lines</strong></dt><dd><p>Whether the lines, separating the items of the axis should be displayed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Plot Area</strong></dt><dd><p>Configuration of the chart’s plot area.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Margin</strong></dt><dd><p><em>Inheritable</em> <br>
+Controls the height of the empty space above the plot area. Is measured in permilles of the whole Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the plot area.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Colors</strong></dt><dd><p>For ease of access, all aforementioned color related options are once again located in the Colors group.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text. This color is applied to both axes labels and text in legend.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Header Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the header text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Header Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the header background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Plot Area Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Background color of the plot area.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Axes Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the both axes lines.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Grid Lines Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the horizontal and vertical grid lines.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value Axes</strong></dt><dd><p><em>Manually orderable</em> <br>
+List of Chart’s value axes. For more information see <a class="reference internal" href="bar-line-chart-kpi-timeline/value-axes.html"><span class="doc">Value Axes</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Series</strong></dt><dd><p><em>Manually orderable</em> <br>
+List of Chart’s series. For more information see <a class="reference internal" href="bar-line-chart-kpi-timeline/series.html"><span class="doc">Series</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bar-line-chart-kpi-timeline/value-axes.html">Value Axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bar-line-chart-kpi-timeline/series.html">Series</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="bar-line-chart-grid/conditional-styles.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Conditional Styles
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="bar-line-chart-kpi-timeline/value-axes.html">
+						Value Axes 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

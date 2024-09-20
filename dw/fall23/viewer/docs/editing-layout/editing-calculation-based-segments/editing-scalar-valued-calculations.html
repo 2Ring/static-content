@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Editing Scalar-Valued Calculations &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Calculation Variables" href="editing-calculation-kpi/calculation-variables.html" />
+    <link rel="prev" title="Editing Calculation Based Segments" href="../editing-calculation-based-segments.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Editing Scalar-Valued Calculations</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Editing Scalar-Valued Calculations
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Editing Scalar-Valued Calculations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="editing-calculation-kpi/calculation-variables.html">Calculation Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-calculation-kpi/parameters.html">Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="editing-scalar-valued-calculations">
+<h1>Editing Scalar-Valued Calculations<a class="headerlink" href="#editing-scalar-valued-calculations" title="Permalink to this headline">¶</a></h1>
+<p>The calculation options control, how its results are calculated.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Type</strong></dt><dd><p><em>Required</em> <br>
+Type of the calculation.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Built-in</strong></dt><dd><p>The results will be generated by a built-in calculation function, provided by the connector.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom</strong></dt><dd><p>The results will be generated by a custom calculation, defined in the expression option. The expression can reference build-in calculation functions, provided by the connector(s).</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Interval Settings</strong></dt><dd><p><em>Required</em> <br>
+KPI can display historical interval data. For more information about historical intervals see <a class="reference internal" href="historical-intervals.html"><span class="doc">Historical Intervals</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Advanced</strong></dt><dd><p>Advanced calculation settings.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Time Zone</strong></dt><dd><p>Specifies based on which time zone values should be calculated.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Refresh Interval</strong></dt><dd><p>Interval in seconds, between each refresh of the calculation’s data.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Log Retention</strong></dt><dd><p>All calculated values are logged for configured number of days. Unsuccessful calculations are also logged. These logs can help with troubleshooting.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation Id</strong></dt><dd><p><em>Serves for information purposes only</em> <br>
+Id of the calculation. Calculation Id is not being automatically updated after changing calculation. Manual refresh is required to show up-to-date value.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Notification Rules</strong></dt><dd><p>This group contains list of configured notification rules. When enabled, notification rules are being checked for potential notifications.
+For more information see <a class="reference internal" href="kpi/notification-rules.html"><span class="doc">Notification Rules</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>If <strong>Built-in</strong> is selected as calculation’s type panel also contains:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Function</strong></dt><dd><p><em>Required</em> <br>
+Connector provided calculation function, used for calculation of results.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><p>A list of parameters, used by the calculation function when calculating the results. For more information see <span class="xref std std-doc">editing-calculation/parameters</span> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>If <strong>Custom</strong> is selected as calculation’s type panel also contains:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Function</strong></dt><dd><p><em>Required</em> <br>
+The type of result the custom calculation is producing.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Expression</strong></dt><dd><p><em>Required</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#expression-builder">Expression builder</a> <em>chapter</em>. <br>
+Defines the expression to be used for calculation of the results. The expression may consist of multiple child calculations called variables. Expression, after replacing variables with values, have to be valid SQL command.</p>
+<div class="notice docutils container">
+<p>If the “DateTime” is used as a function for a custom KPI, expression has to evaluate to the Unix Time format in milliseconds. For more information about the Unix Time and conversion to Unix Time, visit <a class="reference external" href="https://www.unixtimestamp.com/">this</a> website.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Variables</strong></dt><dd><p>List of all variables. Variable represents a result of a child calculation. For more information see <span class="xref std std-doc">editing-calculation/calculation-variables</span> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="notice docutils container">
+<p>Any changes made to calculations or calculation parameters are applied only after underlying connector processed them. While the changes are being processed, a message is displayed in the bottom left corner, with text “Applying changes”. The text is followed by the list of affected connectors. The message disappears when all connectors successfully processed the change.</p>
+<p>If Applying changes message persists for long time, without any additional changes made, there may be a problem with the connection to the server. In such case the message will be displayed until the connection is restored and changes are automatically applied. When connection is not the problem some of the connectors could not be running.</p>
+</div>
+<p>When calculation parameters are changed (created, deleted or updated) previous parameters are stored in calculation history together with date until which they were being applied. When showing historic data for segment values are shown for calculation parameters which were configured at the time that value is associated with.
+If current calculation parameters should be used for all historic values, regardless of used parameters at the time of those values, calculation history has to be cleared using <span class="button">Clear parameter history</span> button.</p>
+<img alt="../../../_images/delete-calculation-history.png" class="flat align-center" src="../../../_images/delete-calculation-history.png" />
+<p>New record in calculation history is added even when data filter, that is applicable to calculation, is changed (created, deleted or updated) in corresponding BU. It is also added when parameter or data filter is using wildcard values and matching values change (connector updated available calculation parameter values).</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="editing-calculation-kpi/calculation-variables.html">Calculation Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-calculation-kpi/parameters.html">Parameters</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../editing-calculation-based-segments.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Editing Calculation Based Segments
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="editing-calculation-kpi/calculation-variables.html">
+						Calculation Variables 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

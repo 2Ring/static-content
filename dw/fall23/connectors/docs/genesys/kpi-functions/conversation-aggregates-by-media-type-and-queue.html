@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)" href="conversation-aggregates-by-media-type-and-wrapup.html" />
+    <link rel="prev" title="2.6. Campaign Stats (CS_P)" href="campaign-stats.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.7. </span>Conversation Aggregates By Media Type And Queue (CAByQ_A)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.7. </span>Conversation Aggregates By Media Type And Queue (CAByQ_A)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="administrative.html">2.1. Administrative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">2.2. Agent Info (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.3. Agent State (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">2.4. Campaign Diagnostics (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">2.5. Campaign Progress (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">2.6. Campaign Stats (CS_P)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-acwcount">2.7.1. CAByQ_A_ACWCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-acwmax">2.7.2. CAByQ_A_ACWMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-acwmin">2.7.3. CAByQ_A_ACWMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-acwsum">2.7.4. CAByQ_A_ACWSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-abandoncount">2.7.5. CAByQ_A_AbandonCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-abandonmax">2.7.6. CAByQ_A_AbandonMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-abandonmin">2.7.7. CAByQ_A_AbandonMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-answeredcount">2.7.8. CAByQ_A_AnsweredCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-answeredmax">2.7.9. CAByQ_A_AnsweredMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-answeredmin">2.7.10. CAByQ_A_AnsweredMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-answeredsum">2.7.11. CAByQ_A_AnsweredSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-flowoutcount">2.7.12. CAByQ_A_FlowOutCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-handlecount">2.7.13. CAByQ_A_HandleCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-handlesum">2.7.14. CAByQ_A_HandleSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-holdcount">2.7.15. CAByQ_A_HoldCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-holdmax">2.7.16. CAByQ_A_HoldMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-holdmin">2.7.17. CAByQ_A_HoldMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-holdsum">2.7.18. CAByQ_A_HoldSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-offeredcount">2.7.19. CAByQ_A_OfferedCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-outboundattemptcount">2.7.20. CAByQ_A_OutboundAttemptCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-outboundcount">2.7.21. CAByQ_A_OutboundCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-overslacount">2.7.22. CAByQ_A_OverSLACount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-serviceleveldenominator">2.7.23. CAByQ_A_ServiceLevelDenominator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-servicelevelnumerator">2.7.24. CAByQ_A_ServiceLevelNumerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-serviceleveltarget">2.7.25. CAByQ_A_ServiceLevelTarget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-shortabandoncount">2.7.26. CAByQ_A_ShortAbandonCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-talkcompletecount">2.7.27. CAByQ_A_TalkCompleteCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-talkmax">2.7.28. CAByQ_A_TalkMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-talkmin">2.7.29. CAByQ_A_TalkMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-talksum">2.7.30. CAByQ_A_TalkSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-transferredcount">2.7.31. CAByQ_A_TransferredCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-voicemailcount">2.7.32. CAByQ_A_VoicemailCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-waitcount">2.7.33. CAByQ_A_WaitCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-waitmax">2.7.34. CAByQ_A_WaitMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-waitmin">2.7.35. CAByQ_A_WaitMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cabyq-a-waitsum">2.7.36. CAByQ_A_WaitSum</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-wrapup.html">2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type.html">2.9. Flow Aggregates By Media Type (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">2.10. Flow Observations By Media Type (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">2.11. Queue Observations (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type.html">2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">2.13. User Aggregates By Media Type (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">2.14. User Observations Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">2.15. User Observations Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">2.16. User Status Aggregates Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">2.17. User Status Aggregates Passive (USA_P)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="conversation-aggregates-by-media-type-and-queue-cabyq-a">
+<h1><span class="section-number">2.7. </span>Conversation Aggregates By Media Type And Queue (CAByQ_A)<a class="headerlink" href="#conversation-aggregates-by-media-type-and-queue-cabyq-a" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cabyq-a-acwcount">
+<h2><span class="section-number">2.7.1. </span>CAByQ_A_ACWCount<a class="headerlink" href="#cabyq-a-acwcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - ACW Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times agents completed after-call work.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-acwmax">
+<h2><span class="section-number">2.7.2. </span>CAByQ_A_ACWMax<a class="headerlink" href="#cabyq-a-acwmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - ACW Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the maximum amount of time spent on after-call work for the selected interval.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-acwmin">
+<h2><span class="section-number">2.7.3. </span>CAByQ_A_ACWMin<a class="headerlink" href="#cabyq-a-acwmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - ACW Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the minimum amount of time spent on after-call work for the selected interval.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-acwsum">
+<h2><span class="section-number">2.7.4. </span>CAByQ_A_ACWSum<a class="headerlink" href="#cabyq-a-acwsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - ACW Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total time spent doing after-call work (ACW). After-call work is the work that an agent performs immediately following an interaction. This work may involve keying activity codes, updating customer databases, filling out forms, or initiating outbound contact. As a metric, it indicates the total time an agent takes to finish working on a call. If an agent must complete any work before the agent can handle the next contact, then ACW is factored into the average handle time.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-abandoncount">
+<h2><span class="section-number">2.7.5. </span>CAByQ_A_AbandonCount<a class="headerlink" href="#cabyq-a-abandoncount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Abandon Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions in which a customer disconnects in an ACD queue before connecting with an agent. For example, the customer hangs up before an agent answers, or the system disconnects the interaction.</p>
+<p><strong>Parameters:</strong> QueueId, MediaType</p>
+</div>
+<div class="section" id="cabyq-a-abandonmax">
+<h2><span class="section-number">2.7.6. </span>CAByQ_A_AbandonMax<a class="headerlink" href="#cabyq-a-abandonmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Abandon Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the maximum amount of time before an end user abandoned an interaction in a queue.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-abandonmin">
+<h2><span class="section-number">2.7.7. </span>CAByQ_A_AbandonMin<a class="headerlink" href="#cabyq-a-abandonmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Abandon Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the minimum amount of time before an end user abandoned an interaction in a queue.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-answeredcount">
+<h2><span class="section-number">2.7.8. </span>CAByQ_A_AnsweredCount<a class="headerlink" href="#cabyq-a-answeredcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Answered Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of assigned ACD interactions answered by an agent in a given period. The answered count increments when the agent is the first to connect to the interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-answeredmax">
+<h2><span class="section-number">2.7.9. </span>CAByQ_A_AnsweredMax<a class="headerlink" href="#cabyq-a-answeredmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Answered Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the maximum amount of time an interaction waited to be connected to an agent.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-answeredmin">
+<h2><span class="section-number">2.7.10. </span>CAByQ_A_AnsweredMin<a class="headerlink" href="#cabyq-a-answeredmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Answered Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the minimum amount of time an interaction waited to be connected to an agent.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-answeredsum">
+<h2><span class="section-number">2.7.11. </span>CAByQ_A_AnsweredSum<a class="headerlink" href="#cabyq-a-answeredsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Answered Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total number of assigned ACD interactions answered by an agent in a given period. Answered increments when the agent is the first to connect to the interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-flowoutcount">
+<h2><span class="section-number">2.7.12. </span>CAByQ_A_FlowOutCount<a class="headerlink" href="#cabyq-a-flowoutcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Flow Out Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of flow-outs. Flow-outs are interactions that enter and leave a queue without getting answered by an agent and without getting disconnected. Flow-outs are an indication of customer service level and queue productivity. High numbers of flow-outs can indicate staffing issues or ineffective agents when used with high handle times (bullseye matching metrics). Flow-outs can include transfers to voicemail, callbacks, and any system-driven events such as in-queue flows that transfer to another queue or external party after a certain amount of time. Flow-outs can also occur if the caller opts to exit out of the queue and return to the IVR. Offered interactions are either flow-out, answered, or abandoned interactions.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-handlecount">
+<h2><span class="section-number">2.7.13. </span>CAByQ_A_HandleCount<a class="headerlink" href="#cabyq-a-handlecount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Handle Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the total number of ACD and non-ACD interactions agents were involved in, including answered interactions, transfers, callbacks, and outbound calls. Handle increments in the interval in which the interaction ends, after the agent completes any after-call work and completes the interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-handlesum">
+<h2><span class="section-number">2.7.14. </span>CAByQ_A_HandleSum<a class="headerlink" href="#cabyq-a-handlesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Handle Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time agents spent handling interactions. This calculation includes talk time, hold time, and after-call work. For outbound calls it also includes dialing and contacting time.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-holdcount">
+<h2><span class="section-number">2.7.15. </span>CAByQ_A_HoldCount<a class="headerlink" href="#cabyq-a-holdcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Hold Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions in which the interaction went on hold.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-holdmax">
+<h2><span class="section-number">2.7.16. </span>CAByQ_A_HoldMax<a class="headerlink" href="#cabyq-a-holdmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Hold Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the maximum amount of hold time for an interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-holdmin">
+<h2><span class="section-number">2.7.17. </span>CAByQ_A_HoldMin<a class="headerlink" href="#cabyq-a-holdmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Hold Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the minimum amount of time spent on after-call work for the selected interval.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-holdsum">
+<h2><span class="section-number">2.7.18. </span>CAByQ_A_HoldSum<a class="headerlink" href="#cabyq-a-holdsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Hold Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of hold time for an interaction.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-offeredcount">
+<h2><span class="section-number">2.7.19. </span>CAByQ_A_OfferedCount<a class="headerlink" href="#cabyq-a-offeredcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Offered Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions routed into the queue for an agent to answer. Offered interactions are either answered, abandoned, or flow-out interactions.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-outboundattemptcount">
+<h2><span class="section-number">2.7.20. </span>CAByQ_A_OutboundAttemptCount<a class="headerlink" href="#cabyq-a-outboundattemptcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Outbound Attempt Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of attempted outbound interactions for Dialer campaigns.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-outboundcount">
+<h2><span class="section-number">2.7.21. </span>CAByQ_A_OutboundCount<a class="headerlink" href="#cabyq-a-outboundcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Outbound Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of outbound interactions placed on behalf of the queue.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-overslacount">
+<h2><span class="section-number">2.7.22. </span>CAByQ_A_OverSLACount<a class="headerlink" href="#cabyq-a-overslacount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Over SLA Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions that were over the defined service level.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-serviceleveldenominator">
+<h2><span class="section-number">2.7.23. </span>CAByQ_A_ServiceLevelDenominator<a class="headerlink" href="#cabyq-a-serviceleveldenominator" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Service Level Denominator - actively updated with notifications</strong></p>
+<p>This KPI function is used as part of a custom calculation formula to calculate the service level.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-servicelevelnumerator">
+<h2><span class="section-number">2.7.24. </span>CAByQ_A_ServiceLevelNumerator<a class="headerlink" href="#cabyq-a-servicelevelnumerator" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Service Level Numerator - actively updated with notifications</strong></p>
+<p>This KPI function is used as part of a custom calculation formula to calculate the service level.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-serviceleveltarget">
+<h2><span class="section-number">2.7.25. </span>CAByQ_A_ServiceLevelTarget<a class="headerlink" href="#cabyq-a-serviceleveltarget" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Service Level Target - actively updated with notifications</strong></p>
+<p>The service level target is a contact center performance statistic expressed as “X percent of contacts answered in Y seconds.”</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-shortabandoncount">
+<h2><span class="section-number">2.7.26. </span>CAByQ_A_ShortAbandonCount<a class="headerlink" href="#cabyq-a-shortabandoncount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Short Abandon Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions that were short abandoned.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-talkcompletecount">
+<h2><span class="section-number">2.7.27. </span>CAByQ_A_TalkCompleteCount<a class="headerlink" href="#cabyq-a-talkcompletecount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Talk Complete Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times an agent was talking/interacting.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-talkmax">
+<h2><span class="section-number">2.7.28. </span>CAByQ_A_TalkMax<a class="headerlink" href="#cabyq-a-talkmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Talk Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the maximum amount of time an agent spent talking/interacting.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-talkmin">
+<h2><span class="section-number">2.7.29. </span>CAByQ_A_TalkMin<a class="headerlink" href="#cabyq-a-talkmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Talk Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the minimum amount of time an agent spent talking/interacting.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-talksum">
+<h2><span class="section-number">2.7.30. </span>CAByQ_A_TalkSum<a class="headerlink" href="#cabyq-a-talksum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Talk Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent talking/interacting.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-transferredcount">
+<h2><span class="section-number">2.7.31. </span>CAByQ_A_TransferredCount<a class="headerlink" href="#cabyq-a-transferredcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Transferred Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions an agent answered in one queue and then transferred. A transfer counts for the queue in which an agent answers the interaction. This measurement is calculated by the number of interactions blind transferred or consult transferred.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-voicemailcount">
+<h2><span class="section-number">2.7.32. </span>CAByQ_A_VoicemailCount<a class="headerlink" href="#cabyq-a-voicemailcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Voicemail Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the amount of voicemails received.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-waitcount">
+<h2><span class="section-number">2.7.33. </span>CAByQ_A_WaitCount<a class="headerlink" href="#cabyq-a-waitcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Wait Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times a user was waiting in queue before an interaction was answered, abandoned, or flowed out of queue.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-waitmax">
+<h2><span class="section-number">2.7.34. </span>CAByQ_A_WaitMax<a class="headerlink" href="#cabyq-a-waitmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Wait Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the maximum amount of time spent waiting in queue for the selected interval.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-waitmin">
+<h2><span class="section-number">2.7.35. </span>CAByQ_A_WaitMin<a class="headerlink" href="#cabyq-a-waitmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Wait Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the minimum amount of time spent waiting in queue for the selected interval.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="cabyq-a-waitsum">
+<h2><span class="section-number">2.7.36. </span>CAByQ_A_WaitSum<a class="headerlink" href="#cabyq-a-waitsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Conversation Aggregates By Media Type and Queue - Wait Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time spent waiting in queue for the selected interval.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="campaign-stats.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.6. </span>Campaign Stats (CS_P)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="conversation-aggregates-by-media-type-and-wrapup.html">
+						<span class="section-number">2.8. </span>Conversation Aggregates By Media Type And Wrap Up (CAByW_A) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1. Key Concepts &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. KPI Functions" href="kpi-functions.html" />
+    <link rel="prev" title="Genesys Cloud" href="../genesys-cloud.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1. </span>Key Concepts</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1. </span>Key Concepts
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Key Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#grid">1.1. Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kpi">1.2. KPI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kpi-functions.html">2. KPI Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="key-concepts">
+<h1><span class="section-number">1. </span>Key Concepts<a class="headerlink" href="#key-concepts" title="Permalink to this headline">¶</a></h1>
+<p>The Genesys Cloud connector provides two types of functions. A Grid and a KPI. This chapter describes the key concepts for both of them.</p>
+<div class="section" id="grid">
+<h2><span class="section-number">1.1. </span>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h2>
+<p>A Grid is composed of two components: A Grid segment and a Grid function. The Grid segment is the visual representation of Grid data, which are calculated by a Grid function. For more information about Grid segments, see the DASHBOARDS &amp; WALLBOARDS User Guide.</p>
+<p>Each Grid function has calculation parameters, which can be used to get more specific data. This chapter also identifies the Merge columns from the built-in Grid functions. Merge columns are a list of columns from a grid calculation function that are a part of the composite primary key. This means that they are the columns that uniquely identify a single row in the grid. They are used to optimize data manipulation in the database and are always included when querying any external system for data.</p>
+<p>In terms of a time interval for which the values are displayed, built-in Grid functions for the Genesys Cloud Connector can be divided into two groups:</p>
+<ul>
+<li><p>Historical grids:</p>
+<ul class="simple">
+<li><p>Conversation Aggregates - Passive</p></li>
+<li><p>Conversation Aggregates By Queue - Active</p></li>
+<li><p>Conversation Aggregates By Wrapup - Active</p></li>
+<li><p>User Aggregates - Active</p></li>
+<li><p>Flow Aggregates - Active</p></li>
+<li><p>Flow Aggregates - Passive</p></li>
+<li><p>User Status Aggregates - Active</p></li>
+<li><p>User Status Aggregates - Passive</p></li>
+</ul>
+<div class="notice docutils container">
+<p>Active historical calculations only support intervals up to 24 hours in the past. Older data will not be present in the grid. <br></p>
+<p>Passive historical calculations support all intervals.</p>
+</div>
+</li>
+<li><p>Non-Historical (Real-Time) grids:</p>
+<ul class="simple">
+<li><p>all others</p></li>
+</ul>
+</li>
+</ul>
+<p>In terms of a values update interval and an API request consumption, built-in Grid functions for the Genesys Cloud Connector can also be divided into two groups:</p>
+<ul>
+<li><p><strong>Active</strong> <br></p>
+<p>These grid calculations are updated in real time through the use of web sockets. The connector is subscribed to relevant topics and gets updates instantly from Genesys. For certain calculations, these grids support a smaller number of parameters and historical active calculations can only retrieve data up to 24 hours in the past. Active grid calculations only consume a single API request every few minutes or when a grid is changed.</p>
+</li>
+<li><p><strong>Passive</strong> <br></p>
+<p>These grid calculations are updated per the specified refresh interval. For most passive grid calculations, a single request has to be made every interval. This means, that passive grid calculations consume API requests at a much faster rate than Active grid calculations. Certain grids, such as Campaign grids consume requests at an even faster than, consuming an API request per interval per campaign displayed in the grid. In the Genesys, billing is based on number of REST requests, so more REST requests cause higher payments.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="kpi">
+<h2><span class="section-number">1.2. </span>KPI<a class="headerlink" href="#kpi" title="Permalink to this headline">¶</a></h2>
+<p>A KPI (Key Performance Indicator) is composed of two components: a KPI segment and a KPI function. The KPI segment is a visual representation of the KPI data, which is calculated by a KPI function. Each KPI function has calculation parameters, which can be used to get more specific data.</p>
+<p>All KPIs except the Administration KPIs are defined as dependent KPIs. These KPIs are calculated from grid calculations. When a dependent KPI is added to a layout, either an existing grid calculation with the same settings (parameters, refresh interval, historical settings), or a virtual grid is used for getting the KPI value. An aggregation function is then used on the result before displaying the result on the layout. When a dependent KPI is set as cumulative, the underlying grid will be set as historical with the interval set to the current day. Otherwise the KPI is regarded as non-historical, or in other words “real time”.</p>
+<div class="notice docutils container">
+<p>In order to create Custom KPIs without components being calculated, it is necessary to create a different KPI with a component for the connector with the same refresh interval. This will cause the custom KPIs to be calculated even without a component.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../genesys-cloud.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Genesys Cloud
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="kpi-functions.html">
+						<span class="section-number">2. </span>KPI Functions 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

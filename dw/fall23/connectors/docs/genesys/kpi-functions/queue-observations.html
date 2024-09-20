@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.11. Queue Observations (QO_A) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)" href="queue-observations-by-media-type.html" />
+    <link rel="prev" title="2.10. Flow Observations By Media Type (FO_A)" href="flow-observations-by-media-type.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.11. </span>Queue Observations (QO_A)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.11. </span>Queue Observations (QO_A)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="administrative.html">2.1. Administrative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">2.2. Agent Info (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.3. Agent State (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">2.4. Campaign Diagnostics (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">2.5. Campaign Progress (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">2.6. Campaign Stats (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-queue.html">2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-wrapup.html">2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type.html">2.9. Flow Aggregates By Media Type (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">2.10. Flow Observations By Media Type (FO_A)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.11. Queue Observations (QO_A)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-activeuserscount">2.11.1. QO_A_ActiveUsersCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-availableagentscount">2.11.2. QO_A_AvailableAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-awayagentscount">2.11.3. QO_A_AwayAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-breakagentscount">2.11.4. QO_A_BreakAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-busyagentscount">2.11.5. QO_A_BusyAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-communicatingagentscount">2.11.6. QO_A_CommunicatingAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-idleagentscount">2.11.7. QO_A_IdleAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-interactingagentscount">2.11.8. QO_A_InteractingAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-mealagentscount">2.11.9. QO_A_MealAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-meetingagentscount">2.11.10. QO_A_MeetingAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-memberagentscount">2.11.11. QO_A_MemberAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-notrespondingagentscount">2.11.12. QO_A_NotRespondingAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-offqueueavailableagentscount">2.11.13. QO_A_OffQueueAvailableAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-offqueueofflineagentscount">2.11.14. QO_A_OffQueueOfflineAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-offlineagentscount">2.11.15. QO_A_OfflineAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-onqueueagentscount">2.11.16. QO_A_OnQueueAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-onqueueinteractingagentscount">2.11.17. QO_A_OnQueueInteractingAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qo-a-trainingagentscount">2.11.18. QO_A_TrainingAgentsCount</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type.html">2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">2.13. User Aggregates By Media Type (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">2.14. User Observations Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">2.15. User Observations Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">2.16. User Status Aggregates Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">2.17. User Status Aggregates Passive (USA_P)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="queue-observations-qo-a">
+<h1><span class="section-number">2.11. </span>Queue Observations (QO_A)<a class="headerlink" href="#queue-observations-qo-a" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="qo-a-activeuserscount">
+<h2><span class="section-number">2.11.1. </span>QO_A_ActiveUsersCount<a class="headerlink" href="#qo-a-activeuserscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Active Users Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the observed number of active users in a queue.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-availableagentscount">
+<h2><span class="section-number">2.11.2. </span>QO_A_AvailableAgentsCount<a class="headerlink" href="#qo-a-availableagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Available Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that are off queue and in the Available status.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-awayagentscount">
+<h2><span class="section-number">2.11.3. </span>QO_A_AwayAgentsCount<a class="headerlink" href="#qo-a-awayagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Away Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that are off queue and in the Away status.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-breakagentscount">
+<h2><span class="section-number">2.11.4. </span>QO_A_BreakAgentsCount<a class="headerlink" href="#qo-a-breakagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Break Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that are off queue and in the Break status.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-busyagentscount">
+<h2><span class="section-number">2.11.5. </span>QO_A_BusyAgentsCount<a class="headerlink" href="#qo-a-busyagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Busy Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that are off queue and in the Busy status.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-communicatingagentscount">
+<h2><span class="section-number">2.11.6. </span>QO_A_CommunicatingAgentsCount<a class="headerlink" href="#qo-a-communicatingagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Communicating Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number agents currently on a call.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-idleagentscount">
+<h2><span class="section-number">2.11.7. </span>QO_A_IdleAgentsCount<a class="headerlink" href="#qo-a-idleagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Idle Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents who are on queue and are available to take interactions, but are not working with interactions.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-interactingagentscount">
+<h2><span class="section-number">2.11.8. </span>QO_A_InteractingAgentsCount<a class="headerlink" href="#qo-a-interactingagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Interacting Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents working with interactions. This number includes agents completing after-call work.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-mealagentscount">
+<h2><span class="section-number">2.11.9. </span>QO_A_MealAgentsCount<a class="headerlink" href="#qo-a-mealagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Meal Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that are off queue and in the Meal status.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-meetingagentscount">
+<h2><span class="section-number">2.11.10. </span>QO_A_MeetingAgentsCount<a class="headerlink" href="#qo-a-meetingagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Meeting Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that are off queue and in the Meeting status.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-memberagentscount">
+<h2><span class="section-number">2.11.11. </span>QO_A_MemberAgentsCount<a class="headerlink" href="#qo-a-memberagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Member Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the observed number of agents in a queue.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-notrespondingagentscount">
+<h2><span class="section-number">2.11.12. </span>QO_A_NotRespondingAgentsCount<a class="headerlink" href="#qo-a-notrespondingagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Not Responding Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that did not answer an offered interaction. The agent could still be handling and completing other previous interactions.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-offqueueavailableagentscount">
+<h2><span class="section-number">2.11.13. </span>QO_A_OffQueueAvailableAgentsCount<a class="headerlink" href="#qo-a-offqueueavailableagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Off Queue Available Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the observed number of available agents that are off queue.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-offqueueofflineagentscount">
+<h2><span class="section-number">2.11.14. </span>QO_A_OffQueueOfflineAgentsCount<a class="headerlink" href="#qo-a-offqueueofflineagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Off Queue Offline Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the observed number of offline agents that are off queue.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-offlineagentscount">
+<h2><span class="section-number">2.11.15. </span>QO_A_OfflineAgentsCount<a class="headerlink" href="#qo-a-offlineagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Offline Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that are off queue and offline.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-onqueueagentscount">
+<h2><span class="section-number">2.11.16. </span>QO_A_OnQueueAgentsCount<a class="headerlink" href="#qo-a-onqueueagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - On Queue Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents that are on queue for a specific queue.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-onqueueinteractingagentscount">
+<h2><span class="section-number">2.11.17. </span>QO_A_OnQueueInteractingAgentsCount<a class="headerlink" href="#qo-a-onqueueinteractingagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - On Queue Interacting Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the observed number of interacting agents that are on queue.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+<div class="section" id="qo-a-trainingagentscount">
+<h2><span class="section-number">2.11.18. </span>QO_A_TrainingAgentsCount<a class="headerlink" href="#qo-a-trainingagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations - Training Agents Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of agents off queue and in the Training status.</p>
+<p><strong>Parameters:</strong> Queue</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="flow-observations-by-media-type.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.10. </span>Flow Observations By Media Type (FO_A)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="queue-observations-by-media-type.html">
+						<span class="section-number">2.12. </span>Queue Observations By Media Type (QOByM_A, QOByM_P) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

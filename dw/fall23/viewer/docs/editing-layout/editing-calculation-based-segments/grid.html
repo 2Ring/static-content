@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Grid &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Columns" href="grid/columns.html" />
+    <link rel="prev" title="Calendar" href="calendar.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Grid</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Grid
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Grid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="grid/columns.html">Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grid/client-sort-columns.html">Client Sort Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grid/realtime-sorting-and-filtering.html">Realtime Sorting and Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="grid/row-conditional-styles.html">Row Conditional Styles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="grid">
+<h1>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h1>
+<p>A Grid displays a set of dynamic values in form of a table. The rows and columns can be individually stylized and configured.
+Additionally, specific rules can be applied to highlight important data. Larger amounts of data are supported with the automatic paging functionality.</p>
+<div class="notice docutils container">
+<p>For general information about this segment, see <a class="reference internal" href="../../what-is-layout/calculation-based-segments/grid.html"><span class="doc">Grid</span></a> chapter.</p>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>External Id</strong></dt><dd><p>An unique id, that is used to access this Grid via the API. Using this id, the Grid can be used by external applications, such as 2Ring Gadgets. The External Id has to be unique across the entire Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation</strong></dt><dd><p><em>For calculation options, see</em> <a class="reference internal" href="editing-table-valued-calculations.html"><span class="doc">Editing Table-Valued Calculations</span></a> <em>chapter</em>. <br>
+The calculation options control, how the displayed values are calculated.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Use Shared Calculation</strong></dt><dd><p>Whether shared calculation should be used for generating results.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shared Calculation</strong></dt><dd><p><em>Available only if “Use Shared Calculation” is enabled</em> <br>
+A shared calculation to be used.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Columns</strong></dt><dd><p><em>Manually orderable</em> <br>
+List of Grid’s columns. For more information see <a class="reference internal" href="grid/columns.html"><span class="doc">Columns</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Paging</strong></dt><dd><p>The Grid can be configured to split its data into multiple pages, with the following options:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Sizing Mode</strong></dt><dd><p><em>Inheritable</em> <br>
+Row size mode.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Page Size</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available if Number of Rows is selected as a Sizing Mode</em> <br>
+Defines the number of rows to be displayed per page.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Row Height</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available if Height of Row is selected as a Sizing Mode</em> <br>
+Height of a row measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Maximum Page Count</strong></dt><dd><p><em>Required</em> <br>
+Maximum number of pages to be displayed. In case source tables contain more rows that are able to be displayed (Page Size * Maximum Page Count), sorting can be configured to display data based on their relevance/priority.</p>
+<p>If <strong>Maximum Page Count</strong> is bigger than 1 Paging group also contains:</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Paging Interval</strong></dt><dd><p><em>Inheritable</em> <br>
+A Grid configured to display more than one page, is paged through automatically. Each page is displayed for a duration specified in this field.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Update Values On Page Change</strong></dt><dd><p>When disabled, Grid’s values are updated only on the first page. Even if new values are available, the Grid will not update its values until all pages have been paged through.
+<br> When enabled, values are updated as soon as they are available.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Appearance</strong></dt><dd><p>The style of the Grid</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p><em>Inheritable</em> <br>
+The size of a padding between the text and cell’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Headers</strong></dt><dd><p>Whether header row should be displayed in Grid. This group contains header configuration.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p><em>Inheritable</em> <br>
+Height of the header, that is measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Borders</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#borders-style">Borders Style</a> <em>section</em>. <br>
+The style, width and color settings for the header borders.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Values</strong></dt><dd><p>Visual configuration of values in Grid</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Colors</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Whether consecutive rows should alternate colors.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available if Alternate Row Colors is enabled</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Alternating color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Borders</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#borders-style">Borders Style</a> <em>section</em>. <br>
+The style, width and color settings for the borders in a values area.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Totals</strong></dt><dd><p>Whether totals should be visible in the grid.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Total Row Label</strong></dt><dd><p><em>Inheritable</em> <br>
+The label of the totals row.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Total Label in Column</strong></dt><dd><p><em>Inheritable</em> <br>
+Column, in which the total label is displayed. Must be included in Default Columns. For more information see <a class="reference external" href="../../../administration-tool-guide/connectors/grid-calculation-functions.html">Grid Calculation Functions</a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Borders</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#borders-style">Borders Style</a> <em>section</em>. <br>
+The style, width and color settings for the borders in a totals row.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Colors</strong></dt><dd><p>For ease of access, all aforementioned color related options are once again located in the Colors group.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Headers Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the header’s text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Headers Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the header’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Values Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the value’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Values Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available if Alternate Row Colors is enabled</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Alternating color of the values background.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Client Sort Columns</strong></dt><dd><p><em>Manually orderable</em> <br>
+List of Client’s sort columns. For more information see <a class="reference internal" href="grid/client-sort-columns.html"><span class="doc">Client Sort Columns</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Row Conditional Styles</strong></dt><dd><p><em>Manually orderable</em> <br>
+List of Grid’s row conditional styles. For more information see <a class="reference internal" href="grid/row-conditional-styles.html"><span class="doc">Row Conditional Styles</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="grid/columns.html">Columns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grid/client-sort-columns.html">Client Sort Columns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grid/realtime-sorting-and-filtering.html">Realtime Sorting and Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grid/row-conditional-styles.html">Row Conditional Styles</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="calendar.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Calendar
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="grid/columns.html">
+						Columns 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

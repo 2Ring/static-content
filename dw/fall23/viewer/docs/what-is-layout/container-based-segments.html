@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Container Based Segments &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="What Is Widget" href="../what-is-widget.html" />
+    <link rel="prev" title="Word Cloud" href="calculation-based-segments/word-cloud.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Container Based Segments</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../what-is-layout.html">What is a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Container Based Segments
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simple-segments.html">Simple Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculation-based-segments.html">Calculation Based Segments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Container Based Segments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nested-layout">Nested Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nested-widget">Nested Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sequence">Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker">Ticker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="container-based-segments">
+<h1>Container Based Segments<a class="headerlink" href="#container-based-segments" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nested-layout">
+<span id="nestedlayout"></span><h2>Nested Layout<a class="headerlink" href="#nested-layout" title="Permalink to this headline">¶</a></h2>
+<p>Another Layout can be displayed, using the Nested Layout segment type. The exact copy of a Layout is displayed inside of the segment, that is fully interactable.</p>
+<p>Nested Layouts allow reusing of repeatedly used segment or group of segments. Such segment(s) can be configured only once and easily modified in the future.</p>
+<p>Figure 1: Layout</p>
+<img alt="../../_images/container-based-segments-layout-n.png" class="flat align-center" src="../../_images/container-based-segments-layout-n.png" />
+<p>Figure 2: The Layout from previous figure, nested inside another Layout</p>
+<img alt="../../_images/container-based-segments-nested-layout.png" class="flat align-center" src="../../_images/container-based-segments-nested-layout.png" />
+<div class="attention docutils container">
+<p>The Theme of the root Layout is applied also to all nested Layouts.</p>
+</div>
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-container-based-segments/nested-layout.html"><span class="doc">Nested Layout</span></a> chapter.</p>
+</div>
+<div class="section" id="nested-widget">
+<span id="nestedwidget"></span><h2>Nested Widget<a class="headerlink" href="#nested-widget" title="Permalink to this headline">¶</a></h2>
+<p>Nested widget is very similar to a nested layout. The difference is that while nested layout defines its data itself, nested widget receives the data to display from the layout it is placed in. It is very suitable to host multiple instances of a nested widget within a single layout, each displaying different data in the same form. This allows creation of floor plans, top charts and other graphically intensive visualizations.</p>
+<p>Figure 1: Widget</p>
+<img alt="../../_images/container-based-segments-widget-n.png" class="flat align-center" src="../../_images/container-based-segments-widget-n.png" />
+<p>Figure 2: Widget</p>
+<img alt="../../_images/container-based-segments-widget-n2.png" class="flat align-center" src="../../_images/container-based-segments-widget-n2.png" />
+<p>Figure 3: Widget</p>
+<img alt="../../_images/container-based-segments-nested-widget.png" class="flat align-center" src="../../_images/container-based-segments-nested-widget.png" />
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-container-based-segments/nested-widget.html"><span class="doc">Nested Widget</span></a> chapter.</p>
+</div>
+<div class="section" id="sequence">
+<span id="sequencee"></span><h2>Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h2>
+<p>A Sequence contains its own items. These items are essentially the same as Layout’s segments. However a Sequence displays only one of its items at a time. The items are automatically alternated through at configured interval.</p>
+<p>Sequence is used to display segments, that don’t need to be visible all the time thus saving space on the Layout for other, more important segments.</p>
+<p>Figure 1: Sequence with smooth transition</p>
+<img alt="../../_images/container-based-segments-sequence-smooth.gif" class="flat align-center" src="../../_images/container-based-segments-sequence-smooth.gif" />
+<p>Figure 2: Sequence without smooth transition</p>
+<img alt="../../_images/container-based-segments-sequence.gif" class="flat align-center" src="../../_images/container-based-segments-sequence.gif" />
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-container-based-segments/sequence.html"><span class="doc">Sequence</span></a> chapter.</p>
+</div>
+<div class="section" id="ticker">
+<span id="id1"></span><h2>Ticker<a class="headerlink" href="#ticker" title="Permalink to this headline">¶</a></h2>
+<p>A Ticker contains its own items. These items are essentially the same as Layout’s segments. Ticker displays its items gradually in a scrolling fashion. The scrolling speed and direction can be configured.</p>
+<p>Ticker is used to display segments, that don’t need to be visible all the time thus saving space on the Layout for other, more important segments.</p>
+<p>Figure 1: Ticker</p>
+<img alt="../../_images/container-based-segments-ticker.gif" class="flat align-center" src="../../_images/container-based-segments-ticker.gif" />
+<p>Figure 2: Vertical Ticker</p>
+<img alt="../../_images/container-based-segments-vertical-ticker.gif" class="flat align-center" src="../../_images/container-based-segments-vertical-ticker.gif" />
+<p>A Ticker is especially useful, when containing a Banner. Sometimes Banner’s content is too long to be comfortably
+displayed. Putting such Banner into a Ticker enables the full display of longer texts, without taking up unnecessary
+space in the Layout.</p>
+<p>Figure 3: Ticker with Banner</p>
+<img alt="../../_images/container-based-segments-ticker-banner.gif" class="flat align-center" src="../../_images/container-based-segments-ticker-banner.gif" />
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-container-based-segments/ticker.html"><span class="doc">Ticker</span></a> chapter.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="calculation-based-segments/word-cloud.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Word Cloud
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../what-is-widget.html">
+						What Is Widget 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

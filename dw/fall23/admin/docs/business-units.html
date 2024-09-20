@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Business Units &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/fontawesome.min.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/main.js"></script>
+    <script src="../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Filters" href="business-units/data-filters.html" />
+    <link rel="prev" title="Navigating the Tool" href="navigating-the-tool.html" /> 
+  </head><body>
+  	<header>
+		<a href="../index.html" id="headerImgWrapper">
+			<img src="../_static/2ring_logo.jpg">
+		</a>
+		<span>Business Units</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Business Units
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Business Units</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="business-units/data-filters.html">Data Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-units/enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-units/ip-filters.html">IP Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-units/users-and-roles.html">Users and Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-units/calculation-parameter-type-groups.html">Calculation Parameter Type Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-units/fonts-client.html">Fonts - Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-units/fonts-server.html">Fonts - Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-units/notification-channels.html">Notification Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="business-units/themes.html">Themes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="connectors.html">Connectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="business-units">
+<h1>Business Units<a class="headerlink" href="#business-units" title="Permalink to this headline">¶</a></h1>
+<p>A Business Unit (BU) is the main security boundary of the system. A Business Unit holds all lower-level entities such as users, administrators, enumerations, themes and more. A user can see or use everything that belongs to their Business Unit or to the Shared Business Unit.</p>
+<img alt="../_images/business-units.png" class="flat align-center" src="../_images/business-units.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p><em>Required</em> <br>
+The name of Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Description</strong></dt><dd><p>A short definition of the usage of the Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Theme</strong></dt><dd><p><em>Required</em> <br>
+Default appearance of all Layouts in this Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Layout Refresh Interval</strong></dt><dd><p>Interval in which Layout refreshes its content.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation Defaults - Scalar Valued</strong></dt><dd><p>Settings for a scalar-valued calculations. These settings are used by a KPI, Calendar, Pie Chart segment and Bar/Line Chart - KPI Timeline series.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Refresh Interval</strong></dt><dd><p><em>Required</em> <br>
+The time interval in seconds to check for new data.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Log Retention</strong></dt><dd><p><em>Required</em> <br>
+Number of days DW keeps logs for specific calculations. The maximum value is 32.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation Defaults - Table Valued</strong></dt><dd><p>Settings for a table-valued calculations. These settings are used by a Grid, Bar/Line Chart - Grid series and a Word Cloud.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Refresh Interval</strong></dt><dd><p><em>Required</em> <br>
+The time interval in seconds to check for new data.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Log Retention</strong></dt><dd><p><em>Required</em> <br>
+Number of days DW keeps logs for specific calculations. The maximum value is 32.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Date and Time Settings</strong></dt><dd><p>Date and time settings the calculations should use by default.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Time Zone</strong></dt><dd><p><em>Required</em> <br>
+This setting allows to specify which time zone the calculations should use by default.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>First Day Of Week</strong></dt><dd><p><em>Required</em> <br>
+This setting is used in calendar and chart segments to correctly order shown days.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Working Hours Start</strong></dt><dd><p><em>Required</em> <br>
+When chart displays values from one day it’s possible to set from what time of day we want to see values.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Working Hours End</strong></dt><dd><p><em>Required</em> <br>
+When chart displays values from one day it’s possible to set until what time of day we want to see values.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Working Days</strong></dt><dd><p>This setting is used in calendar and chart segments for determining values for which days should be displayed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p><span class="heading-4">Copying Business Units</span></p>
+<p>The Business Unit copy wizard allows a system admin to create copies of Business Units. All entities (except Layouts) created within the Business Unit are copied. The copy wizard is located in panel toolbar and can be opened with <em class="fa fa-copy"></em> button.</p>
+<p>There are 3 options how to handle <strong>Data filters</strong> when copying Business Units:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Don’t Keep</strong></dt><dd><p>Filters are not copied from the selected Business Unit. Users will have access to all values of the enumeration parameters.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Keep Without Values</strong></dt><dd><p>Filters are copied from the selected Business Unit but with no values allowed. Filter without selected values means no enumeration parameter values will be available to the new Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Keep With Values</strong></dt><dd><p>Filters, including their selected values, are copied from the selected Business Unit.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>There are 3 options how to handle <strong>IP filters</strong> when copying Business Units:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Don’t Keep</strong></dt><dd><p>Filters are not copied from the selected Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Keep Settings Without Addresses</strong></dt><dd><p>Filter settings, without specific allowed IP addresses, are copied from the selected Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Keep Settings With Addresses</strong></dt><dd><p>Filter settings, including specific allowed IP addresses, are copied from the selected Business Unit.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>There are 3 options how to handle <strong>Content Files</strong> when copying Business Units:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Don’t Copy</strong></dt><dd><p>Content files are not copied from the selected Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy Files In Use</strong></dt><dd><p>Only files which are currently used in Business Unit or its children are copied. Since Layouts are not being copied during copy of Business Unit, also files used in them will not be copied.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy All</strong></dt><dd><p>All content files are copied.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Figure 1: Copy dialog</p>
+<img alt="../_images/business-units-duplicate-bu.png" class="flat align-center" src="../_images/business-units-duplicate-bu.png" />
+<p><span class="heading-4">Generating Azure Roles</span></p>
+<p>During configuration of Azure authentication for DW, application’s manifest has to be updated. Part, that should be inserted into the manifest can be generated here.</p>
+<p>If DW is not using Azure authentication this option can be ignored.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="business-units/data-filters.html">Data Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-units/enums.html">Enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-units/ip-filters.html">IP Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-units/users-and-roles.html">Users and Roles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-units/calculation-parameter-type-groups.html">Calculation Parameter Type Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-units/fonts-client.html">Fonts - Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-units/fonts-server.html">Fonts - Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-units/notification-channels.html">Notification Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-units/themes.html">Themes</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="navigating-the-tool.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Navigating the Tool
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="business-units/data-filters.html">
+						Data Filters 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

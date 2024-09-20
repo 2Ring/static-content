@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Editing a Layout &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/fontawesome.min.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/main.js"></script>
+    <script src="../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Editing a Segment" href="editing-layout/editing-segment.html" />
+    <link rel="prev" title="Keyboard Shortcuts" href="working-with-the-layout-editor/keyboard-shortcuts.html" /> 
+  </head><body>
+  	<header>
+		<a href="../index.html" id="headerImgWrapper">
+			<img src="../_static/2ring_logo.jpg">
+		</a>
+		<span>Editing a Layout</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Editing a Layout
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Editing a Layout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="editing-layout/editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-layout/editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-layout/editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-layout/editing-calculation-based-segments.html">Editing Calculation Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-layout/editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-layout/publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-layout/impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="editing-a-layout">
+<h1>Editing a Layout<a class="headerlink" href="#editing-a-layout" title="Permalink to this headline">¶</a></h1>
+<div class="notice docutils container">
+<p>All of the information below also applies to the widget.</p>
+</div>
+<p>Layout’s Edit mode can be accessed in one of two ways:</p>
+<ul class="simple">
+<li><p>Click the <em class="fa fa-plus"></em> icon in the Layout list at the bottom right side of the screen to create and edit a new Layout.</p></li>
+</ul>
+<p>Figure 1: Add button</p>
+<img alt="../_images/editing-layout-add-layout.png" class="flat align-center" src="../_images/editing-layout-add-layout.png" />
+<ul class="simple">
+<li><p>Click the pen icon located at the top right side of the screen, while viewing a specific Layout to edit it.</p></li>
+</ul>
+<p>Figure 2: Edit button</p>
+<img alt="../_images/editing-layout-edit-layout.png" class="flat align-center" src="../_images/editing-layout-edit-layout.png" />
+<div class="attention docutils container">
+<p>When the aforementioned buttons are not present, the current logged-in user lacks sufficient permissions to access the Edit Mode.</p>
+</div>
+<div class="notice docutils container">
+<p>While in Edit Mode, the displayed Layout cannot be viewed in Full Screen mode.</p>
+</div>
+<p>When the Edit mode is entered, a panel, also called the Layout panel, is automatically opened containing the following options:</p>
+<p>Figure 3: Layout panel</p>
+<img alt="../_images/editing-layout-layout-panel.png" class="flat align-center" src="../_images/editing-layout-layout-panel.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>The name of the Layout. The name is displayed in the Layout list and as the header of the viewed Layout.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Description</strong></dt><dd><p>Optional description of the Layout, displayed in the Layout list.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Refresh Interval</strong></dt><dd><p><em>Inheritable</em> <br> <br>
+Interval in seconds, between each refresh of the Layout’s data</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Appearance</strong></dt><dd><p>The style of the Layout</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Aspect Ratio</strong></dt><dd><p><em>Inheritable</em> <br> <br>
+Ratio of Layout dimensions, at which the Layout is displayed. If unlocked is selected, Layout will fit the browser’s window size.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Aspect Ratio</strong></dt><dd><p><em>Only if Custom is selected as an Aspect Ratio</em> <br>
+Custom aspect ratio in <em>X:Y</em> format.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Theme</strong></dt><dd><p><em>Inheritable</em> <br>
+Visual theme, applied to all segments in the Layout.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Theme Overrides…</strong></dt><dd><p>Selected theme can be customized for current layout by overriding any of its properties. For list of all properties, see <span class="xref std std-doc">../administration-tool-guide/business-units/themes</span> chapter. <br>
+Customized theme can then be saved as a new theme for current Business Unit by clicking the <em class="fa fa-save"></em> button and selecting a name.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Type</strong></dt><dd><p><em>Inheritable</em> <br>
+Type of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Only if Solid Color is selected as a Background Type</em> <br>
+<em>For more information see</em> <a class="reference external" href="working-with-the-layout-editor/fields.html#color-field">Color field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Image</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Only if Image is selected as a Background Type</em> <br>
+Image of the background.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Short URL</strong></dt><dd><p>The Short URL allows the use of a shortened link, which can be used for sharing and easy navigation to the Layout.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Token</strong></dt><dd><p>Uniquely generated string which is used in Short URL address. When a new token is generated and published, previous Short URL will no longer be usable.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Anonymous Access</strong></dt><dd><p>Allows navigation to the Layout, without the need to login first. Affects only a direct navigation using the Short URL.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Fullscreen</strong></dt><dd><p>Controls, if the Layout should be put into the full screen mode, after being accessed with the Short URL.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Toolbar</strong></dt><dd><p>Controls, if the Layout should contain the navigation controls. Hiding navigation controls means that navigation to Layout list is unavailable. Affects only a Layout, accessed using the Short URL.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Segments</strong></dt><dd><p><em>Manually orderable</em> <br>
+List of Layout’s segments. For more information about Layout segment see <a class="reference internal" href="editing-layout/editing-segment.html"><span class="doc">Editing a Segment</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shared Calculations</strong></dt><dd><p>After creating a calculation on the layout/widget, it can serve as a predefined calculation and can be choosen in segments supporting layout calculations such as KPI or Pie Chart. For more information about editing calculation, see <a class="reference internal" href="editing-layout/editing-shared-calculations.html"><span class="doc">Editing Shared Calculations</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Default Calculation Parameters</strong></dt><dd><p>Default Calculation Parameters allow the user to predefine calculation parameters for the entire Layout. These parameters are then automatically applied to all newly created calculations (those that are supported by calculation type). Automatically added parameters can be manually overridden on each individual calculation. For more information see
+<span class="xref std std-doc">editing-layout/editing-calculation-based-segments/editing-scalar-valued-calculations/parameters</span> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout/editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout/editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout/editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout/editing-calculation-based-segments.html">Editing Calculation Based Segments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout/editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout/publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout/impersonating.html">Impersonating</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="working-with-the-layout-editor/keyboard-shortcuts.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Keyboard Shortcuts
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="editing-layout/editing-segment.html">
+						Editing a Segment 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

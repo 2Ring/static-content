@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Copying Layouts &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exporting/Importing Layouts" href="export-import.html" />
+    <link rel="prev" title="Working with the Layout List" href="../working-with-layout-list.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Copying Layouts</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../working-with-layout-list.html">Working with the Layout List</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Copying Layouts
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Copying Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export-import.html">Exporting/Importing Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update-banners.html">Update Banners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload-csv-files.html">Upload CSV Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="copying-layouts">
+<h1>Copying Layouts<a class="headerlink" href="#copying-layouts" title="Permalink to this headline">¶</a></h1>
+<p>Existing Layouts can be copied into any available Business Unit, using the Copy Layouts dialog. The <em class="fa fa-copy"></em> button, used to open the dialog, is available only when at least one Layout is selected in the Layout list.</p>
+<p>Figure 1: Copy dialog</p>
+<img alt="../../_images/copying-layouts-copy-dialog.png" class="flat align-center" src="../../_images/copying-layouts-copy-dialog.png" />
+<p>The dialog contains the following options:</p>
+<ul>
+<li><dl>
+<dt><strong>Target Business Unit</strong></dt><dd><p>The Business Unit, into which the selected Layout should be copied. Only Business Units that are available to the user are displayed.</p>
+<div class="notice docutils container">
+<p>When target Business Unit already contains a Layout with the same name as the one that is being copied, the copied Layout is numbered.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Keep Parameters</strong></dt><dd><p>Whether the calculation parameters in Layout should be copied. If enabled, parameters of every calculation, located in the Layout are copied.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Keep Notification Message Recipients</strong></dt><dd><p>Whether the notification message recipients in Layout should be copied.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy as Draft</strong></dt><dd><p>Whether the layout should be copied as a draft (layout won’t be published).</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>These options are available only when copying Layout into another Business Unit:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Copy Parameter Groups</strong></dt><dd><p><em>Available only when Keep Parameters is enabled</em> <br>
+Whether parameter groups used in the layout should be copied. If a target Business Unit contains parameter group with the same name, this group is used instead of copying a new one. If the Parameter Group is copied into a different Business Unit, values are filtered based on the Business Unit’s configured filters.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy Notification Message Templates</strong></dt><dd><p>Whether notification message templates used by the Layout should also be copied.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy Nested Widget Data Filter Values</strong></dt><dd><p>Whether data filter values configured in the nested widget should be copied.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy Theme if does not exist</strong></dt><dd><p>Whether theme used by the Layout should also be copied if such theme does not already exist in the target Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Content Files</strong></dt><dd><p>Whether content files, such as audio files, pdf files or images used in the Layout should be copied. Available options are:</p>
+<ul>
+<li><dl>
+<dt><strong>Do Not Copy</strong></dt><dd><p>The content files will not be copied.</p>
+<div class="attention docutils container">
+<p>If Layout contains sources which references content from its own Business Unit, the copied Layout will be marked as invalid, unless default value is applicable. For administrators, invalid Layouts are marked red in the Layout list. Any other users are not able to see invalid Layouts in the Layout list.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy And Replace If Exists</strong></dt><dd><p>The content files will be copied. If there are already files with the same name but different size in the target Business Unit, they will be replaced.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy And Rename If Exists</strong></dt><dd><p>The content files will be copied. If there are already files with the same name but different size in the target Business Unit, copied files will be numbered (adding “(xyz)” at the end of the file name).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy If Not Exists</strong></dt><dd><p>The content files will be copied. If there are already files with the same name but different size in the target Business Unit, the content files will not be copied.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>When the Layout copying is done, the report dialog appears. This dialog has only informative character.
+Copied Layouts, content files and other associated entities are listed in Details group.</p>
+<p>Figure 2: Copy Report</p>
+<img alt="../../_images/copying-layouts-copy-report.png" class="flat align-center" src="../../_images/copying-layouts-copy-report.png" />
+<p><strong>Copying Enums</strong> - During copying of Layouts or segments into another Business Unit, enumerations with the same configuration are used if found. Otherwise, new record is created as a copy of source enumeration.
+<br> Two display formats are configured the same way if both have the same format.</p>
+<p><strong>Copying Notification Channels</strong> - During copying of notification channels into another Business Unit, notification channels of the same type are used if found. Otherwise, new channel is created. Settings of newly created channels have to be configured manually.</p>
+<p><span class="heading-4">Invalid Layout</span></p>
+<p>If an invalid layout is created during copying, it is marked red in the copy report.</p>
+<img alt="../../_images/copying-layouts-invalid-copy-report.png" class="flat align-center" src="../../_images/copying-layouts-invalid-copy-report.png" />
+<p>After copying is done, it is recommended to review the invalid layouts and track the issue via the items list.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../working-with-layout-list.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Working with the Layout List
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="export-import.html">
+						Exporting/Importing Layouts 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

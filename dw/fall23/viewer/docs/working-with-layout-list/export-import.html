@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exporting/Importing Layouts &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Update Banners" href="update-banners.html" />
+    <link rel="prev" title="Copying Layouts" href="copying-layouts.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Exporting/Importing Layouts</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../working-with-layout-list.html">Working with the Layout List</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Exporting/Importing Layouts
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="copying-layouts.html">Copying Layouts</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Exporting/Importing Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update-banners.html">Update Banners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload-csv-files.html">Upload CSV Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="exporting-importing-layouts">
+<h1>Exporting/Importing Layouts<a class="headerlink" href="#exporting-importing-layouts" title="Permalink to this headline">¶</a></h1>
+<p>Layouts and Widgets can be easily moved between DW deployments using the export/import functionality.</p>
+<div class="notice docutils container">
+<p>Examples of widgets are placed in the distribution package in the <em>Assets\Layouts</em> folder after the DW installation.</p>
+<p>If a CSV file is used in the widget, a specific CSV file is defined in the widget name. In this case, the CSV file must be uploaded before the widget. For more information see <a class="reference external" href="upload-csv-files.html">Upload CSV files</a> chapter.</p>
+</div>
+<div class="notice docutils container">
+<p>Layouts/Widgets can be exported/imported between DW versions with the same major nad minor number. The last number from the version can differ.</p>
+<p>Example: <br></p>
+<ul class="simple">
+<li><p>Layout/Widget from 9.0.3 version can be imported into DW 9.0.1</p></li>
+<li><p>Layout/Widget from 9.0.3 version can NOT be imported into DW 9.1.0</p></li>
+<li><p>Layout/Widget from 9.1.0 version can NOT be imported into DW 9.0.1</p></li>
+</ul>
+</div>
+<p>When using this functionality keep in mind that:</p>
+<ul class="simple">
+<li><p>Content files such as images, audio files, pdfs are also not exported. Even though the URL of the file is visible in the editor after the import, the file has to be uploaded or changed in targeted DW deployment.</p></li>
+<li><p>Themes are also not included in the exported layout. Theme has to be exported and imported into the desired DW instance separately before the layout/widget. Otherwise, default BU theme is used.</p></li>
+<li><p>Entities which are managed in administration tool and which are used in the exported layout are also imported.</p>
+<ul>
+<li><p>Business unit associated entities (enums and notification message templates) are set as a custom property on the layout entity, unless there is already an entity with the same name/format. In that case, found entity is used in the layout or/and its sources.</p></li>
+<li><p>Connector associated entities (kpi calculation functions, grid calculation functions, grid calculation function columns etc.) are re-associated based on their name. If entity with the same name is not found in the target DW deployment, assignment is cleared.</p></li>
+</ul>
+</li>
+</ul>
+<p><span class="heading-4">Export</span></p>
+<p>Selected layouts/widgets can be exported by clicking on the Export button.
+When multiple layouts/widgets are selected, they are exported as a single json file.</p>
+<p>Figure 1: Export Button</p>
+<img alt="../../_images/export-button.png" class="flat align-center" src="../../_images/export-button.png" />
+<p>In the following dialog choose, whether the exported layouts will be imported in the same business unit as originals or in different business unit or different DW deployment. Layout entities and properties that will be exported with the layout are dependent on this choice. This can be customized in Advanced Options group. <br>
+To export layout/widget, click <em>Export</em> button.</p>
+<p>Figure 2: Export Dialog</p>
+<img alt="../../_images/export-dialog.png" class="flat align-center" src="../../_images/export-dialog.png" />
+<p><strong>Parameter Groups</strong></p>
+<ul class="simple">
+<li><p>Disabled: Parameter groups configured on the layout entities are cleared.</p></li>
+<li><p>Enabled: Parameter groups are either matched with existing ones in targeted BU or they are created anew in targeted BU.</p></li>
+</ul>
+<p><strong>Parameter Groups with Values</strong> (available only when <em>Parameter Groups</em> property is enabled)</p>
+<ul class="simple">
+<li><p>Disabled: Newly created groups are empty.</p></li>
+<li><p>Enabled: Newly created groups contain same values as groups in original BU.</p></li>
+</ul>
+<p><strong>Referred Layouts Or Widgets</strong></p>
+<ul class="simple">
+<li><p>Disabled: Layouts and widgets used in the Nested Layout/Widget segments are NOT included in the export.</p></li>
+<li><p>Enabled: All layouts and widgets used in the Nested Layout/Widget segments are included in the export.</p></li>
+</ul>
+<p>Currently opened layout can be exported by clicking on the export button in:</p>
+<ul class="simple">
+<li><p>layout viewer (published version is exported)</p></li>
+<li><p>layout editor (current draft version is exported)</p></li>
+</ul>
+<p>Figure 3: Export Button</p>
+<img alt="../../_images/export-button-2.png" class="flat align-center" src="../../_images/export-button-2.png" />
+<p><span class="heading-4">Import</span></p>
+<p>Exported layout/widget can be imported by clicking on the Import button.</p>
+<div class="attention docutils container">
+<p>Connector, whose functions are used in the exported layout must be running during the layout import.</p>
+</div>
+<p>Figure 4: Import Button</p>
+<img alt="../../_images/import-button.png" class="flat align-center" src="../../_images/import-button.png" />
+<p>In the following dialog, choose exported file containing layout(s)/widgets(s) and choose, if they should be imported as drafts. <br>
+In the <em>Advanced Options</em> group, entities, that should be imported with the layout/widgets, can be configured. <br>
+To import layout/widget, click <em>Import</em> button.</p>
+<p>Figure 5: Import Dialog</p>
+<img alt="../../_images/import-dialog.png" class="flat align-center" src="../../_images/import-dialog.png" />
+<p><strong>Parameter Groups</strong></p>
+<ul class="simple">
+<li><p>Disabled: Parameter groups configured on the layout entities are cleared.</p></li>
+<li><p>Enabled: Parameter groups are either matched with existing ones in targeted BU or they are created anew in targeted BU.</p></li>
+</ul>
+<p><strong>Parameter Groups with Values</strong> (available only when <em>Parameter Groups</em> property is enabled)</p>
+<ul class="simple">
+<li><p>Disabled: Newly created groups are empty.</p></li>
+<li><p>Enabled: Newly created groups contain same values as groups in original BU.</p></li>
+</ul>
+<p><strong>Referred Layouts Or Widgets</strong></p>
+<ul class="simple">
+<li><p>Disabled: Layouts and widgets used in the Nested Layout/Widget segments are NOT imported.</p></li>
+<li><p>Enabled: All layouts and widgets used in the Nested Layout/Widget segments are imported.</p></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="copying-layouts.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Copying Layouts
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="update-banners.html">
+						Update Banners 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

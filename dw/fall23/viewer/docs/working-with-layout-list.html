@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Working with the Layout List &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/fontawesome.min.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/main.js"></script>
+    <script src="../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Copying Layouts" href="working-with-layout-list/copying-layouts.html" />
+    <link rel="prev" title="What Is Widget" href="what-is-widget.html" /> 
+  </head><body>
+  	<header>
+		<a href="../index.html" id="headerImgWrapper">
+			<img src="../_static/2ring_logo.jpg">
+		</a>
+		<span>Working with the Layout List</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Working with the Layout List
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working with the Layout List</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="working-with-layout-list/copying-layouts.html">Copying Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-layout-list/export-import.html">Exporting/Importing Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-layout-list/update-banners.html">Update Banners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-layout-list/upload-csv-files.html">Upload CSV Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="working-with-the-layout-list">
+<h1>Working with the Layout List<a class="headerlink" href="#working-with-the-layout-list" title="Permalink to this headline">¶</a></h1>
+<p>The Layout list displays all available Layouts. Each Layout is represented by name and, if available, a description. <br></p>
+<p>Figure 1: Layout list Controls:</p>
+<img alt="../_images/working-with-layout-list-controls.png" class="flat align-center" src="../_images/working-with-layout-list-controls.png" />
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>Search box</strong></dt><dd><p>Displayed Layouts can be filtered using the search box. When no search phrase is entered, all available Layouts are displayed. Otherwise only Layouts containing the entered phrase are displayed. The letter case is neglected. Pressing any key on the keyboard automatically starts typing into the search box.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Hide Warnings</strong></dt><dd><p>Whether Layouts with warnings should be highlighted in a different color.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Share</strong></dt><dd><p>Available only when a single Layout is selected. Opens up a dialog with sharable links to the selected Layout.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Update banners</strong></dt><dd><p>Available for Business Unit administrators, system administrators and Message Authors only. Opens up a dialog where multiple banners text can be updated. For more info see <a class="reference internal" href="working-with-layout-list/update-banners.html"><span class="doc">Update Banners</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Manage CSV Files</strong></dt><dd><p>By clicking on the Manage CSV Files button, CSV files can be uploaded or deleted and then selected as a source table in table valued calculations to provide static data. For more info see <a class="reference external" href="working-with-layout-list/upload-csv-files.html">Upload CSV Files</a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Manage Image Files</strong></dt><dd><p>By clicking on the Manage Image Files button, image files can be uploaded or deleted. For more info see <a class="reference external" href="static-content.html#content-management">Content Management</a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Manage Audio Files</strong></dt><dd><p>By clicking on the Manage Audio Files button, audio files can be uploaded or deleted. For more info see <a class="reference external" href="static-content.html#content-management">Content Management</a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Manage PDF Files</strong></dt><dd><p>By clicking on the Manage PDF Files button, PDF files can be uploaded or deleted. For more info see <a class="reference external" href="static-content.html#content-management">Content Management</a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Delete</strong></dt><dd><p>Available when at least one Layout is selected. Permanently deletes all selected Layouts.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Copy</strong></dt><dd><p>Available when at least one Layout is selected. Opens up a dialog where selected Layouts can be copied. For more info see <a class="reference internal" href="working-with-layout-list/copying-layouts.html"><span class="doc">Copying Layouts</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Export</strong></dt><dd><p>By clicking on the Export button, selected layout/widget is exported and downloaded as a json file. For more info see <a class="reference internal" href="working-with-layout-list/export-import.html"><span class="doc">Exporting/Importing Layouts</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Import</strong></dt><dd><p>Exported layout/widget can be imported by clicking on the Import button. For more info see <a class="reference internal" href="working-with-layout-list/export-import.html"><span class="doc">Exporting/Importing Layouts</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Refresh</strong></dt><dd><p>Refreshes the content of the Layout list.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Select/Deselect All</strong></dt><dd><p>Add all Layouts to selection or removes all Layouts from selection if all are already selected.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>When hovering over the layout’s name, a preview of the layout is displayed.</p>
+<p>Figure 2: Layout preview</p>
+<img alt="../_images/working-with-layout-list-layout-list-0.png" class="flat align-center" src="../_images/working-with-layout-list-layout-list-0.png" />
+<p>If there is a draft version of the layout, the layout is marked with <code class="docutils literal notranslate"><span class="pre">*</span></code>. For more information about draft, see <a class="reference external" href="editing-layout/publishing-discarding-changes.html#draft">Draft</a> chapter.</p>
+<p>Figure 3: Layout list</p>
+<img alt="../_images/working-with-layout-list-layout-list.png" class="flat align-center" src="../_images/working-with-layout-list-layout-list.png" />
+<p>If there are some Layouts, containing not propperly configured segments, administrators can see them marked orange in the Layout list.</p>
+<p>Figure 4: Layout list containing invalid Layouts</p>
+<img alt="../_images/working-with-layout-list-layout-list-invalid.png" class="flat align-center" src="../_images/working-with-layout-list-layout-list-invalid.png" />
+<p>If user has privileges then a new Layout can be added by clicking the <em class="fa fa-plus"></em> button, located on the bottom right side of the screen. Clicking the button will redirect the user to the newly created Layout and open up its edit mode.</p>
+<p>When hovering over a Layout with mouse cursor, its icon changes to a checkbox. Toggling this checkbox adds or removes the hovered Layout from selection. Multiple Layouts can be selected at once. Additional controls are available when one or more Layouts are selected.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="working-with-layout-list/copying-layouts.html">Copying Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-layout-list/export-import.html">Exporting/Importing Layouts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-layout-list/update-banners.html">Update Banners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working-with-layout-list/upload-csv-files.html">Upload CSV Files</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="what-is-widget.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						What Is Widget
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="working-with-layout-list/copying-layouts.html">
+						Copying Layouts 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

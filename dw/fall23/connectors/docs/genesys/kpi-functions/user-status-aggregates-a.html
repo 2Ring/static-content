@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.16. User Status Aggregates Active (USA_A) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.17. User Status Aggregates Passive (USA_P)" href="user-status-aggregates-p.html" />
+    <link rel="prev" title="2.15. User Observations Passive (UO_P)" href="user-observations-p.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.16. </span>User Status Aggregates Active (USA_A)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.16. </span>User Status Aggregates Active (USA_A)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="administrative.html">2.1. Administrative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">2.2. Agent Info (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.3. Agent State (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">2.4. Campaign Diagnostics (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">2.5. Campaign Progress (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">2.6. Campaign Stats (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-queue.html">2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-wrapup.html">2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type.html">2.9. Flow Aggregates By Media Type (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">2.10. Flow Observations By Media Type (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">2.11. Queue Observations (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type.html">2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">2.13. User Aggregates By Media Type (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">2.14. User Observations Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">2.15. User Observations Passive (UO_P)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.16. User Status Aggregates Active (USA_A)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-agentroutingcommunicatingtimesum">2.16.1. USA_A_AgentRoutingCommunicatingTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-agentroutingidletimesum">2.16.2. USA_A_AgentRoutingIdleTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-agentroutinginteractingtimesum">2.16.3. USA_A_AgentRoutingInteractingTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-agentroutingnotrespondingtimesum">2.16.4. USA_A_AgentRoutingNotRespondingTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresenceavailabletimesum">2.16.5. USA_A_SystemPresenceAvailableTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresenceawaytimesum">2.16.6. USA_A_SystemPresenceAwayTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresencebreaktimesum">2.16.7. USA_A_SystemPresenceBreakTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresencebusytimesum">2.16.8. USA_A_SystemPresenceBusyTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresencemealtimesum">2.16.9. USA_A_SystemPresenceMealTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresencemeetingtimesum">2.16.10. USA_A_SystemPresenceMeetingTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresenceofflinetimesum">2.16.11. USA_A_SystemPresenceOfflineTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresenceonqueuetimesum">2.16.12. USA_A_SystemPresenceOnQueueTimeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usa-a-systempresencetrainingtimesum">2.16.13. USA_A_SystemPresenceTrainingTimeSum</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">2.17. User Status Aggregates Passive (USA_P)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="user-status-aggregates-active-usa-a">
+<h1><span class="section-number">2.16. </span>User Status Aggregates Active (USA_A)<a class="headerlink" href="#user-status-aggregates-active-usa-a" title="Permalink to this headline">¶</a></h1>
+<div class="notice docutils container">
+<p>Unlike the User Status Aggregates Passive KPIs, these metrics are only updated when an agent’s state changes.</p>
+</div>
+<div class="section" id="usa-a-agentroutingcommunicatingtimesum">
+<h2><span class="section-number">2.16.1. </span>USA_A_AgentRoutingCommunicatingTimeSum<a class="headerlink" href="#usa-a-agentroutingcommunicatingtimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - Agent Routing Communicating Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the amount of time an agent spent in the Communicating status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-agentroutingidletimesum">
+<h2><span class="section-number">2.16.2. </span>USA_A_AgentRoutingIdleTimeSum<a class="headerlink" href="#usa-a-agentroutingidletimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - Agent Routing Idle Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the amount of time an agent spent in the Idle status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-agentroutinginteractingtimesum">
+<h2><span class="section-number">2.16.3. </span>USA_A_AgentRoutingInteractingTimeSum<a class="headerlink" href="#usa-a-agentroutinginteractingtimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - Agent Routing Interacting Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the amount of time an agent spent in the Interacting status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-agentroutingnotrespondingtimesum">
+<h2><span class="section-number">2.16.4. </span>USA_A_AgentRoutingNotRespondingTimeSum<a class="headerlink" href="#usa-a-agentroutingnotrespondingtimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - Agent Routing Not Responding Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the amount of time an agent spent in the Not Responding status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresenceavailabletimesum">
+<h2><span class="section-number">2.16.5. </span>USA_A_SystemPresenceAvailableTimeSum<a class="headerlink" href="#usa-a-systempresenceavailabletimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence Available Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the Available status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresenceawaytimesum">
+<h2><span class="section-number">2.16.6. </span>USA_A_SystemPresenceAwayTimeSum<a class="headerlink" href="#usa-a-systempresenceawaytimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence Away Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the Away status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresencebreaktimesum">
+<h2><span class="section-number">2.16.7. </span>USA_A_SystemPresenceBreakTimeSum<a class="headerlink" href="#usa-a-systempresencebreaktimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence Break Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the Break status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresencebusytimesum">
+<h2><span class="section-number">2.16.8. </span>USA_A_SystemPresenceBusyTimeSum<a class="headerlink" href="#usa-a-systempresencebusytimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence Busy Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the Busy status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresencemealtimesum">
+<h2><span class="section-number">2.16.9. </span>USA_A_SystemPresenceMealTimeSum<a class="headerlink" href="#usa-a-systempresencemealtimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence Meal Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the Meal status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresencemeetingtimesum">
+<h2><span class="section-number">2.16.10. </span>USA_A_SystemPresenceMeetingTimeSum<a class="headerlink" href="#usa-a-systempresencemeetingtimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence Meeting Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the Meeting status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresenceofflinetimesum">
+<h2><span class="section-number">2.16.11. </span>USA_A_SystemPresenceOfflineTimeSum<a class="headerlink" href="#usa-a-systempresenceofflinetimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence Offline TimeSum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the Offline status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresenceonqueuetimesum">
+<h2><span class="section-number">2.16.12. </span>USA_A_SystemPresenceOnQueueTimeSum<a class="headerlink" href="#usa-a-systempresenceonqueuetimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence On Queue Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the On Queue status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+<div class="section" id="usa-a-systempresencetrainingtimesum">
+<h2><span class="section-number">2.16.13. </span>USA_A_SystemPresenceTrainingTimeSum<a class="headerlink" href="#usa-a-systempresencetrainingtimesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>User Status Aggregates - System Presence Training Time Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time an agent spent in the Training status.</p>
+<p><strong>Parameters:</strong> Queue, User</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="user-observations-p.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.15. </span>User Observations Passive (UO_P)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="user-status-aggregates-p.html">
+						<span class="section-number">2.17. </span>User Status Aggregates Passive (USA_P) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

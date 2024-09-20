@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Upgrade &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Uninstallation" href="uninstallation.html" />
+    <link rel="prev" title="Import Functions" href="import-functions.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Upgrade</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../connectors.html">Connectors</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Upgrade
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../business-units.html">Business Units</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../connectors.html">Connectors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capabilities.html">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kpi-calculation-functions.html">KPI Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid-calculation-functions.html">Grid Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculation-parameter-types.html">Calculation Parameter Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-functions.html">Import Functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Upgrade</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#possible-scenarios">Possible scenarios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="uninstallation.html">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="upgrade">
+<h1>Upgrade<a class="headerlink" href="#upgrade" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Upgrade<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>If the newer version of a connector is available, it is recommended to do the upgrade.</p>
+<div class="attention docutils container">
+<p>In case of upgrading a hosted connector (e.g. WXCC, Genesys) make sure to stop the connector windows service before starting the proccess.</p>
+</div>
+<div class="attention docutils container">
+<p>Please, keep in mind, that all layout edit sessions will be discarded during upgrade. It is recommended to publish changes made in layouts before upgrading the connector.</p>
+</div>
+<p>For upgrading a connector, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Select a connector which you want to upgrade and click on Upgrade button.</strong></p>
+<img alt="../../_images/upgrade-1.png" class="flat align-center" src="../../_images/upgrade-1.png" />
+</li>
+<li><p><strong>Click on the paperclip icon and select the connector installation package.</strong></p>
+<img alt="../../_images/upgrade-2.png" class="flat align-center" src="../../_images/upgrade-2.png" />
+</li>
+<li><p><strong>Click on the Validate button to evaluate differences between manifest and current installation of connector.</strong></p>
+<div class="notice docutils container">
+<p>Because of possible conflicts, reviewing the changes is required before upgrading the connector.</p>
+</div>
+<img alt="../../_images/upgrade-3.png" class="flat align-center" src="../../_images/upgrade-3.png" />
+</li>
+<li><p><strong>Detected differences will be displayed in Conflicts and Changes sections.</strong></p>
+<img alt="../../_images/upgrade-4.png" class="flat align-center" src="../../_images/upgrade-4.png" />
+<p>Possible differences:</p>
+<ul class="simple">
+<li><p><strong>NEW</strong> - This is a new item not yet present in currently installed version. It will be installed.</p></li>
+<li><p><strong>REMOVE</strong> - This item is present in currently installed version but will be removed after upgrade.</p></li>
+<li><p><strong>MANDATORY UPDATE</strong> - This item already exists but a new definition will be installed.</p></li>
+<li><p><strong>OPTIONAL UPDATE</strong> - This item already exists and a new definition is available. It will be installed if “Perform both mandatory and optional updates” will be chosen.</p></li>
+<li><p><strong>INCOMPATIBLE</strong> - This item definition is incompatible with the current version (merge columns) and cannot be modified to the new version.</p></li>
+</ul>
+<p><strong>OPTIONAL UPDATE</strong> is considered as conflict and user has to choose what should happen to record during upgrade. <br>
+<strong>INCOMPATIBLE</strong> is also considered as conflict but can not be resolved during upgrade of connector. This conflict cause whole function
+to be skipped regardless of selected conflict resolution mode.</p>
+<div class="notice docutils container">
+<p>Hovering on detected difference’s badge will show its description.</p>
+</div>
+</li>
+<li><p><strong>If optional updates are detected select conflicts resolution mode. Available options are:</strong></p>
+<ul class="simple">
+<li><p>Perform both mandatory and optional updates</p></li>
+<li><p>Perform mandatory updates and skip optional updates</p></li>
+</ul>
+<img alt="../../_images/upgrade-5.png" class="flat align-center" src="../../_images/upgrade-5.png" />
+</li>
+<li><p><strong>Click on Upgrade button.</strong></p>
+<img alt="../../_images/upgrade-6.png" class="flat align-center" src="../../_images/upgrade-6.png" />
+</li>
+<li><p><strong>After an upgrade is done, click on a Close button.</strong></p>
+<img alt="../../_images/upgrade-7.png" class="flat align-center" src="../../_images/upgrade-7.png" />
+</li>
+</ol>
+</div>
+<div class="section" id="possible-scenarios">
+<h2>Possible scenarios<a class="headerlink" href="#possible-scenarios" title="Permalink to this headline">¶</a></h2>
+<p><span class="heading-4">Records in use</span></p>
+<p>If there are any functions, grid function columns, calculation parameter types, or any other connector child records, used in a layouts, that should be deleted by an upgrade, user will get the following dialog.</p>
+<img alt="../../_images/upgrade-error.png" class="flat align-center" src="../../_images/upgrade-error.png" />
+<p>Connector can not be upgraded while these records are used in layouts. <br>
+Layout’s editor will be opened in new browser tab after clicking on the name of the layout. <br></p>
+<img alt="../../_images/upgrade-error-1.png" class="flat align-center" src="../../_images/upgrade-error-1.png" />
+<p>After clearing references to these records from segments, user has to repeat the upgrade process.</p>
+<p><span class="heading-4">Invalid derived columns</span></p>
+<p>If there are any grid columns removed or renamed, that were previously used in expressions, user will get following dialog.</p>
+<img alt="../../_images/upgrade-error-20.png" class="flat align-center" src="../../_images/upgrade-error-20.png" />
+<p>User can review the expressions in the list of invalid derived columns. <br>
+By hoovering on the specific column, additional information are displayed. <br></p>
+<img alt="../../_images/upgrade-error-2.png" class="flat align-center" src="../../_images/upgrade-error-2.png" />
+<p>Column’s edit panel will be opened in new browser tab after clicking on the name of the invalid derived column.</p>
+<div class="notice docutils container">
+<p>The Connector has been successfully upgraded, however it is highly recommended to fix all invalid expressions for all grid calculation functions to work correctly.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="import-functions.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Import Functions
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="uninstallation.html">
+						Uninstallation 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.26. Dispositions Outbound Campaign &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.27. Inbound Campaign" href="inbound-campaign.html" />
+    <link rel="prev" title="2.25. Dispositions Inbound Campaign" href="dispositions-inbound-campaign.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.26. </span>Dispositions Outbound Campaign</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../five9.html">Five9</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">2. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.26. </span>Dispositions Outbound Campaign
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../five9.html">Five9</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="acd-status.html">2.1. ACD Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-chat.html">2.2. ACD Status Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-email.html">2.3. ACD Status Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-sms.html">2.4. ACD Status SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-social.html">2.5. ACD Status Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-text.html">2.6. ACD Status Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-group-statistics.html">2.7. Agent Group Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-group-statistics-chat.html">2.8. Agent Group Statistics Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-group-statistics-email.html">2.9. Agent Group Statistics Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-group-statistics-sms.html">2.10. Agent Group Statistics SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-group-statistics-social.html">2.11. Agent Group Statistics Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-group-statistics-text.html">2.12. Agent Group Statistics Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.13. Agent State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">2.14. Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-chat.html">2.15. Agent Statistics Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-email.html">2.16. Agent Statistics Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-sms.html">2.17. Agent Statistics SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-social.html">2.18. Agent Statistics Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-text.html">2.19. Agent Statistics Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autodial-campaign.html">2.20. Autodial Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-state.html">2.21. Campaign State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-agent-group-statistics.html">2.22. Dispositions Agent Group Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-agent-statistics.html">2.23. Dispositions Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-autodial-campaign.html">2.24. Dispositions Autodial Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-inbound-campaign.html">2.25. Dispositions Inbound Campaign</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.26. Dispositions Outbound Campaign</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">2.26.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">2.26.2. Calculation Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign.html">2.27. Inbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-chat.html">2.28. Inbound Campaign Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-email.html">2.29. Inbound Campaign Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-sms.html">2.30. Inbound Campaign SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-social.html">2.31. Inbound Campaign Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outbound-campaign.html">2.32. Outbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="outbound-campaign-manager.html">2.33. Outbound Campaign Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reporting.html">2.34. Reporting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-attributes.html">2.35. User Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dispositions-outbound-campaign">
+<h1><span class="section-number">2.26. </span>Dispositions Outbound Campaign<a class="headerlink" href="#dispositions-outbound-campaign" title="Permalink to this headline">¶</a></h1>
+<p>This Grid function pulls data from the <strong>Dispositions Outbound Campaign</strong> statistics type (data source) in Five9. The name after the ‘-‘ refers to the actual column name of the statistic type in Five9. For more information about the statistics consult an official Five9 documentation describing statistics types and their columns.</p>
+<div class="notice docutils container">
+<p>If a Derived column for a statistic is not specified, then it is false by default.</p>
+</div>
+<div class="section" id="columns">
+<h2><span class="section-number">2.26.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Campaign Id</strong> - Campaign Id</p></li>
+<li><p><strong>Campaign Name</strong> - Campaign Name</p></li>
+<li><p><strong>3rd Party Transfer</strong> - 3rd Party Transfer</p></li>
+<li><p><strong>Abandon</strong> - Abandon</p></li>
+<li><p><strong>Agent Error</strong> - Agent Error</p></li>
+<li><p><strong>Answering Machine</strong> - Answering Machine</p></li>
+<li><p><strong>Busy</strong> - Busy</p></li>
+<li><p><strong>Caller Disconnected</strong> - Caller Disconnected</p></li>
+<li><p><strong>Declined</strong> - Declined</p></li>
+<li><p><strong>Dial Error</strong> - Dial Error</p></li>
+<li><p><strong>Do Not Call</strong> - Do Not Call</p></li>
+<li><p><strong>Duplicated Callback Request</strong> - Duplicated Callback Request</p></li>
+<li><p><strong>Fax</strong> - Fax</p></li>
+<li><p><strong>Force Stop</strong> - Force Stop</p></li>
+<li><p><strong>Forced Logout</strong> - Forced Logout</p></li>
+<li><p><strong>Forward Participant</strong> - Forward Participant</p></li>
+<li><p><strong>Forwarded</strong> - Forwarded</p></li>
+<li><p><strong>Hangup</strong> - Hangup</p></li>
+<li><p><strong>Hardware Timeout</strong> - Hardware Timeout</p></li>
+<li><p><strong>Internal Call</strong> - Internal Call</p></li>
+<li><p><strong>No Answer</strong> - No Answer</p></li>
+<li><p><strong>No Disposition</strong> - No Disposition</p></li>
+<li><p><strong>No Response From Caller</strong> - No Response From Caller</p></li>
+<li><p><strong>Operator Intercept</strong> - Operator Intercept</p></li>
+<li><p><strong>Parked</strong> - Parked</p></li>
+<li><p><strong>Queue Callback Assigned</strong> - Queue Callback Assigned</p></li>
+<li><p><strong>Queue Callback Timeout</strong> - Queue Callback Timeout</p></li>
+<li><p><strong>Recycle</strong> - Recycle</p></li>
+<li><p><strong>Resource Unavailable</strong> - Resource Unavailable</p></li>
+<li><p><strong>Ringback</strong> - Ringback</p></li>
+<li><p><strong>Sent To Voicemail</strong> - Sent To Voicemail</p></li>
+<li><p><strong>Spam</strong> - Spam</p></li>
+<li><p><strong>Station Session</strong> - Station Session</p></li>
+<li><p><strong>System Error</strong> - System Error</p></li>
+<li><p><strong>System Shutdown</strong> - System Shutdown</p></li>
+<li><p><strong>Timeout</strong> - Timeout</p></li>
+<li><p><strong>Transferred To 3rd Party</strong> - Transferred To 3rd Party</p></li>
+<li><p><strong>Unknown Connection</strong> - Unknown Connection</p></li>
+<li><p><strong>Voicemail Dump</strong> - Voicemail Dump</p></li>
+<li><p><strong>Voicemail Processed</strong> - Voicemail Processed</p></li>
+<li><p><strong>Voicemail Returned</strong> - Voicemail Returned</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">2.26.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The grid function has these optional parameters:</p>
+<ul class="simple">
+<li><p><strong>Campaigns</strong> - Allows you to select from a list of Campaigns.</p></li>
+<li><p><strong>CampaignsGroups</strong> - list of parameter groups. This parameter represents groups of parameters, which will be used in the calculation of this function.</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="dispositions-inbound-campaign.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.25. </span>Dispositions Inbound Campaign
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="inbound-campaign.html">
+						<span class="section-number">2.27. </span>Inbound Campaign 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

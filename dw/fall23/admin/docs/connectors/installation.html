@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Installation &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Import Functions" href="import-functions.html" />
+    <link rel="prev" title="Values" href="calculation-parameter-types/values.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Installation</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../connectors.html">Connectors</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Installation
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../business-units.html">Business Units</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../connectors.html">Connectors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capabilities.html">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kpi-calculation-functions.html">KPI Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid-calculation-functions.html">Grid Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculation-parameter-types.html">Calculation Parameter Types</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-steps">Installation Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="import-functions.html">Import Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html">Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uninstallation.html">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Before the installation, make sure the connector version is compatible with the DW version. DW and its connectors are considered to be compatible, when both minor and major version numbers match.</p>
+<p>Example: <br>
+- DW 8.0.1 is compatible with connector 8.0.3 <br>
+- DW 8.1.0 is NOT compatible with connector 8.0.3 <br>
+- DW 8.0.1 is NOT compatible with connector 8.1.0 <br></p>
+<div class="section" id="installation-steps">
+<h2>Installation Steps<a class="headerlink" href="#installation-steps" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>In the Administration Application, select CONNECTORS in the drawer menu.</p>
+<p>Figure 1: Connectors button</p>
+<img alt="../../_images/installation-connectors-button.png" class="flat align-center" src="../../_images/installation-connectors-button.png" />
+</li>
+<li><p>Click on IMPORT button located in the toolbar of connectors list.</p>
+<p>Figure 2: Import button</p>
+<img alt="../../_images/installation-import-button.png" class="flat align-center" src="../../_images/installation-import-button.png" />
+</li>
+<li><p>In the import dialog, enter a unique connector name. A Normalized Name is a read-only field, defining the name that will be used for connector tables. It is automatically generated from the name of the connector by replacing all characters except the alphanumerical with an underscore. A Normalized Name has to be unique. Click on the “definition file” field, locate the connector’s manifest package and click IMPORT.</p>
+<div class="notice docutils container">
+<p>The name of the connector can not be changed after the installation.</p>
+</div>
+<p>Figure 3: Import dialog</p>
+<img alt="../../_images/installation-import-dialog.png" class="flat align-center" src="../../_images/installation-import-dialog.png" />
+</li>
+<li><p>After the connector is successfully installed, notification banner is displayed.</p>
+<p>Figure 4: Install</p>
+<img alt="../../_images/installation-import-succesfull.png" class="flat align-center" src="../../_images/installation-import-succesfull.png" />
+</li>
+</ol>
+<p id="api-key"><span class="heading-4">Api Key</span></p>
+<p>In order to ensure successful communication between a Connector Windows service and DW application, please follow these steps: <br></p>
+<ol class="arabic">
+<li><p>Navigate to the Connectors tab, choose the desired connector and click on Api Key.</p>
+<p>Figure 5: Api Key button</p>
+<img alt="../../_images/installation-api-key.png" class="flat align-center" src="../../_images/installation-api-key.png" />
+</li>
+<li><p>User can generate the Api Key by clicking on generate button in the Api Key dialog or set Api Key used in another connector.</p>
+<div class="notice docutils container">
+<p>Connectors have to share the same Api Key.</p>
+</div>
+<p>Figure 6: Generate button</p>
+<img alt="../../_images/installation-generate-button.png" class="flat align-center" src="../../_images/installation-generate-button.png" />
+</li>
+<li><p>After setting a desired Api Key, clicking on SAVE closes the dialog and saves the Api key.</p>
+<div class="attention docutils container">
+<p>Make sure to copy the Api Key before saving. It will not be available afterwards.</p>
+</div>
+<p>Figure 7: Save button</p>
+<img alt="../../_images/installation-save-api-key.png" class="flat align-center" src="../../_images/installation-save-api-key.png" />
+</li>
+</ol>
+<p><span class="heading-4">Entering Api Key and Api Url into appsettings.json</span></p>
+<p>Manual entering of the ApiKey and ApiUrl is required. Locate the appsettings.json file in the DW deploy folder -&gt; services -&gt; connector_host and open in any text editor.</p>
+<div class="notice docutils container">
+<p>It is necessarry to enter an encrypted ApiKey into appsettings.json. For instructions how to encrypt the ApiKey, see <a class="reference external" href="../../deployment-guide/installation-process/application-server/configuration/security/data-encryption.html#encrypt-api-key">Encrypt Api Key</a> chapter.</p>
+</div>
+<p>Figure 9: appsettings.json</p>
+<img alt="../../_images/installation-api-key-2.png" class="flat align-center" src="../../_images/installation-api-key-2.png" />
+<p><strong>[ENTERT YOUR SECRET HERE]</strong> placeholder <br>
+Api Key which user generated and saved in the DW Administration Tool.</p>
+<p><strong>[HOSTNAME]</strong> placeholder <br>
+IP address or hostname of server where 2Ring DW is deployed.</p>
+<p><strong>[DW_APPLICATION_PATH]</strong> placeholder <br>
+Virtual path for DW in IIS. This is configured during the installation of the DW (see Installation chapter). By default, the application path is 2ring/dw</p>
+<div class="notice docutils container">
+<p>Changing settings in the appsettings.json file requires the service to be restarted.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="calculation-parameter-types/values.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Values
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="import-functions.html">
+						Import Functions 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pie Chart &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Segment" href="pie-charts/segments.html" />
+    <link rel="prev" title="Conditional Styles" href="bar-line-chart-kpi-timeline/conditional-styles.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Pie Chart</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Pie Chart
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Pie Chart</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pie-charts/segments.html">Segments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pie-chart">
+<h1>Pie Chart<a class="headerlink" href="#pie-chart" title="Permalink to this headline">¶</a></h1>
+<p>The Pie Chart is best used, when comparing the results of multiple different calculations. Each calculation is presented as a segment of a pie shaped chart. The chart can be accompanied with a legend, displaying additional information about each segment.</p>
+<div class="notice docutils container">
+<p>For general information about this segment, see <a class="reference internal" href="../../what-is-layout/calculation-based-segments/pie-chart.html"><span class="doc">Pie Chart</span></a> chapter.</p>
+</div>
+<ul>
+<li><dl>
+<dt><strong>Appearance</strong></dt><dd><p>The style of a Pie Chart</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Type</strong></dt><dd><p><em>Required</em> <br>
+Type of the Pie Chart.
+<br> Available options are:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Doughnut</strong></dt><dd><p>The chart is shaped like a doughnut, with a hole in the middle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Pie</strong></dt><dd><p>The chart is represented by a fully filled circle.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Cut Out</strong></dt><dd><p>Whether chart’s segments are separated from each other by a small gap.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Show Segment Labels</strong></dt><dd><p>When enabled, labels are visible on top of each segment.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Display When</strong></dt><dd><p><em>Required</em> <br>
+Whether the labels should be visible, when its segment isn’t big enough to contain it.
+<br> Available options are <em>Always</em> and <em>If Enough Space</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Mode</strong></dt><dd><p><em>Required</em> <br>
+Defines what type of information is shown in labels.
+<br> Available options are <em>Title</em>, <em>Value</em> and <em>Percentage</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Display Format</strong></dt><dd><p><em>Required</em> <br>
+<em>Available only when “Value” or “Percentage” is selected as Mode.</em> <br>
+Format of segment label.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Display Format</strong></dt><dd><p><em>Available only when “Custom” is selected as a Display Format</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#custom-display-format">Custom Display Format</a> <em>section</em>. <br>
+Custom format of segment label.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Arc Text</strong></dt><dd><p>When enabled, the label is curved along the segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Position</strong></dt><dd><p><em>Required</em> <br>
+The relative distance of the label from the middle of chart. 0% means closest to the middle and 100% means furthest.</p>
+<div class="notice docutils container">
+<p>Position value can go even above 100% resulting in label to be shown outside of the segment.
+But in such scenario full visibility of labels is not guaranteed.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Label Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the label.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p><em>Inheritable</em> <br>
+Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Legend</strong></dt><dd><p>When enabled, the legend is displayed. The legend displayed additional information about each segment.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Show Values</strong></dt><dd><p>Whether the actual value, that the segment represents, should be displayed in legend.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Display Format</strong></dt><dd><p><em>Required</em> <br>
+Format of the actual value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Display Format</strong></dt><dd><p><em>Available only when “Custom” is selected as a Display Format</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#custom-display-format">Custom Display Format</a> <em>section</em>. <br>
+Custom format of the actual value.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Percentages</strong></dt><dd><p>Whether the percentage, that each segment takes up from the whole chart, should be displayed in legend.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Display Format</strong></dt><dd><p><em>Required</em> <br>
+Format of the percentage.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Display Format</strong></dt><dd><p><em>Available only when “Custom” is selected as a Display Format</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#custom-display-format">Custom Display Format</a> <em>section</em>. <br>
+Custom format of the actual value.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Legend Content</strong></dt><dd><p>Content of the legend. <br>
+Available options are <em>Segment Title</em> and <em>Segment Interval</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p><em>Required</em> <br>
+Position of legend.
+<br> Available options are <em>Left</em>, <em>Right</em>, <em>Top</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color field</a> <em>section</em>. <br>
+Color of the legend’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p><em>Inheritable</em> <br>
+Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Null Value</strong></dt><dd><p><em>Inheritable</em> <br>
+A custom value that is displayed when the value is not available.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Colors</strong></dt><dd><p>For ease of access, all aforementioned color related options are once again located in the Colors group.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Segment Label Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the segment label.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Legend Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the legend text.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Segments</strong></dt><dd><p>List of configured segments. For more information see <a class="reference internal" href="pie-charts/segments.html"><span class="doc">Segment</span></a> chapter</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pie-charts/segments.html">Segments</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="bar-line-chart-kpi-timeline/conditional-styles.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Conditional Styles
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="pie-charts/segments.html">
+						Segment 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

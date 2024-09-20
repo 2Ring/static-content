@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.3. Agent Statistics RT &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.4. Queue Agent States" href="queue-agent-states.html" />
+    <link rel="prev" title="1.2. Agent Statistics" href="agent-statistics.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.3. </span>Agent Statistics RT</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../wxcc-2-0.html">WXCC</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">1. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.3. </span>Agent Statistics RT
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agents.html">1.1. Agents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">1.2. Agent Statistics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.3. Agent Statistics RT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-rt-tasks-in-progress">1.3.1. Agent Statistics RT - Tasks In Progress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-rt-tasks-in-progress-chat">1.3.2. Agent Statistics RT - Tasks In Progress Chat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-rt-tasks-in-progress-email">1.3.3. Agent Statistics RT - Tasks In Progress Email</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-rt-tasks-in-progress-social">1.3.4. Agent Statistics RT - Tasks In Progress Social</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-rt-tasks-in-progress-telephony">1.3.5. Agent Statistics RT - Tasks In Progress Telephony</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agent-statistics-rt-tasks-rona">1.3.6. Agent Statistics RT - Tasks RONA</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="queue-agent-states.html">1.4. Queue Agent States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-statistics.html">1.5. Queue Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-statistics-rt.html">1.6. Queue Statistics RT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tasks.html">1.7. Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="agent-statistics-rt">
+<h1><span class="section-number">1.3. </span>Agent Statistics RT<a class="headerlink" href="#agent-statistics-rt" title="Permalink to this headline">¶</a></h1>
+<p>The Agent Statistics RT KPI Functions calculate real time statistics for Agents.</p>
+<div class="attention docutils container">
+<p>These KPI Functions utilize REST API for initialization and Webhook Notifications for updates.</p>
+</div>
+<p>Depending on the KPI Function, the following parameters may be used:</p>
+<ul class="simple">
+<li><p><strong>Agents</strong> - list of Agents names</p></li>
+<li><p><strong>CompetencyLevel</strong> - Minimum profiency level of skill in skill profile, for skill type PROFIENCY</p></li>
+<li><p><strong>Queues</strong> - List of Queue names</p></li>
+<li><p><strong>Skills</strong> - List of Skill names</p></li>
+<li><p><strong>SkillsBooleanValue</strong> - Boolean value of skill in skill profile, for skill type BOOLEAN</p></li>
+<li><p><strong>SkillsEnumValues</strong> - List of values of skill in skill profile, for skill type ENUM</p></li>
+<li><p><strong>SkillsTextValues</strong> - List of values of skill in skill profile, for skill type TEXT</p></li>
+</ul>
+<div class="notice docutils container">
+<p>If the Skill parameter is filled, it is necessary to fill in some of the parameters SkillsBooleanValue, SkillsEnumValues, SkillsTextValues and CompetencyLevel according to the type of skills specified in the parameter. <br>
+The agent will be displayed if assigned a skill profile that includes any of the skills specified in the parameter, combined with the skill value according to the skill type.</p>
+</div>
+<div class="section" id="agent-statistics-rt-tasks-in-progress">
+<h2><span class="section-number">1.3.1. </span>Agent Statistics RT - Tasks In Progress<a class="headerlink" href="#agent-statistics-rt-tasks-in-progress" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks currently being handled by agents.</p>
+<p><strong>Parameters</strong>: Agents, CompetencyLevel, Queues, Skills, SkillsBooleanValue, SkillsEnumValues, SkillsTextValues</p>
+</div>
+<div class="section" id="agent-statistics-rt-tasks-in-progress-chat">
+<h2><span class="section-number">1.3.2. </span>Agent Statistics RT - Tasks In Progress Chat<a class="headerlink" href="#agent-statistics-rt-tasks-in-progress-chat" title="Permalink to this headline">¶</a></h2>
+<p>This KPI returns the number of chat tasks currently being handled by the agent.</p>
+<p><strong>Parameters:</strong> Agents, CompetencyLevel, Queues, Skills, SkillsBooleanValue, SkillsEnumValues, SkillsTextValues</p>
+</div>
+<div class="section" id="agent-statistics-rt-tasks-in-progress-email">
+<h2><span class="section-number">1.3.3. </span>Agent Statistics RT - Tasks In Progress Email<a class="headerlink" href="#agent-statistics-rt-tasks-in-progress-email" title="Permalink to this headline">¶</a></h2>
+<p>This KPI returns the number of email tasks currently being handled by the agent.</p>
+<p><strong>Parameters:</strong> Agents, CompetencyLevel, Queues, Skills, SkillsBooleanValue, SkillsEnumValues, SkillsTextValues</p>
+</div>
+<div class="section" id="agent-statistics-rt-tasks-in-progress-social">
+<h2><span class="section-number">1.3.4. </span>Agent Statistics RT - Tasks In Progress Social<a class="headerlink" href="#agent-statistics-rt-tasks-in-progress-social" title="Permalink to this headline">¶</a></h2>
+<p>This KPI returns the number of social tasks currently being handled by the agent.</p>
+<p><strong>Parameters:</strong> Agents, CompetencyLevel, Queues, Skills, SkillsBooleanValue, SkillsEnumValues, SkillsTextValues</p>
+</div>
+<div class="section" id="agent-statistics-rt-tasks-in-progress-telephony">
+<h2><span class="section-number">1.3.5. </span>Agent Statistics RT - Tasks In Progress Telephony<a class="headerlink" href="#agent-statistics-rt-tasks-in-progress-telephony" title="Permalink to this headline">¶</a></h2>
+<p>This KPI returns the number of telephony tasks currently being handled by the agent.</p>
+<p><strong>Parameters:</strong> Agents, CompetencyLevel, Queues, Skills, SkillsBooleanValue, SkillsEnumValues, SkillsTextValues</p>
+</div>
+<div class="section" id="agent-statistics-rt-tasks-rona">
+<h2><span class="section-number">1.3.6. </span>Agent Statistics RT - Tasks RONA<a class="headerlink" href="#agent-statistics-rt-tasks-rona" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks offered to agents, that went unanswered.</p>
+<p><strong>Parameters:</strong> Agents, CompetencyLevel, Queues, Skills, SkillsBooleanValue, SkillsEnumValues, SkillsTextValues</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="agent-statistics.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.2. </span>Agent Statistics
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="queue-agent-states.html">
+						<span class="section-number">1.4. </span>Queue Agent States 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

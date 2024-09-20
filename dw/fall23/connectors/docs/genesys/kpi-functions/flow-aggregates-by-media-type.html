@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.9. Flow Aggregates By Media Type (FA_A) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.10. Flow Observations By Media Type (FO_A)" href="flow-observations-by-media-type.html" />
+    <link rel="prev" title="2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)" href="conversation-aggregates-by-media-type-and-wrapup.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.9. </span>Flow Aggregates By Media Type (FA_A)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.9. </span>Flow Aggregates By Media Type (FA_A)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="administrative.html">2.1. Administrative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">2.2. Agent Info (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.3. Agent State (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">2.4. Campaign Diagnostics (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">2.5. Campaign Progress (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">2.6. Campaign Stats (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-queue.html">2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-wrapup.html">2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.9. Flow Aggregates By Media Type (FA_A)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowcount">2.9.1. FA_A_FlowCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowdisconnectcount">2.9.2. FA_A_FlowDisconnectCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowdisconnectmax">2.9.3. FA_A_FlowDisconnectMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowdisconnectmin">2.9.4. FA_A_FlowDisconnectMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowdisconnectsum">2.9.5. FA_A_FlowDisconnectSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowexitcount">2.9.6. FA_A_FlowExitCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowexitmax">2.9.7. FA_A_FlowExitMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowexitmin">2.9.8. FA_A_FlowExitMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowexitsum">2.9.9. FA_A_FlowExitSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowmax">2.9.10. FA_A_FlowMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowmin">2.9.11. FA_A_FlowMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowoutcomecount">2.9.12. FA_A_FlowOutcomeCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowoutcomefailedcount">2.9.13. FA_A_FlowOutcomeFailedCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowoutcomemax">2.9.14. FA_A_FlowOutcomeMax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowoutcomemin">2.9.15. FA_A_FlowOutcomeMin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowoutcomesum">2.9.16. FA_A_FlowOutcomeSum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fa-a-flowsum">2.9.17. FA_A_FlowSum</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">2.10. Flow Observations By Media Type (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">2.11. Queue Observations (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type.html">2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">2.13. User Aggregates By Media Type (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">2.14. User Observations Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">2.15. User Observations Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">2.16. User Status Aggregates Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">2.17. User Status Aggregates Passive (USA_P)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="flow-aggregates-by-media-type-fa-a">
+<h1><span class="section-number">2.9. </span>Flow Aggregates By Media Type (FA_A)<a class="headerlink" href="#flow-aggregates-by-media-type-fa-a" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fa-a-flowcount">
+<h2><span class="section-number">2.9.1. </span>FA_A_FlowCount<a class="headerlink" href="#fa-a-flowcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of communications that entered a flow.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowdisconnectcount">
+<h2><span class="section-number">2.9.2. </span>FA_A_FlowDisconnectCount<a class="headerlink" href="#fa-a-flowdisconnectcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Disconnect Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of times an entry spent time in a flow until it was disconnected.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowdisconnectmax">
+<h2><span class="section-number">2.9.3. </span>FA_A_FlowDisconnectMax<a class="headerlink" href="#fa-a-flowdisconnectmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Disconnect Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the longest amount of time that an entry spent in the flow before disconnecting.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowdisconnectmin">
+<h2><span class="section-number">2.9.4. </span>FA_A_FlowDisconnectMin<a class="headerlink" href="#fa-a-flowdisconnectmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Disconnect Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the shortest amount of time that an entry spent in the flow before disconnecting.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowdisconnectsum">
+<h2><span class="section-number">2.9.5. </span>FA_A_FlowDisconnectSum<a class="headerlink" href="#fa-a-flowdisconnectsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Disconnect Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time spent in a flow for communications that were abandoned.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowexitcount">
+<h2><span class="section-number">2.9.6. </span>FA_A_FlowExitCount<a class="headerlink" href="#fa-a-flowexitcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Exit Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the total number of times an entry was in a flow until it exited the flow to another destination, such as an ACD queue, ACD voicemail, or a user.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowexitmax">
+<h2><span class="section-number">2.9.7. </span>FA_A_FlowExitMax<a class="headerlink" href="#fa-a-flowexitmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Exit Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the longest amount of time that an entry spent in the flow before exiting.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowexitmin">
+<h2><span class="section-number">2.9.8. </span>FA_A_FlowExitMin<a class="headerlink" href="#fa-a-flowexitmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Exit Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the shortest amount of time that an entry spent in the flow before exiting.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowexitsum">
+<h2><span class="section-number">2.9.9. </span>FA_A_FlowExitSum<a class="headerlink" href="#fa-a-flowexitsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Exit Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time spent in a flow for communications that exited the flow regularly.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowmax">
+<h2><span class="section-number">2.9.10. </span>FA_A_FlowMax<a class="headerlink" href="#fa-a-flowmax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the maximum amount of time spent in a flow.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowmin">
+<h2><span class="section-number">2.9.11. </span>FA_A_FlowMin<a class="headerlink" href="#fa-a-flowmin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the minimum amount of time spent in a flow.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowoutcomecount">
+<h2><span class="section-number">2.9.12. </span>FA_A_FlowOutcomeCount<a class="headerlink" href="#fa-a-flowoutcomecount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Outcome Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of communications that had a specific flow outcome.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowoutcomefailedcount">
+<h2><span class="section-number">2.9.13. </span>FA_A_FlowOutcomeFailedCount<a class="headerlink" href="#fa-a-flowoutcomefailedcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Outcome Failure Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of failed flow outcomes.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowoutcomemax">
+<h2><span class="section-number">2.9.14. </span>FA_A_FlowOutcomeMax<a class="headerlink" href="#fa-a-flowoutcomemax" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Outcome Max - actively updated with notifications</strong></p>
+<p>This KPI function returns the maximum number of communications that had a specific flow outcome.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowoutcomemin">
+<h2><span class="section-number">2.9.15. </span>FA_A_FlowOutcomeMin<a class="headerlink" href="#fa-a-flowoutcomemin" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Outcome Min - actively updated with notifications</strong></p>
+<p>This KPI function returns the minimum number of communications that had a specific flow outcome.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowoutcomesum">
+<h2><span class="section-number">2.9.16. </span>FA_A_FlowOutcomeSum<a class="headerlink" href="#fa-a-flowoutcomesum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Outcome Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total number of communications that had a specific flow outcome.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+<div class="section" id="fa-a-flowsum">
+<h2><span class="section-number">2.9.17. </span>FA_A_FlowSum<a class="headerlink" href="#fa-a-flowsum" title="Permalink to this headline">¶</a></h2>
+<p><strong>Flow Aggregates By Media Type - Flow Sum - actively updated with notifications</strong></p>
+<p>This KPI function returns the total amount of time spent in a flow.</p>
+<p><strong>Parameters:</strong> Flow, MediaType, Queue</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="conversation-aggregates-by-media-type-and-wrapup.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.8. </span>Conversation Aggregates By Media Type And Wrap Up (CAByW_A)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="flow-observations-by-media-type.html">
+						<span class="section-number">2.10. </span>Flow Observations By Media Type (FO_A) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

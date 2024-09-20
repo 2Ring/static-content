@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.6. Campaign Stats (CS_P) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)" href="conversation-aggregates-by-media-type-and-queue.html" />
+    <link rel="prev" title="2.5. Campaign Progress (CP_A)" href="campaign-progress.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.6. </span>Campaign Stats (CS_P)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.6. </span>Campaign Stats (CS_P)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="administrative.html">2.1. Administrative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">2.2. Agent Info (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.3. Agent State (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">2.4. Campaign Diagnostics (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">2.5. Campaign Progress (CP_A)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.6. Campaign Stats (CS_P)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cs-p-contactrateattemptscount">2.6.1. CS_P_ContactRateAttemptsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cs-p-contactrateconnectscount">2.6.2. CS_P_ContactRateConnectsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cs-p-effectiveidleagentscount">2.6.3. CS_P_EffectiveIdleAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cs-p-idleagentscount">2.6.4. CS_P_IdleAgentsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cs-p-outstandingcallscount">2.6.5. CS_P_OutstandingCallsCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cs-p-scheduledcallscount">2.6.6. CS_P_ScheduledCallsCount</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-queue.html">2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-wrapup.html">2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type.html">2.9. Flow Aggregates By Media Type (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">2.10. Flow Observations By Media Type (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">2.11. Queue Observations (QO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations-by-media-type.html">2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">2.13. User Aggregates By Media Type (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">2.14. User Observations Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">2.15. User Observations Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">2.16. User Status Aggregates Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">2.17. User Status Aggregates Passive (USA_P)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="campaign-stats-cs-p">
+<h1><span class="section-number">2.6. </span>Campaign Stats (CS_P)<a class="headerlink" href="#campaign-stats-cs-p" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cs-p-contactrateattemptscount">
+<h2><span class="section-number">2.6.1. </span>CS_P_ContactRateAttemptsCount<a class="headerlink" href="#cs-p-contactrateattemptscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Campaign Stats - Contact Rate Attempts Count - passively updated (produces more API requests for your organization)</strong></p>
+<p>This KPI function returns the number of call attempts made.</p>
+<p><strong>Parameters:</strong> Campaign, Queue</p>
+</div>
+<div class="section" id="cs-p-contactrateconnectscount">
+<h2><span class="section-number">2.6.2. </span>CS_P_ContactRateConnectsCount<a class="headerlink" href="#cs-p-contactrateconnectscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Campaign Stats - Contact Rate Connects Count - passively updated (produces more API requests for your organization)</strong></p>
+<p>This KPI function returns the number of calls in which a live voice was detected.</p>
+<p><strong>Parameters:</strong> Campaign, Queue</p>
+</div>
+<div class="section" id="cs-p-effectiveidleagentscount">
+<h2><span class="section-number">2.6.3. </span>CS_P_EffectiveIdleAgentsCount<a class="headerlink" href="#cs-p-effectiveidleagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Campaign Stats - Effective Idle Agents Count - passively updated (produces more API requests for your organization)</strong></p>
+<p>This KPI function returns the number of effective available agents that are not being utilized currently.</p>
+<p><strong>Parameters:</strong> Campaign, Queue</p>
+</div>
+<div class="section" id="cs-p-idleagentscount">
+<h2><span class="section-number">2.6.4. </span>CS_P_IdleAgentsCount<a class="headerlink" href="#cs-p-idleagentscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Campaign Stats - Idle Agents Count - passively updated (produces more API requests for your organization)</strong></p>
+<p>This KPI function returns the number of agents who are on queue and are available to take interactions, but are not working with any interactions.</p>
+<p><strong>Parameters:</strong> Campaign, Queue</p>
+</div>
+<div class="section" id="cs-p-outstandingcallscount">
+<h2><span class="section-number">2.6.5. </span>CS_P_OutstandingCallsCount<a class="headerlink" href="#cs-p-outstandingcallscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Campaign Stats - Outstanding Calls Count - passively updated (produces more API requests for your organization)</strong></p>
+<p>This KPI function returns the number of currently ongoing campaign calls.</p>
+<p><strong>Parameters:</strong> Campaign, Queue</p>
+</div>
+<div class="section" id="cs-p-scheduledcallscount">
+<h2><span class="section-number">2.6.6. </span>CS_P_ScheduledCallsCount<a class="headerlink" href="#cs-p-scheduledcallscount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Campaign Stats - Scheduled Calls Count - passively updated (produces more API requests for your organization)</strong></p>
+<p>This KPI function returns the number of currently scheduled campaign calls.</p>
+<p><strong>Parameters:</strong> Campaign, Queue</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="campaign-progress.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.5. </span>Campaign Progress (CP_A)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="conversation-aggregates-by-media-type-and-queue.html">
+						<span class="section-number">2.7. </span>Conversation Aggregates By Media Type And Queue (CAByQ_A) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

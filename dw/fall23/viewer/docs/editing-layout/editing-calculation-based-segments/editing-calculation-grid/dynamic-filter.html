@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dynamic Filter &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/fontawesome.min.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/main.js"></script>
+    <script src="../../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Historical Intervals" href="../historical-intervals.html" />
+    <link rel="prev" title="Sort Columns" href="sort-columns.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../../index.html" id="headerImgWrapper">
+			<img src="../../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Dynamic Filter</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Dynamic Filter
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="source-tables.html">Source Tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="custom-columns.html">Custom Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sort-columns.html">Sort Columns</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Dynamic Filter</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#filtering-using-user-attributes">Filtering using User Attributes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#filtering-using-url-parameters">Filtering using URL parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dynamic-filter">
+<h1>Dynamic Filter<a class="headerlink" href="#dynamic-filter" title="Permalink to this headline">¶</a></h1>
+<p>Dynamic filters allow the user to filter displayed grid based values using user attributes or/and URL parameters. Filter is represented by expression with placeholders which are replaced with value from user attributes or received from the URL parameters at runtime. Specific grid columns and user attributes can be selected from the list of columns/user attributes, located at the bottom of the dialog.</p>
+<p>Figure 1: Dynamic Filter dialog</p>
+<a class="flat reference internal image-reference" href="../../../../_images/dynamic-filter-dialog.png"><img alt="../../../../_images/dynamic-filter-dialog.png" class="flat align-center" src="../../../../_images/dynamic-filter-dialog.png" style="width: 485.79999999999995px; height: 527.1px;" /></a>
+<div class="notice docutils container">
+<p>Filtering using User Attributes and URL parameters can be combined.</p>
+</div>
+<div class="notice docutils container">
+<p>For more information about building an expression, see <a class="reference external" href="../../../working-with-the-layout-editor/fields.html#expression-builder">Expression builder</a> <em>chapter</em>. <br></p>
+</div>
+<p>In case of using a specific grid column in the dynamic filter, the placeholder is defined in format: <strong>SourceTableAlias.Column</strong>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SourceTableAlias</span></code> has to be replaced with the alias of the targeted source table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Column</span></code> has to be replaced with the specific column from the source table.</p></li>
+</ul>
+<div class="notice docutils container">
+<p>For more information about supported dynamic filter syntax, see the <a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.data.datacolumn.expression?view=netcore-3.1">Microsoft documentation</a>.</p>
+</div>
+<div class="section" id="filtering-using-user-attributes">
+<h2>Filtering using User Attributes<a class="headerlink" href="#filtering-using-user-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Value placeholders are defined in filter in format: <strong>${user_attributeName}</strong>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> has to be replaced with a specific user attribute.</p></li>
+</ul>
+<p>When using connector associated user attribute, value placeholders are defined in filter in format: <strong>${user_connectorName_attributeName}</strong>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorName</span></code> has to be replaced with the name of the connector, the user attribute is associated with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> has to be replaced with a specific user attribute.</p></li>
+</ul>
+<div class="notice docutils container">
+<p>When using user attributes, the attributes of the currently logged in user are applied.</p>
+</div>
+<div class="notice docutils container">
+<p>For more information about User Attributes, see <span class="xref std std-doc">../../../../administration-tool-guide/business-units/security/users</span> chapter.</p>
+</div>
+<p><span class="heading-4">Dynamic filter with one value placeholder</span></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agents.Agent = ${user_uccx_agentName}
+</pre></div>
+</div>
+<div class="notice docutils container">
+<p>Text values have to be enclosed in apostrophes either in url parameter filter:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>?filter_agentName=&#39;Lara%20Croft&#39;
+</pre></div>
+</div>
+<p>or in dynamic filter expression:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agents.Agent = &#39;${url_agentName}&#39;
+</pre></div>
+</div>
+</div>
+<p><span class="heading-4">Dynamic filter with one value placeholder with multiple values</span></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agents.Agent IN (${user_uccx_agentNames})
+</pre></div>
+</div>
+<div class="notice docutils container">
+<p>Each text value needs to be enclosed in apostrophes in user attribute definition</p>
+</div>
+<p><span class="heading-4">Dynamic filter with multiple value placeholders</span></p>
+<p>In the following example, only agents that belong to the same team and with the same skill assigned as the logged in user will be selected.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agents.Team = ${user_uccx_team} AND Agents.Skill  = ${user_uccx_skill}
+</pre></div>
+</div>
+</div>
+<div class="section" id="filtering-using-url-parameters">
+<h2>Filtering using URL parameters<a class="headerlink" href="#filtering-using-url-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Value placeholders are defined in filter in format: <strong>${url_placeholderName}</strong>
+<br> Value placeholders are defined in URL in format: <strong>filter_placeholderName</strong></p>
+<p><span class="heading-4">Dynamic filter with one value placeholder</span></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agents.Agent = ${url_agentName}
+</pre></div>
+</div>
+<p>This filter allows the user to specify a name of a single agent. Only rows that contain said agent in their Agent column will be displayed.</p>
+<p><strong>URL</strong></p>
+<p>To apply the filter, the following attribute needs to be added to the URL of the Layout:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="nx">filter_agentName</span><span class="o">=</span><span class="s1">&#39;Lara%20Croft&#39;</span>
+</pre></div>
+</div>
+<p>When applied, only columns with Agent Lara Croft will be displayed.</p>
+<div class="notice docutils container">
+<p>Text values have to be enclosed in apostrophes either in url parameter filter:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>?filter_agentName=&#39;Lara%20Croft&#39;
+</pre></div>
+</div>
+<p>or in dynamic filter expression:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agents.Agent = &#39;${url_agentName}&#39;
+</pre></div>
+</div>
+</div>
+<div class="notice docutils container">
+<p>Spaces need to be replaced with %20.</p>
+</div>
+<p><span class="heading-4">Dynamic filter with one value placeholder with multiple values</span></p>
+<p>In case of filtering using URL parameters:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agents.Agent IN ${url_agentNames}
+</pre></div>
+</div>
+<p>This filter allows the user to specify a name of any number of agents. Only rows that contain said agents in their Agent column will be displayed.</p>
+<p><strong>URL</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="nx">filter_agentNames</span><span class="o">=</span><span class="s1">&#39;Lara%20Croft&#39;</span><span class="p">,</span><span class="s1">&#39;Sarrah%20Connor&#39;</span>
+</pre></div>
+</div>
+<div class="notice docutils container">
+<p>Each text value needs to be enclosed in apostrophes and separated by comma.</p>
+</div>
+<p><span class="heading-4">Dynamic filter with multiple value placeholders</span></p>
+<p>In case of filtering using URL parameters:</p>
+<p>In the following example, only agents that are in state defined in the URL, for a longer time than it is defined in the URL, will be selected.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agents.State = ${url_state} AND Agents.Duration &gt; ${url_duration}
+</pre></div>
+</div>
+<p>Multiple expressions can be configured for the same grid. Each expression needs to be separated by AND.</p>
+<p><strong>URL</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="nx">filter_state</span><span class="o">=</span><span class="s1">&#39;Not%20Ready&#39;</span><span class="o">&amp;</span><span class="nx">filter_duration</span><span class="o">=</span><span class="mf">60</span>
+</pre></div>
+</div>
+<p>Only agents, that are in the Not Ready state for more than 60 seconds, are displayed.</p>
+<div class="notice docutils container">
+<p>Each parameter need to be separated by &amp;.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="sort-columns.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Sort Columns
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../historical-intervals.html">
+						Historical Intervals 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

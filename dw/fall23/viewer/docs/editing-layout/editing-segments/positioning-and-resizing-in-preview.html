@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Positioning and Resizing in Preview &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Editing Shared Calculations" href="../editing-shared-calculations.html" />
+    <link rel="prev" title="Copying" href="copying.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Positioning and Resizing in Preview</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-segment.html">Editing a Segment</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Positioning and Resizing in Preview
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-segment.html">Editing Segment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="copying.html">Copying</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Positioning and Resizing in Preview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#positioning-and-resizing">Positioning and Resizing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#segments-distribution-and-alignment">Segments Distribution and Alignment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="positioning-and-resizing-in-preview">
+<h1>Positioning and Resizing in Preview<a class="headerlink" href="#positioning-and-resizing-in-preview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="positioning-and-resizing">
+<h2>Positioning and Resizing<a class="headerlink" href="#positioning-and-resizing" title="Permalink to this headline">¶</a></h2>
+<p>All segments present in the current Layout are displayed in Layout’s preview. When hovered over with mouse cursor,
+the hovered segment is highlighted with an orange glow and following actions can be made:</p>
+<ul>
+<li><p>Clicking and dragging changes position of the segment.</p>
+<div class="notice docutils container">
+<p>Segments are moved simultaneously in the layout in case of moving a group of segments.</p>
+</div>
+</li>
+<li><p>When hovering over the edge of the segment, clicking and dragging resizes the segment in the corresponding direction.</p></li>
+</ul>
+<p>Figure 1: Segment positioning and resizing</p>
+<img alt="../../../_images/positioning-and-resizing-in-preview-resize-segment.gif" class="flat align-center" src="../../../_images/positioning-and-resizing-in-preview-resize-segment.gif" />
+<p>Behavior of positioning and resizing can be changed with options located over the Layout preview. It contains
+the following options:</p>
+<p>Figure 2: Positioning settings in the Layout</p>
+<img alt="../../../_images/positioning-and-resizing-in-preview-position-segment.png" class="flat align-center" src="../../../_images/positioning-and-resizing-in-preview-position-segment.png" />
+<ol class="arabic">
+<li><dl>
+<dt><strong>Show/Hide Background</strong></dt><dd><p>Whether the Layout’s background should be displayed in preview. If Snap to Grid option is enabled, the grid points can be more easily seen when background is hidden.</p>
+<div class="notice docutils container">
+<p>This option hides background only in edit mode. Background remains visible when viewing Layout outside of the edit mode.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show/Hide Borders</strong></dt><dd><p>Whether segments borders should be displayed. Borders are displayed as a thin black line around the segment boundaries.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Layout Zoom</strong></dt><dd><p>Zoom of the layout preview area. The scrollbars appear when zooming the layout causes the preview area not to fit on the screen. <br>
+Available options are <em>Best Fit</em>, and every 10% on the scale of <em>50%</em> - <em>200%</em></p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Snap to Grid</strong></dt><dd><p>When enabled, grid points are displayed based on the Grid Size option. Positioning and resizing, can be done only in increments, specified by the Grid Size.
+<br> When disabled, the segments can be positioned and resized freely.</p>
+<p>Figure 3: Positioning and resizing using grid</p>
+<a class="flat reference internal image-reference" href="../../../_images/positioning-and-resizing-in-preview-resizing-grid.gif"><img alt="../../../_images/positioning-and-resizing-in-preview-resizing-grid.gif" class="flat align-center" src="../../../_images/positioning-and-resizing-in-preview-resizing-grid.gif" style="width: 840.0px; height: 508.2px;" /></a>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Grid</strong></dt><dd><p>Whether the grid points should be visible.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Grid Size</strong></dt><dd><p>Size of the grid, used when Snap to Grid is enabled.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Position and Size of the Segment can be set also by filling in <strong>Top</strong>, <strong>Left</strong>, <strong>Height</strong> and <strong>Width</strong> properties of the Segment in <strong>Position and Size</strong> group.
+For more information see <a class="reference internal" href="../editing-segment.html"><span class="doc">Editing a Segment</span></a> chapter.</p>
+<p>Figure 4: Position and Size settings</p>
+<img alt="../../../_images/positioning-and-resizing-in-preview-position-settings.png" class="flat align-center" src="../../../_images/positioning-and-resizing-in-preview-position-settings.png" />
+</div>
+<div class="section" id="segments-distribution-and-alignment">
+<h2>Segments Distribution and Alignment<a class="headerlink" href="#segments-distribution-and-alignment" title="Permalink to this headline">¶</a></h2>
+<p>If multiple segments need to be evenly distributed in the layout or aligned on either side for better clarity, the following features are available:</p>
+<p>Figure 5: Segments Distribution and Alignment</p>
+<img alt="../../../_images/positioning-and-resizing-in-preview-position-segment2.png" class="flat align-center" src="../../../_images/positioning-and-resizing-in-preview-position-segment2.png" />
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>Distribute Segments</strong></dt><dd><p>Segments distribution based on a criteria set by a user.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Segments Alignment</strong></dt><dd><p>Alignment of selected segments.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p><span class="heading-4">Distribute Segments</span></p>
+<p>Selected segments can be distributed in the layout by clicking on the Distribute Segments button. Following dialog appears:</p>
+<div class="notice docutils container">
+<p>Only segments with the same size can be distributed.</p>
+</div>
+<div class="notice docutils container">
+<p>Segments are distributed in order in which they were selected.</p>
+</div>
+<p>Figure 6: Segments Distribution dialog</p>
+<img alt="../../../_images/positioning-and-resizing-in-preview-distribute-dialog.png" class="flat align-center" src="../../../_images/positioning-and-resizing-in-preview-distribute-dialog.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Flow Direction</strong></dt><dd><p>Direction of the segment distribution. <br>
+If <em>Distribute columns</em> is selected, segments are distributed into columns. <br>
+If <em>Distribute rows</em> is selected, segments are distributed into rows.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Columns/rows</strong></dt><dd><p><em>Based on selected Flow Direction</em> <br>
+Number of columns or rows, segments should be distributed into.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Distribution Mode</strong></dt><dd><p>Mode of segments distribution. <br></p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Distribute to target area</strong></dt><dd><p>User can define the position of the target area by filling the coordinates and size of the area. All fields are measured in percents of the Layout’s size.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Left</strong></dt><dd><p>Left boundary of the area.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Top</strong></dt><dd><p>Top boundary of the area.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Width</strong></dt><dd><p>Width of the area.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of the area.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Distribute by fixed distances</strong></dt><dd><p>Segments are distributed by fixed distances set by a user. All fields are measured in percents of the Layout’s size.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Horizontal distance</strong></dt><dd><p>Horizontal distance between segments.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical distance</strong></dt><dd><p>Vertical distance between segments.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Selected segments are distributed based on the user preferences by clicking on the <span class="button">DISTRIBUTE</span> button.</p>
+<p><span class="heading-4">Segments Alignment</span></p>
+<p>Selected segments can be aligned by clicking on one of the following buttons:</p>
+<div class="notice docutils container">
+<p>Segments are aligned according to the segment that was selected first.</p>
+</div>
+<p>Figure 7: Alignment buttons</p>
+<img alt="../../../_images/positioning-and-resizing-in-preview-alignment.png" class="flat align-center" src="../../../_images/positioning-and-resizing-in-preview-alignment.png" />
+<ol class="arabic simple">
+<li><p>Segments are aligned to the left.</p></li>
+<li><p>Segments are aligned to the horizontal center.</p></li>
+<li><p>Segments are aligned to the right.</p></li>
+<li><p>Segments are aligned to the top.</p></li>
+<li><p>Segments are aligned to the vertical center.</p></li>
+<li><p>Segments are aligned to the bottom.</p></li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="copying.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Copying
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../editing-shared-calculations.html">
+						Editing Shared Calculations 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

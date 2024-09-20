@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Messages &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/language_data.js"></script>
+    <script src="../../../../../_static/fontawesome.min.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/main.js"></script>
+    <script src="../../../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../../../index.html" id="headerImgWrapper">
+			<img src="../../../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Messages</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Messages
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="messages">
+<h1>Messages<a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>A name of the notification message.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Channel</strong></dt><dd><p><em>Required</em> <br>
+<em>For more information about notification channels see</em> <span class="xref std std-doc">../../../../../administration-tool-guide/business-units/notification-channels</span> <em>chapter</em>. <br>
+A notification channel that will be used to sent notification.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Template</strong></dt><dd><p><em>Required</em> <br>
+<em>For more information about templates see</em> <span class="xref std std-doc">../../../../../administration-tool-guide/business-units/notification-channels/message-templates</span> <em>chapter</em>. <br>
+Defines content/text of the notification. One of pre-defined templates or custom template can be selected.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Subject</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../../../../working-with-the-layout-editor/fields.html#expression-builder">Expression builder</a> <em>chapter</em>. <br>
+A subject of the notification message. Subject is often used in channel notification popups instead of whole text.
+<br> This option can not be edited when pre-defined message template has been selected.
+<br> Placeholders can be used in message subject which will be replaced with corresponding value or text at the time of the notification. List of all placeholders is available <span class="xref std std-doc">here</span>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Message Body</strong></dt><dd><p><em>Required</em> <br>
+<em>For more information about different types of notification channels and their supported formats see</em> <span class="xref std std-doc">../../../../../administration-tool-guide/notification-settings/notification-channel-types</span> <em>chapter</em>. <br>
+<em>For more information see</em> <a class="reference external" href="../../../../working-with-the-layout-editor/fields.html#expression-builder">Expression builder</a> <em>chapter</em>. <br>
+A text of the notification message. It has to be in correct format supported by each notification channel.
+<br> This option can not be edited when pre-defined message template has been selected.
+<br> Placeholders can be used in message subject which will be replaced with corresponding value or text at the time of the notification. List of all placeholders is available <span class="xref std std-doc">here</span>.
+<br> Format of a body is specific to each notification channel type and is documented in corresponding subchapter in <span class="xref std std-doc">../../../../../administration-tool-guide/notification-settings/notification-channel-types</span> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Recipients</strong></dt><dd><p>List of recipient to whom the message will be sent. For more information see <a class="reference internal" href="messages/recipients.html"><span class="doc">Recipients</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="messages/recipients.html">Recipients</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+				
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

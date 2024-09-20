@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Placeholders &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Cisco Webex Teams" href="cisco-webex-teams.html" />
+    <link rel="prev" title="Default Message Templates" href="default-message-templates.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Placeholders</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../notification-settings.html">Notification Settings</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../notification-channel-types.html">Notification Channel Types</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Placeholders
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../business-units.html">Business Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../connectors.html">Connectors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../notification-settings.html">Notification Settings</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notification-channel-types.html">Notification Channel Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="default-message-templates.html">Default Message Templates</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Placeholders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cisco-webex-teams.html">Cisco Webex Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="discord.html">Discord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dw-layout-banner.html">DW Layout Banner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mail.html">Mail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="microsoft-teams.html">Microsoft Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slack.html">Slack</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="placeholders">
+<h1>Placeholders<a class="headerlink" href="#placeholders" title="Permalink to this headline">¶</a></h1>
+<p>When creating notification and building http request to channel, placeholders can be used. These placeholders are replaced at the time of notification with configured/computed values.</p>
+<p>In addition to list of fixed placeholders described below also Channel Settings can be substituted. To use Channel Setting as a placeholder simply use {{Setting’s System Name}}. Settings of password type can not be used as placeholders.</p>
+<p>These are placeholders available for all Channels:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>{{AlertGeneratedAt_CalculationTimeZone}}</strong></dt><dd><p><em>DateTime</em> <br>
+The time email was sent (calculation’s time zone).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{AlertGeneratedAt_UtcTimeZone}}</strong></dt><dd><p><em>DateTime</em> <br>
+The time email was sent (UTC time zone).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{BaseURL}}</strong></dt><dd><p><em>Text</em> <br>
+URL where DW application is deployed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{BusinessUnit}}</strong></dt><dd><p><em>Text</em> <br>
+The name of Business Unit from which notification originates.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{CalculationFunction}}</strong></dt><dd><p><em>Text</em> <br>
+The name of the calculation function notification is associated with.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{ChannelId}}</strong></dt><dd><p><em>Text</em> <br>
+Id of the Channel that will be notified.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{CompareValue}}</strong></dt><dd><p><em>Format depends on the calculation above which the rule is used</em> <br>
+Notification rule compare value. The value the KPI is compared to.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{ConditionMetAt_CalculationTimeZone}}</strong></dt><dd><p><em>DateTime</em> <br>
+The time condition first became true (calculation’s time zone).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{ConditionMetAt_UtcTimeZone}}</strong></dt><dd><p><em>DateTime</em> <br>
+The time condition first became true (UTC time zone).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{CurrentValue}}</strong></dt><dd><p><em>Format depends on the type of calculation asssociated with notification rule</em> <br>
+Last known KPI value before the email is sent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{Duration}}</strong></dt><dd><p><em>Timespan</em> <br>
+Number of minutes the condition has been true.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{EditURL}}</strong></dt><dd><p><em>Text</em> <br>
+The URL of the notification rule.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{FirstValueInSequence}}</strong></dt><dd><p><em>Format depends on the type of calculation asssociated with notification rule</em> <br>
+First KPI value in sequence of values which cause notification to be sent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{LastValueInSequence}}</strong></dt><dd><p><em>Format depends on the type of calculation asssociated with notification rule</em> <br>
+Last KPI value in sequence of values which cause notification to be sent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{LayoutURL}}</strong></dt><dd><p><em>Text</em> <br>
+The URL of the Layout from which notification originates.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{LayoutName}}</strong></dt><dd><p><em>Text</em> <br>
+The name of the Layout from which notification originates.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{MaxValueInSequence}}</strong></dt><dd><p><em>Format depends on the type of calculation asssociated with notification rule</em> <br>
+Maximum KPI value in sequence of values which cause notification to be sent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{MinValueInSequence}}</strong></dt><dd><p><em>Format depends on the type of calculation asssociated with notification rule</em> <br>
+Minimum KPI value in sequence of values which cause notification to be sent.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{RecipientAddress}}</strong></dt><dd><p><em>Text</em> <br>
+Address where the notification should be sent. In case of email channel recipient address is email address.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{RuleName}}</strong></dt><dd><p><em>Text</em> <br>
+The name of the notification rule.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{RuleOperator}}</strong></dt><dd><p><em>Text</em> <br>
+Comparison operation (in mathematical form) used in notification rule.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>{{OperatorText}}</strong></dt><dd><p><em>Text</em> <br>
+Comparison operation (in text form) used in notification rule.</p>
+<table class="colwidths-auto docutils align-default" id="id1">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Relation between RuleOperator and OperatorText</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>RuleOperator</p></th>
+<th class="head"><p>OperatorText</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>greater than</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;</p></td>
+<td><p>less than</p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;=</p></td>
+<td><p>greater than or equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>less than or equal to</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;&gt;</p></td>
+<td><p>not equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p>=</p></td>
+<td><p>equal to</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{Title}}</strong></dt><dd><p><em>Text</em> <br>
+Title of KPI containing notification rule.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{TimeZoneName}}</strong></dt><dd><p><em>Text</em> <br>
+The name of the Calculation’s time zone.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{UtcOffset}}</strong></dt><dd><p><em>Numeric</em> <br>
+The offset of the Calculation’s time zone.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>{{UtcOffsetFormatted}}</strong></dt><dd><p><em>String</em> <br>
+The formatted offset of the Calculation’s time zone.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="notice docutils container">
+<p>For more information about supported formats of the placeholders, see following documentation:</p>
+<p><strong>DateTime</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings">Standard date and time format strings</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings">Custom date and time format strings</a></p></li>
+</ul>
+<p><strong>TimeSpan</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings">Standard TimeSpan format strings</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings">Custom TimeSpan format strings</a></p></li>
+</ul>
+<p><strong>Numeric</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">Standard numeric format strings</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings">Custom numeric format strings</a></p></li>
+</ul>
+</div>
+<div class="notice docutils container">
+<p>Format of the placeholder has to be placed at the end of the placeholder after the <strong>:</strong> symbol. For example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{{AlertGeneratedAt_UtcTimeZone:R}}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="default-message-templates.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Default Message Templates
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="cisco-webex-teams.html">
+						Cisco Webex Teams 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

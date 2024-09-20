@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.2. Queues Statistics Historical &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="3. SQL Patterns" href="../sql-patterns.html" />
+    <link rel="prev" title="2.1. Queues Statistics Current" href="queues-statistics-current.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.2. </span>Queues Statistics Historical</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../amazonconnect.html">AmazonConnect</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.2. </span>Queues Statistics Historical
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">1. Grid Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="queues-statistics-current.html">2.1. Queues Statistics Current</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2. Queues Statistics Historical</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-api-contacts-handled">2.2.1. Queues Statistics Historical - Api Contacts Handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-average-abandon-time">2.2.2. Queues Statistics Historical - Average Abandon Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-average-after-contact-work-time">2.2.3. Queues Statistics Historical - Average After Contact Work Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-average-handle-time">2.2.4. Queues Statistics Historical - Average Handle Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-average-hold-time">2.2.5. Queues Statistics Historical - Average Hold Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-average-interaction-and-hold-time">2.2.6. Queues Statistics Historical - Average Interaction And Hold Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-average-interaction-time">2.2.7. Queues Statistics Historical - Average Interaction Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-average-occupancy">2.2.8. Queues Statistics Historical - Average Occupancy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-average-queue-answer-time">2.2.9. Queues Statistics Historical - Average Queue Answer Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-callback-contacts-handled">2.2.10. Queues Statistics Historical - Callback Contacts Handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-abandoned">2.2.11. Queues Statistics Historical - Contacts Abandoned</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-agent-hung-up-first">2.2.12. Queues Statistics Historical - Contacts Agent Hung Up First</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-consulted">2.2.13. Queues Statistics Historical - Contacts Consulted</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-handled">2.2.14. Queues Statistics Historical - Contacts Handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-handled-incoming">2.2.15. Queues Statistics Historical - Contacts Handled Incoming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-handled-outbound">2.2.16. Queues Statistics Historical - Contacts Handled Outbound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-hold-abandons">2.2.17. Queues Statistics Historical - Contacts Hold Abandons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-missed">2.2.18. Queues Statistics Historical - Contacts Missed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-queued">2.2.19. Queues Statistics Historical - Contacts Queued</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-transferred-in">2.2.20. Queues Statistics Historical - Contacts Transferred In</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-transferred-in-from-queue">2.2.21. Queues Statistics Historical - Contacts Transferred In From Queue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-transferred-out">2.2.22. Queues Statistics Historical - Contacts Transferred Out</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-contacts-transferred-out-from-queue">2.2.23. Queues Statistics Historical - Contacts Transferred Out From Queue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-longest-queued-time">2.2.24. Queues Statistics Historical - Longest Queued Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-historical-service-level">2.2.25. Queues Statistics Historical - Service Level</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="queues-statistics-historical">
+<h1><span class="section-number">2.2. </span>Queues Statistics Historical<a class="headerlink" href="#queues-statistics-historical" title="Permalink to this headline">¶</a></h1>
+<p>Depending on the KPI function, the following parameters may be used:</p>
+<ul class="simple">
+<li><p><strong>Queues</strong> – list of queue names.</p></li>
+<li><p><strong>Threshold</strong> – time in seconds. Calls with queue time lower than the threshold will be considered as handled in service level. The possible threshold values are: whole numbers between 1 and 604800(inclusive).</p></li>
+</ul>
+<p>You have to select exactly one threshold value, otherwise KPIs using the parameter will display an error.</p>
+<div class="section" id="queues-statistics-historical-api-contacts-handled">
+<h2><span class="section-number">2.2.1. </span>Queues Statistics Historical - Api Contacts Handled<a class="headerlink" href="#queues-statistics-historical-api-contacts-handled" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts that were initiated using an Amazon Connect API operation and handled by an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-average-abandon-time">
+<h2><span class="section-number">2.2.2. </span>Queues Statistics Historical - Average Abandon Time<a class="headerlink" href="#queues-statistics-historical-average-abandon-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the average time that contacts waited in the queue before being abandoned.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-average-after-contact-work-time">
+<h2><span class="section-number">2.2.3. </span>Queues Statistics Historical - Average After Contact Work Time<a class="headerlink" href="#queues-statistics-historical-average-after-contact-work-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the average time that an agent spent in the After Contact Work (ACW) status after handling a contact. Agents enter the ACW status after a contact ends and leave it when they select a different agent status.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-average-handle-time">
+<h2><span class="section-number">2.2.4. </span>Queues Statistics Historical - Average Handle Time<a class="headerlink" href="#queues-statistics-historical-average-handle-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the average time that an agent spent on contacts, including hold time and after contact work time.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-average-hold-time">
+<h2><span class="section-number">2.2.5. </span>Queues Statistics Historical - Average Hold Time<a class="headerlink" href="#queues-statistics-historical-average-hold-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the average time that customers spent on hold after being connected to an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-average-interaction-and-hold-time">
+<h2><span class="section-number">2.2.6. </span>Queues Statistics Historical - Average Interaction And Hold Time<a class="headerlink" href="#queues-statistics-historical-average-interaction-and-hold-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the average of the sum of the interaction time and hold time.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-average-interaction-time">
+<h2><span class="section-number">2.2.7. </span>Queues Statistics Historical - Average Interaction Time<a class="headerlink" href="#queues-statistics-historical-average-interaction-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the average time that agents spent interacting with customers on a contact.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-average-occupancy">
+<h2><span class="section-number">2.2.8. </span>Queues Statistics Historical - Average Occupancy<a class="headerlink" href="#queues-statistics-historical-average-occupancy" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the percentage of time that agents were active on contacts.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-average-queue-answer-time">
+<h2><span class="section-number">2.2.9. </span>Queues Statistics Historical - Average Queue Answer Time<a class="headerlink" href="#queues-statistics-historical-average-queue-answer-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the average time that contacts waited in the queue before being answered by an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-callback-contacts-handled">
+<h2><span class="section-number">2.2.10. </span>Queues Statistics Historical - Callback Contacts Handled<a class="headerlink" href="#queues-statistics-historical-callback-contacts-handled" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts that were initiated from a queued callback and handled by an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-abandoned">
+<h2><span class="section-number">2.2.11. </span>Queues Statistics Historical - Contacts Abandoned<a class="headerlink" href="#queues-statistics-historical-contacts-abandoned" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts disconnected by the customer while in the queue.</p>
+<p>Parameters: Queues</p>
+<div class="notice docutils container">
+<p>Contacts queued for callback are not counted as abandoned.</p>
+</div>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-agent-hung-up-first">
+<h2><span class="section-number">2.2.12. </span>Queues Statistics Historical - Contacts Agent Hung Up First<a class="headerlink" href="#queues-statistics-historical-contacts-agent-hung-up-first" title="Permalink to this headline">¶</a></h2>
+<p>This Kpi function returns the number of contacts disconnected where the agent disconnected before the customer.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-consulted">
+<h2><span class="section-number">2.2.13. </span>Queues Statistics Historical - Contacts Consulted<a class="headerlink" href="#queues-statistics-historical-contacts-consulted" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts disconnected where the agent disconnected before the customer.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-handled">
+<h2><span class="section-number">2.2.14. </span>Queues Statistics Historical - Contacts Handled<a class="headerlink" href="#queues-statistics-historical-contacts-handled" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts that were connected to an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-handled-incoming">
+<h2><span class="section-number">2.2.15. </span>Queues Statistics Historical - Contacts Handled Incoming<a class="headerlink" href="#queues-statistics-historical-contacts-handled-incoming" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of incoming contacts that were handled by an agent, including inbound contacts, transferred contacts, and scheduled callbacks.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-handled-outbound">
+<h2><span class="section-number">2.2.16. </span>Queues Statistics Historical - Contacts Handled Outbound<a class="headerlink" href="#queues-statistics-historical-contacts-handled-outbound" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of outbound contacts that were handled by an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-hold-abandons">
+<h2><span class="section-number">2.2.17. </span>Queues Statistics Historical - Contacts Hold Abandons<a class="headerlink" href="#queues-statistics-historical-contacts-hold-abandons" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts that disconnected while the customer was on hold.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-missed">
+<h2><span class="section-number">2.2.18. </span>Queues Statistics Historical - Contacts Missed<a class="headerlink" href="#queues-statistics-historical-contacts-missed" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts routed to an agent but not answered by the agent, including contacts abandoned by the customer, during the specified time range.</p>
+<p>Parameters: Queues</p>
+<div class="notice docutils container">
+<p>A contact can be counted as missed multiple times, once for each time it is routed to an agent but not answered.</p>
+</div>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-queued">
+<h2><span class="section-number">2.2.19. </span>Queues Statistics Historical - Contacts Queued<a class="headerlink" href="#queues-statistics-historical-contacts-queued" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts placed in the queue.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-transferred-in">
+<h2><span class="section-number">2.2.20. </span>Queues Statistics Historical - Contacts Transferred In<a class="headerlink" href="#queues-statistics-historical-contacts-transferred-in" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts transferred to the queue by an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-transferred-in-from-queue">
+<h2><span class="section-number">2.2.21. </span>Queues Statistics Historical - Contacts Transferred In From Queue<a class="headerlink" href="#queues-statistics-historical-contacts-transferred-in-from-queue" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts transferred to the queue by an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-transferred-out">
+<h2><span class="section-number">2.2.22. </span>Queues Statistics Historical - Contacts Transferred Out<a class="headerlink" href="#queues-statistics-historical-contacts-transferred-out" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts transferred from the queue after being answered by an agent.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-contacts-transferred-out-from-queue">
+<h2><span class="section-number">2.2.23. </span>Queues Statistics Historical - Contacts Transferred Out From Queue<a class="headerlink" href="#queues-statistics-historical-contacts-transferred-out-from-queue" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts transferred from the queue to another queue.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-longest-queued-time">
+<h2><span class="section-number">2.2.24. </span>Queues Statistics Historical - Longest Queued Time<a class="headerlink" href="#queues-statistics-historical-longest-queued-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the longest time that a contact spent waiting in the queue.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-historical-service-level">
+<h2><span class="section-number">2.2.25. </span>Queues Statistics Historical - Service Level<a class="headerlink" href="#queues-statistics-historical-service-level" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the percentage of contacts removed from the queue between 0 and X seconds after being added to it.</p>
+<p>Parameters: Queues, Threshold</p>
+<div class="notice docutils container">
+<p>Maximum of 20 unique SERVICE_LEVEL metrics can be included in a request.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="queues-statistics-current.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.1. </span>Queues Statistics Current
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../sql-patterns.html">
+						<span class="section-number">3. </span>SQL Patterns 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

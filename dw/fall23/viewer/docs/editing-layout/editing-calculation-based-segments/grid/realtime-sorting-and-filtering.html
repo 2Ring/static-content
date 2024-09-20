@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Real-Time Sorting and Filtering &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/fontawesome.min.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/main.js"></script>
+    <script src="../../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Row Conditional Styles" href="row-conditional-styles.html" />
+    <link rel="prev" title="Client Sort Columns" href="client-sort-columns.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../../index.html" id="headerImgWrapper">
+			<img src="../../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Real-Time Sorting and Filtering</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid.html">Grid</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Real-Time Sorting and Filtering
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calendar.html">Calendar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../grid.html">Grid</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="columns.html">Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="client-sort-columns.html">Client Sort Columns</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Realtime Sorting and Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="row-conditional-styles.html">Row Conditional Styles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="real-time-sorting-and-filtering">
+<h1>Real-Time Sorting and Filtering<a class="headerlink" href="#real-time-sorting-and-filtering" title="Permalink to this headline">¶</a></h1>
+<p>Grid can be sorted and filtered in real-time by clicking on the <em class="fa fa-ellipsis-v"></em> that appears when the columns header is hovered on.
+When sorting in real-time, grid can be sorted only by one column at a time. Grid data can be filtered by selecting a filter mode, and a desired text. Every column with configured filter is marked with the <em class="fa fa-filter"></em> icon.</p>
+<div class="notice docutils container">
+<p>The Real-time client sorting is stored in the browser’s local storage. This means that sorting and filtering will persist even after refreshing layout or whole DW. This also means that any changes made will not be transferred when using different users, browsers or machines.</p>
+</div>
+<div class="notice docutils container">
+<p>Real-time sorting and filtering is not available while editing the layout. It is reapplied after exiting the edit mode.</p>
+</div>
+<p>Figure 1: Sorting and filtering in grid</p>
+<img alt="../../../../_images/realtime-sorting-and-filtering-grid-sorting.png" class="flat align-center" src="../../../../_images/realtime-sorting-and-filtering-grid-sorting.png" />
+<p>Following modes are available for filtering:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Equal To</strong></dt><dd><p>Values that equal to defined text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Not Equal To</strong></dt><dd><p>Values that do not equal to defined text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Greater Than</strong></dt><dd><p><em>Available only if column contains numeric values</em> <br>
+Values that are greater than defined value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Greater Than or Equal to</strong></dt><dd><p><em>Available only if column contains numeric values</em> <br>
+Values that are greater or equal the defined value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Less Than</strong></dt><dd><p><em>Available only if column contains numeric values</em> <br>
+Values that are less than defined value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Less Than or Equal to</strong></dt><dd><p><em>Available only if column contains numeric values</em> <br>
+Values that are less or equal the defined value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Between</strong></dt><dd><p><em>Available only if column contains numeric values</em> <br>
+Values that are in the range of values, defined by selecting the Min and Max value. The range can contain also the Min or Max value by choosing one or both of the options.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Not Between</strong></dt><dd><p><em>Available only if column contains numeric values</em> <br>
+Values that are outside the range of values, defined by selecting the Min and Max value. The range can contain also the Min or Max value by choosing one or both of the options.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Contains</strong></dt><dd><p><em>Available only if column contains string values</em> <br>
+Values that contain the defined text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Begins With</strong></dt><dd><p><em>Available only if column contains string values</em> <br>
+Values that begin with the defined text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Ends With</strong></dt><dd><p><em>Available only if column contains string values</em> <br>
+Values that end with the defined text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Matches RegEx</strong></dt><dd><p><em>Available only if column contains string values</em> <br>
+Value matches the Grid value in terms of a Javascript Regex match.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>In Set</strong></dt><dd><p>The value matches one of the defined values.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Set Values</strong></dt><dd><p>The current value must be present in list of values.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Not in Set</strong></dt><dd><p>The value does not match any of the defined values.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Set Values</strong></dt><dd><p>The current value must not be present in list of values.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Has Value</strong></dt><dd><p>Values that are available.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>No Value</strong></dt><dd><p>Values that are not available.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="client-sort-columns.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Client Sort Columns
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="row-conditional-styles.html">
+						Row Conditional Styles 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

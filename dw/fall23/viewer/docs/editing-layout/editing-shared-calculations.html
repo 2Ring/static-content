@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Editing Shared Calculations &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Editing Calculation - Grid" href="editing-calculation-grid.html" />
+    <link rel="prev" title="Positioning and Resizing in Preview" href="editing-segments/positioning-and-resizing-in-preview.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Editing Shared Calculations</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Editing Shared Calculations
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Editing Shared Calculations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editing-calculation-grid.html">Editing Calculation - Grid</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-calculation-based-segments.html">Editing Calculation Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="editing-shared-calculations">
+<h1>Editing Shared Calculations<a class="headerlink" href="#editing-shared-calculations" title="Permalink to this headline">¶</a></h1>
+<p>Shared calculations are associated with layout/widget and can be used in any number of following segments:</p>
+<ul class="simple">
+<li><p>KPI</p></li>
+<li><p>Grid</p></li>
+<li><p>Bar/Line Chart - Grid</p></li>
+<li><p>Pie Chart</p></li>
+<li><p>Word Cloud</p></li>
+</ul>
+<p>Shared calculations can produce both scalar values or table data. They are typically used when:</p>
+<ul class="simple">
+<li><p>layout contains multiple segments displaying different data from the same grid calculation</p></li>
+<li><p>layout contains different presentation of the same data e.g. displaying state of the agent as a text and also as a colored icon.</p></li>
+</ul>
+<p>If the shared calculation of grid type is used, results are extracted from table data based on configured column and row filters. If multiple row filters are defined the result row must match all of them. Column and row filters are configured on segment using shared calculation.</p>
+<p>Shared calculations are also used to customize data shown in widget when widget is nested in layout.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Type</strong></dt><dd><p>Type of the calculation.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Kpi</strong></dt><dd><p>KPI calculation.
+<br> For calculation options, see <a class="reference internal" href="editing-calculation-based-segments/editing-scalar-valued-calculations.html"><span class="doc">Editing Scalar-Valued Calculations</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Grid</strong></dt><dd><p>Grid calculation.
+<br> For calculation options, see <a class="reference internal" href="editing-calculation-grid.html"><span class="doc">Editing Calculation - Grid</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>Name of the calculation.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="editing-segments/positioning-and-resizing-in-preview.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Positioning and Resizing in Preview
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="editing-calculation-grid.html">
+						Editing Calculation - Grid 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

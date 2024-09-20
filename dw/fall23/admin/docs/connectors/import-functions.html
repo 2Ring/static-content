@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Import Functions &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Upgrade" href="upgrade.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Import Functions</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../connectors.html">Connectors</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Import Functions
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../business-units.html">Business Units</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../connectors.html">Connectors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capabilities.html">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kpi-calculation-functions.html">KPI Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid-calculation-functions.html">Grid Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculation-parameter-types.html">Calculation Parameter Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Import Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html">Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uninstallation.html">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="import-functions">
+<h1>Import Functions<a class="headerlink" href="#import-functions" title="Permalink to this headline">¶</a></h1>
+<p>To gain more specific and personalized experience, custom calculation functions can be added into a connector by importing a manifest file. <br></p>
+<div class="notice docutils container">
+<p>Importing functions is  for connectors, that supports custom calculation functions.</p>
+</div>
+<p>For import of the functions, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Select a connector to which you want to add functions and click on Import Functions button.</strong></p>
+<img alt="../../_images/import-functions-1.png" class="flat align-center" src="../../_images/import-functions-1.png" />
+</li>
+<li><p><strong>Click on the paperclip icon and select the manifest file you want to import.</strong></p>
+<img alt="../../_images/import-functions-2.png" class="flat align-center" src="../../_images/import-functions-2.png" />
+</li>
+<li><p><strong>Click on the Validate button to evaluate differences between manifest and current installation of connector.</strong></p>
+<div class="notice docutils container">
+<p>Because of possible conflicts, reviewing the changes is required before importing functions.</p>
+</div>
+<img alt="../../_images/import-functions-3.png" class="flat align-center" src="../../_images/import-functions-3.png" />
+</li>
+<li><p><strong>Detected differences will be displayed in Conflicts and Changes sections.</strong></p>
+<img alt="../../_images/import-functions-4.png" class="flat align-center" src="../../_images/import-functions-4.png" />
+<p>Possible differences:</p>
+<ul class="simple">
+<li><p><strong>NEW</strong> - This is a new item not yet present in currently installed version. It will be installed.</p></li>
+<li><p><strong>MANDATORY UPDATE</strong> - This item already exists but a new definition will be installed.</p></li>
+<li><p><strong>OPTIONAL UPDATE</strong> - This item already exists and a new definition is available. It will be installed if “Overwrite existing” will be chosen.</p></li>
+<li><p><strong>LOCKED</strong> - This item is locked and cannot be updated.</p></li>
+<li><p><strong>INCOMPATIBLE</strong> - This item definition is incompatible with the current version (merge columns) and cannot be modified to the new version.</p></li>
+</ul>
+<p><strong>OPTIONAL UPDATE</strong> is considered as conflict and user has to choose what should happen to record during import. <br>
+<strong>LOCKED</strong> and <strong>INCOMPATIBLE</strong> are also considered as conflicts but can not be resolved during import of functions. These types of conflicts cause whole function
+to be skipped regardless of selected conflict resolution mode.</p>
+<div class="notice docutils container">
+<p>Hovering on detected difference’s badge will show its description.</p>
+</div>
+</li>
+<li><p><strong>If optional updates are detected select conflicts resolution mode. Available options are:</strong></p>
+<ul class="simple">
+<li><p><em>Overwrite existing</em> - replaces the existing record with the new record.</p></li>
+<li><p><em>Keep existing</em> - keeps the existing record.</p></li>
+<li><p><em>Skip function with conflict</em> - skips the whole function so it and its child records will not be modified.</p></li>
+</ul>
+<img alt="../../_images/import-functions-5.png" class="flat align-center" src="../../_images/import-functions-5.png" />
+</li>
+<li><p><strong>Click on Import button.</strong></p>
+<img alt="../../_images/import-functions-6.png" class="flat align-center" src="../../_images/import-functions-6.png" />
+</li>
+<li><p><strong>After an import is done, click on a Close button.</strong></p>
+<img alt="../../_images/import-functions-7.png" class="flat align-center" src="../../_images/import-functions-7.png" />
+</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="installation.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Installation
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="upgrade.html">
+						Upgrade 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

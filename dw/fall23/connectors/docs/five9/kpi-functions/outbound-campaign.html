@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.24. Outbound Campaign &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.25. Outbound Campaign Manager" href="outbound-campaign-manager.html" />
+    <link rel="prev" title="1.23. Inbound Campaign Social" href="inbound-campaign-social.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.24. </span>Outbound Campaign</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../five9.html">Five9</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">1. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.24. </span>Outbound Campaign
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../five9.html">Five9</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="acd-status.html">1.1. ACD Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-chat.html">1.2. ACD Status Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-email.html">1.3. ACD Status Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-sms.html">1.4. ACD Status SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-social.html">1.5. ACD Status Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acd-status-text.html">1.6. ACD Status Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">1.7. Agent State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">1.8. Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-chat.html">1.9. Agent Statistics Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-email.html">1.10. Agent Statistics Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-sms.html">1.11. Agent Statistics SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-social.html">1.12. Agent Statistics Social</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-text.html">1.13. Agent Statistics Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autodial-campaign.html">1.14. Autodial Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-agent-statistics.html">1.15. Dispositions Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-autodial-campaign.html">1.16. Dispositions Autodial Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-inbound-campaign.html">1.17. Dispositions Inbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dispositions-outbound-campaign.html">1.18. Dispositions Outbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign.html">1.19. Inbound Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-chat.html">1.20. Inbound Campaign Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-email.html">1.21. Inbound Campaign Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-sms.html">1.22. Inbound Campaign SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inbound-campaign-social.html">1.23. Inbound Campaign Social</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.24. Outbound Campaign</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-abandoned">1.24.1. Outbound Campaign - Abandoned</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-call-charges">1.24.2. Outbound Campaign - Call Charges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-connected">1.24.3. Outbound Campaign - Connected</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-connected-fcc">1.24.4. Outbound Campaign - Connected FCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-first-call-resolution">1.24.5. Outbound Campaign - First Call Resolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-handled">1.24.6. Outbound Campaign - Handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-longest-hold-time">1.24.7. Outbound Campaign - Longest Hold Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-longest-queue-time">1.24.8. Outbound Campaign - Longest Queue Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-no-party-contact-agent">1.24.9. Outbound Campaign - No Party Contact - Agent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-no-party-contact-sys">1.24.10. Outbound Campaign - No Party Contact - Sys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-skipped-in-preview">1.24.11. Outbound Campaign - Skipped In Preview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outbound-campaign-total-calls">1.24.12. Outbound Campaign - Total Calls</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="outbound-campaign-manager.html">1.25. Outbound Campaign Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="outbound-campaign">
+<h1><span class="section-number">1.24. </span>Outbound Campaign<a class="headerlink" href="#outbound-campaign" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="outbound-campaign-abandoned">
+<h2><span class="section-number">1.24.1. </span>Outbound Campaign - Abandoned<a class="headerlink" href="#outbound-campaign-abandoned" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: abandonCallRate</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-call-charges">
+<h2><span class="section-number">1.24.2. </span>Outbound Campaign - Call Charges<a class="headerlink" href="#outbound-campaign-call-charges" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: callCharges</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-connected">
+<h2><span class="section-number">1.24.3. </span>Outbound Campaign - Connected<a class="headerlink" href="#outbound-campaign-connected" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: connectedCallsCount</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-connected-fcc">
+<h2><span class="section-number">1.24.4. </span>Outbound Campaign - Connected FCC<a class="headerlink" href="#outbound-campaign-connected-fcc" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: connected_FccCallsCount</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-first-call-resolution">
+<h2><span class="section-number">1.24.5. </span>Outbound Campaign - First Call Resolution<a class="headerlink" href="#outbound-campaign-first-call-resolution" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: firstCallResolution</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-handled">
+<h2><span class="section-number">1.24.6. </span>Outbound Campaign - Handled<a class="headerlink" href="#outbound-campaign-handled" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: handledCallsCount</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-longest-hold-time">
+<h2><span class="section-number">1.24.7. </span>Outbound Campaign - Longest Hold Time<a class="headerlink" href="#outbound-campaign-longest-hold-time" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: longestHoldTime</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Max</p>
+</div>
+<div class="section" id="outbound-campaign-longest-queue-time">
+<h2><span class="section-number">1.24.8. </span>Outbound Campaign - Longest Queue Time<a class="headerlink" href="#outbound-campaign-longest-queue-time" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: longestQueueTime</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Max</p>
+</div>
+<div class="section" id="outbound-campaign-no-party-contact-agent">
+<h2><span class="section-number">1.24.9. </span>Outbound Campaign - No Party Contact - Agent<a class="headerlink" href="#outbound-campaign-no-party-contact-agent" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: noPartyContactAgentCallsCount</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-no-party-contact-sys">
+<h2><span class="section-number">1.24.10. </span>Outbound Campaign - No Party Contact - Sys<a class="headerlink" href="#outbound-campaign-no-party-contact-sys" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: noPartyContactSystemCallsCount</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-skipped-in-preview">
+<h2><span class="section-number">1.24.11. </span>Outbound Campaign - Skipped In Preview<a class="headerlink" href="#outbound-campaign-skipped-in-preview" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: skippedInPreviewCallsCount</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+<div class="section" id="outbound-campaign-total-calls">
+<h2><span class="section-number">1.24.12. </span>Outbound Campaign - Total Calls<a class="headerlink" href="#outbound-campaign-total-calls" title="Permalink to this headline">¶</a></h2>
+<p><strong>API Statistic</strong>: OUTBOUND_CAMPAIGN_STATISTICS</p>
+<p><strong>API Statistic Field</strong>: totalCallsCount</p>
+<p><strong>Parameters</strong>: Campaigns</p>
+<p><strong>Aggregation Function</strong>: Sum</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="inbound-campaign-social.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.23. </span>Inbound Campaign Social
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="outbound-campaign-manager.html">
+						<span class="section-number">1.25. </span>Outbound Campaign Manager 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

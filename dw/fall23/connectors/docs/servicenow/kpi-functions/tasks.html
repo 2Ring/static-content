@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tasks &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Grid Functions" href="../grid-functions.html" />
+    <link rel="prev" title="PA - Scorecard" href="pa-scorecard.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Tasks</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../servicenow.html">ServiceNow</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html">KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Tasks
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../servicenow.html">ServiceNow</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pa-scorecard.html">PA - Scorecard</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tasks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tasks-active">Tasks – Active</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tasks-closed">Tasks – Closed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tasks-created">Tasks – Created</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tasks-in-interval">Tasks – In Interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tasks-longest-waiting">Tasks – Longest Waiting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tasks-opened">Tasks – Opened</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tasks-state">Tasks - State</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tasks">
+<h1>Tasks<a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h1>
+<p>Depending on the KPI function, the following parameters may be used:</p>
+<ul class="simple">
+<li><p><strong>Assignment Group</strong> – list of assignment group names.</p></li>
+<li><p><strong>Company Name</strong> – list of company names.</p></li>
+<li><p><strong>Priority</strong> – list of numbers of priorities.</p></li>
+<li><p><strong>State</strong> – list of numbers of states.</p></li>
+<li><p><strong>Table</strong> - list of task tables.</p></li>
+<li><p><strong>Time Period</strong> – time period for calculating data. Default setting is Today. Available values are: “LastXDays”, “Period Time”, “Today”.</p></li>
+<li><p><strong>Time Period Count</strong> – number of time periods that will be calculated (applies to Time Period parameter: Period Time).</p></li>
+<li><p><strong>Time Period Field</strong> – name of a time field used to query data against time period parameter. Available values are: “Closed Time”, “Created Time”, “Opened Time”.</p></li>
+<li><p><strong>Time Period Interval</strong> – specifies the size of a time period (applies to Time Period parameter: Period Time). Available values are: “Week”, “Month” and “Year”.</p></li>
+<li><dl class="simple">
+<dt><strong>Time Period Offset</strong> – offset for a time period (applies to Time Period parameter: Period Time).</dt><dd><ul>
+<li><p>If it is set to 0, it starts to calculate actual week, month or year.</p></li>
+<li><p>If it set to 1 or more, it starts to calculate from previous X week(s), month(s) or year(s) back.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Time Period Shift</strong> – number of last X days (applies to Time Period parameter: Last X Days).</p></li>
+</ul>
+<div class="section" id="tasks-active">
+<h2>Tasks – Active<a class="headerlink" href="#tasks-active" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of currently active tasks.</p>
+<p>Parameters: Assignment Group, Company Name, Priority, State, Table</p>
+</div>
+<div class="section" id="tasks-closed">
+<h2>Tasks – Closed<a class="headerlink" href="#tasks-closed" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of tasks, that were closed today.</p>
+<p>Parameters: Assignment Group, Company Name, Priority, State, Table</p>
+</div>
+<div class="section" id="tasks-created">
+<h2>Tasks – Created<a class="headerlink" href="#tasks-created" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of tasks, that were created today.</p>
+<p>Parameters: Assignment Group, Company Name, Priority, State, Table</p>
+</div>
+<div class="section" id="tasks-in-interval">
+<h2>Tasks – In Interval<a class="headerlink" href="#tasks-in-interval" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of tasks. It supports a group of time period parameters.</p>
+<p>Parameters: Assignment Group, Company Name, Priority, Table, Time Period, Time Period Count, Time Period Field, Time Period Interval, Time Period Offset, Time Period Shift</p>
+</div>
+<div class="section" id="tasks-longest-waiting">
+<h2>Tasks – Longest Waiting<a class="headerlink" href="#tasks-longest-waiting" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the queue time of the longest waiting task.</p>
+<p>Parameters: Assignment Group, Company Name, Priority, State, Table</p>
+</div>
+<div class="section" id="tasks-opened">
+<h2>Tasks – Opened<a class="headerlink" href="#tasks-opened" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of tasks, that were opened today.</p>
+<p>Parameters: Assignment Group, Company Name, Priority, State, Table</p>
+</div>
+<div class="section" id="tasks-state">
+<h2>Tasks - State<a class="headerlink" href="#tasks-state" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of tasks in states.</p>
+<p>Parameters: Assignment Group, Company Name, Priority, State, Table</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="pa-scorecard.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						PA - Scorecard
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../grid-functions.html">
+						Grid Functions 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

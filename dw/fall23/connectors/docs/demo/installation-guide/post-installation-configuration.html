@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Post-Installation Configuration &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Post-Installation Configuration</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Post-Installation Configuration
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="post-installation-configuration">
+<h1>Post-Installation Configuration<a class="headerlink" href="#post-installation-configuration" title="Permalink to this headline">¶</a></h1>
+<p>Instead of a database connection, the configuration.xml file is used for configuration. This file is located in the installation directory (where Connector.exe file is located). Open the file in any suitable XML editor and see the bullet list below for XML tag information.</p>
+<ul class="simple">
+<li><p>TestTimeout – how often the connector checks if calls, Texts or Staffino data should be generated</p></li>
+<li><dl class="simple">
+<dt>NotReadyTimeAfterRONA</dt><dd><ul>
+<li><p>Min – the minimum time an agent spends in Not Ready - RNA</p></li>
+<li><p>Max – the maximum time an agent spends in Not Ready - RNA</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="not-collapsable simple">
+<li><dl class="simple">
+<dt>Voice</dt><dd><ul>
+<li><dl class="simple">
+<dt>Chance</dt><dd><ul>
+<li><p>ACD – the likelihood of an ACD call being generated</p></li>
+<li><p>Internal – the likelihood of an internal call being generated</p></li>
+<li><p>Outbound – the likelihood of an outbound call being generated</p></li>
+<li><p>Abandon – the likelihood of an ACD call ending up as abandon</p></li>
+<li><p>Dequeued – the likelihood of an ACD call ending up as dequeued</p></li>
+<li><p>Hold – the likelihood of an ACD call being put on hold</p></li>
+<li><p>ShortAbandon – the likelihood of an ACD call ending up as short abandon, when the call should have been abandoned on agent, but none was ready</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>QueueTime – the maximum time a call will spent in a queue</p></li>
+<li><dl class="simple">
+<dt>OutboundCallDuration</dt><dd><ul>
+<li><p>Min – the minimum duration of an outbound call</p></li>
+<li><p>Max – the maximum duration of an outbound call</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>InternalCallDuration</dt><dd><ul>
+<li><p>Min – the minimum duration of an internal call</p></li>
+<li><p>Max – the maximum duration of an internal call</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ReservedTime – if the reserved time is greater than 10, the agent will get put into the RNA state and the call requeued</dt><dd><ul>
+<li><p>Min – the minimum time an agent spends in the Reserved state when offered an ACD call</p></li>
+<li><p>Max – the maximum time an agent spends in the Reserved state when offered an ACD call</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>TalkTimeBeforeHold – not used</dt><dd><ul>
+<li><p>Min</p></li>
+<li><p>Max</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>TalkTimeAfterHold</dt><dd><ul>
+<li><p>Min – the minimum time an ACD call spends in progress after being held</p></li>
+<li><p>Max – the maximum time an ACD call spends in progress after being held</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>HoldTime</dt><dd><ul>
+<li><p>Min – the minimum time an ACD call spends being held</p></li>
+<li><p>Max – the maximum time an ACD call spends being held</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>TalkTime</dt><dd><ul>
+<li><p>Min – the minimum time an ACD call spends in progress</p></li>
+<li><p>Max – the maximum time an ACD call spends in progress</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>WorkTime</dt><dd><ul>
+<li><p>Min – the minimum time an agent spends in the Wrap-Up (Work) state after an ACD call</p></li>
+<li><p>Max – the maximum time an agent spends in the Wrap-Up (Work) state after an ACD call</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Text – refers to chats and emails</dt><dd><ul>
+<li><p>Chance – the likelihood of a Text being generated</p></li>
+<li><p>AbandonChance – the likelihood of a Text ending up as abandon</p></li>
+<li><p>ShortAbandonChance – the likelihood of an abandoned Text ending up as short abandon instead</p></li>
+<li><p>DequeuedChance – the likelihood of a Text ending up as dequeued</p></li>
+<li><p>QueueTime – the maximum time a Text will spent in a queue</p></li>
+<li><dl class="simple">
+<dt>TalkTime</dt><dd><ul>
+<li><p>Min – the minimum time a Text spends in progress</p></li>
+<li><p>Max – the maximum time a Text spends in progress</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ReservedTime – if the reserved time is greater than 10, the agent will get put into the RNA state and the Text requeued</dt><dd><ul>
+<li><p>Min – the minimum time an agent spends in the Reserved state when offered a Text</p></li>
+<li><p>Max – the maximum time an agent spends in the Reserved state when offered a Text</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Staffino</dt><dd><ul>
+<li><p>Chance – the likelihood of Staffino statistics increasing</p></li>
+<li><p>ThankYousIncrease – the increase of ThankYous</p></li>
+<li><p>SuggestionsIncrease – the increase of Suggestions</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>WrapUpCodes – a pool of wrap-up codes the connector chooses from</dt><dd><ul>
+<li><p>WrapUpCode – the name of the wrap-up code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>CallVariables – a pool of call variable values the connector chooses from</dt><dd><ul>
+<li><p>CallVariable – the call variable value</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+				
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

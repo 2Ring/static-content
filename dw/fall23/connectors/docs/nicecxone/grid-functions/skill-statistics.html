@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.4. Skill Statistics &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.5. Skill Statistics RT" href="skill-statistics-rt.html" />
+    <link rel="prev" title="2.3. Skill Attributes" href="skill-attributes.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.4. </span>Skill Statistics</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../nicecxone.html">Nice CXone</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">2. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.4. </span>Skill Statistics
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.1. Agent State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">2.2. Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="skill-attributes.html">2.3. Skill Attributes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.4. Skill Statistics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">2.4.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">2.4.2. Calculation Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="skill-statistics-rt.html">2.5. Skill Statistics RT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-attributes.html">2.6. User Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="skill-statistics">
+<h1><span class="section-number">2.4. </span>Skill Statistics<a class="headerlink" href="#skill-statistics" title="Permalink to this headline">¶</a></h1>
+<p>This Grid function displays the reporting summary data for every skill for the current day.</p>
+<div class="notice docutils container">
+<p>For more information, see the <a class="reference external" href="https://developer.niceincontact.com/API/ReportingAPI#/Reporting/getFullSkillSummaries">NICE CXone API documentation</a>.</p>
+</div>
+<div class="section" id="columns">
+<h2><span class="section-number">2.4.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Skill Id</strong> - The unique, system-generated ID of the skill.</p></li>
+<li><p><strong>Skill Name</strong> - The text description of the skill. It displays the name assigned to the skill.</p></li>
+<li><p><strong>Abandon Count</strong> - The number of abandoned contacts.</p></li>
+<li><p><strong>Abandon Rate</strong> - The percent of Contacts who entered the skill and then abandoned the call.</p></li>
+<li><p><strong>Average Handle Time</strong> - The average amount of time that it took to handle an inbound or outbound Contact.</p></li>
+<li><p><strong>Average Inqueue Time</strong> - The average amount of time that contacts spent in the queue.</p></li>
+<li><p><strong>Average Speed To Answer</strong> - The average amount of time that it took for a call to be answered by an Agent, from the time when the caller first selected the option to speak to an Agent, to when the Agent answered. This metric does not include Abandoned calls</p></li>
+<li><p><strong>Average Talk Time</strong> - The average amount of time that a contact spent speaking with an agent, including hold time and conference time.</p></li>
+<li><p><strong>Average Wrap Time</strong> - The average amount of time that Agents spent doing after contact work (ACW).</p></li>
+<li><p><strong>Business Unit Id</strong> - The unique, system-generated ID of the Business Unit.</p></li>
+<li><p><strong>Business Unit Name</strong> - The name of the business - NICE inContact’s customer name.</p></li>
+<li><p><strong>Connects</strong> - The number of times the Personal Connection dialer results in an answer event.</p></li>
+<li><p><strong>Connects AHT</strong> - The average handle time for connect calls made using Personal Connection.</p></li>
+<li><p><strong>Contacts Active</strong> - The number of Contacts that are currently active in the system.</p></li>
+<li><p><strong>Contacts Handled</strong> - The number of contacts handled.</p></li>
+<li><p><strong>Contacts Offered</strong> - The total number of Contacts offered to Agents who have this specific skill.</p></li>
+<li><p><strong>Contacts Queued</strong> - The total number of inbound contacts placed in queue. This includes contacts that spent time in the queue and those that were immediately routed to an available Agent. This number includes contacts transferred to a skill or an Agent. This number does not include transfers followed by a consult.</p></li>
+<li><p><strong>Contacts Out Of SLA</strong> - The total number of Contacts who entered the skill and were handled outside the required SLA service level threshold. This statistic includes abandons based on whether the skill is configured to include them.</p></li>
+<li><p><strong>Contacts Within SLA</strong> - The total number of Contacts who entered the skill and were handled within the required SLA service level threshold. This statistic includes abandons based on whether the skill is configured to include them.</p></li>
+<li><p><strong>Dials</strong> - The number of times the Personal Connection dialer initiates a call for a contact.</p></li>
+<li><p><strong>Hold Time</strong> - The amount of time that the skill was in the hold state.</p></li>
+<li><p><strong>Is Outbound</strong> - Indicates whether this is an Outbound contact or whether this is not an Outbound contact.</p></li>
+<li><p><strong>Longest Queue Dur</strong> - The amount of time for the one contact which spent the most time in the queue waiting for an Agent.</p></li>
+<li><p><strong>Right Party Connects</strong> - The number of INTENDED contacts that were reached. Intended contacts are counted as Right Party Connects irrespective of whether there is a positive or negative outcome from the interaction.</p></li>
+<li><p><strong>Right Party Connects AHT</strong> - The average handle time for the Right Party Connects. Right Party Connects are counted irrespective of whether there is a positive or negative outcome from the interaction.</p></li>
+<li><p><strong>Service Level</strong> - An integer value representing the percent of Contacts who entered the skill and were handled within the required SLA. Service levels and abandonment impacts are configured when new skills are configured. This percentage takes abandonment impact into account.</p></li>
+<li><p><strong>Total Contact Time</strong> - The amount of time that the contact spent in the NICE inContact system.</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">2.4.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The Grid function has these optional parameters:</p>
+<ul class="simple">
+<li><p><strong>Skills</strong> - Allows you to select from a list of skills using a logical OR operation for filtering. When you use this parameter, any object that matches at least one of the selected skills will be included in the results.  - list of Skill names</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="skill-attributes.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.3. </span>Skill Attributes
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="skill-statistics-rt.html">
+						<span class="section-number">2.5. </span>Skill Statistics RT 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

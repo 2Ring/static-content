@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculation Parameter Type Groups &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Fonts - Client" href="fonts-client.html" />
+    <link rel="prev" title="Administrators" href="users-and-roles/administrators.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Calculation Parameter Type Groups</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../business-units.html">Business Units</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Calculation Parameter Type Groups
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../business-units.html">Business Units</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="data-filters.html">Data Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ip-filters.html">IP Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users-and-roles.html">Users and Roles</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Calculation Parameter Type Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fonts-client.html">Fonts - Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fonts-server.html">Fonts - Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notification-channels.html">Notification Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="themes.html">Themes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../connectors.html">Connectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="calculation-parameter-type-groups">
+<h1>Calculation Parameter Type Groups<a class="headerlink" href="#calculation-parameter-type-groups" title="Permalink to this headline">¶</a></h1>
+<p>A Parameter Group is a collection of values of an enumerable calculation parameter type (for more information about calculation parameter types see Calculation Parameter Types chapter in the Layout Tool guide). A parameter group can be passed as a calculation parameter to calculations that accept group parameters.</p>
+<p>Groups are usually used for grouping of multiple rows of a grid into a single row. However, the calculation type
+determines how it uses a parameter. Some calculation may use a group for filtering.</p>
+<p>Refer to the connector calculation documentation for more details.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p><em>Required</em> <br>
+The name of a group.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation Parameter Type</strong></dt><dd><p><em>Required</em> <br>
+Type of calculation parameter which group is associated with.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Values</strong></dt><dd><p>List of available values for selected Calculation Parameter Type where each value can be added to the group.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p><span class="heading-4">Example</span></p>
+<p>Within the company, it was decided that statistics will be displayed as an aggregation of all sub
+departments (Invoicing, Orders, Returns) into one group named Sales. To do so, group Invoicing, Orders and Returns department into a single Sales department.</p>
+<p>Figure 1: Original grid.</p>
+<img alt="../../_images/calculation-parameter-type-groups-example-before.png" class="flat align-center" src="../../_images/calculation-parameter-type-groups-example-before.png" />
+<p>Figure 2: Configuration of calculation parameter type group in administration tool.</p>
+<a class="flat reference internal image-reference" href="../../_images/calculation-parameter-type-groups-example-group-configuration.png"><img alt="../../_images/calculation-parameter-type-groups-example-group-configuration.png" class="flat align-center" src="../../_images/calculation-parameter-type-groups-example-group-configuration.png" style="width: 267.59999999999997px; height: 421.2px;" /></a>
+<p>Figure 3: Configuration of grid’s parameter in Layout editor.</p>
+<a class="flat reference internal image-reference" href="../../_images/calculation-parameter-type-groups-example-parameter-configuration.png"><img alt="../../_images/calculation-parameter-type-groups-example-parameter-configuration.png" class="flat align-center" src="../../_images/calculation-parameter-type-groups-example-parameter-configuration.png" style="width: 294.0px; height: 364.2px;" /></a>
+<p>Figure 4: Grouped grid.</p>
+<img alt="../../_images/calculation-parameter-type-groups-example-after.png" class="flat align-center" src="../../_images/calculation-parameter-type-groups-example-after.png" />
+<p>Notice that in grouped grid, values shown in Sales row are sums of values of configured sub departments.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="users-and-roles/administrators.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Administrators
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="fonts-client.html">
+						Fonts - Client 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

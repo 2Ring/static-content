@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.12. Queue Observations By Media Type (QOByM_A, QOByM_P) &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.13. User Aggregates By Media Type (UA_A)" href="user-aggregates-by-media-type.html" />
+    <link rel="prev" title="2.11. Queue Observations (QO_A)" href="queue-observations.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.12. </span>Queue Observations By Media Type (QOByM_A, QOByM_P)</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../genesys-cloud.html">Genesys Cloud</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.12. </span>Queue Observations By Media Type (QOByM_A, QOByM_P)
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../key-concepts.html">1. Key Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="administrative.html">2.1. Administrative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-info.html">2.2. Agent Info (AI_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.3. Agent State (AS_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-diagnostics.html">2.4. Campaign Diagnostics (CD_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-progress.html">2.5. Campaign Progress (CP_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign-stats.html">2.6. Campaign Stats (CS_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-queue.html">2.7. Conversation Aggregates By Media Type And Queue (CAByQ_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conversation-aggregates-by-media-type-and-wrapup.html">2.8. Conversation Aggregates By Media Type And Wrap Up (CAByW_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-aggregates-by-media-type.html">2.9. Flow Aggregates By Media Type (FA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow-observations-by-media-type.html">2.10. Flow Observations By Media Type (FO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-observations.html">2.11. Queue Observations (QO_A)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.12. Queue Observations By Media Type (QOByM_A, QOByM_P)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#qobym-a-interactingcount">2.12.1. QOByM_A_InteractingCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qobym-a-waitingcount">2.12.2. QOByM_A_WaitingCount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qobym-p-longestinteraction">2.12.3. QOByM_P_LongestInteraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qobym-p-longestwaiting">2.12.4. QOByM_P_LongestWaiting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-aggregates-by-media-type.html">2.13. User Aggregates By Media Type (UA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-a.html">2.14. User Observations Active (UO_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-observations-p.html">2.15. User Observations Passive (UO_P)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-a.html">2.16. User Status Aggregates Active (USA_A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-status-aggregates-p.html">2.17. User Status Aggregates Passive (USA_P)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">3. Grid Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="queue-observations-by-media-type-qobym-a-qobym-p">
+<h1><span class="section-number">2.12. </span>Queue Observations By Media Type (QOByM_A, QOByM_P)<a class="headerlink" href="#queue-observations-by-media-type-qobym-a-qobym-p" title="Permalink to this headline">¶</a></h1>
+<p>FO_A_ActiveCount</p>
+<div class="section" id="qobym-a-interactingcount">
+<h2><span class="section-number">2.12.1. </span>QOByM_A_InteractingCount<a class="headerlink" href="#qobym-a-interactingcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations By Media Type - Interacting Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions assigned to the queue that agents are currently interacting with.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="qobym-a-waitingcount">
+<h2><span class="section-number">2.12.2. </span>QOByM_A_WaitingCount<a class="headerlink" href="#qobym-a-waitingcount" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations By Media Type - Waiting Count - actively updated with notifications</strong></p>
+<p>This KPI function returns the number of interactions waiting to be answered. Waiting is calculated by the sum total of interactions waiting.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="qobym-p-longestinteraction">
+<h2><span class="section-number">2.12.3. </span>QOByM_P_LongestInteraction<a class="headerlink" href="#qobym-p-longestinteraction" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations By Media Type - Longest Interaction - passively updated (produces more API requests for your organization)</strong></p>
+<p>This KPI returns the maximum amount of time spent interacting in a queue.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+<div class="section" id="qobym-p-longestwaiting">
+<h2><span class="section-number">2.12.4. </span>QOByM_P_LongestWaiting<a class="headerlink" href="#qobym-p-longestwaiting" title="Permalink to this headline">¶</a></h2>
+<p><strong>Queue Observations By Media Type - Longest Waiting - passively updated (produces more API requests for your organization)</strong></p>
+<p>This KPI returns the amount of queue time of the longest waiting task.</p>
+<p><strong>Parameters:</strong> MediaType, Queue</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="queue-observations.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.11. </span>Queue Observations (QO_A)
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="user-aggregates-by-media-type.html">
+						<span class="section-number">2.13. </span>User Aggregates By Media Type (UA_A) 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

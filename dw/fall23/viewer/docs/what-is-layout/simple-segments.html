@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Segments &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Calculation Based Segments" href="calculation-based-segments.html" />
+    <link rel="prev" title="What is a Layout" href="../what-is-layout.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Simple Segments</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../what-is-layout.html">What is a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Simple Segments
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../what-is-layout.html">What is a Layout</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Simple Segments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#banner">Banner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clock">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label">Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pdf-document">PDF Document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shape">Shape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#social-feed-facebook">Social Feed - Facebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#social-feed-x-twitter">Social Feed - X (Twitter)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#video-youtube">Video – YouTube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web-page">Web Page</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="calculation-based-segments.html">Calculation Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="container-based-segments.html">Container Based Segments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="simple-segments">
+<h1>Simple Segments<a class="headerlink" href="#simple-segments" title="Permalink to this headline">¶</a></h1>
+<p>Simple Segment types display either a static or external content such as document, image, text or similar.</p>
+<div class="section" id="banner">
+<span id="bannerr"></span><h2>Banner<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
+<p>A Banner displays a static text. Banner is usually used as a title for the entire Layout, or as a header of a group of other segments. Furthermore, important announcements or information can be sent to and displayed using the Banner segment. A single Banner can contain multiple lines of text (only when using regular banner text flow).</p>
+<p>If used directly in a Layout segment the Banner itself is limited by width of the segment. However, when put inside a Ticker, the full text will scroll within the Ticker.</p>
+<p>For more information about editing the Banner, see <a class="reference internal" href="../editing-layout/editing-simple-segments/banner.html"><span class="doc">Banner</span></a> chapter.
+<br> For more information about editing the Ticker, see <a class="reference internal" href="../editing-layout/editing-container-based-segments/ticker.html"><span class="doc">Ticker</span></a> chapter.</p>
+<p>Figure 1: Banner</p>
+<img alt="../../_images/simple-segments-banners.png" class="flat align-center" src="../../_images/simple-segments-banners.png" />
+<p>Figure 2: Banner - various orientations</p>
+<img alt="../../_images/simple-segments-banners-various.png" class="flat align-center" src="../../_images/simple-segments-banners-various.png" />
+</div>
+<div class="section" id="clock">
+<span id="clockk"></span><h2>Clock<a class="headerlink" href="#clock" title="Permalink to this headline">¶</a></h2>
+<p>A Clock displays current date, time or both. The type of information displayed can be configured using the datetime format.</p>
+<p>By default a Clock uses the local time zone (time zone the user is located in). However, a specific time zone can be chosen instead.</p>
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-simple-segments/clock.html"><span class="doc">Clock</span></a> chapter.</p>
+<p>Figure 3: Clock</p>
+<img alt="../../_images/simple-segments-clock.png" class="flat align-center" src="../../_images/simple-segments-clock.png" />
+</div>
+<div class="section" id="image">
+<span id="imagee"></span><h2>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h2>
+<p>A Image displays a picture or a gif file as a part of a Layout. Publicly available pictures can be shown by using their URL or pictures can be also loaded from the server, where the DW application is deployed.</p>
+<div class="notice docutils container">
+<p>Default images are stored in the distribution package in the <em>Assets\Images</em> folder in case, if any of them needs to be uploaded.</p>
+</div>
+<p>Image can be configured to periodically refresh its picture. This allows the use of dynamically generated images, or images, that change over time.</p>
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-simple-segments/image.html"><span class="doc">Image</span></a> chapter.</p>
+<p>Figure 4: Layout with Image segment</p>
+<img alt="../../_images/simple-segments-image.png" class="flat align-center" src="../../_images/simple-segments-image.png" />
+</div>
+<div class="section" id="label">
+<span id="labell"></span><h2>Label<a class="headerlink" href="#label" title="Permalink to this headline">¶</a></h2>
+<p>A Label displays a static text, usually used as a title for the entire Layout, or as a header of a group of other segments. A single Label can contain multiple lines of text. Unlike the Banner, no information or text can be sent to a Label.</p>
+<p>If used directly in a Layout, the Label itself is limited by width of the segment. However, when put inside a Ticker, the full text will scroll within the Ticker.</p>
+<p>For more information about editing the Label, see <a class="reference internal" href="../editing-layout/editing-simple-segments/label.html"><span class="doc">Label</span></a> chapter.
+<br> For more information about editing the Ticker, see <a class="reference internal" href="../editing-layout/editing-container-based-segments/ticker.html"><span class="doc">Ticker</span></a> chapter.</p>
+<p>Figure 5: Label</p>
+<img alt="../../_images/simple-segments-label.png" class="flat align-center" src="../../_images/simple-segments-label.png" />
+</div>
+<div class="section" id="pdf-document">
+<span id="pdf"></span><h2>PDF Document<a class="headerlink" href="#pdf-document" title="Permalink to this headline">¶</a></h2>
+<p>A PDF Document displays a document as a part of a Layout. Documents are loaded from the server, where the DW application is deployed.</p>
+<p>Documents with multiple pages are supported. Pages are automatically paged through, in the configured interval. Documents can be periodically refreshed. This allows the use of dynamically generated documents, or documents, that change over time.</p>
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-simple-segments/pdf.html"><span class="doc">PDF Document</span></a> chapter.</p>
+<p>Figure 6: Layout with Pdf Document segment</p>
+<img alt="../../_images/simple-segments-pdf.png" class="flat align-center" src="../../_images/simple-segments-pdf.png" />
+</div>
+<div class="section" id="shape">
+<span id="shapee"></span><h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<p>A Shape is a simple source, allowing user to create a rectagular, eliptical or triangular shapes with an option to change the color and add borders.
+A shape source can, for example, be used as a background for a certain part of a layout that should be visually separated from the rest.</p>
+<p>Figure 7: Background created by the shape segment</p>
+<img alt="../../_images/simple-segments-shape.png" class="flat align-center" src="../../_images/simple-segments-shape.png" />
+<p>For more information about editing this segment, see the <a class="reference internal" href="../editing-layout/editing-simple-segments/shape.html"><span class="doc">Shape</span></a> chapter.</p>
+</div>
+<div class="section" id="social-feed-facebook">
+<span id="facebook"></span><h2>Social Feed - Facebook<a class="headerlink" href="#social-feed-facebook" title="Permalink to this headline">¶</a></h2>
+<p>Social Feed - Facebook segment provides ability to display any Facebook page directly in the DW segment. <br>
+It is not required to be logged in the Facebook to display page content.</p>
+<p>Figure 8: Social Feed - Facebook</p>
+<img alt="../../_images/simple-segments-facebook.png" class="flat align-center" src="../../_images/simple-segments-facebook.png" />
+<p>For more information about editing this segment, see the <a class="reference internal" href="../editing-layout/editing-simple-segments/facebook.html"><span class="doc">Social Feed - Facebook</span></a> chapter.</p>
+</div>
+<div class="section" id="social-feed-x-twitter">
+<span id="twitter"></span><h2>Social Feed - X (Twitter)<a class="headerlink" href="#social-feed-x-twitter" title="Permalink to this headline">¶</a></h2>
+<p>Social Feed - X (Twitter) segment provides ability to display any X (Twitter) page directly in the DW segment. <br>
+It is not required to be logged in the X (Twitter) to display page content.</p>
+<p>Figure 9: Social Feed - X (Twitter)</p>
+<img alt="../../_images/simple-segments-twitter.png" class="flat align-center" src="../../_images/simple-segments-twitter.png" />
+<p>For more information about editing this segment, see the <a class="reference internal" href="../editing-layout/editing-simple-segments/twitter.html"><span class="doc">Social Feed - X (Twitter)</span></a> chapter.</p>
+</div>
+<div class="section" id="video-youtube">
+<span id="video"></span><h2>Video – YouTube<a class="headerlink" href="#video-youtube" title="Permalink to this headline">¶</a></h2>
+<p>Videos and playlists, hosted on the YouTube website can be displayed as a part of a Layout. Typical use of this source is to display a company overview video, provide a live TV feed, such as a news channel or play music.</p>
+<dl class="simple">
+<dt>The following options of the embedded player, used to display the YouTube video, can be configured:</dt><dd><ul class="simple">
+<li><p>Default volume.</p></li>
+<li><p>Enable or disable the Closed Captions.</p></li>
+<li><p>Enable or disable, whether the controls are available.</p></li>
+<li><p>Enable or disable the Annotations.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="notice docutils container">
+<p>The video is always automatically played. In case the autoplay function does not work properly, see the <a class="reference external" href="../../troubleshooting.html#media-autoplay-not-working">Media autoplay not working</a> chapter.</p>
+</div>
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-simple-segments/video-youtube.html"><span class="doc">Video – YouTube</span></a> chapter.</p>
+<p>Figure 10: Layout with Video – YouTube segment</p>
+<img alt="../../_images/simple-segments-youtube-video.png" class="flat align-center" src="../../_images/simple-segments-youtube-video.png" />
+</div>
+<div class="section" id="web-page">
+<span id="web"></span><h2>Web Page<a class="headerlink" href="#web-page" title="Permalink to this headline">¶</a></h2>
+<p>Other websites can be displayed in the Layout. The displayed page is fully interactable and can be configured to refresh periodically, to always display the newest version of the website.
+A Web Page can be used to display sites like news sites, weather applications or local intranet sites.</p>
+<div class="notice docutils container">
+<p>Some websites don’t support embedding and cannot be used in the Web Page segment.</p>
+</div>
+<p>For more information about editing this segment, see <a class="reference internal" href="../editing-layout/editing-simple-segments/web-page.html"><span class="doc">Web Page</span></a> chapter.</p>
+<p>Figure 11: Layout with Web Page</p>
+<img alt="../../_images/simple-segments-web-page.png" class="flat align-center" src="../../_images/simple-segments-web-page.png" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../what-is-layout.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						What is a Layout
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="calculation-based-segments.html">
+						Calculation Based Segments 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

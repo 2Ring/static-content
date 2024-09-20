@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.4. User Attributes &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2. KPI Functions" href="../kpi-functions.html" />
+    <link rel="prev" title="1.3. Queues Statistics Historical" href="queues-statistics-historical.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.4. </span>User Attributes</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../amazonconnect.html">AmazonConnect</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">1. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.4. </span>User Attributes
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">1. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agents-statistics.html">1.1. Agents Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queues-statistics-current.html">1.2. Queues Statistics Current</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queues-statistics-historical.html">1.3. Queues Statistics Historical</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.4. User Attributes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">1.4.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">1.4.2. Calculation Parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="user-attributes">
+<h1><span class="section-number">1.4. </span>User Attributes<a class="headerlink" href="#user-attributes" title="Permalink to this headline">¶</a></h1>
+<p>The User Attributes Grid Function displays static data for Agent in a tabular format.</p>
+<div class="section" id="columns">
+<h2><span class="section-number">1.4.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Agent Id</strong> - the Id of the agent</p></li>
+<li><p><strong>Agent Id Quoted</strong> - Agent Id column formatted for use in dynamic filters</p></li>
+<li><p><strong>Agent Name</strong> – the name of the agent</p></li>
+<li><p><strong>Agent Name Quoted</strong> - Agent Name column formatted for use in dynamic filters</p></li>
+<li><p><strong>Assigned Queues</strong> - The list of queues assigned to the agent</p></li>
+<li><p><strong>Assigned Queues Quoted</strong> - Formatted representation of the assigned queues for use in dynamic filters</p></li>
+<li><p><strong>Assigned Routing Profile</strong> - The routing profile assigned to the agent</p></li>
+<li><p><strong>Assigned Routing Profile Quoted</strong> - Formatted representation of the assigned routing profile for use in dynamic filters</p></li>
+<li><p><strong>Agent Username</strong> - The username of the agent</p></li>
+<li><p><strong>Agent Username Quoted</strong> - Agent Username column formatted for use in dynamic filters</p></li>
+<li><p><strong>Email</strong> - The email address of the agent</p></li>
+<li><p><strong>Email Quoted</strong> - Agent Email column formatted for use in dynamic filters</p></li>
+<li><p><strong>First Name</strong> - The first name of the agent</p></li>
+<li><p><strong>First Name Quoted</strong> - Agent First Name column formatted for use in dynamic filters</p></li>
+<li><p><strong>Last Name</strong> - The last name of the agent</p></li>
+<li><p><strong>Last Name Quoted</strong> - Agent Last Name column formatted for use in dynamic filters</p></li>
+<li><p><strong>Mobile</strong> - The mobile number of the agent</p></li>
+<li><p><strong>Mobile Quoted</strong> - Agent Mobile column formatted for use in dynamic filters</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">1.4.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Agents</strong> - The list of agents</p></li>
+<li><p><strong>Queues</strong> - The list of queue names</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="queues-statistics-historical.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.3. </span>Queues Statistics Historical
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../kpi-functions.html">
+						<span class="section-number">2. </span>KPI Functions 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

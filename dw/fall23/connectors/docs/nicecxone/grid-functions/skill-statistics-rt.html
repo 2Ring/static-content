@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.5. Skill Statistics RT &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.6. User Attributes" href="user-attributes.html" />
+    <link rel="prev" title="2.4. Skill Statistics" href="skill-statistics.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.5. </span>Skill Statistics RT</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../nicecxone.html">Nice CXone</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">2. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.5. </span>Skill Statistics RT
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">2.1. Agent State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">2.2. Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="skill-attributes.html">2.3. Skill Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="skill-statistics.html">2.4. Skill Statistics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.5. Skill Statistics RT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">2.5.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">2.5.2. Calculation Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-attributes.html">2.6. User Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="skill-statistics-rt">
+<h1><span class="section-number">2.5. </span>Skill Statistics RT<a class="headerlink" href="#skill-statistics-rt" title="Permalink to this headline">¶</a></h1>
+<p>This Grid function displays the activity information for all skills.</p>
+<div class="notice docutils container">
+<p>For more information, see the <a class="reference external" href="https://developer.niceincontact.com/API/RealTimeDataAPI#/RealTime/SkillActivity">NICE CXone API documentation</a>.</p>
+</div>
+<div class="section" id="columns">
+<h2><span class="section-number">2.5.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Skill Id</strong> - the ID of the Skill.</p></li>
+<li><p><strong>Skill Name</strong> - the name of the Skill.</p></li>
+<li><p><strong>Agents Acw</strong> - the number of Agents in ACW on Skill.</p></li>
+<li><p><strong>Agents Available</strong> - the number of Agents available on Skill.</p></li>
+<li><p><strong>Agents Idle</strong> - the number of Agents idle on Skill.</p></li>
+<li><p><strong>Agents Logged In</strong> - the number of Agents logged into Skill.</p></li>
+<li><p><strong>Agents Unavailable</strong> - the number of Agents unavailable on Skill.</p></li>
+<li><p><strong>Agents Working</strong> - the number of Agents working on Skill.</p></li>
+<li><p><strong>Business Unit Id</strong> - the ID of Business Unit.</p></li>
+<li><p><strong>Contacts Active</strong> - the number of active Contacts for Skill.</p></li>
+<li><p><strong>Earliest Queue Time</strong> - the time of the earliest queued contact for Skill.</p></li>
+<li><p><strong>Email From Address</strong> - the email address, that is used to send emails from the Skill to customers.</p></li>
+<li><p><strong>Is Active</strong> - indicates if the Skill is active.</p></li>
+<li><p><strong>In SLA</strong> - the number of contacts the agents handled within the defined service level threshold.</p></li>
+<li><p><strong>Is Natural Calling</strong> - indicates if the Skill is in Natural calling mode.</p></li>
+<li><p><strong>Is Outbound</strong> - indicates if Skill is outbound.</p></li>
+<li><p><strong>Out SLA</strong> - the number of contacts agents handled outside the specified service level threshold.</p></li>
+<li><p><strong>Parked Count</strong> - the number of Emails in the parked queue.</p></li>
+<li><p><strong>Personal Queue Count</strong> - the number of Emails in the personal queue.</p></li>
+<li><p><strong>Queue Count</strong> - the number of Contacts in queue for Skill.</p></li>
+<li><p><strong>Skill Queue Count</strong> - the number of Emails in the skill queue.</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">2.5.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The Grid function has these optional parameters:</p>
+<ul class="simple">
+<li><p><strong>Skills</strong> - Allows you to select from a list of skills using a logical OR operation for filtering. When you use this parameter, any object that matches at least one of the selected skills will be included in the results.  - list of Skill names</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="skill-statistics.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2.4. </span>Skill Statistics
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="user-attributes.html">
+						<span class="section-number">2.6. </span>User Attributes 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.5. Queue Statistics &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.6. Queue Statistics RT" href="queue-statistics-rt.html" />
+    <link rel="prev" title="1.4. Queue Agent States" href="queue-agent-states.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.5. </span>Queue Statistics</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../wxcc-2-0.html">WXCC</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">1. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.5. </span>Queue Statistics
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agents.html">1.1. Agents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">1.2. Agent Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics-rt.html">1.3. Agent Statistics RT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queue-agent-states.html">1.4. Queue Agent States</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.5. Queue Statistics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-accepted-queue-time">1.5.1. Queue Statistics - Longest Accepted Queue Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-accepted-ringing-time">1.5.2. Queue Statistics - Longest Accepted Ringing Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-conference-time">1.5.3. Queue Statistics - Longest Conference Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-connected-time">1.5.4. Queue Statistics - Longest Connected Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-consult-time">1.5.5. Queue Statistics - Longest Consult Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-hold-time">1.5.6. Queue Statistics - Longest Hold Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-last-queue-time">1.5.7. Queue Statistics - Longest Last Queue Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-queue-time">1.5.8. Queue Statistics - Longest Queue Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-ringing-time">1.5.9. Queue Statistics - Longest Ringing Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-self-service-time">1.5.10. Queue Statistics - Longest Self Service Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-longest-wrapup-time">1.5.11. Queue Statistics - Longest Wrapup Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-abandoned">1.5.12. Queue Statistics - Tasks Abandoned</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-abandoned-in-service-level">1.5.13. Queue Statistics - Tasks Abandoned In Service Level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-accepted">1.5.14. Queue Statistics - Tasks Accepted</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-accepted-in-service-level">1.5.15. Queue Statistics - Tasks Accepted In Service Level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-callback">1.5.16. Queue Statistics - Tasks Callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-conferenced">1.5.17. Queue Statistics - Tasks Conferenced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-consulted">1.5.18. Queue Statistics - Tasks Consulted</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-enqueued">1.5.19. Queue Statistics - Tasks Enqueued</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-held">1.5.20. Queue Statistics - Tasks Held</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-offered">1.5.21. Queue Statistics - Tasks Offered</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-outdial">1.5.22. Queue Statistics - Tasks Outdial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-self-service">1.5.23. Queue Statistics - Tasks Self Service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-total">1.5.24. Queue Statistics - Tasks Total</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-transferred">1.5.25. Queue Statistics - Tasks Transferred</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-transferred-to-agent">1.5.26. Queue Statistics - Tasks Transferred To Agent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-tasks-transferred-to-queue">1.5.27. Queue Statistics - Tasks Transferred To Queue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-accepted-queue-time">1.5.28. Queue Statistics - Total Accepted Queue Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-accepted-ringing-time">1.5.29. Queue Statistics - Total Accepted Ringing Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-conference-time">1.5.30. Queue Statistics - Total Conference Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-connected-time">1.5.31. Queue Statistics - Total Connected Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-consult-time">1.5.32. Queue Statistics - Total Consult Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-hold-time">1.5.33. Queue Statistics - Total Hold Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-last-queue-time">1.5.34. Queue Statistics - Total Last Queue Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-queue-time">1.5.35. Queue Statistics - Total Queue Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-ringing-time">1.5.36. Queue Statistics - Total Ringing Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-self-service-time">1.5.37. Queue Statistics - Total Self Service Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-time">1.5.38. Queue Statistics - Total Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queue-statistics-total-wrapup-time">1.5.39. Queue Statistics - Total Wrapup Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="queue-statistics-rt.html">1.6. Queue Statistics RT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tasks.html">1.7. Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="queue-statistics">
+<h1><span class="section-number">1.5. </span>Queue Statistics<a class="headerlink" href="#queue-statistics" title="Permalink to this headline">¶</a></h1>
+<p>The Queue Statistics KPI Functions display aggregated Queue statistics for the current day.</p>
+<div class="notice docutils container">
+<p>For more information, see the <a class="reference external" href="https://developer.webex-cx.com/documentation/search">Webex API documentation</a>.</p>
+</div>
+<p>Depending on the KPI Function, the following parameters may be used:</p>
+<ul class="simple">
+<li><p><strong>Queues</strong> - list of Queue names</p></li>
+<li><p><strong>Channel Type</strong> - list of Channel Types</p></li>
+<li><p><strong>WrapupCodes</strong> - list of Wrapup Codes</p></li>
+</ul>
+<div class="section" id="queue-statistics-longest-accepted-queue-time">
+<h2><span class="section-number">1.5.1. </span>Queue Statistics - Longest Accepted Queue Time<a class="headerlink" href="#queue-statistics-longest-accepted-queue-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest time a task spent in the queue before being accepted by an agent.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-accepted-ringing-time">
+<h2><span class="section-number">1.5.2. </span>Queue Statistics - Longest Accepted Ringing Time<a class="headerlink" href="#queue-statistics-longest-accepted-ringing-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest time a task spent ringing before being accepted by an agent.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-conference-time">
+<h2><span class="section-number">1.5.3. </span>Queue Statistics - Longest Conference Time<a class="headerlink" href="#queue-statistics-longest-conference-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest time a task spent in a conference call with an agent or multiple agents.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-connected-time">
+<h2><span class="section-number">1.5.4. </span>Queue Statistics - Longest Connected Time<a class="headerlink" href="#queue-statistics-longest-connected-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest connected time for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-consult-time">
+<h2><span class="section-number">1.5.5. </span>Queue Statistics - Longest Consult Time<a class="headerlink" href="#queue-statistics-longest-consult-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest time a task spent in a consultation with an agent.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-hold-time">
+<h2><span class="section-number">1.5.6. </span>Queue Statistics - Longest Hold Time<a class="headerlink" href="#queue-statistics-longest-hold-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest time a task spent on hold.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-last-queue-time">
+<h2><span class="section-number">1.5.7. </span>Queue Statistics - Longest Last Queue Time<a class="headerlink" href="#queue-statistics-longest-last-queue-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest queue time for the last queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-queue-time">
+<h2><span class="section-number">1.5.8. </span>Queue Statistics - Longest Queue Time<a class="headerlink" href="#queue-statistics-longest-queue-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest queue time for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-ringing-time">
+<h2><span class="section-number">1.5.9. </span>Queue Statistics - Longest Ringing Time<a class="headerlink" href="#queue-statistics-longest-ringing-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest ringing time for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-self-service-time">
+<h2><span class="section-number">1.5.10. </span>Queue Statistics - Longest Self Service Time<a class="headerlink" href="#queue-statistics-longest-self-service-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest self service time for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-longest-wrapup-time">
+<h2><span class="section-number">1.5.11. </span>Queue Statistics - Longest Wrapup Time<a class="headerlink" href="#queue-statistics-longest-wrapup-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the longest time a task spent on wrapup.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-abandoned">
+<h2><span class="section-number">1.5.12. </span>Queue Statistics - Tasks Abandoned<a class="headerlink" href="#queue-statistics-tasks-abandoned" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of assigned tasks that were abandoned in a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-abandoned-in-service-level">
+<h2><span class="section-number">1.5.13. </span>Queue Statistics - Tasks Abandoned In Service Level<a class="headerlink" href="#queue-statistics-tasks-abandoned-in-service-level" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of assigned tasks that were abandoned in the queue within specified service level.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-accepted">
+<h2><span class="section-number">1.5.14. </span>Queue Statistics - Tasks Accepted<a class="headerlink" href="#queue-statistics-tasks-accepted" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of assigned tasks that were accepted in a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-accepted-in-service-level">
+<h2><span class="section-number">1.5.15. </span>Queue Statistics - Tasks Accepted In Service Level<a class="headerlink" href="#queue-statistics-tasks-accepted-in-service-level" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of assigned tasks that were accepted in the queue within specified service level.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-callback">
+<h2><span class="section-number">1.5.16. </span>Queue Statistics - Tasks Callback<a class="headerlink" href="#queue-statistics-tasks-callback" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that were set for a callback.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-conferenced">
+<h2><span class="section-number">1.5.17. </span>Queue Statistics - Tasks Conferenced<a class="headerlink" href="#queue-statistics-tasks-conferenced" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that were part of a conference call with one or more agents.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-consulted">
+<h2><span class="section-number">1.5.18. </span>Queue Statistics - Tasks Consulted<a class="headerlink" href="#queue-statistics-tasks-consulted" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that required consultation before resolution.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-enqueued">
+<h2><span class="section-number">1.5.19. </span>Queue Statistics - Tasks Enqueued<a class="headerlink" href="#queue-statistics-tasks-enqueued" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks enqueued in a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-held">
+<h2><span class="section-number">1.5.20. </span>Queue Statistics - Tasks Held<a class="headerlink" href="#queue-statistics-tasks-held" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that were placed on hold at some point during their processing.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-offered">
+<h2><span class="section-number">1.5.21. </span>Queue Statistics - Tasks Offered<a class="headerlink" href="#queue-statistics-tasks-offered" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of queue tasks that were offered to an agent.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-outdial">
+<h2><span class="section-number">1.5.22. </span>Queue Statistics - Tasks Outdial<a class="headerlink" href="#queue-statistics-tasks-outdial" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that were outdial.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-self-service">
+<h2><span class="section-number">1.5.23. </span>Queue Statistics - Tasks Self Service<a class="headerlink" href="#queue-statistics-tasks-self-service" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that were connected through self-service options.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-total">
+<h2><span class="section-number">1.5.24. </span>Queue Statistics - Tasks Total<a class="headerlink" href="#queue-statistics-tasks-total" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total number of tasks for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-transferred">
+<h2><span class="section-number">1.5.25. </span>Queue Statistics - Tasks Transferred<a class="headerlink" href="#queue-statistics-tasks-transferred" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that were transferred.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-transferred-to-agent">
+<h2><span class="section-number">1.5.26. </span>Queue Statistics - Tasks Transferred To Agent<a class="headerlink" href="#queue-statistics-tasks-transferred-to-agent" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that were transferred to an agent.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-tasks-transferred-to-queue">
+<h2><span class="section-number">1.5.27. </span>Queue Statistics - Tasks Transferred To Queue<a class="headerlink" href="#queue-statistics-tasks-transferred-to-queue" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the number of tasks that were transferred to a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-accepted-queue-time">
+<h2><span class="section-number">1.5.28. </span>Queue Statistics - Total Accepted Queue Time<a class="headerlink" href="#queue-statistics-total-accepted-queue-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total time tasks spent in the queue before being accepted by an agent.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-accepted-ringing-time">
+<h2><span class="section-number">1.5.29. </span>Queue Statistics - Total Accepted Ringing Time<a class="headerlink" href="#queue-statistics-total-accepted-ringing-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total time tasks spent ringing before being accepted by an agent.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-conference-time">
+<h2><span class="section-number">1.5.30. </span>Queue Statistics - Total Conference Time<a class="headerlink" href="#queue-statistics-total-conference-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total time tasks spent in a conference call with an agent or multiple agents.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-connected-time">
+<h2><span class="section-number">1.5.31. </span>Queue Statistics - Total Connected Time<a class="headerlink" href="#queue-statistics-total-connected-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total connected time for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-consult-time">
+<h2><span class="section-number">1.5.32. </span>Queue Statistics - Total Consult Time<a class="headerlink" href="#queue-statistics-total-consult-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total time tasks spent in a consultation with an agent.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-hold-time">
+<h2><span class="section-number">1.5.33. </span>Queue Statistics - Total Hold Time<a class="headerlink" href="#queue-statistics-total-hold-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total time tasks spent on hold.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-last-queue-time">
+<h2><span class="section-number">1.5.34. </span>Queue Statistics - Total Last Queue Time<a class="headerlink" href="#queue-statistics-total-last-queue-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total queue time for the last queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-queue-time">
+<h2><span class="section-number">1.5.35. </span>Queue Statistics - Total Queue Time<a class="headerlink" href="#queue-statistics-total-queue-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total queue time for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-ringing-time">
+<h2><span class="section-number">1.5.36. </span>Queue Statistics - Total Ringing Time<a class="headerlink" href="#queue-statistics-total-ringing-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total ringing time for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-self-service-time">
+<h2><span class="section-number">1.5.37. </span>Queue Statistics - Total Self Service Time<a class="headerlink" href="#queue-statistics-total-self-service-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total self serivce time for a queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-time">
+<h2><span class="section-number">1.5.38. </span>Queue Statistics - Total Time<a class="headerlink" href="#queue-statistics-total-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total lifetime of tasks associated with the queue.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+<div class="section" id="queue-statistics-total-wrapup-time">
+<h2><span class="section-number">1.5.39. </span>Queue Statistics - Total Wrapup Time<a class="headerlink" href="#queue-statistics-total-wrapup-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI Function returns the total time tasks spent on wrapup.</p>
+<p><strong>Parameters:</strong> Queues, Channel Type, WrapupCodes</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="queue-agent-states.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.4. </span>Queue Agent States
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="queue-statistics-rt.html">
+						<span class="section-number">1.6. </span>Queue Statistics RT 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

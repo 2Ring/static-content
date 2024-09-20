@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2.1. Queues Statistics Current &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.2. Queues Statistics Historical" href="queues-statistics-historical.html" />
+    <link rel="prev" title="2. KPI Functions" href="../kpi-functions.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">2.1. </span>Queues Statistics Current</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../amazonconnect.html">AmazonConnect</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">2. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">2.1. </span>Queues Statistics Current
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">1. Grid Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1. Queues Statistics Current</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-agents-after-contact-work">2.1.1. Queues Statistics Current - Agents After Contact Work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-agents-available">2.1.2. Queues Statistics Current - Agents Available</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-agents-error">2.1.3. Queues Statistics Current - Agents Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-agents-non-productive">2.1.4. Queues Statistics Current - Agents Non Productive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-agents-on-call">2.1.5. Queues Statistics Current - Agents On Call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-agents-online">2.1.6. Queues Statistics Current - Agents Online</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-agents-staffed">2.1.7. Queues Statistics Current - Agents Staffed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-contacts-in-queue">2.1.8. Queues Statistics Current - Contacts In Queue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-contacts-scheduled">2.1.9. Queues Statistics Current - Contacts Scheduled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queues-statistics-current-oldest-contact-age">2.1.10. Queues Statistics Current - Oldest Contact Age</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="queues-statistics-historical.html">2.2. Queues Statistics Historical</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="queues-statistics-current">
+<h1><span class="section-number">2.1. </span>Queues Statistics Current<a class="headerlink" href="#queues-statistics-current" title="Permalink to this headline">¶</a></h1>
+<p>Depending on the KPI function, the following parameters may be used:</p>
+<ul class="simple">
+<li><p><strong>Queues</strong> – list of queue names.</p></li>
+</ul>
+<div class="section" id="queues-statistics-current-agents-after-contact-work">
+<h2><span class="section-number">2.1.1. </span>Queues Statistics Current - Agents After Contact Work<a class="headerlink" href="#queues-statistics-current-agents-after-contact-work" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of agents who are doing After Call Work for a contact.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-current-agents-available">
+<h2><span class="section-number">2.1.2. </span>Queues Statistics Current - Agents Available<a class="headerlink" href="#queues-statistics-current-agents-available" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of agents who have set their status to Available.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-current-agents-error">
+<h2><span class="section-number">2.1.3. </span>Queues Statistics Current - Agents Error<a class="headerlink" href="#queues-statistics-current-agents-error" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of agents who have their contact in an error state.
+Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-current-agents-non-productive">
+<h2><span class="section-number">2.1.4. </span>Queues Statistics Current - Agents Non Productive<a class="headerlink" href="#queues-statistics-current-agents-non-productive" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of agents who have set their status to a custom status (other than Available or Offline).</p>
+<p>Parameters: Queues</p>
+<div class="notice docutils container">
+<p>Agents can handle contacts while their status is set to a custom status. For example, agents can be On call or doing ACW while their status is set to a custom. This means it’s possible for agents to be counted as On call and Non Productive at the same time.</p>
+</div>
+</div>
+<div class="section" id="queues-statistics-current-agents-on-call">
+<h2><span class="section-number">2.1.5. </span>Queues Statistics Current - Agents On Call<a class="headerlink" href="#queues-statistics-current-agents-on-call" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of agents currently on a contact.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-current-agents-online">
+<h2><span class="section-number">2.1.6. </span>Queues Statistics Current - Agents Online<a class="headerlink" href="#queues-statistics-current-agents-online" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of agents who have set their status to something other than Offline.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-current-agents-staffed">
+<h2><span class="section-number">2.1.7. </span>Queues Statistics Current - Agents Staffed<a class="headerlink" href="#queues-statistics-current-agents-staffed" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of agents who are online, and not in Non Productive (a custom status).</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-current-contacts-in-queue">
+<h2><span class="section-number">2.1.8. </span>Queues Statistics Current - Contacts In Queue<a class="headerlink" href="#queues-statistics-current-contacts-in-queue" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts currently in the queue.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-current-contacts-scheduled">
+<h2><span class="section-number">2.1.9. </span>Queues Statistics Current - Contacts Scheduled<a class="headerlink" href="#queues-statistics-current-contacts-scheduled" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of customers in the queue for which there is a callback scheduled.</p>
+<p>Parameters: Queues</p>
+</div>
+<div class="section" id="queues-statistics-current-oldest-contact-age">
+<h2><span class="section-number">2.1.10. </span>Queues Statistics Current - Oldest Contact Age<a class="headerlink" href="#queues-statistics-current-oldest-contact-age" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the time of the contact that has been in the queue the longest.</p>
+<p>Parameters: Queues</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../kpi-functions.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">2. </span>KPI Functions
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="queues-statistics-historical.html">
+						<span class="section-number">2.2. </span>Queues Statistics Historical 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

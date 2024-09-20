@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Diagnostics &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Filters" href="filters.html" />
+    <link rel="prev" title="Connectors" href="../connectors.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Diagnostics</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../connectors.html">Connectors</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Diagnostics
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../business-units.html">Business Units</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../connectors.html">Connectors</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capabilities.html">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kpi-calculation-functions.html">KPI Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grid-calculation-functions.html">Grid Calculation Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculation-parameter-types.html">Calculation Parameter Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-functions.html">Import Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html">Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uninstallation.html">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="diagnostics">
+<h1>Diagnostics<a class="headerlink" href="#diagnostics" title="Permalink to this headline">¶</a></h1>
+<p>2Ring DW monitors each installed Connector and checks whether it is operating correctly. Following diagnostic information is available:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Licenses Consumed</strong></dt><dd><p>Number of licenses currently being used by logged in contact center agents.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Iteration</strong></dt><dd><p>Connector runs in iterations. In one iteration all outdated calculations are recalculated. This group contains information about last Connector’s iteration.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Result</strong></dt><dd><p>Indicates whether Connector was successful in collecting data from the source, processing the data and sending it to DW database. Succeeded or Failed is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Error</strong></dt><dd><p>An error message indicating why the Connector is not working.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Iteration Date</strong></dt><dd><p>The time of last iteration start. Client PC time is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Duration</strong></dt><dd><p>A number of milliseconds iteration took.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Runtime Data</strong></dt><dd><p>Some connectors store runtime data, that can be be viewed and used for troubleshooting.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Info</strong></dt><dd><p>Runtime data stored by the connector.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Last Successful Write</strong></dt><dd><p>Date and time of the last successful data write.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../connectors.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Connectors
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="filters.html">
+						Filters 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Word Cloud &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Container Based Segments" href="../container-based-segments.html" />
+    <link rel="prev" title="Bar/Line Chart - KPI Timeline" href="bar-line-chart-kpi-timeline.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Word Cloud</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../what-is-layout.html">What is a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../calculation-based-segments.html">Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Word Cloud
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../simple-segments.html">Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../calculation-based-segments.html">Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Word Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../container-based-segments.html">Container Based Segments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="word-cloud">
+<h1>Word Cloud<a class="headerlink" href="#word-cloud" title="Permalink to this headline">¶</a></h1>
+<p>Word Cloud graphically displays words in a size that depends on the weight of the word.
+Size of the words in a source is directly proportional to weight. For example, the topics most talked about, in agent and customer communication, will have the largest font size. The data to be processed is obtained from the source table which contains the word and the weight assigned to it.</p>
+<p>The display of words in the source is fully customizable. Size coefficient, rotation of words and colors can be set.</p>
+<p>Figure 1: Word Cloud</p>
+<img alt="../../../_images/word-cloud.png" class="flat align-center" src="../../../_images/word-cloud.png" />
+<p>Rotation can be adjusted by setting minimum and maximum rotation angle.</p>
+<p>Figure 2: Word Cloud with different rotation angle range.</p>
+<img alt="../../../_images/word-cloud-angle.png" class="flat align-center" src="../../../_images/word-cloud-angle.png" />
+<p>The number of different rotation angles within this range, can be set by entering the number of rotation steps.</p>
+<p>Figure 3: Word Cloud with different rotation steps. Two steps in the left and four steps in the right image.</p>
+<img alt="../../../_images/word-cloud-rotation-steps.png" class="flat align-center" src="../../../_images/word-cloud-rotation-steps.png" />
+<p>There are three types of color mode. Random, Column and Fixed.</p>
+<p>Figure 4: Word Cloud with different color modes.</p>
+<img alt="../../../_images/word-cloud-colors.png" class="flat align-center" src="../../../_images/word-cloud-colors.png" />
+<p>Also, a spacing between words can be adjusted.</p>
+<p>Figure 5: Word Cloud with different spacing.</p>
+<img alt="../../../_images/word-cloud-spacing.png" class="flat align-center" src="../../../_images/word-cloud-spacing.png" />
+<p>For more information about editing this segment, see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/word-cloud.html"><span class="doc">Word Cloud</span></a> chapter.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="bar-line-chart-kpi-timeline.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Bar/Line Chart - KPI Timeline
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../container-based-segments.html">
+						Container Based Segments 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

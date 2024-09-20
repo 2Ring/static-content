@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calendar &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Grid" href="grid.html" />
+    <link rel="prev" title="Row Filters" href="kpi/row-filters.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Calendar</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Calendar
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="calendar">
+<h1>Calendar<a class="headerlink" href="#calendar" title="Permalink to this headline">¶</a></h1>
+<p>The Calendar presents a historical view of a specific calculation. Each day in the configured time period is displayed as a tile. The color of the tile indicates to which range value of the day falls under. Multiple months can be displayed by a single calendar segment.</p>
+<div class="notice docutils container">
+<p>For general information about this segment, see <a class="reference internal" href="../../what-is-layout/calculation-based-segments/calendar.html"><span class="doc">Calendar</span></a> chapter.</p>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>Calculation</strong></dt><dd><p>For more general calculation options, see <a class="reference internal" href="editing-scalar-valued-calculations.html"><span class="doc">Editing Scalar-Valued Calculations</span></a> chapter. <br>
+The calculation options control, how the displayed values are calculated. Only calculation functions that produce numeric results can be selected in calendar.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Period Settings</strong></dt><dd><p>This group defines period over which we want to display values.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Period</strong></dt><dd><p><em>Required</em> <br>
+A desired type of time period to be displayed in calendar.
+<br> Available options are:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Month</strong></dt><dd><p>A month like calendar view will be displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Week</strong></dt><dd><p>A week like calendar view will be displayed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Number of Displayed Periods</strong></dt><dd><p><em>Required</em> <br>
+The number of months/weeks to display.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Displayed Period</strong>/<strong>Newest Displayed Period</strong></dt><dd><p><em>Required</em> <br>
+When only one period should be displayed this option defines which period it will be.
+<br> When multiple periods should be displayed this option defines which will be the newest displayed period.
+<br> Available options are:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>This Period</strong></dt><dd><p>The calendar displays the currently ongoing Month or Week.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Last Period</strong></dt><dd><p>The calendar displays the previous Month or Week.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Other Period</strong></dt><dd><p>If this option is chosen, how far into the past the Displayed Period/Newest Displayed Period is has to be provided.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value of the Day</strong></dt><dd><p><em>Required</em> <br>
+Defines, what result should be used in the Calendar.
+<br> Available options are:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>First</strong></dt><dd><p>The first recorded result of each day is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Last</strong></dt><dd><p>The last recorded result of each day is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Min</strong></dt><dd><p>The minimal recorded result of each day is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Max</strong></dt><dd><p>The greatest recorded result of each day is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Delta</strong></dt><dd><p>The difference between the Last result of the day and the one before is displayed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Weekdays</strong></dt><dd><p>The Calendar can be configured to display only certain relevant days of the week.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>First Day Of Week</strong></dt><dd><p><em>Inheritable</em> <br>
+Specifies, which day should be displayed and considered as first of each week.
+<br> Available options are <em>Monday</em> - <em>Sunday</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Monday, …, Sunday</strong></dt><dd><p><em>Inheritable</em> <br>
+Visibility of each day can be configured with its corresponding dropdown. Non-Working days are hidden.
+<br> Available options are <em>Working Day</em> and <em>Non-Working Day</em></p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Appearance</strong></dt><dd><p>The style of a Calendar</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Headers</strong></dt><dd><p>Visual configuration of calendar headers.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Day Headers</strong></dt><dd><p><em>Inheritable</em> <br>
+Controls, whether the day of the week should be displayed above all calendar day columns.
+<br> Available option are <em>Show</em> and <em>Hide</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Period Headers</strong></dt><dd><p><em>Inheritable</em> <br>
+Controls, whether the displayed time period should be described in header.
+<br> Available option are <em>Show</em> and <em>Hide</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p><em>Inheritable</em> <br>
+Height of the headers, that is measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Day Numbers</strong></dt><dd><p>Visual configuration of day numbers.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Visibility</strong></dt><dd><p><em>Inheritable</em> <br>
+Whether day numbers should be visible.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Content</strong></dt><dd><p><em>Inheritable</em> <br>
+Content of the day numbers. <br>
+Available options are <em>Title</em>, <em>Paging Info</em> and <em>Title and Paging Info</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p>Position of the day numbers. If <em>Float on Top</em> or <em>Float on Bottom</em> is selected, day numbers float over the segment which may cause overlapping.   <br>
+Available options are <em>Float on Top</em>, <em>Float on Bottom</em>, <em>Top</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p><em>Inheritable</em> <br>
+Height of day numbers.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+The color of the day number, displayed in the tile.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the day numbers background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p><em>Inheritable</em> <br>
+Position of day numbers on horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available only when the horizontal alignment is Left or Right</em> <br>
+The size of a padding between the day numbers and day numbers’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Values</strong></dt><dd><p>Visual configuration of calendar’s day tiles.</p>
+<ul>
+<li><dl>
+<dt><strong>Presentation Type</strong></dt><dd><p><em>Required</em> <br>
+Defines how value should be presented.
+<br> Available options are:</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Alphanumeric</strong></dt><dd><p>The value is presented as a pure text, without any additional graphical elements.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore</strong></dt><dd><p>The value is enveloped in a colored circle. The circle changes color based on configured conditional styles. The semaphore is used, when the state is more important than the value itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle</strong></dt><dd><p>The value is accompanied by a circle indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle</strong></dt><dd><p>The value is accompanied by a semi-circle indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal/Vertical Bar</strong></dt><dd><p>The value is accompanied by a rectangular indicator. The indicator represents the level of fulfillment of a configured goal.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Image</strong></dt><dd><p>An image is applied.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Static Color</strong></dt><dd><p>A static color is applied.</p>
+<p>Figure 1: Presentation types.</p>
+<img alt="../../../_images/kpi.png" class="flat align-center" src="../../../_images/kpi.png" />
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Display Format</strong></dt><dd><p><em>Required</em> <br>
+Format in which value should be displayed. When Raw is selected, the value is displayed without any transformation.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>According to the selected presentation type</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore/Circle/Semi Circle/Bar Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>According to the selected presentation type</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the Semaphore/Circle/Semi Circle/Bar.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Empty Bar Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Only if Horizontal/Vertical Bar is selected as a presentation type</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Not available, if the “Image” presentation type is selected</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Not available, if the “Image” presentation type is selected</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Sizing</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Not available, if the “Image” or “Static color” presentation type is selected</em> <br>
+Controls, how font size is calculated.
+<br> Available options are:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Regular</dt><dd><p>Font is sized relatively to calendar’s cell height. <br>
+In case of Circle, Semi Circle and Semaphore presentation type, font is sized relatively to Circle’s/Semi Circle’s/Semaphore’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Best Fit</dt><dd><p>Font is dynamically sized to always fit inside calendar’s cell.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available only if “Regular” is selected as a text sizing</em> <br>
+<em>Not available if “Image” or “Solid Color” is selected as a presentation type</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Choose Display Range Min Manually</strong></dt><dd><p><em>Available only when “Circle”, “Semi Circle” or “Bar” presentation type is selected.</em> <br>
+Whether the minimum on the value range is defined manually.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Min</strong></dt><dd><p>Value, that defines the minimum on the value range.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Choose Display Range Max Manually</strong></dt><dd><p><em>Available only when “Circle”, “Semi Circle” or “Bar” presentation type is selected.</em> <br>
+Whether the maximum on the value range is defined manually.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Max</strong></dt><dd><p>Value, that defines the maximum on the value range.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the value should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em> <br>
+Available only when the text sizing is set to <em>Regular</em> and presentation type to <em>Alphanumeric</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>File</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../static-content.html">Static content</a> <em>chapter</em>. <br>
+Relative path of the image, that should be displayed. Using the {{value}} placeholder in the path, an image can dynamically change, based on the KPI value.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Image Horizontal Alignment</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+Controls, where the image should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Image Vertical Alignment</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+Controls, where the image should be aligned on the vertical axis. <br>
+Available options are <em>Top</em>, <em>Middle</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Image Size</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+Decides, how the image is adjusted to the Segment’s size.</p>
+<ul>
+<li><dl>
+<dt><strong>Cover</strong></dt><dd><p>The image is resized to cover the whole Segment, without deforming the image. No uncovered spaces are present. However one of image’s axis may overlap outside of the Segment’s boundaries.</p>
+<p>Figure 1: Cover</p>
+<img alt="../../../_images/image-cover.png" class="flat align-center" src="../../../_images/image-cover.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Contain</strong></dt><dd><p>The image The image is resized to be fully displayed, in largest possible size, without deforming the image. Uncovered spaces, filled with the Background Color, are present.</p>
+<p>Figure 2: Contain</p>
+<img alt="../../../_images/image-contain.png" class="flat align-center" src="../../../_images/image-contain.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Fill</strong></dt><dd><p>The image fully fills the entire Segment’s size. The image may be deformed. No uncovered spaces or overlapping occurs.</p>
+<p>Figure 3: Fill</p>
+<img alt="../../../_images/image-fill.png" class="flat align-center" src="../../../_images/image-fill.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Custom</strong></dt><dd><p>When selected, <strong>Custom Size Height</strong> and <strong>Custom Size Width</strong> fields are displayed. These fields define size of the image in percentages of the Segment’s size.</p>
+<p>Figure 4: Custom</p>
+<img alt="../../../_images/image-custom.png" class="flat align-center" src="../../../_images/image-custom.png" />
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Effects and Filters</strong></dt><dd><p><em>Available only if the “Image” presentation type is selected</em> <br>
+Controls, adjusting the image, such as Brightness, Contrast, Opacity etc. Click <span class="button">Reset</span> to revert image to its default values.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Null Value</strong></dt><dd><p><em>Inheritable</em> <br>
+A custom value that is displayed when the value is not available.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Corner Radius</strong></dt><dd><p><em>Inheritable</em> <br>
+Corner radius of the values can be adjusted with a slider or a text field for a custom value. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Conditional Styles</strong></dt><dd><p><em>For more information see</em> <a class="reference internal" href="kpi/conditional-styles.html"><span class="doc">Conditional Styles</span></a> <em>chapter</em>. <br>
+Conditional Styles are used to modify appearance of the value based on its data.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="kpi/row-filters.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Row Filters
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="grid.html">
+						Grid 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

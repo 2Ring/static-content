@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bar/Line Chart - Grid &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Bar/Line Chart - KPI Timeline" href="bar-line-chart-kpi-timeline.html" />
+    <link rel="prev" title="Grid" href="grid.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Bar/Line Chart - Grid</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../what-is-layout.html">What is a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../calculation-based-segments.html">Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Bar/Line Chart - Grid
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../simple-segments.html">Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../calculation-based-segments.html">Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../container-based-segments.html">Container Based Segments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bar-line-chart-grid">
+<h1>Bar/Line Chart - Grid<a class="headerlink" href="#bar-line-chart-grid" title="Permalink to this headline">¶</a></h1>
+<p>A Bar/Line Chart - Grid can display values of one or more calculations. This way, development of multiple calculations can be compared with each other.</p>
+<p>Multiple series with various Bar/Line types and modes can be configured.A legend can be displayed, that describes the calculation and can provide additional information. The position and size of the legend can be configured.</p>
+<p>Figure 1: Bar/Line Chart - Grid</p>
+<img alt="../../../_images/grid-bar-line-chart.png" class="flat align-center" src="../../../_images/grid-bar-line-chart.png" />
+<p>A Bar/Line Chart - Grid consist of one horizontal axis and any number of vertical axes. The horizontal axis can be configured by selecting a specific column. Results are represented by vertical axes. Each axis can display grid lines.</p>
+<div class="notice docutils container">
+<p>Some labels on horizontal and vertical axes may be hidden, when size of the segment is not big enough to fit all labels</p>
+</div>
+<p>There are multiple ways, the results can be presented.</p>
+<p>Figure 2: Two calculations with Bar types</p>
+<img alt="../../../_images/grid-bar-line-chart-two-series.png" class="flat align-center" src="../../../_images/grid-bar-line-chart-two-series.png" />
+<p>Grid consisting of calculations with a Bar type set can also be configured with horizontal value axis orientation.</p>
+<p>Figure 3: Horizontal value axis orientation</p>
+<img alt="../../../_images/bar-line-chart-grid-horizontal.png" class="flat align-center" src="../../../_images/bar-line-chart-grid-horizontal.png" />
+<div class="notice docutils container">
+<p>The horizontal value axis orientation supports only Bar type calculations. Calculations with any other type selected are hidden in the grid.
+Also, rotation of axis labels with not enough space is not possible when the horizontal value axis orientation is set.</p>
+</div>
+<p>Figure 4: Line type (blue) and Curved Line type (yellow), with vertical grid lines enabled</p>
+<img alt="../../../_images/grid-bar-line-chart-two-series-lines.png" class="flat align-center" src="../../../_images/grid-bar-line-chart-two-series-lines.png" />
+<p>Figure 5: Line Area type (blue) and Curved Line Area type (yellow), with vertical grid lines enabled</p>
+<img alt="../../../_images/grid-bar-line-chart-two-series-areas.png" class="flat align-center" src="../../../_images/grid-bar-line-chart-two-series-areas.png" />
+<p>Sometimes, multiple calculations provide similar results, that need to be displayed together. Results of such calculations can be stacked into one value.</p>
+<p>Figure 6: Timeline Chart with three stacked calculations</p>
+<img alt="../../../_images/grid-bar-line-chart-stacked-series.png" class="flat align-center" src="../../../_images/grid-bar-line-chart-stacked-series.png" />
+<p>Conditional styles can be configured for each calculation. Results are colored according to range result values falls under. This allows the user to easily see if the requirements for a specific agent were not met, or highlight exceptional results.</p>
+<p>Figure 7: Timeline Chart with conditional styles and threshold segments color mode.</p>
+<img alt="../../../_images/grid-bar-line-chart-ranges.png" class="flat align-center" src="../../../_images/grid-bar-line-chart-ranges.png" />
+<p>Figure 8: Timeline Chart with conditional styles and whole bar color mode.</p>
+<img alt="../../../_images/grid-bar-line-chart-ranges-whole-bar.png" class="flat align-center" src="../../../_images/grid-bar-line-chart-ranges-whole-bar.png" />
+<p>For more information about editing this segment, see <a class="reference internal" href="../../editing-layout/editing-calculation-based-segments/bar-line-chart-grid.html"><span class="doc">Bar/Line Chart - Grid</span></a> chapter.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="grid.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Grid
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="bar-line-chart-kpi-timeline.html">
+						Bar/Line Chart - KPI Timeline 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Users &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="User Attributes" href="users/user-attributes.html" />
+    <link rel="prev" title="Users and Roles" href="../users-and-roles.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Users</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../business-units.html">Business Units</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../users-and-roles.html">Users and Roles</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Users
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../business-units.html">Business Units</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data-filters.html">Data Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ip-filters.html">IP Filters</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../users-and-roles.html">Users and Roles</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Users</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="users/user-attributes.html">User Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="additional-readers.html">Additional Readers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message-authors.html">Message Authors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="administrators.html">Administrators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calculation-parameter-type-groups.html">Calculation Parameter Type Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fonts-client.html">Fonts - Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fonts-server.html">Fonts - Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notification-channels.html">Notification Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../themes.html">Themes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../connectors.html">Connectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="users">
+<h1>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h1>
+<p>Users are able to log into DW application.</p>
+<p><span class="heading-4">Importing Users</span></p>
+<p>If configured, users can be imported from Okta and Microsoft Entra Id tenants. For more information about tenant configuration see <a class="reference internal" href="../../system-settings/security.html"><span class="doc">Security</span></a> chapter.</p>
+<div class="notice docutils container">
+<p>When importing users from Microsoft Entra ID or Okta keep in mind:</p>
+<ul>
+<li><p>user can be imported only once within all Business Units</p>
+<img alt="../../../_images/user-already-exist.png" class="align-center" src="../../../_images/user-already-exist.png" />
+</li>
+<li><p>email is required for imported user. If user has no email configured in the Microsoft Entra Id or Okta, it is required to configure it in user detail after import</p></li>
+<li><p>import button is hidden if no tenants are configured</p></li>
+</ul>
+</div>
+<p>Users can be imported by clicking the import button.</p>
+<p>Figure 1: Import button</p>
+<img alt="../../../_images/import-button.png" class="flat align-center" src="../../../_images/import-button.png" />
+<p>In the following dialog, select the tenant from which to import users.</p>
+<p>Figure 2: Select a tenant</p>
+<img alt="../../../_images/import-tenant.png" class="flat align-center" src="../../../_images/import-tenant.png" />
+<p>Select users which should be imported and click “IMPORT”.</p>
+<p>Figure 3: Select users</p>
+<img alt="../../../_images/import-users.png" class="flat align-center" src="../../../_images/import-users.png" />
+<div class="notice docutils container">
+<p>When typing in the search bar, the defined term is searched for in all columns. However, it is necessary to enter the term from the beginning.</p>
+<p>For example, if you want to search for user “Benjamin”:</p>
+<ul class="simple">
+<li><p>“enjamin” or “jamin” will not match the desired user</p></li>
+<li><p>“ben” or “benja” will match the user</p></li>
+</ul>
+</div>
+<p><span class="heading-4">Creating New User</span></p>
+<p>When new user is being created panel contains:</p>
+<p>Figure 1: Creating New User</p>
+<img alt="../../../_images/users-create-user.png" class="flat align-center" src="../../../_images/users-create-user.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Username</strong></dt><dd><p><em>Required</em> <br>
+The username used for identification into the application.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>First Name</strong></dt><dd><p>User’s first name.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Last Name</strong></dt><dd><p>User’s last name.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Full Name</strong></dt><dd><p>User’s full name displayed in DW.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Email</strong></dt><dd><p><em>Required if user is imported from Microsoft Entra ID or Okta</em> <br>
+User’s Email address.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>User Attribute Key</strong></dt><dd><p>User identity in an external system, that is used to map user attributes to this user.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Is System Administrator</strong></dt><dd><p>Whether user has full access to DW application. Only system administrators can assign this permission to other users. For security reasons assigning full permissions require confirmation to avoid accidental assignment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Is Tenant Administrator</strong></dt><dd><p>Whether user has access to Business Unit administration in DW application. System administrators and tenant administrators can assign this permission to other users. Tenant administrator has access to all Business Units except the “System” Business Unit.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p><span class="heading-4">Setting User’s Password</span></p>
+<p>User’s password can be set by clicking <em class="fa fa-key"></em> button located in user panel toolbar. This button is visible only after user has been created on server (after first save).</p>
+<div class="notice docutils container">
+<p>Password cannot be set or changed for imported users.</p>
+</div>
+<p>Figure 4: SET PASSWORD button</p>
+<img alt="../../../_images/users-reset-password.png" class="flat align-center" src="../../../_images/users-reset-password.png" />
+<p>After clicking this button Set Password dialog is opened containing:</p>
+<p>Figure 5: Set password dialog</p>
+<img alt="../../../_images/users-set-dialog.png" class="flat align-center" src="../../../_images/users-set-dialog.png" />
+<ul>
+<li><dl class="simple">
+<dt><strong>Password</strong></dt><dd><p><em>Required</em> <br>
+User’s password.</p>
+</dd>
+</dl>
+<div class="attention docutils container">
+<p>Make sure to copy the password before setting since dialog will be automatically closed upon successful set. The password will not be available afterwards.</p>
+</div>
+</li>
+<li><dl class="simple">
+<dt><strong>Confirm Password</strong></dt><dd><p><em>Required</em> <br>
+Confirm the set password.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>User must change password at next sign in</strong></dt><dd><p><em>Required</em> <br>
+If enabled, next time a user logs in, he will be prompted to set a new password.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Figure 6: New password</p>
+<img alt="../../../_images/users-unlock-user-password.png" class="flat align-center" src="../../../_images/users-unlock-user-password.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>New Password</strong></dt><dd><p><em>Required</em> <br>
+User’s new password.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Confirm Password</strong></dt><dd><p><em>Required</em> <br>
+Confirm the new password.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="users/user-attributes.html">User Attributes</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../users-and-roles.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Users and Roles
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="users/user-attributes.html">
+						User Attributes 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

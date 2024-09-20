@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Connector Installation &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Connector Installation</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Connector Installation
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="connector-installation">
+<h1>Connector Installation<a class="headerlink" href="#connector-installation" title="Permalink to this headline">¶</a></h1>
+<p>Before the installation, make sure the connector version is compatible with the DW version. DW and its connectors are considered to be compatible, when both minor and major version numbers match.</p>
+<p>Example: <br>
+- DW 8.0.1 is compatible with connector 8.0.3 <br>
+- DW 8.1.0 is NOT compatible with connector 8.0.3 <br>
+- DW 8.0.1 is NOT compatible with connector 8.1.0</p>
+<p>Extract 2Ring_DW_DEMO_Connector_vX.Y.Z.zip file – vX.Y.Z indicates the version of the connector. It is recommended to place the files in C:\Program Files\2Ring\DW\Connectors\XYZ.</p>
+<div class="attention docutils container">
+<p>Do not remove the unzipped package after the installation.</p>
+</div>
+<p>To perform an action such as install or uninstall you need to supply action specific parameters either in an xml file or later at runtime once prompted. Most frequent actions have a pre-created parameters.xml file prepared in the distribution package.</p>
+<ul class="simple">
+<li><p>Required parameters that are not in an XML file or their value is left blank will be prompted for value during runtime.</p></li>
+<li><p>Optional parameters that are not in an XML file will be prompted for value during runtime. If an optional parameter value is left blank, the parameter will be ignored.</p></li>
+<li><p>Passwords entered in the xml files will not get displayed during runtime.</p></li>
+<li><p>During runtime, some parameters may require confirmation. The user will be asked to enter the value twice.</p></li>
+</ul>
+<p>To prepare for install, uninstall or upgrade, follow these steps:</p>
+<ol class="arabic">
+<li><dl>
+<dt><strong>Configure connection to SQL Server instance where DW database is installed.</strong></dt><dd><ul class="simple">
+<li><p>Open Connection.xml</p></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ServerName&gt;&lt;/ServerName&gt;</span>
+<span class="nt">&lt;DBName&gt;&lt;/DBName&gt;</span>
+<span class="nt">&lt;UserName&gt;&lt;/UserName&gt;</span>
+<span class="nt">&lt;Password&gt;&lt;/Password&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Edit the following fields if necessary:</strong></dt><dd><ul>
+<li><dl>
+<dt><strong>ServerName</strong> – the address (hostname or IP address\InstanceName) of the SQL server, that contains the DW database</dt><dd><div class="attention docutils container">
+<p>If the SQL Server does not run on the default port, use format: hostname or IP address\InstanceName, Port</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><p><strong>DBName</strong> – the name for the Demo Connector database</p></li>
+<li><dl>
+<dt><strong>UserName (Optional)</strong> – the username of SQL user that will be used to create the Demo connector database</dt><dd><div class="attention docutils container">
+<p>Leave blank to use integrated security mode. The user has to have the sysadmin role assigned in the SQL Server.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Password (Optional)</strong> – the password of the SQL user</dt><dd><div class="attention docutils container">
+<p>If left blank, the user will be prompted to enter the password at runtime. If the UserName is left blank, the Password must be blank as well.,</p>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Save the file.</strong></p></li>
+<li><dl>
+<dt><strong>Open InstallParameters.xml</strong></dt><dd><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Parameter</span> <span class="na">Name=</span><span class="s">&quot;ConnectorName&quot;</span> <span class="na">Value=</span><span class="s">&quot;Demo&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Parameter</span> <span class="na">Name=</span><span class="s">&quot;DWDatabase&quot;</span> <span class="na">Value=</span><span class="s">&quot;DW&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Edit the following fields if necessary:</strong></dt><dd><ul class="simple">
+<li><p>ConnectorName – the name of the connector</p></li>
+<li><p>DWDatabase – the name of the DW database</p></li>
+</ul>
+<p>Example of filled in parameters:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Parameter</span> <span class="na">Name=</span><span class="s">&quot;ConnectorName&quot;</span> <span class="na">Value=</span><span class="s">&quot;Demo&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Parameter</span> <span class="na">Name=</span><span class="s">&quot;DWDatabase&quot;</span> <span class="na">Value=</span><span class="s">&quot;DW&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p><strong>Save the file</strong></p></li>
+<li><p><strong>Open the command prompt as Administrator and navigate to the extracted directory</strong></p></li>
+<li><p><strong>Run Install.cmd</strong></p></li>
+<li><dl class="simple">
+<dt><strong>Run InstallService.cmd</strong></dt><dd><ul class="simple">
+<li><p>Enter the name and password of the DW Application user once prompted</p></li>
+<li><p>Enter the display name for the connector service once prompted</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+<p><span class="heading-4">Documentation Update</span></p>
+<p>In case of installing, or upgrading a connector, which is a higher version than the currently installed version of 2Ring Dashboards and Wallboards, a manual documentation update is recommended. <br>
+To do that, open the documentation zip-file, which is provided with the connector, and extract the files in the DW deploy folder -&gt; docs -&gt; connectors. Replace the files in the destination, if prompted.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+				
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Upgrade &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Upgrade</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+				<span class="reference active">
+					Upgrade
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="upgrade">
+<h1>Upgrade<a class="headerlink" href="#upgrade" title="Permalink to this headline">¶</a></h1>
+<p>DW Connector upgrade is always part of a bigger process described in the DW Deployment Guide, only follow the steps below as a part of that process:</p>
+<ol class="arabic simple">
+<li><p><strong>Edit Connection.xml</strong> - see <a class="reference internal" href="../installation-guide/connector-installation.html"><span class="doc">Connector Installation</span></a> chapter for more details.</p></li>
+<li><p><strong>Edit UpgradeParameters.xml</strong> - DWDatabase – the name of the DW database</p></li>
+<li><p><strong>Run Upgrade.cmd</strong></p></li>
+<li><p><strong>Run InstallService.cmd</strong></p></li>
+</ol>
+<div class="section" id="re-registration">
+<h2>Re-registration<a class="headerlink" href="#re-registration" title="Permalink to this headline">¶</a></h2>
+<p>When performing an upgrade of the DW application only, the connector has to be re-registered after the upgrade should the name of the DW database change. To re-register the connector, follow these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Edit Connection.xml</strong> - see <a class="reference internal" href="../installation-guide/connector-installation.html"><span class="doc">Connector Installation</span></a> chapter for more details.</p></li>
+<li><p><strong>Run Register.cmd</strong> - Enter the name of the DW database once prompted</p></li>
+</ol>
+<p><span class="heading-4">Documentation Update</span></p>
+<p>In case of installing, or upgrading a connector, which is a higher version than the currently installed version of 2Ring Dashboards and Wallboards, a manual documentation update is recommended. <br>
+To do that, open the documentation zip-file, which is provided with the connector, and extract the files in the DW deploy folder -&gt; docs -&gt; connectors. Replace the files in the destination, if prompted.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+				
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Historical Intervals &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="KPI" href="kpi.html" />
+    <link rel="prev" title="Dynamic Filter" href="editing-calculation-grid/dynamic-filter.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Historical Intervals</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Historical Intervals
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="historical-intervals">
+<h1>Historical Intervals<a class="headerlink" href="#historical-intervals" title="Permalink to this headline">¶</a></h1>
+<p>Numerical calculations can be configured to display results from historical time intervals.</p>
+<div class="attention docutils container">
+<p>Calculations using historical intervals starts collecting data from the time such interval was configured.</p>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>Interval Type</strong></dt><dd><p>Specifies the type of interval displayed value should be from.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>15 Minutes</strong></dt><dd><p>8:00 - 8:15, 8:15 - 8:30, ….</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>30 Minutes</strong></dt><dd><p>8:00 - 8:30, 8:30 - 9:00, …</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Hour</strong></dt><dd><p>8:00 - 9:00, 9:00 - 10:00, …</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Day</strong></dt><dd><p>today, yesterday, …</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Week</strong></dt><dd><p>this week, previous week, …</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Month</strong></dt><dd><p>this month, previous month, …</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Year</strong></dt><dd><p>this year, previous year, …</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Which Interval</strong></dt><dd><p>Lets an user choose from which interval, of selected type, data should be displayed.
+For each interval type current, previous or other interval can be chosen. If other option is chosen, how far into the past the displayed interval is has to be provided.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Value in Interval</strong></dt><dd><p>Defines, which value from the selected interval should be displayed.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>First</strong></dt><dd><p>The first recorded result of the configured interval is displayed</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Last</strong></dt><dd><p>The last recorded result of the configured interval is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Min</strong></dt><dd><p>The minimal recorded result of the configured interval is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Max</strong></dt><dd><p>The greatest recorded result of the configured interval is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Delta</strong></dt><dd><p>The difference between the Last result of the configured interval and the one before is displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Week-to-date</strong></dt><dd><p><em>Available only when “Day” interval type is selected and when selected calculation function is cumulative.</em> <br>
+The sum of all last values of every day, since the start of the week (defined by selected interval) until selected interval.</p>
+<div class="attention docutils container">
+<p>This option is experimental. In some cases it can produce unexpected values.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Month-to-date</strong></dt><dd><p><em>Available only when “Day” interval type is selected and when selected calculation function is cumulative.</em> <br>
+The sum of all last values of every day, since the start of the month (defined by selected interval) until selected interval.</p>
+<div class="attention docutils container">
+<p>This option is experimental. In some cases it can produce unexpected values</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Year-to-date</strong></dt><dd><p><em>Available only when “Day”, “Week” or “Month” interval type is selected and when selected calculation function is cumulative.</em> <br>
+The sum of all last values of every instance of the given interval, since the start of the year (defined by selected interval) until selected interval.</p>
+<div class="attention docutils container">
+<p>This option is experimental. In some cases it can produce unexpected values</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Total</strong></dt><dd><p><em>Available only when “Week”, “Month” or “Year” interval type is selected and when selected calculation function is cumulative.</em> <br>
+The sum of last values of every day in selected interval.</p>
+<div class="attention docutils container">
+<p>This option is experimental. In some cases it can produce unexpected values</p>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="editing-calculation-grid/dynamic-filter.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Dynamic Filter
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="kpi.html">
+						KPI 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

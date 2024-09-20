@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bar/Line Chart - Grid &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Value Axes" href="bar-line-chart-grid/value-axes.html" />
+    <link rel="prev" title="Row Conditional Styles" href="grid/row-conditional-styles.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Bar/Line Chart - Grid</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Bar/Line Chart - Grid
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Bar/Line Chart - Grid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bar-line-chart-grid/value-axes.html">Value Axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bar-line-chart-grid/series.html">Series</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="word-cloud.html">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bar-line-chart-grid">
+<h1>Bar/Line Chart - Grid<a class="headerlink" href="#bar-line-chart-grid" title="Permalink to this headline">¶</a></h1>
+<p>A Bar/Line Chart - Grid can display values of one or more calculations. This way, development of multiple calculations can be compared with each other.</p>
+<div class="notice docutils container">
+<p>For general information about this segment, see <a class="reference internal" href="../../what-is-layout/calculation-based-segments/bar-line-chart-grid.html"><span class="doc">Bar/Line Chart - Grid</span></a> chapter.</p>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>External Id</strong></dt><dd><p>An unique id, that is used to access this Word Cloud via the API. Using this id, the Word Cloud can be used by external applications, such as 2Ring Gadgets. The External Id has to be unique across the entire Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation</strong></dt><dd><p>The calculation options control, how the displayed values are calculated.
+<br> For calculation options, see <a class="reference internal" href="editing-table-valued-calculations.html"><span class="doc">Editing Table-Valued Calculations</span></a> chapter.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Use Shared Calculation</strong></dt><dd><p>Whether shared calculation should be used for generating results.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shared Calculation</strong></dt><dd><p><em>Available only if “Use Shared Calculation” is enabled</em> <br>
+A shared calculation to be used.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Appearance</strong></dt><dd><p>The style of the Timeline Chart</p>
+<ul>
+<li><dl>
+<dt><strong>Value Axis Orientation</strong></dt><dd><p>Orientation of the value axis. <br>
+Available options are: <em>Horizontal</em> and <em>Vertical</em></p>
+<div class="notice docutils container">
+<p>Horizontal value axis orientation supports only Bar type calculations. Calculations with any other type selected are hidden in the grid.
+Also, rotation of axis labels with not enough space is not possible when the horizontal value axis orientation is set.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Legend</strong></dt><dd><p>When enabled, the chart legend is displayed.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p><em>Required</em> <br>
+Position of legend.
+<br> Available options are <em>Left</em>, <em>Right</em>, <em>Top</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text in legend.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background in legend.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p><em>Inheritable</em> <br>
+Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Label Axis</strong></dt><dd><p>Configuration of horizontal chart axis</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Column</strong></dt><dd><p><em>Required</em> <br>
+A column that represents the label axis.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Sort Column</strong></dt><dd><p>The column, data should be ordered by.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Sorting Direction</strong></dt><dd><p>Whether the column should be ordered in ascending or descending order.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Display Format</strong></dt><dd><p>Format in which value should be displayed. When Raw is selected, the value is displayed without any transformation.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Display Format</strong></dt><dd><p><em>Only if Custom is selected as a Display Format</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#custom-display-format">Custom Display Format</a> <em>section</em>. <br>
+Custom format in which value should be displayed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Auto Rotate Labels</strong></dt><dd><p>Whether axis labels should be automatically rotated when there is not enough space for them.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+<em>Labels do not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p><em>Inheritable</em> <br>
+Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Grid Lines</strong></dt><dd><p>Whether the lines, separating the items of the axis should be displayed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Plot Area</strong></dt><dd><p>Configuration of the chart’s plot area.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Margin</strong></dt><dd><p><em>Inheritable</em> <br>
+Controls the height of the empty space above the plot area. Is measured in permilles of the whole Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the plot area.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Colors</strong></dt><dd><p>For ease of access, all aforementioned color related options are once again located in the Colors group.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the text. This color is applied to both axes labels and text in legend.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Plot Area Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Background color of the plot area.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Axes Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the both axes lines.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Grid Lines Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the horizontal and vertical grid lines.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value Axes</strong></dt><dd><p><em>Manually orderable</em> <br>
+List of Chart’s value axes. For more information see <a class="reference internal" href="bar-line-chart-grid/value-axes.html"><span class="doc">Value Axes</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Series</strong></dt><dd><p><em>Manually orderable</em> <br>
+List of Chart’s series. For more information see <a class="reference internal" href="bar-line-chart-grid/series.html"><span class="doc">Series</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bar-line-chart-grid/value-axes.html">Value Axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bar-line-chart-grid/series.html">Series</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="grid/row-conditional-styles.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Row Conditional Styles
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="bar-line-chart-grid/value-axes.html">
+						Value Axes 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

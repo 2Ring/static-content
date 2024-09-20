@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Columns &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Default Settings - Schema" href="columns/schema.html" />
+    <link rel="prev" title="Grid Calculation Functions" href="../grid-calculation-functions.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Columns</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../connectors.html">Connectors</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-calculation-functions.html">Grid Calculation Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Columns
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../business-units.html">Business Units</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../connectors.html">Connectors</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../capabilities.html">Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-calculation-functions.html">KPI Calculation Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-calculation-functions.html">Grid Calculation Functions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Columns</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="columns/schema.html">Default Settings - Schema</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="parameters.html">Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calculation-parameter-types.html">Calculation Parameter Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import-functions.html">Import Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upgrade.html">Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uninstallation.html">Uninstallation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="columns">
+<h1>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h1>
+<p>Custom computed (derived) Grid columns can be added to Grid calculation functions. Derived columns offer the flexibility to add columns that do not come with the connector when it is installed.</p>
+<div class="notice docutils container">
+<p>Derived Grid columns cannot be used in other derived columns.</p>
+</div>
+<div class="notice docutils container">
+<p>Custom functions dbo.MinNumeric(), dbo.MaxNumeric(), dbo.MinDateTime() and dbo.MaxDateTime() can be used to compare two values to return either the lesser or greater one.</p>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p><em>Required</em> <br>
+The name of the Grid calculation function column.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Display Name</strong></dt><dd><p>A name that appears as the grid column’s header when the grid calculation function column is selected as column type. If the display name is not filled, the header is automatically set from the grid calculation function column’s name in which all words are separated by a space and all non-alphanumeric characters are also replaced by a space.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Description</strong></dt><dd><p>A description of the Grid calculation function Column which appears in dropdown tooltips in both Administration Application and Layout Editor.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Data Type</strong></dt><dd><p><em>Required</em> <br>
+Indicates the type of value associated with this column.|br|
+Available options are <em>Numeric</em>, <em>Text</em>, <em>DateTime</em> and <em>TimeSpan</em>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Storage Data Type</strong></dt><dd><p>Actual column type in SQL database.
+<br> List of all supported types is available <a class="reference external" href="https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-2016">here</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation Parameter Type</strong></dt><dd><p>Determines a calculation parameter type whose values appear in this column.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value Type</strong></dt><dd><p>Whether calcualtion parameter type name or calculation parameter type value appears in this column.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Aggregation Function</strong></dt><dd><p>A method how to merge values if multiple rows are returned. This property also defines how the total value of the column is calculated. <br>
+Available options are <em>Average</em>, <em>Count</em>, <em>Count Distinct</em>, <em>Count Not Null</em>, <em>First</em>, <em>Last</em>, <em>Max</em>, <em>Median</em>, <em>Min</em>, <em>Standard Deviation</em>, <em>Sum</em>, <em>Variance</em> and <em>Weighted Average</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Is Derived</strong></dt><dd><p><em>Required</em> <br>
+Whether this column is natively calculated by connector or if its additionally calculated (derived) from existing columns. For derived columns <strong>Expression</strong> has to be provided.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Expression</strong></dt><dd><p><em>Available only when column is derived.</em> <br>
+T-SQL expression to compute the column. Other column values can be used in the expression by using format column_name. Simple or advanced SQL logic can be used in the expression. This includes simple math operations, cast operations, etc. If a number with a decimal point is desired, the expressions have to be multiplied by 1.0.</p>
+<p><strong>Example</strong>: Create a message column that displays “Please end the call” when an agent is talking over 15 minutes. The expression would be:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>CASE
+    WHEN Duration &gt; 900 AND State = &#39;Talking&#39;
+    THEN &#39;Please end the call.&#39;
+END
+</pre></div>
+</div>
+<div class="notice docutils container">
+<p>If the “DateTime” is used as a data type for a derived column, expression has to evaluate to the Unix Time format in milliseconds. For more information about the Unix Time and conversion to Unix Time, visit <a class="reference external" href="https://www.unixtimestamp.com/">this</a> website.</p>
+</div>
+<div class="attention docutils container">
+<p>If the created expression is invalid, all Grids using that Grid calculation function will become invalid as well.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Default Settings</strong></dt><dd><p>A JSON field that contains the default settings for entities using the Grid calculation function column. These settings are applied when the Grid calculation function column is selected.
+The first level contains a type of the entity and the second level contains default settings for the associated entity type. <br>
+All available settings are listed in the <a class="reference external" href="columns/schema.html">Default Settings - Schema</a> chapter.</p>
+<p><strong>Example :</strong></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;gridColumn&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;widthRatio&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="nt">&quot;displayFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;{0:F0}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;horizontalAlignment&quot;</span><span class="p">:</span> <span class="s2">&quot;Right&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;presentationType&quot;</span><span class="p">:</span> <span class="s2">&quot;Alphanumeric&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;barLineChartSeries&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;displayFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;{0:F0}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Metadata</strong></dt><dd><p>A user can view or edit a metadata.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="columns/schema.html">Default Settings - Schema</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../grid-calculation-functions.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Grid Calculation Functions
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="columns/schema.html">
+						Default Settings - Schema 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

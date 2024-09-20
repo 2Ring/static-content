@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Task States &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Task Statistics" href="task-statistics.html" />
+    <link rel="prev" title="Task List" href="task-list.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Task States</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../servicenow.html">ServiceNow</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html">Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Task States
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../servicenow.html">ServiceNow</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">KPI Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">Grid Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="assignment-group-states.html">Assignment Group States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assignment-group-statistics.html">Assignment Group Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="task-list.html">Task List</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Task States</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">Calculation Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-mapped-parameters">Column-mapped Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="task-statistics.html">Task Statistics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="task-states">
+<h1>Task States<a class="headerlink" href="#task-states" title="Permalink to this headline">¶</a></h1>
+<p>This Grid function calculates task states.</p>
+<div class="notice docutils container">
+<p>All data for this function is collected using ServiceNow Aggregate API. In case the Aggregate API is disabled, ServiceNow Table API is used.</p>
+</div>
+<div class="section" id="columns">
+<h2>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Table Name</strong> – the name of the task table.</p></li>
+<li><p><strong>Active</strong> – the number of currently active tasks.</p></li>
+<li><p><strong>State</strong> – the number of tasks, currently in state defined in the parameter.</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Assignment Group</strong> – list of assignment group names.</p></li>
+<li><p><strong>Company Name</strong> - list of company names.</p></li>
+<li><p><strong>Priority</strong> - list of task priorities.</p></li>
+<li><p><strong>State</strong> - list of task states.</p></li>
+<li><p><strong>Table</strong> - list of task tables.</p></li>
+</ul>
+</div>
+<div class="section" id="column-mapped-parameters">
+<h2>Column-mapped Parameters<a class="headerlink" href="#column-mapped-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Table Name</strong> - Table calculation parameter value</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="task-list.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Task List
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="task-statistics.html">
+						Task Statistics 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

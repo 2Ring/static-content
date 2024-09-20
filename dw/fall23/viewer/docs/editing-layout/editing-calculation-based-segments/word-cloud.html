@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Word Cloud &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Condition" href="condition.html" />
+    <link rel="prev" title="Row Filters" href="pie-charts/row-filters.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Word Cloud</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Word Cloud
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing-scalar-valued-calculations.html">Editing Scalar-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-table-valued-calculations.html">Editing Table-Valued Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="historical-intervals.html">Historical Intervals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kpi.html">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calendar.html">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grid.html">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-grid.html">Bar/Line Chart - Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bar-line-chart-kpi-timeline.html">Bar/Line Chart - KPI Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pie-chart.html">Pie Chart</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="condition.html">Condition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="word-cloud">
+<h1>Word Cloud<a class="headerlink" href="#word-cloud" title="Permalink to this headline">¶</a></h1>
+<p>Word Cloud graphically displays words in a size that depends on the weight of the word. Size of the words in a source is directly proportional to weight.</p>
+<div class="notice docutils container">
+<p>For general information about this segment, see <a class="reference internal" href="../../what-is-layout/calculation-based-segments/word-cloud.html"><span class="doc">Word Cloud</span></a> chapter.</p>
+</div>
+<ul>
+<li><dl class="simple">
+<dt><strong>External Id</strong></dt><dd><p>An unique id, that is used to access this Word Cloud via the API. Using this id, the Word Cloud can be used by external applications, such as 2Ring Gadgets. The External Id has to be unique across the entire Business Unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Calculation</strong></dt><dd><p><em>For calculation options, see</em> <a class="reference internal" href="editing-table-valued-calculations.html"><span class="doc">Editing Table-Valued Calculations</span></a> <em>chapter.</em> <br>
+The calculation options control, how the displayed values are calculated.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Use Shared Calculation</strong></dt><dd><p>Whether shared calculation should be used for generating results.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shared Calculation</strong></dt><dd><p><em>Available only if “Use Shared Calculation” is enabled</em> <br>
+A shared calculation to be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Column</strong></dt><dd><p>A column from the source table, from which the text will be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Weight Column</strong></dt><dd><p>A column from the source table that indicates the weight of the words.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Appearance</strong></dt><dd><p>The style of the Word Cloud.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#text-style">Text Style</a> <em>section</em>. <br>
+<em>Word Cloud does not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Spacing</strong></dt><dd><p>A gap between words.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Out Of Bound Behavior</strong></dt><dd><p><em>Inheritable</em> <br>
+Dictates what should happen with the word if it exceeds the source boundaries.</p>
+<p>Available options are:</p>
+<p><em>Hide</em> - hides the word that exceeds the Word Cloud boundaries. <br></p>
+<div class="notice docutils container">
+<p>If there is any word hidden due to exceeding the Word Cloud boundaries, the user will be notified in a pop up. Pop up appears only during editing of layout.</p>
+</div>
+<p><em>Shrink To Fit</em> - reduces the size of a word that exceeds the Word Cloud boundaries to fit into them.</p>
+<div class="notice docutils container">
+<p>If there is a size reduction in any word due to exceeding the Word Cloud boundaries, the user will be notified in a pop up. Pop up appears only during editing of layout.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Word Sizing</strong></dt><dd><p>Word size options.</p>
+<ul>
+<li><dl>
+<dt><strong>Size Parameter</strong></dt><dd><p><em>Inheritable</em> <br>
+Parameter on the basis of which the word size is calculated.</p>
+<p>Available options are: <em>Weight</em> and <em>Weight Order</em>:</p>
+<p><em>Weight</em> - the size of the word depends on the weight assigned to the word. <br>
+<em>Weight Order</em> - the size of the word is calculated on the basis of the order in which the word is dependent on the weight assigned to the word.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Manual Font Size Coefficients</strong></dt><dd><p>Whether the word size coefficients should be entered manually.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Minimum Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available only if “Manual Font Size Coefficient” is enabled</em> <br>
+Minimum font size coefficient expresses relation of text size to height of the source. For example the value of 0.5 makes the header text half the size of the source. The font size will never drop below minimum size set.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Maximum Font Size Coefficient</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>Available only if “Manual Font Size Coefficient” is enabled</em> <br>
+Maximum font size coefficient expresses relation of text size to height of the source. For example the value of 0.5 makes the text half the size of the source. The font size will never exceed the maximum size set.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Sizing Function</strong></dt><dd><p>The function by which the word size is calculated.</p>
+<p>Available options are:</p>
+<p><em>Parabolic</em> -  differences in word size change parabolically, depending on the weight of the word <br>
+<em>Exponential</em> - differences in word size change exponentialy, depending on the weight of the word. Differences in size of the words raises quicker than by using a parabolic function.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Parabolic Function Exponent</strong></dt><dd><p><em>Available only if “Parabolic” Sizing Function is selected</em> <br>
+Exponent, according to which the word size is calculated. The higher the value, the greater the difference between word sizes.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Exponential Function Base</strong></dt><dd><p><em>Available only if “Exponential” Sizing Function is selected</em> <br>
+A value, according to which the word size is calculated. The higher the value, the greater the difference between word sizes.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Word Rotation</strong></dt><dd><p>Word rotation options.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Minimum Rotation Angle</strong></dt><dd><p><em>Inheritable</em> <br>
+Minimum angle for word rotation in degrees. Word rotation will never be at a lower angle than a value set.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Maximum Rotation Angle</strong></dt><dd><p><em>Inheritable</em> <br>
+Maximum angle for word rotation in degrees. Word rotation will never exceed this angle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Rotation Steps</strong></dt><dd><p><em>Inheritable</em> <br>
+The number of different angles of rotation of the word to be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Rotate Probability</strong></dt><dd><p><em>Inheritable</em> <br>
+The probability od words rotation in percent.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Colors</strong></dt><dd><p>Color options.</p>
+<ul>
+<li><dl>
+<dt><strong>Color Mode</strong></dt><dd><p><em>Inheritable</em> <br>
+Available options are:</p>
+<p><em>Random</em> - Randomly selcted color for each word. <br>
+<em>Columns</em> - Every word is colored according to a hexadecimal value assigned to a word in a selected column. <br>
+<em>Fixed</em> - A fixed color for all words.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>Available only if “Fixed” Color Mode is selected</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the words.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Color Column</strong></dt><dd><p><em>Available only if “Columns” Color Mode is selected</em> <br>
+A column, according to which the words will be colored.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Inheritable</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the Word Cloud’s background.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="pie-charts/row-filters.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Row Filters
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="condition.html">
+						Condition 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2221 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Themes &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/fontawesome.min.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/main.js"></script>
+    <script src="../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Connectors" href="../connectors.html" />
+    <link rel="prev" title="Notification Channel Type Settings" href="notification-channels/settings.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../index.html" id="headerImgWrapper">
+			<img src="../../_static/2ring_logo.jpg">
+		</a>
+		<span>Themes</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../business-units.html">Business Units</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Themes
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigating-the-tool.html">Navigating the Tool</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../business-units.html">Business Units</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="data-filters.html">Data Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ip-filters.html">IP Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users-and-roles.html">Users and Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculation-parameter-type-groups.html">Calculation Parameter Type Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fonts-client.html">Fonts - Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fonts-server.html">Fonts - Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notification-channels.html">Notification Channels</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Themes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#layout-segment">Layout Segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#banner">Banner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bar-line-chart">Bar/Line Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#calendar">Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clock">Clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grid">Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kpi">KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label">Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nested-layout-widget">Nested Layout/Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pdf-document">PDF Document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pie-chart">Pie Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sequence">Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shape">Shape</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ticker">Ticker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#web-page">Web Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#word-cloud">Word Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#youtube-video">YouTube Video</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colors">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text-styles">Text Styles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../connectors.html">Connectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notification-settings.html">Notification Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system-settings.html">System Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Security</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="themes">
+<h1>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h1>
+<p>Themes are used to define a default style for each type of segment in particular Business Unit. Themes are reusable and can be applied to any number of Layouts, thus saving time when multiple Layouts should look the same. This makes styling easy by changing everything in one central location. <br></p>
+<div class="notice docutils container">
+<p>Default themes are stored in the distribution package in the <em>Assets\Themes</em> folder in case, if any of them needs to be restored.</p>
+</div>
+<p>Themes can be exported into a zip file by clicking the export button.</p>
+<p>Figure 1: Export button</p>
+<img alt="../../_images/themes-export.png" class="flat align-center" src="../../_images/themes-export.png" />
+<p>Exported theme can be imported in the DW by clicking the import button.</p>
+<div class="notice docutils container">
+<p>Themes can be exported/imported between DW versions without any restrictions.</p>
+</div>
+<p>Figure 2: Import button</p>
+<img alt="../../_images/themes-import.png" class="flat align-center" src="../../_images/themes-import.png" />
+<p>Locate the exported zip file and select, how the static content, used within the theme, should be imported. Available options are:</p>
+<ul class="simple">
+<li><p><strong>Import And Rename If Exists</strong> - static content files are imported. In case a file with the same name already exists, the imported file is renamed.</p></li>
+<li><p><strong>Import And Replace If Exists</strong> - static content files are imported. In case a file with the same name already exists, it is replaced by the imported file.</p></li>
+<li><p><strong>Import If Not Exists</strong> - static content files are only imported if they do not already exist.</p></li>
+</ul>
+<p>Figure 3: Import dialog</p>
+<img alt="../../_images/themes-dialog.png" class="flat align-center" src="../../_images/themes-dialog.png" />
+<p>To create a new Theme, click the <span class="button">+</span> button located above the list of themes. In the following dialog, select an existing theme, from which the new theme will be copied.</p>
+<div class="notice docutils container">
+<p>Value for all options in Themes is required.</p>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>The name of a theme.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Type</strong></dt><dd><p>Type of the Layout’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Layout’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Image</strong></dt><dd><p>Image of the Layout’s background.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="layout-segment">
+<h2>Layout Segment<a class="headerlink" href="#layout-segment" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="simple">
+<dt><strong>Corner Radius</strong></dt><dd><p>Corner radius of the segment measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Margin</strong></dt><dd><p>Margin of the ticker measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shadow</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#shadow-style">Shadow Style</a> <em>section.</em> <br>
+Shadow of the segment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Transparency</strong></dt><dd><p>Transparency of layout segments measured in percents.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Borders</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#borders-style">Borders Style</a> <em>section.</em> <br>
+The style, width and color settings for the segments borders.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Titles Style</strong></dt><dd><p>Settings applied to source titles.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Visibility</strong></dt><dd><p>Whether the title should be visible.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Content</strong></dt><dd><p>Content of the title. <br>
+Available options are <em>Title</em>, <em>Paging Info</em> and <em>Title and Paging Info</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p>Position of the title. If <em>Float on Top</em> or <em>Float on Bottom</em> is selected, title floats over the segment which may cause overlapping. <br>
+Available options are <em>Float on Top</em>, <em>Float on Bottom</em>, <em>Top</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of segment titles.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of title text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the title background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.
+<br> Ticker Items aren’t affected by this option.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis.</p>
+<p>Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the segment’s title and segment’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Render As Link Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold, italic or underlined text should be used in title rendered as link.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="banner">
+<h2>Banner<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of text</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of background</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the vertical axis. <br>
+Available options are <em>Top</em>, <em>Middle</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the banner text and banner’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="bar-line-chart">
+<h2>Bar/Line Chart<a class="headerlink" href="#bar-line-chart" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Plot Area Margin</strong></dt><dd><p>Setting for an amount of empty space between top of the chart and header. In case of horizontal value axis orientation, plot area margin defines an amount of empty space between the end of the chart (maximum value on the horizontal axis) and other entity such as the legend. If there is no other entity, this setting defines the space between the end of the chart and the segment’s border.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Headers</strong></dt><dd><p>The style of headers.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of header’s text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The background color used in the headers</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of headers.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Colors</strong></dt><dd><p>The color settings used in a timeline chart.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of a text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of a background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Plot Area Background</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of a plot area background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Axes</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of an axes lines.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Grid Lines</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of a grid lines.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Legend</strong></dt><dd><p>The style of legend in the bar/line chart.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The background color of the legend.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p>The size of the labels. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Label Axis</strong></dt><dd><p>Settings for label axis.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+<em>Label axis does not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p>The size of a label axis font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value Axis</strong></dt><dd><p>Settings for value axis.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Title</strong></dt><dd><p>Settings for value axis titles.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+<em>Value axis does not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p>The size of a text. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Labels</strong></dt><dd><p>Settings for value axis labels.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+<em>Labels do not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p>The size of a text. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Thresholds</strong></dt><dd><p>Settings for thresholds.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Line Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#borders-style">Borders Style</a> <em>section.</em> <br>
+The style, width and color of the line.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Labels</strong></dt><dd><p>Settings for thresholds labels.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section</em>. <br>
+Type of font to use and whether bold, italic or underlined text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p>Position of the label. <br>
+<em>Available options are “Left”, “Center” and “Right”</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section</em>. <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section</em>. <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p>Size of the font. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Series</strong></dt><dd><p>Settings for series.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Line Width</strong></dt><dd><p>Width of a line when values in series are presented as line, curved line, line area or curved line area. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Colors</strong></dt><dd><p>The color settings of chart series.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Value</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the value.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Value Labels</strong></dt><dd><p>Settings of value labels.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+<em>Value labels do not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+The color of text used in value labels.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p>The size of a text. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Null Value</strong></dt><dd><p>A custom value that is displayed when the value is not available.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="calendar">
+<h2>Calendar<a class="headerlink" href="#calendar" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Show Day Headers</strong></dt><dd><p>By turning off, hide name of days from calendar.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Show Period Headers</strong></dt><dd><p>By turning off, hide header describing shown interval.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Headers</strong></dt><dd><p>The style of the headers in the calendar.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the headers text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of headers background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of the calendar headers.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Day Numbers</strong></dt><dd><p>Visual configuration of day numbers.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Visibility</strong></dt><dd><p>Whether day numbers should be visible.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Content</strong></dt><dd><p>Content of the day numbers. <br>
+Available options are <em>Title</em>, <em>Paging Info</em> and <em>Title and Paging Info</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p>Position of the day numbers. If <em>Float on Top</em> or <em>Float on Bottom</em> is selected, day numbers float over the segment which may cause overlapping.   <br>
+Available options are <em>Float on Top</em>, <em>Float on Bottom</em>, <em>Top</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Position of day numbers on horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the day numbers and day numbers’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of day numbers.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the day number, displayed in the tile.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the day numbers background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Values</strong></dt><dd><p>Settings for calendar values.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of values background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Best Fit</strong></dt><dd><p>Whether value should dynamically resize to best fit into a clock.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the text and values border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Null Value</strong></dt><dd><p>A custom value that is displayed when the value is not available.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Corner Radius</strong></dt><dd><p>Corner radius of the values measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Presentation Types</strong></dt><dd><p>Settings for each presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Alphanumeric</strong></dt><dd><p>Color settings for Alphanumeric presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore</strong></dt><dd><p>Color settings for Semaphore presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the semaphore.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle</strong></dt><dd><p>Color settings for Circle presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the circle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle</strong></dt><dd><p>Color settings for Semi Circle presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Semi Circle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Bar</strong></dt><dd><p>Color settings for Horizontal Bar presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Horizontal Bar.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Empty Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Bar</strong></dt><dd><p>Color settings for Vertical Bar presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Vertical Bar.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Empty Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="clock">
+<h2>Clock<a class="headerlink" href="#clock" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="simple">
+<dt><strong>Format</strong></dt><dd><p>Format of displayed time. For more information about supported formats see <span class="xref std std-doc">../../layout-tool-guide/editing-layout/editing-simple-segments/clock</span> chapter.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Style</strong></dt><dd><p>The style of a Clock.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Best Fit</strong></dt><dd><p>Whether value should dynamically resize to best fit into a clock.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis.</p>
+<p>Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Vertical Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the vertical axis.</p>
+<p>Available options are <em>Top</em>, <em>Middle</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the text and clock’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="grid">
+<h2>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Paging Interval</strong></dt><dd><p>The time interval between change of each page.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Sizing Mode</strong></dt><dd><p>Row size mode.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Row Height</strong></dt><dd><p>Height of a row measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Page Size</strong></dt><dd><p>Number of rows displayed for each page.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the text and cell’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Headers</strong></dt><dd><p>The style of the headers in the grid.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of header’s text</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of header’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of the headers.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Borders</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#borders-style">Borders Style</a> <em>section.</em> <br>
+The style, width and color settings for the header borders.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Values</strong></dt><dd><p>Settings for values in grid.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Colors</strong></dt><dd><p>Whether consecutive rows should alternate colors.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the background. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Best Fit</strong></dt><dd><p>Whether value should dynamically resize to best fit into a grid.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Null Value</strong></dt><dd><p>A custom value that is displayed when the value is not available.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Presentation Types</strong></dt><dd><p>Color settings for each presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Alphanumeric</strong></dt><dd><p>Color settings for Alphanumeric presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the text. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore</strong></dt><dd><p>Color settings for Semaphore presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the text. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the semaphore.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Semaphore Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the semaphore. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle</strong></dt><dd><p>Color settings for Circle presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the text. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the circle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Circle Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the circle. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle</strong></dt><dd><p>Color settings for Semi Circle presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the text. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Semi Circle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Semi Circle Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the semi circle. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Bar</strong></dt><dd><p>Color settings for Horizontal Bar presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the text. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Horizontal Bar.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Horizontal Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the horizontal bar. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Empty Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Empty Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternate background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Bar</strong></dt><dd><p>Color settings for Vertical Bar presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the text. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Vertical Bar.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Row Vertical Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternating color of the vertical bar. <br></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Empty Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Alternate Empty Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Alternate background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Borders</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#borders-style">Borders Style</a> <em>section.</em> <br>
+The style, width and color settings for the borders in a values area.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Totals</strong></dt><dd><p>Totals display the aggregation of the values from the whole column in the separated row on the bottom of the grid. Colors and text style in this row can be configured independently of the others.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Borders</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#borders-style">Borders Style</a> <em>section.</em> <br>
+The style, width and color settings for the borders in a totals row.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Blink Color</strong></dt><dd><p>The background color can alternate between this color and the standard color.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+A color to alternate.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Audible Alert</strong></dt><dd><p>Settings for audible alerts.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Audio File</strong></dt><dd><p>The alert sound that will be played.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Repeat</strong></dt><dd><p>Whether an audio file will repeat itself until a value is out of the set range.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="image">
+<h2>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of image’s background</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="kpi">
+<h2>KPI<a class="headerlink" href="#kpi" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of KPI’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Best Fit</strong></dt><dd><p>Dynamically resize a value to best fit into a KPI.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the value and segment’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Null Value</strong></dt><dd><p>A custom value that is displayed when the value is not available.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Presentation Types</strong></dt><dd><p>Color settings for each presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Alphanumeric</strong></dt><dd><p>Color settings for Alphanumeric presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore</strong></dt><dd><p>Color settings for Semaphore presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semaphore Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the semaphore.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle</strong></dt><dd><p>Color settings for Circle presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Circle Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the circle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle</strong></dt><dd><p>Color settings for Semi Circle presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Semi Circle Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Semi Circle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient. In the case of semicircle, circle and semaphore presentation type combined with the regular sizing, available height is defined by the height of the circle/semicircle/semaphore. Otherwise, by the height of the container.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Bar</strong></dt><dd><p>Color settings for Horizontal Bar presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Horizontal Bar.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Empty Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Bar</strong></dt><dd><p>Color settings for Vertical Bar presentation type.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Vertical Bar.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Empty Bar Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Background color of the bar itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Blink Color</strong></dt><dd><p>The background color can alternate between this color and the standard color.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+A color to alternate.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Audible Alert</strong></dt><dd><p>Settings for audible alerts.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Audio File</strong></dt><dd><p>The alert sound that will be played.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Repeat</strong></dt><dd><p>Whether an audio file will repeat itself until a value is out of the set range.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="label">
+<h2>Label<a class="headerlink" href="#label" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of Label’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis. <br>
+Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Vertical Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the vertical axis. <br>
+Available options are <em>Top</em>, <em>Middle</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the text and Label’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="nested-layout-widget">
+<h2>Nested Layout/Widget<a class="headerlink" href="#nested-layout-widget" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Type</strong></dt><dd><p>Type of the Layout’s/Widget’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the Layout’s/Widget’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Image</strong></dt><dd><p>Image of the Layout’s/Widget’s background.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="pdf-document">
+<h2>PDF Document<a class="headerlink" href="#pdf-document" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The background color used in the PDF document.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="pie-chart">
+<h2>Pie Chart<a class="headerlink" href="#pie-chart" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The background color of the pie chart.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Segment Labels</strong></dt><dd><p>The settings for segment labels.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Label Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the segment labels.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p>The size of the segment labels. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Legend</strong></dt><dd><p>The style of legend in the pie chart.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Color of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+Background color of a legend.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size</strong></dt><dd><p>The size of the labels. Measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Custom Null Value</strong></dt><dd><p>A custom value that is displayed when the value is not available.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="sequence">
+<h2>Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="simple">
+<dt><strong>Corner Radius</strong></dt><dd><p>Corner radius of the sequence’s item measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Margin</strong></dt><dd><p>Margin of the sequence’s item measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shadow</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#shadow-style">Shadow Style</a> <em>section.</em> <br>
+Shadow of the sequence’s item.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Titles Style</strong></dt><dd><p>Settings applied to source titles.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Visibility</strong></dt><dd><p>Whether the title should be visible.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Content</strong></dt><dd><p>Content of the title. <br>
+Available options are <em>Title</em>, <em>Paging Info</em> and <em>Title and Paging Info</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p>Position of the title. If <em>Float on Top</em> or <em>Float on Bottom</em> is selected, title floats over the sequence which may cause overlapping.   <br>
+Available options are <em>Float on Top</em>, <em>Float on Bottom</em>, <em>Top</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of sequence items titles.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of title text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the title background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.
+<br> Ticker Items aren’t affected by this option.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis.</p>
+<p>Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the segment’s title and segment’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="shape">
+<h2>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The background color of the Shape.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="ticker">
+<h2>Ticker<a class="headerlink" href="#ticker" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl>
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br></p>
+<p>The background color of the ticker.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Corner Radius</strong></dt><dd><p>Corner radius of the ticker’s item measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Margin</strong></dt><dd><p>Margin of the ticker’s item measured in permilles of the entire Layout’s height.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Shadow</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#shadow-style">Shadow Style</a> <em>section.</em> <br>
+Shadow of the ticker’s item.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Titles Style</strong></dt><dd><p>Settings applied to source titles.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Visibility</strong></dt><dd><p>Whether the title should be visible.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Content</strong></dt><dd><p>Content of the title. <br>
+Available options are <em>Title</em>, <em>Paging Info</em> and <em>Title and Paging Info</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong></dt><dd><p>Position of the title. If <em>Float on Top</em> or <em>Float on Bottom</em> is selected, title floats over the ticker which may cause overlapping.   <br>
+Available options are <em>Float on Top</em>, <em>Float on Bottom</em>, <em>Top</em> and <em>Bottom</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Height</strong></dt><dd><p>Height of ticker items titles.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of title text.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the title background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Font Size Coefficient</strong></dt><dd><p>The font size is calculated by multiplying available height for the text by font size coefficient.
+<br> Ticker Items aren’t affected by this option.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Horizontal Alignment</strong></dt><dd><p>Controls, where the text should be aligned on the horizontal axis.</p>
+<p>Available options are <em>Left</em>, <em>Center</em> and <em>Right</em></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Padding</strong></dt><dd><p>The size of a padding between the segment’s title and segment’s border in “em” units. 1 em equals to the font size of the associated text. <br>
+The padding is applied to the side where the text is horizontally aligned.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="web-page">
+<h2>Web Page<a class="headerlink" href="#web-page" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the web page’s background.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="word-cloud">
+<h2>Word Cloud<a class="headerlink" href="#word-cloud" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+<em>Word Cloud does not support Custom CSS in the Text Style. If Theme Text Style, with Custom CSS is chosen, Custom CSS will not be applied</em> <br>
+Type of font to use and whether bold or italic text should be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Spacing</strong></dt><dd><p>A coefficient that indicates the amount of space between words.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Out Of Bound Behavior</strong></dt><dd><p>Dictates what should happen with the word if it exceeds the source boundaries.</p>
+<p>Available options are:</p>
+<p><em>Hide</em> - hides the word that exceeds the Word Cloud boundaries. <br></p>
+<div class="notice docutils container">
+<p>If there is any word hidden due to exceeding the Word Cloud boundaries, the user will be notified in a pop up. Pop up appears only during editing of layout.</p>
+</div>
+<p><em>Shrink To Fit</em> - reduces the size of a word that exceeds the Word Cloud boundaries to fit into them.</p>
+<div class="notice docutils container">
+<p>If there is a size reduction in any word due to exceeding the Word Cloud boundaries, the user will be notified in a pop up. Pop up appears only during editing of layout.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Word Sizing</strong></dt><dd><p>Word size options.</p>
+<ul>
+<li><dl>
+<dt><strong>Size Parameter</strong></dt><dd><p>Parameter on the basis of which the word size is calculated.</p>
+<p>Available options are: <em>Weight</em> and <em>Weight Order</em>:</p>
+<p><em>Weight</em> - the size of the word depends on the weight assigned to the word. <br>
+<em>Weight Order</em> - the size of the word is calculated on the basis of the order in which the word is dependent on the weight assigned to the word.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Minimum Font Size Coefficient</strong></dt><dd><p>Minimum font size coefficient expresses relation of text size to height of the source. For example the value of 0.5 makes the header text half the size of the source. The font size will never drop below minimum size set.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Maximum Font Size Coefficient</strong></dt><dd><p>Maximum font size coefficient expresses relation of text size to height of the source. For example the value of 0.5 makes the text half the size of the source. The font size will never exceed the maximum size set.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Sizing Function</strong></dt><dd><p>The function by which the word size is calculated.</p>
+<p>Available options are:</p>
+<p><em>Parabolic</em> -  differences in word size change parabolically, depending on the weight of the word <br>
+<em>Exponential</em> - differences in word size change exponentialy, depending on the weight of the word. Differences in size of the words raises quicker than by using a parabolic function.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Parabolic Function Exponent</strong></dt><dd><p>Exponent, according to which the word size is calculated. The higher the value, the greater the difference between word sizes.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Exponential Function Base</strong></dt><dd><p>A value, according to which the word size is calculated. The higher the value, the greater the difference between word sizes.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Word Rotation</strong></dt><dd><p>Word rotation options.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Minimum Rotation Angle</strong></dt><dd><p>Minimum angle for word rotation in degrees. Word rotation will never be at a lower angle than a value set.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Maximum Rotation Angle</strong></dt><dd><p>Maximum angle for word rotation in degrees. Word rotation will never exceed this angle.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Rotation Steps</strong></dt><dd><p>The number of different angles of rotation of the word to be used.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Rotate Probability</strong></dt><dd><p>The probability od words rotation in percent.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Colors</strong></dt><dd><p>Color options.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+The color of the background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+A text color, used in the Fixed color mode.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="youtube-video">
+<h2>YouTube Video<a class="headerlink" href="#youtube-video" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Volume</strong></dt><dd><p>The volume of a selected video.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="colors">
+<h2>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h2>
+<p>A Theme Color is a predefined color, that can be reused in layouts within the theme in which it was defined.</p>
+<p>Theme Colors are typically used to define the color of specific parts of a layout or segment that are used repeatedly, such as a title or header.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>The name of a Theme Color.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Color</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#color-field">Color field</a> <em>section.</em> <br>
+A color.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="text-styles">
+<h2>Text Styles<a class="headerlink" href="#text-styles" title="Permalink to this headline">¶</a></h2>
+<p>A Theme Text style is a predefined text style that defines the font to use and whether bold or italic text should be used. It can be reused in layouts within the theme in which it was defined.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Name</strong></dt><dd><p>The name of a Theme Text style.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Text Style</strong></dt><dd><p><em>For more information see</em> <a class="reference external" href="../navigating-the-tool.html#text-style">Text Style</a> <em>section.</em> <br>
+Style of the text.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="notification-channels/settings.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Notification Channel Type Settings
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="../connectors.html">
+						Connectors 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

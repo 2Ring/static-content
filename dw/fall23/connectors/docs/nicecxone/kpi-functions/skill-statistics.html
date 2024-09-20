@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.3. Skill Statistics &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.4. Skill Statistics RT" href="skill-statistics-rt.html" />
+    <link rel="prev" title="1.2. Agent Statistics" href="agent-statistics.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.3. </span>Skill Statistics</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../nicecxone.html">Nice CXone</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../kpi-functions.html"><span class="section-number">1. </span>KPI Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.3. </span>Skill Statistics
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../kpi-functions.html">1. KPI Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="agent-state.html">1.1. Agent State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="agent-statistics.html">1.2. Agent Statistics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.3. Skill Statistics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-abandon-count">1.3.1. Skill Statistics - Abandon Count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-connects">1.3.2. Skill Statistics - Connects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-contacts-active">1.3.3. Skill Statistics - Contacts Active</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-contacts-handled">1.3.4. Skill Statistics - Contacts Handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-contacts-offered">1.3.5. Skill Statistics - Contacts Offered</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-contacts-queued">1.3.6. Skill Statistics - Contacts Queued</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-contacts-out-of-sla">1.3.7. Skill Statistics - Contacts Out Of SLA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-contacts-within-sla">1.3.8. Skill Statistics - Contacts Within SLA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-dials">1.3.9. Skill Statistics - Dials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-hold-time">1.3.10. Skill Statistics - Hold Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-longest-queue-dur">1.3.11. Skill Statistics - Longest Queue Dur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-right-party-connects">1.3.12. Skill Statistics - Right Party Connects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skill-statistics-total-contact-time">1.3.13. Skill Statistics - Total Contact Time</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="skill-statistics-rt.html">1.4. Skill Statistics RT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../grid-functions.html">2. Grid Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="skill-statistics">
+<h1><span class="section-number">1.3. </span>Skill Statistics<a class="headerlink" href="#skill-statistics" title="Permalink to this headline">¶</a></h1>
+<p>The Skill Statistics KPI functions display aggregated reporting summary data for every Skill for the current day.</p>
+<div class="notice docutils container">
+<p>For more information, see the <a class="reference external" href="https://developer.niceincontact.com/API/ReportingAPI#/Reporting/getFullSkillSummaries">NICE CXone API documentation</a>.</p>
+</div>
+<p>Depending on the KPI function, the following parameters may be used:</p>
+<ul class="simple">
+<li><p><strong>Skills</strong> - Allows you to select from a list of skills using a logical OR operation for filtering. When you use this parameter, any object that matches at least one of the selected skills will be included in the results.  - list of Skill names</p></li>
+</ul>
+<div class="section" id="skill-statistics-abandon-count">
+<h2><span class="section-number">1.3.1. </span>Skill Statistics - Abandon Count<a class="headerlink" href="#skill-statistics-abandon-count" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of abandoned contacts.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-connects">
+<h2><span class="section-number">1.3.2. </span>Skill Statistics - Connects<a class="headerlink" href="#skill-statistics-connects" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of times the Personal Connection dialer results in an answer event.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-contacts-active">
+<h2><span class="section-number">1.3.3. </span>Skill Statistics - Contacts Active<a class="headerlink" href="#skill-statistics-contacts-active" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts that are currently active in the system.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-contacts-handled">
+<h2><span class="section-number">1.3.4. </span>Skill Statistics - Contacts Handled<a class="headerlink" href="#skill-statistics-contacts-handled" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts handled.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-contacts-offered">
+<h2><span class="section-number">1.3.5. </span>Skill Statistics - Contacts Offered<a class="headerlink" href="#skill-statistics-contacts-offered" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts offered to agents.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-contacts-queued">
+<h2><span class="section-number">1.3.6. </span>Skill Statistics - Contacts Queued<a class="headerlink" href="#skill-statistics-contacts-queued" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of inbound contacts placed in queue. This includes contacts that spent time in the queue and those that were immediately routed to an available agent. This number includes contacts transferred to a skill or an agent. This number does not include transfers followed by a consult.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-contacts-out-of-sla">
+<h2><span class="section-number">1.3.7. </span>Skill Statistics - Contacts Out Of SLA<a class="headerlink" href="#skill-statistics-contacts-out-of-sla" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts who entered the skills and were handled outside the required SLA service level threshold. This statistic includes abandons based on whether the skill is configured to include them.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-contacts-within-sla">
+<h2><span class="section-number">1.3.8. </span>Skill Statistics - Contacts Within SLA<a class="headerlink" href="#skill-statistics-contacts-within-sla" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of contacts who entered the skills and were handled within the required SLA service level threshold. This statistic includes abandons based on whether the skill is configured to include them.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-dials">
+<h2><span class="section-number">1.3.9. </span>Skill Statistics - Dials<a class="headerlink" href="#skill-statistics-dials" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of times the Personal Connection dialer initiates a call for a contact.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-hold-time">
+<h2><span class="section-number">1.3.10. </span>Skill Statistics - Hold Time<a class="headerlink" href="#skill-statistics-hold-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the amount of time that skills were in the hold state.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-longest-queue-dur">
+<h2><span class="section-number">1.3.11. </span>Skill Statistics - Longest Queue Dur<a class="headerlink" href="#skill-statistics-longest-queue-dur" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the amount of time for the one contact which spent the most time in the queue waiting for an agent.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-right-party-connects">
+<h2><span class="section-number">1.3.12. </span>Skill Statistics - Right Party Connects<a class="headerlink" href="#skill-statistics-right-party-connects" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the number of INTENDED contacts that were reached. Intended contacts are counted as Right Party Connects irrespective of whether there is a positive or negative outcome from the interaction.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+<div class="section" id="skill-statistics-total-contact-time">
+<h2><span class="section-number">1.3.13. </span>Skill Statistics - Total Contact Time<a class="headerlink" href="#skill-statistics-total-contact-time" title="Permalink to this headline">¶</a></h2>
+<p>This KPI function returns the amount of time that the contact spent in the NICE inContact system.</p>
+<p><strong>Parameters</strong>: Skills</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="agent-statistics.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1.2. </span>Agent Statistics
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="skill-statistics-rt.html">
+						<span class="section-number">1.4. </span>Skill Statistics RT 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

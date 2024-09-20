@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Nested Widget &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Data Sources" href="data-sources.html" />
+    <link rel="prev" title="Nested Layout" href="nested-layout.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span>Nested Widget</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../editing-layout.html">Editing a Layout</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../editing-container-based-segments.html">Editing Container Based Segments</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					Nested Widget
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../logging-in.html">Logging in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-layout.html">What is a Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../what-is-widget.html">What is a Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-layout-list.html">Working with the Layout List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../working-with-the-layout-editor.html">Working with the Layout Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../editing-layout.html">Editing a Layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editing-segment.html">Editing Segment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-shared-calculations.html">Editing Shared Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-simple-segments.html">Editing Simple Segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing-calculation-based-segments.html">Editing Calculation Based Segments</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editing-container-based-segments.html">Editing Container Based Segments</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nested-layout.html">Nested Layout</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Nested Widget</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="data-sources.html">Data Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sequence.html">Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ticker.html">Ticker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-discarding-changes.html">Publishing/Discarding Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../impersonating.html">Impersonating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../static-content.html">Static Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nested-widget">
+<h1>Nested Widget<a class="headerlink" href="#nested-widget" title="Permalink to this headline">¶</a></h1>
+<p>A widget can be displayed inside of a segment, using the Nested Widget segment type. Nested Widget is fully interactable.</p>
+<div class="notice docutils container">
+<p>For general information about this segment, see <a class="reference internal" href="../../what-is-layout/container-based-segments.html#nestedwidget"><span class="std std-ref">Nested Widget</span></a> chapter.</p>
+</div>
+<p>The nested Widget can be selected in the <strong>Widget</strong> dropdown. Only Widgets from the same Business Unit or Shared Business Unit can be selected.</p>
+<div class="notice docutils container">
+<p>The Nested Widget cannot be edited directly in its parent Layout, like other segments. Instead, an <span class="button">Edit</span> button opens up a new tab and navigates to the Nested Widget’s panel in edit mode.</p>
+<p>Figure 3: Edit button</p>
+<img alt="../../../_images/widget-edit.png" class="flat align-center" src="../../../_images/widget-edit.png" />
+</div>
+<div class="notice docutils container">
+<p>If any changes are made to the widget while the parent layout is open, the widget needs to be refreshed by clicking on the <span class="button">Refresh</span> button in order to see the changes in the nested widget.</p>
+<p>Figure 4: Refresh button</p>
+<img alt="../../../_images/widget-refresh.png" class="flat align-center" src="../../../_images/widget-refresh.png" />
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Widget</strong></dt><dd><p>A widget, that should be nested.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Appearance</strong></dt><dd><p>The style of the Nested Widget.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Show Background</strong></dt><dd><p>Whether background from the nested Widget should be applied.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Background Type</strong></dt><dd><p>Type of the Widget’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Color</strong></dt><dd><p><em>Only available if</em> Solid Color <em>is selected as Background Type</em> <br>
+<em>For more information see</em> <a class="reference external" href="../../working-with-the-layout-editor/fields.html#color-field">Color Field</a> <em>section</em>. <br>
+Color of the Widget’s background.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Background Image</strong></dt><dd><p><em>Only available if</em> Image <em>is selected as Background Type</em> <br>
+Image of the Widget’s background.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Scaling Mode</strong></dt><dd><p>Whether the relative sizes in widget segments should be applied relative to parent layout or to widget itself.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Self</strong></dt><dd><p>Relative sizes in widget segments are applied relative to the widget itself.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Parent</strong></dt><dd><p>Relative sizes in widget segments are applied relative to parent layout.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Apply Theme</strong></dt><dd><p>Whether parent layout theme, theme set on the widget itself or custom theme should be applied to segments in widget.</p>
+<ul>
+<li><dl class="simple">
+<dt><strong>Custom Theme</strong></dt><dd><p><em>Only if Custom is selected as Apply Theme</em> <br>
+Visual theme, applied to all segments in the Nested Widget.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Data Sources</strong></dt><dd><p>Mapping of widget calculations to parent layout calculations. For more information see <a class="reference internal" href="data-sources.html"><span class="doc">Data Sources</span></a> chapter.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-sources.html">Data Sources</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="nested-layout.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						Nested Layout
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="data-sources.html">
+						Data Sources 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

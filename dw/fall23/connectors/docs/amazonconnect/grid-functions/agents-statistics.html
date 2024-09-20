@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>1.1. Agents Statistics &#8212; 2Ring Dashboards &amp; Wallboards Documentation</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/main.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/fontawesome.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/main.js"></script>
+    <script src="../../../_static/versioning.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.2. Queues Statistics Current" href="queues-statistics-current.html" />
+    <link rel="prev" title="1. Grid Functions" href="../grid-functions.html" /> 
+  </head><body>
+  	<header>
+		<a href="../../../index.html" id="headerImgWrapper">
+			<img src="../../../_static/2ring_logo.jpg">
+		</a>
+		<span><span class="section-number">1.1. </span>Agents Statistics</span>
+  	</header>
+	<div id="breadcrumbsContainer" role="navigation" aria-label="breadcrumbs navigation">
+		<div class="wy-breadcrumbs">
+		
+			
+				<a class="reference" href="../../../index.html">Home</a> 
+				<i class="fa fa-chevron-right navigation-direction-icon"></i>	
+				
+					<a class="reference" href="../../amazonconnect.html">AmazonConnect</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+					<a class="reference" href="../grid-functions.html"><span class="section-number">1. </span>Grid Functions</a>
+					<i class="fa fa-chevron-right navigation-direction-icon"></i>
+				
+				<span class="reference active">
+					<span class="section-number">1.1. </span>Agents Statistics
+				</span>
+			
+		
+		</div>
+	</div>
+
+
+    <div class="document">
+  <div class="contentWrapper">
+	
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../amazonconnect.html">AmazonConnect</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../grid-functions.html">1. Grid Functions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1. Agents Statistics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#columns">1.1.1. Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculation-parameters">1.1.2. Calculation Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-mapped-parameters">1.1.3. Column-mapped Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="queues-statistics-current.html">1.2. Queues Statistics Current</a></li>
+<li class="toctree-l3"><a class="reference internal" href="queues-statistics-historical.html">1.3. Queues Statistics Historical</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-attributes.html">1.4. User Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../kpi-functions.html">2. KPI Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sql-patterns.html">3. SQL Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../five9.html">Five9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genesys-cloud.html">Genesys Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nicecxone.html">Nice CXone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servicenow.html">ServiceNow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcc-2-0.html">WXCC</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+	<div class="pagewrapper">
+		
+			
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="agents-statistics">
+<h1><span class="section-number">1.1. </span>Agents Statistics<a class="headerlink" href="#agents-statistics" title="Permalink to this headline">¶</a></h1>
+<p>The Agents Statistics Grid function calculates current statistics for agents, which are then displayed in a tabular format.</p>
+<div class="attention docutils container">
+<p>This Grid requires Amazon Kinesis Stream enabled.</p>
+</div>
+<div class="section" id="columns">
+<h2><span class="section-number">1.1.1. </span>Columns<a class="headerlink" href="#columns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Agent Id</strong> - the Id of the agent.</p></li>
+<li><p><strong>Agent Name</strong> – the name of the agent.</p></li>
+<li><p><strong>Average Handle Time</strong> – the average time the agent spent handling contacts.</p></li>
+<li><p><strong>Average Talk Time</strong> – the average time agent’s contacts spent off hold.</p></li>
+<li><p><strong>Call Duration</strong> – the duration of agent’s current contact.</p></li>
+<li><p><strong>Call State</strong> – the state of agent’s current contact.</p></li>
+<li><p><strong>Calls Abandoned</strong> – the number of contacts disconnected by the customer, while being presented to the agent.</p></li>
+<li><p><strong>Calls Handled</strong> – the number of contacts that were handled by the agent.</p></li>
+<li><p><strong>Calls Offered</strong> – the number of contacts presented to the agent.</p></li>
+<li><p><strong>Duration</strong> – the time the agent has spent in the current state.</p></li>
+<li><p><strong>State</strong> – the current agent’s state.</p></li>
+<li><p><strong>Team</strong> – comma-separated list of agent’s hierarchy groups.</p></li>
+</ul>
+</div>
+<div class="section" id="calculation-parameters">
+<h2><span class="section-number">1.1.2. </span>Calculation Parameters<a class="headerlink" href="#calculation-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Queues</strong> – the list of queue names.</p></li>
+<li><p><strong>Agent Hierarchy Group Level 1</strong> – the list of hierarchy groups of level 1.</p></li>
+<li><p><strong>Agent Hierarchy Group Level 2</strong> – the list of hierarchy groups of level 2.</p></li>
+<li><p><strong>Agent Hierarchy Group Level 3</strong> – the list of hierarchy groups of level 3.</p></li>
+<li><p><strong>Agent Hierarchy Group Level 4</strong> – the list of hierarchy groups of level 4.</p></li>
+<li><p><strong>Agent Hierarchy Group Level 5</strong> – the list of hierarchy groups of level 5.</p></li>
+</ul>
+</div>
+<div class="section" id="column-mapped-parameters">
+<h2><span class="section-number">1.1.3. </span>Column-mapped Parameters<a class="headerlink" href="#column-mapped-parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Agent Id</strong> - Agents calculation parameter value</p></li>
+<li><p><strong>State</strong> - States calculation parameter value</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+			<div class="siblings-navigation">
+				
+					<a class="reference" class="btn btn-default" href="../grid-functions.html">
+						<i class="fa fa-chevron-left navigation-direction-icon"></i> 
+						<span class="section-number">1. </span>Grid Functions
+					</a>
+				
+				
+					<div class="spacer"></div>
+				
+				
+					<a class="reference" class="btn btn-default" href="queues-statistics-current.html">
+						<span class="section-number">1.2. </span>Queues Statistics Current 
+						<i class="fa fa-chevron-right navigation-direction-icon"></i>
+					</a>
+				
+			</div>
+		
+	</div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>
